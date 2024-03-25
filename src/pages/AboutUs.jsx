@@ -1,7 +1,7 @@
 import Header from "../laouts/Header"
 import Footer from "../laouts/Footer"
 
-function About() {
+function AboutUs() {
     return (
         <>
         <Header/>
@@ -15,4 +15,4 @@ function About() {
     )
 }
 
-export default About
+export default AboutUs
