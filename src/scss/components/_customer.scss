@@ -1,0 +1,110 @@
+.customer {
+    overflow: hidden;
+    &__row {
+        padding: 120px 0 180px;
+    }
+    &__title {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+    &__card {
+        display: flex;
+        gap: 30px;
+        position: relative;
+    }    
+    &__list {
+        display: flex;
+        padding-bottom: 43px;
+        flex-direction: column;
+    }
+    &__slider {
+        display: flex;
+        gap: 45px;
+        &_control {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: absolute;
+            right: 95px;
+            bottom: 45px;
+        }
+
+    }
+    &__button {
+        border: none;
+        background:  #e7e5f4;
+        border-radius: 78.5px;    
+        width: 191px;  
+        height: 11px; 
+        margin-right: -5px;
+        border: none;
+        cursor: pointer;
+        &-active {
+            background: $purple;
+            position: relative;
+            margin-left: 20px;        
+        }
+    }
+
+    &__item {
+        background: $white;
+        border-radius: 21px;
+        width: 528px;
+        height: 239px;
+        padding: 43px;
+        &_col {
+            margin-left: 21px;
+        }
+        &_name {
+            color: #030314;
+            font-family: $Poppins;
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 31.5px;
+        }
+        &_date {
+            color: #5E5D5D;
+            font-family: Quicksand;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+        &_decor {
+            margin-left: auto;
+        }
+        &_img {
+            background: url(/img/customer_foto.jpg) no-repeat center center;
+            border-radius: 50px;
+            width: 71px;
+            height: 71px;
+        }
+        &_text {
+        color: #969696;
+        text-align: justify;
+        font-family: $Poppins;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 26px; 
+        padding-bottom: 32px;
+        &-top {
+            color: #636363;
+            padding-bottom: 39px;
+        }
+        }
+        &_rating {
+            background: url(/img/Stars.png)no-repeat;
+            width: 138px;
+            height: 23px;
+        }
+        &_top {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 32px;
+        }
+        &-active {
+            height: 346px;
+        }
+     }
+  
+}

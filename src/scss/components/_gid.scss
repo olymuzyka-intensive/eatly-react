@@ -1,0 +1,147 @@
+.dishes {
+    &__row {
+        padding-top: 100px;
+        padding-bottom: 120px;
+        border-bottom: 0.71px solid #CBCBCB;
+    }
+    &__title {
+        font-size: 45px;
+        text-align: center;
+        padding-bottom: 85px;
+        span {
+            color: $purple;
+        }
+    }
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: nowrap;
+        margin-bottom: 65.36px;
+    }
+    &__item {
+        width: 225px;
+        height: 390px;
+        border-radius: 34.5px;
+        border: 1.4px solid #F4F4F6;
+        box-shadow: 6.84842px 82.18102px 41.09051px 0px rgba(229, 229, 229, 0.70);
+        position: relative; 
+        transition: transform 0.3s ease;
+        &_like {
+            cursor: pointer;
+            position: absolute;
+            top: 24px;
+            right: 22px;
+        } 
+        &_like:active {
+            background: url(/img/Heart-fill.svg) no-repeat;
+        }   
+    }
+    &__item:hover {
+        transform: scale(1.1);
+    }
+    &__item:nth-child(1) {
+        background: $white url(/img/Food-1.png) no-repeat;
+        background-position: 50% 20%;
+    }
+    &__item:nth-child(2) {
+        background: $white url(/img/Food-2.png) no-repeat;
+        background-position: 50% 20%;
+    }
+    &__item:nth-child(3) {
+        background: $white url(/img/Food-3.png) no-repeat;
+        background-position: 50% 20%;
+    }
+    &__item:nth-child(4) {
+        background: $white url(/img/Food-1.png) no-repeat;
+        background-position: 50% 20%;
+    }
+    &__item:nth-child(5) {
+        background: $white url(/img/Food-2.png) no-repeat;
+        background-position: 50% 20%;
+    }
+    &__category {
+        display: inline-flex;
+        font-size: 11.5px;
+        font-weight: 400;
+        line-height: 17px;
+        padding: 5px 7.5px;
+        border-radius: 5.4px;
+
+        
+        &_1 {     
+            color:  #DAA31A;
+            background: #F7EDD0;
+        }
+        &_2 {
+            color: #FB471D;
+            background:#F7C5BA;
+        }
+        &_3 {        
+            color: #309D5B;
+            background:#dfe8d7;
+        }
+        &_card {
+            margin-top: 225px;
+            padding: 0 17px;
+        }
+    }
+    
+    &__subtitle a {
+        color: $black;
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 37.5px;
+        padding-bottom: 10px;
+    }
+    &__comment {
+        font-family: $Manrope;
+        font-size: 20px;
+        line-height: 26px;
+        display: flex;
+        margin-bottom: 7px;
+        &_star {
+            padding-left: 6.5px;
+            padding-right: 6.5px;
+        }
+    } 
+        
+    &__price {
+        display: flex;
+        color: $black;
+        font-family: $Manrope;
+        font-size: 25.936px;
+        font-weight: 700;
+        line-height: 40.345px;
+        align-items: center;
+        &_sub {
+            color: $gray;
+            font-size: 19px;
+            margin-top: 3px;
+        }
+    }
+    &__add {
+        width: 44px;
+        height: 40px;
+        background: $black url(/img/+.svg) no-repeat;
+        background-position: 50%;
+        border-radius: 9px;
+        margin-left: auto;
+        position: relative; 
+        cursor: pointer;
+        svg {
+            position: absolute;
+            top: 33%;
+            right: 33%;
+        }
+    }
+    &__pagemenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 46px;
+        margin-bottom: 65px;
+        align-items: baseline;
+    }
+}  

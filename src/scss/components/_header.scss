@@ -1,0 +1,76 @@
+.header {
+    &__row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 48px;
+        padding-bottom: 24.6px;
+        border-bottom: 0.71px solid #CBCBCB;
+    }
+
+    &__nav {
+        display: flex;    
+    }
+
+    &__logo {
+        margin-right: 103px;
+        align-self: center;
+    }
+
+    &__button {
+        margin-left: auto;
+        display: flex;
+    }
+
+    &__burger {
+        display: none; 
+        transition: all 0.3s ease-in;
+        align-items: center;  
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+        background: none;
+        border: 0;
+
+        span, span::before, span::after {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: black
+        }
+        span::before {
+        content: '';
+        top: -8px;
+        }
+        span::after {
+        content: '';
+        top: 8px;
+        }
+    }
+
+    &-popup  {
+        display: none;
+    } 
+    
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        gap: 53.49px;
+        text-transform: capitalize;
+        font-family: $Inter;
+        font-weight: 500;
+        align-items: center;     
+        color: $madium-gray;
+        font-size: 17.83px;  
+    }
+}
+
+.menu {
+    &__link {
+        &:hover {
+            color: $purple;
+        }
+    }
+}

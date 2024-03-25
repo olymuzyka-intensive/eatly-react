@@ -1,0 +1,247 @@
+.btn {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: $Poppins;
+    font-weight: 700;
+    padding: 17.83px 26.74px;
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+    &--shop {
+        // background: $purple;
+        // width: 85px;
+        // height: 62.66px;
+        // border-radius: 17.8px;
+        position: relative;
+        svg {
+            fill: $purple;
+            width: 30px;
+            height: 30px;
+            position: absolute; 
+            top: 20%;
+            left: 28%;  
+        }
+    }
+
+    // &--shop:hover {
+    //     background: $bgwhite;
+    //     border: 1px solid $purple;
+    //     svg {
+    //         fill: $purple;
+    //     } 
+    // }
+
+    &--confirm {
+        background: $purple;
+        border-radius: 17.8px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        width: 385px;
+        height: 77px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    &--confirm:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+    
+    &--get-started {
+        background: $purple;
+        font-weight: 500;
+        border-radius: 12.4px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        margin-right: 18px;
+        padding: 18px 30px;
+    }
+
+    &--get-started:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &--Go-pro {
+        border: 1.5px solid $purple;
+        color: $purple;
+        font-weight: 500;
+        border-radius: 12.4px;
+        background: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        padding: 18px 30px;
+    }
+
+    &--Go-pro:hover {
+        background: $purple;
+        color: $bgwhite;
+    }
+
+    &--download {
+        display: flex;
+        background: $purple;
+        font-weight: 500;
+        width: 190px;
+        height: 63px;
+        border-radius: 12.4px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        align-items: center;
+        justify-content: center;
+        span {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+    }
+
+    &--download:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+        span svg path{
+            stroke: $purple;
+        }
+    }
+
+    &--view-all {
+        display: flex;
+        background: none;
+        color: #ACADB9;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 45px; 
+        letter-spacing: -0.1px;
+        float: right;        
+        span {
+            margin-left: 20px;
+        }
+        a {
+            color: $gray;
+        }
+    }
+
+    &--subscribe {
+        background: $purple;
+        font-size: 15px;
+        font-weight: 500;
+        width: 135px;
+        border-radius: 12.4px;
+        color: $bgwhite;
+        line-height: 1.5;
+        letter-spacing: 0.443px;
+        text-transform: uppercase;
+    }
+
+    &--subscribe:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &--apply {
+        background: $purple;
+        border-radius: 17.8px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        width: 100%;
+        font-size: 13.7px;
+        font-weight: 600;
+        letter-spacing: -0.137px;
+    }
+
+    &--apply:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &--apply-coupon {
+        width: 130px;
+        height: 70px;
+        background: $purple;
+        border-radius: 17.8px;
+        color: $bgwhite;
+        line-height: 1.5;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &--apply-coupon:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &--next-article {
+        display: flex;
+        background: $purple;
+        font-weight: 500;
+        width: 200px;
+        border-radius: 12.4px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+            span {
+                margin-left: 15px;
+                margin-top: 10px;
+            }        
+    }
+
+    &--next-article:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+        span svg path{
+            stroke: $purple;
+        }
+    }  
+
+    &--send {
+        background: $purple;
+        border-radius: 17.8px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        width: 100%;
+        height: 77px;        
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.137px;
+    }
+
+    &--send:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+    
+    &--payment {
+        display: block;
+        background: $purple;
+        border-radius: 17.8px;
+        color: $bgwhite;
+        line-height: 1.5;
+        text-transform: capitalize;
+        padding: 24px;
+        text-align: center;
+        height: 77px;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.137px;
+    }
+
+    &--payment:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+}

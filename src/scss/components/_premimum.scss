@@ -1,0 +1,81 @@
+.premium {
+    background: url(/img/premimum-bg.svg);
+    background-size: 100% auto;
+    &__row {
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-evenly;
+        padding: 50px 0;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    &__title {
+        color: $white;
+        text-align: center;
+        font-family: $PublicSans;
+        font-size: 43.2px;
+        font-weight: 700;
+        line-height: 1.25;
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        color: #C5BFED;
+        text-align: center;
+        font-family: $Inter;
+        font-size: 14.4px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    
+}
+
+.quality {
+    padding: 100px 0;
+    &__row {
+        background: url(/img/quality-bg.png) no-repeat;
+        background-position: 10% top;
+        height: 745px;
+        border-bottom: 0.71px solid #CBCBCB;
+
+    }
+    &__col {
+        margin-left: 53%;
+        position: relative;
+    }
+    &__title {
+        padding: 85px 0;
+        color: #18181B;
+        font-size: 50.923px;
+        font-weight: 700;
+        line-height: 58.2px;
+        text-transform: capitalize;
+        padding-bottom: 63px;
+        span {
+            color: $purple;
+        }
+    }
+    &__button {
+        position: relative;
+    }
+
+    &__decor-2 {
+        color: $purple;
+        left: 160px;
+        top: 50px;
+        position: absolute;        
+    }
+   
+    ul {
+        list-style: disc;
+    }
+    li {
+        font-size: 20.5px;
+        padding-bottom: 27px;
+        margin-left: 30px;
+    }
+}

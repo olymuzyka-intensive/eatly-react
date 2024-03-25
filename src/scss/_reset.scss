@@ -1,0 +1,36 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $Poppins;
+    font-size: 18px;
+    color: $lite-gray;
+    font-weight: 400;
+    background: $bgwhite;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #18181B;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 25.6px;
+    text-transform: capitalize;
+    span {
+        color: $purple;
+    }
+}
