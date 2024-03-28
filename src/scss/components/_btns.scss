@@ -1,23 +1,23 @@
 .btn {
-    cursor: pointer;
-    font-size: 18px;
+    cursor: pointer;    
     font-family: $Poppins;
     font-weight: 700;
     padding: 17.83px 26.74px;
     border: 1px solid transparent;
     transition: all 0.3s linear;
+    font-size: 17.83px;
     &--shop {
-        // background: $purple;
+        background: none;
         // width: 85px;
         // height: 62.66px;
         // border-radius: 17.8px;
         position: relative;
         svg {
             fill: $purple;
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             position: absolute; 
-            top: 20%;
+            top: 0;
             left: 28%;  
         }
     }
@@ -36,8 +36,7 @@
         color: $bgwhite;
         line-height: 1.5;
         text-transform: capitalize;
-        width: 385px;
-        height: 77px;
+        width: 100%;
         padding: 25px;
         text-align: center;
     }
@@ -49,14 +48,16 @@
     }
     
     &--get-started {
-        background: $purple;
         font-weight: 500;
         border-radius: 12.4px;
         color: $bgwhite;
-        line-height: 1.5;
+        line-height: 24px;
         text-transform: capitalize;
         margin-right: 18px;
         padding: 18px 30px;
+        font-size: 16.27px;
+        letter-spacing: 0.01em;
+        background: $purple;
     }
 
     &--get-started:hover {
@@ -71,9 +72,11 @@
         font-weight: 500;
         border-radius: 12.4px;
         background: $bgwhite;
-        line-height: 1.5;
+        line-height: 24px;
         text-transform: capitalize;
         padding: 18px 30px;
+        font-size: 16.27px;
+        letter-spacing: 0.01em;
     }
 
     &--Go-pro:hover {
@@ -86,16 +89,16 @@
         background: $purple;
         font-weight: 500;
         width: 190px;
-        height: 63px;
+        padding: 9.5px 0px;
         border-radius: 12.4px;
         color: $bgwhite;
-        line-height: 1.5;
+        line-height: 23px;
         text-transform: capitalize;
         align-items: center;
         justify-content: center;
         span {
             margin-left: 15px;
-            margin-top: 10px;
+            margin-top: 7px;
         }
     }
 
@@ -116,12 +119,9 @@
         font-weight: 500;
         line-height: 45px; 
         letter-spacing: -0.1px;
-        float: right;        
+        float: right;     color: $gray;   
         span {
             margin-left: 20px;
-        }
-        a {
-            color: $gray;
         }
     }
 
@@ -150,9 +150,9 @@
         line-height: 1.5;
         text-transform: capitalize;
         width: 100%;
-        font-size: 13.7px;
+        font-size: 13.73px;
         font-weight: 600;
-        letter-spacing: -0.137px;
+        letter-spacing: -0.01em;
     }
 
     &--apply:hover {
@@ -162,14 +162,15 @@
     }
 
     &--apply-coupon {
-        width: 130px;
-        height: 70px;
+        width: 132px;
         background: $purple;
         border-radius: 17.8px;
         color: $bgwhite;
-        line-height: 1.5;
+        // line-height: 21;
         font-size: 18px;
         font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.02em;
     }
 
     &--apply-coupon:hover {
@@ -184,12 +185,13 @@
         font-weight: 500;
         width: 200px;
         border-radius: 12.4px;
+        font-size: 20.29px;
         color: $bgwhite;
-        line-height: 1.5;
+        line-height: 25.4px;
         text-transform: capitalize;
         align-items: center;
         justify-content: center;
-        height: 80px;
+        // height: 80px;
             span {
                 margin-left: 15px;
                 margin-top: 10px;
@@ -209,13 +211,12 @@
         background: $purple;
         border-radius: 17.8px;
         color: $bgwhite;
-        line-height: 1.5;
+        font-size: 20.81px;
+        line-height: 31px;
         text-transform: capitalize;
-        width: 100%;
-        height: 77px;        
-        font-size: 21px;
+        font-size: 20.81px;
         font-weight: 600;
-        letter-spacing: -0.137px;
+        letter-spacing: 0.03em;
     }
 
     &--send:hover {
@@ -229,14 +230,14 @@
         background: $purple;
         border-radius: 17.8px;
         color: $bgwhite;
-        line-height: 1.5;
         text-transform: capitalize;
         padding: 24px;
         text-align: center;
-        height: 77px;
-        font-size: 21px;
+        // height: 77px;
+        font-size: 20px;        
+        line-height: 30px;
         font-weight: 600;
-        letter-spacing: -0.137px;
+        letter-spacing: -0.01em;
     }
 
     &--payment:hover {

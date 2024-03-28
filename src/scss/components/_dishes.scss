@@ -35,30 +35,30 @@
             right: 22px;
         } 
         &_like:active {
-            background: url(/img/Heart-fill.svg) no-repeat;
+            background: url(/src/img/Heart-fill.svg) no-repeat;
         }   
     }
     &__item:hover {
         transform: scale(1.1);
     }
     &__item:nth-child(1) {
-        background: $white url(/img/Food-1.png) no-repeat;
+        background: $white url(/src/img/Food-1.png) no-repeat;
         background-position: 50% 20%;
     }
     &__item:nth-child(2) {
-        background: $white url(/img/Food-2.png) no-repeat;
+        background: $white url(/src/img/Food-2.png) no-repeat;
         background-position: 50% 20%;
     }
     &__item:nth-child(3) {
-        background: $white url(/img/Food-3.png) no-repeat;
+        background: $white url(/src/img/Food-3.png) no-repeat;
         background-position: 50% 20%;
     }
     &__item:nth-child(4) {
-        background: $white url(/img/Food-1.png) no-repeat;
+        background: $white url(/src/img/Food-1.png) no-repeat;
         background-position: 50% 20%;
     }
     &__item:nth-child(5) {
-        background: $white url(/img/Food-2.png) no-repeat;
+        background: $white url(/src/img/Food-2.png) no-repeat;
         background-position: 50% 20%;
     }
     &__category {
@@ -84,7 +84,7 @@
         }
         &_card {
             margin-top: 225px;
-            padding: 0 17px;
+            padding: 0 23.05px 23.28px 31.01px;
         }
     }
     
@@ -124,7 +124,7 @@
     &__add {
         width: 44px;
         height: 40px;
-        background: $black url(/img/+.svg) no-repeat;
+        background: $black url(/src/img/+.svg) no-repeat;
         background-position: 50%;
         border-radius: 9px;
         margin-left: auto;

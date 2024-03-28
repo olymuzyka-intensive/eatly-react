@@ -1,35 +1,40 @@
 .customer {
-    overflow: hidden;
     &__row {
         padding: 120px 0 180px;
     }
+    
     &__title {
         text-align: center;
         padding-bottom: 80px;
     }
+
     &__card {
         display: flex;
         gap: 30px;
         position: relative;
+        overflow: hidden;
     }    
+
     &__list {
         display: flex;
         padding-bottom: 43px;
         flex-direction: column;
     }
+
     &__slider {
         display: flex;
-        gap: 45px;
+        gap: 45px;      
         &_control {
             display: flex;
             flex-direction: row;
             justify-content: center;
             position: absolute;
-            right: 95px;
+            right: 140px;
             bottom: 45px;
         }
 
     }
+
     &__button {
         border: none;
         background:  #e7e5f4;
@@ -50,8 +55,8 @@
         background: $white;
         border-radius: 21px;
         width: 528px;
-        height: 239px;
         padding: 43px;
+        height: fit-content; 
         &_col {
             margin-left: 21px;
         }
@@ -73,7 +78,7 @@
             margin-left: auto;
         }
         &_img {
-            background: url(/img/customer_foto.jpg) no-repeat center center;
+            background: url(/src/img/customer_foto.jpg) no-repeat center center;
             border-radius: 50px;
             width: 71px;
             height: 71px;
@@ -93,18 +98,19 @@
         }
         }
         &_rating {
-            background: url(/img/Stars.png)no-repeat;
-            width: 138px;
+            display: flex;
+            gap: 4px;
             height: 23px;
         }
         &_top {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 32px;
+            display: none;
+            &-active {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 32px;
+            }
         }
-        &-active {
-            height: 346px;
-        }
-     }
-  
+    }
+
+
 }

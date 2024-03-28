@@ -38,7 +38,7 @@
         position: absolute;
         width: 30px;
         height: 2px;
-        background-color: black
+        background-color: $purple;
         }
         span::before {
         content: '';
@@ -62,13 +62,15 @@
         font-family: $Inter;
         font-weight: 500;
         align-items: center;     
-        color: $madium-gray;
-        font-size: 17.83px;  
+        
     }
 }
 
 .menu {
     &__link {
+        color: $madium-gray;
+        font-size: 17.83px;  
+        line-height: 27px;
         &:hover {
             color: $purple;
         }

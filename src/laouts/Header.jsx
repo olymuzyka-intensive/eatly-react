@@ -18,7 +18,7 @@ function Header() {
                                 <Link to="/blog" className="menu__link">Blog</Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="/aboutus" className="menu__link">About Us</Link>
+                                <Link to="/aboutUs" className="menu__link">About Us</Link>
                             </li>
                             <li className="menu__item">
                                 <Link to="/contact" className="menu__link">Contact</Link>

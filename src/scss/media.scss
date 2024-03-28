@@ -33,6 +33,11 @@
     }
 
     .support {
+        &__row {
+            &_left {
+                width: 480px;
+            }
+        }
         &__title {
             &_img {
                 &-2 {
@@ -48,6 +53,14 @@
     .premium {
         background-size: 100% 100%;
     }
+
+    .customer {
+        &__slider {
+            &_control {
+                right: 0px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -55,10 +68,6 @@
         padding: 12.68px 19.02px;
         font-size: 12.68px;
         &--shop {
-            width: 60px;
-            height: 45.38px;
-            padding: 5px 5px;
-            border-radius: 12.6px;
             svg {
                 width: 25px;
                 height: 25px;
@@ -69,14 +78,12 @@
             font-weight: 600;
             font-size: 12.6px;
             line-height: 19px;
-            // width: 272px;
             height: 53px;
             padding: 16px;
         }
+
         &--send {
             border-radius: 12.6px;
-            // width: 100%;
-            // height: 54px;
             font-weight: 500;
             font-size: 14.8px;
             line-height: 22px;
@@ -88,25 +95,25 @@
         }
 
         &--apply-coupon {
-            // height: 50px;
-            // width: 94px;
-            border-radius: 12.6px;
+            border-radius: 7.09px;
             font-weight: 500;
             font-size: 12.8px;
             line-height: 15px;
+            padding: 17.4px 28.44px;
         }
+
         &--payment {
-            border-radius: 12.6px;
-            // height: 55px;
+            border-radius: 7.09px;
             margin-top: 39px;
             font-size: 14.2px;
             line-height: 21px;
             font-weight: 600;
+            letter-spacing: -0.01em;
             padding: 16px;
         }
+
         &--get-started {
             font-weight: 500;
-            // width: 110px;
             border-radius: 8.9px;
             font-size: 11.6px;
             line-height: 17px;
@@ -121,11 +128,11 @@
         &--download {
             display: flex;
             font-weight: 500;
-            // width: 133px;
+            width: 133px;
+            padding: 3px;
             border-radius: 8.9px;
             font-size: 12.85px;
             line-height: 16px;
-            height: 44.8px;
             margin-top: 23.5px;
             span {
                 margin-left: 5px;
@@ -135,7 +142,13 @@
                 }
             }
         }
-         &--subscribe {
+        
+        &--view-all {
+            span {
+                margin-top: 3px;
+            }
+        }
+        &--subscribe {
             font-weight: 500;
             // width: 94px;
             border-radius: 8.9px;
@@ -163,13 +176,98 @@
         }
     }
 
-    .header {        
+    .header {
         &__row {
             img {
             width: 79.5px;
             height: 30px;
             }
-        }        
+        }     
+        &__button {
+            margin-right: 15px;
+        }
+
+        &__burger {
+            display: flex; 
+            position: relative; 
+        }
+
+        &__burger.active { 
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            z-index: 1000;                 
+            span {                
+                width: 0;
+            }
+            span::before {
+                position: absolute;
+                transform: rotate(45deg);
+                top: 0;
+                left: 0;
+                width: 30px;
+                transition: transform 0.5s linear;
+                animation-delay: 2s;
+                background-color: white;
+            }
+            span::after {
+                position: absolute;
+                transform: rotate(-45deg);    
+                top: 0;       
+                left: 0;
+                width: 30px;
+                transition: transform 0.5s linear;
+                background-color: white;
+            }                      
+        }
+
+        &__menu {
+            display: none;                 
+        }
+
+        &__menu.active {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 20px;
+            right: 10px;
+            top: 30px;
+            background: #6C5FBC no-repeat;
+            height: 40%;
+            width: 40%;
+            border-radius: 50% 4% 40% 40%;
+            z-index: 999;
+            font-size: 17px;
+            line-height: 24px;
+            box-shadow: 2px 2px 6px darkblue;
+            animation: show 0.5s forwards;
+            animation-delay: -2s;
+            @keyframes show {
+                0% {
+                    transform: scale(0);
+                }
+                25% {
+                    transform: scale(0.25);
+                }
+                50% {
+                    transform: scale(0.5);
+                }
+                75% {
+                    transform: scale(0.75);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            a {
+                color: white;
+            }
+            a:hover {
+                text-shadow: rgb(32, 31, 30) 1px 0 10px;
+            }         
+        }   
+          
     }
 
     .footer {
@@ -200,34 +298,44 @@
         }
         
         &__row {
-            background-size: 429px 384px;
+            background-size: 483px 431px;
         }
     }
         
-    .quality {
-        padding-top: 73px;
-        
+    .quality {      
         &__row {
+            padding: 73px 0 85.33px;
             background-position: 78px 73.6px;
             background-size: 216px auto;
-            height: 530px;
         }
+
         &__col {
             width: 400px;
         }
+
         &__title {
         font-size: 36px;
-        padding: 55px 0 45px;
+        padding: 15px 0 45px;
         }
+
         li {
         font-size: 14.5px;
         padding-bottom: 19.25px;
+        line-height: 21.7px;
         }
-        &__decor-2 {
-            left: 110px;
-            top: 30px;
-            width: 100px;
-            height: 62px;
+
+        &__decor {
+            &-2 {
+                left: 110px;
+                top: 30px;
+                width: 100px;
+                height: 62px;
+            }
+            &-3 {
+                left: 300px;
+                width: 37px;
+                top: -15px;
+            }
         }
     }
 
@@ -272,6 +380,7 @@
             padding: 2px 5.5px;
             &_card {
                 margin-top: 140px;
+                padding: 0 16.4px 19.48px 21.5px;
             }
         }
         &__comment {
@@ -306,7 +415,6 @@
         }
         &__cards {
             margin-bottom: 46.5px;
-            justify-content: center;
             gap: 21.89px;
         }
     }
@@ -385,13 +493,17 @@
         &__row {
             padding: 71.5px 0 134px;
         }
+
+        &__slider {
+            gap: 29.11px;
+            &_control {
+                right: 110px;
+            }
+        }
+
         &__item {
             width: 375.5px;
-            height: 170px;
             padding: 27px 30.5px;
-            &-active {
-                height: 246px;
-            } 
             &_img {
                 width: 50.52px;
                 height: 50.52px;
@@ -416,6 +528,7 @@
                 height: 31.5px;
             }
         }
+
         &__button {
             width: 135px;
             height: 7.82px;
@@ -426,6 +539,19 @@
         &__row {
             width: 492px;
         }
+
+        &__cards {
+            &_decor {
+                &-2 {
+                    right: -90px;
+                    width: 85px;
+                }
+                &-3 {
+                    left: -90px;
+                    width: 85px;
+                }
+            }
+        } 
         &__item {
             width: 485px;
             &_subtitle {
@@ -455,16 +581,21 @@
                 }
             }
         }
-        &__form form{
-            input {     
-                width: 385px;
-                height: 50px;
+
+        &__form {
+            gap: 5.69px;
+            input {    
+                border-radius: 7.09px; 
+                width: 384.71px;
                 background-size: 15.5px 21.3px;
+                padding: 17.7px 0 17.4px 60px;
             }
             input::placeholder {
                 font-size: 12.8px;
+                line-height: 15px;
             }
         }
+
         &__price {
             &_sub {
                 font-size: 14.2px;
@@ -477,6 +608,7 @@
                 letter-spacing: -0.02em;
             }
         }
+
         &__pay {
             &_item:not(:last-child) {
                 padding-top: 11px;
@@ -602,16 +734,21 @@
     }
 
     .support {
-        &__row {
-            height: 582px;
+        padding: 145px 0 155px;
+        &__row {            
+            input, textarea {
+                font-size: 12.88px;
+                line-height: 19.3px;
+                padding: 18.59px 18.59px 18.59px 18.02px;
+                border-radius: 12.6px;
+            }
             input {
-                height: 56.20;
                 margin-bottom: 18.5px;
             }
             textarea {
-                height: 245px;
                 margin-top: 18.5px;
                 margin-bottom: 25px;
+                padding: 16.1px 16.1px 209.23px 16.1px;
             }
             &_left {
                 width: 377px;
@@ -619,7 +756,7 @@
                 background-position: 5.5% 5.75%;
             }
             &_right {
-                width: 351px;
+                width: 350.58px;
             }
         }
         &__title {
@@ -633,13 +770,18 @@
                 }
                 &-2 {
                     width: 216px;
-                    top: 260px;
-                    left: 290px;
-                }
+                    top: 240px;
+                    left: 270px;
+                }               
                 &-3 {
                     width: 100px;
-                    bottom: -60px;
+                    // bottom: -60px;
                     left: -70px;
+                }
+                &-4 {
+                    position: absolute;
+                    right: -180px;
+                    top: 210px;
                 }
             }
             &_right {
@@ -674,8 +816,7 @@
 @media (max-width: 768px) {
     .btn {
         &--shop {
-            height: 41.42px;
-            border-radius: 11.45px;
+            top: -5px;
             svg {
                 width: 25px;
                 height: 25px;
@@ -689,16 +830,14 @@
             font-size: 14.4px;
             line-height: 22px;
             letter-spacing: 0.03em;
-            // width: 272px;
         }
         &--send {
             border-radius: 11.45px;
-            width: 100%;
             font-weight: 500;
             font-size: 13px;
             line-height: 20px;
             letter-spacing: 0.03em; 
-            // height: 61px;   
+            padding: 18px;  
         }
         &--apply {
             border-radius: 11.45px;
@@ -711,23 +850,19 @@
         }
     
         &--apply-coupon {
-            border-radius: 11.45px;
             font-weight: 500;
             font-size: 10.8px;
             line-height: 13px;
             letter-spacing: -0.02em;
         }
         &--payment {
-            border-radius: 11.45px;
             font-size: 12px;
             line-height: 18px;
             letter-spacing: -0.01em;        
-            width: 100%;
             margin-top: 39px;
            }
         &--get-started {
             font-weight: 500;
-            // width: 125px;
             border-radius: 9.9px;
             font-size: 13px;
             line-height: 20px;
@@ -736,7 +871,6 @@
         &--Go-pro {
             font-weight: 500;
             border-radius: 9.9px;
-            // width: 78px;
             font-size: 13px;
             line-height: 20px;
             letter-spacing: 0.01em;
@@ -744,7 +878,6 @@
         &--download {
             display: flex;
             font-weight: 500;
-            // width: 133px;
             border-radius: 9.9px;
             font-size: 12px;
             line-height: 15px;
@@ -756,7 +889,6 @@
         &--subscribe {
             font-size: 15px;
             font-weight: 500;
-            // width: 94px;
             border-radius: 9.9px;
             font-size: 9.6px;
             line-height: 14px;
@@ -767,7 +899,6 @@
             font-weight: 600;
             font-size: 11.5px;
             line-height: 14px;
-            // width: 174.5px;
             border-radius: 9.9px;
             span {
                 margin-left: 15px;
@@ -775,96 +906,11 @@
             }        
         }        
     }
-
-    .header {
-        &__button {
-            margin-right: 15px;
-        }
-
-        &__burger {
-            display: flex; 
-            position: relative; 
-        }
-
-        &__burger.active { 
-            position: absolute;
-            right: 40px;
-            top: 40px;
-            z-index: 1000;                 
-            span {                
-                width: 0;
-            }
-            span::before {
-                position: absolute;
-                transform: rotate(45deg);
-                top: 0;
-                left: 0;
-                width: 30px;
-                transition: transform 0.5s linear;
-                animation-delay: 2s;
-                background-color: white;
-            }
-            span::after {
-                position: absolute;
-                transform: rotate(-45deg);    
-                top: 0;       
-                left: 0;
-                width: 30px;
-                transition: transform 0.5s linear;
-                background-color: white;
-            }                      
-        }
-
-        &__menu {
-            display: none;                 
-        }
-
-        &__menu.active {
-            display: flex;
-            position: absolute;
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 20px;
-            right: 10px;
-            top: 30px;
-            background: #6C5FBC no-repeat;
-            height: 40%;
-            width: 40%;
-            border-radius: 50% 4% 40% 40%;
-            z-index: 999;
-            font-size: 17px;
-            line-height: 24px;
-            box-shadow: 2px 2px 6px darkblue;
-            animation: show 0.5s forwards;
-            animation-delay: -2s;
-            @keyframes show {
-                0% {
-                    transform: scale(0);
-                }
-                25% {
-                    transform: scale(0.25);
-                }
-                50% {
-                    transform: scale(0.5);
-                }
-                75% {
-                    transform: scale(0.75);
-                }
-                100% {
-                    transform: scale(1);
-                }
-            }
-            a {
-                color: white;
-            }
-            a:hover {
-                text-shadow: rgb(32, 31, 30) 1px 0 10px;
-            }         
-        }   
-          
-    }
-    
+  
     .promo {
+        &__row {
+            background-size: 400px 365px;
+        }
         &__left {
             width: 470px;
         }
@@ -881,8 +927,15 @@
 
     .quality {
         &__row {
-            background-position: 50px 73.6px;
+            background-position: 30px 73.6px;
         }
+
+        &__decor {
+            &-3 {
+                left: 250px;
+            }
+        }
+
         &__col {
             width: 350px;
             margin-left: 45%;
@@ -890,20 +943,18 @@
     }
 
     .customer {
-        &__item {
-            width: 362.59px;
-            height: 180px;
-            &-active {
-                height: 260px;
-            }
-        }
+        // &__item {
+        //     width: 88vw;
+        // }
         &__slider {
             &_control {
-                right: -25px;
+                right: 2%;
+                bottom: 10px;
+                width: 100%;
             }
         }
         &__button {
-            width: 115px;
+            width: 225px;
         }
     }
 
@@ -914,20 +965,37 @@
     }
 
     .support {
-        &__row {
+        padding: 51px 0 100px;
+        &__row {            
+            input, textarea {
+                font-size: 11.04px;
+                line-height: 17px;
+            }
+            input {
+                padding: 20.5px 15.93px;
+                margin-bottom: 12px;
+            }
+            textarea {
+                padding: 13.79px 16.55px 179.21px;
+                margin-top: 38.76px;
+                margin-bottom: 22.1px;
+            }
+            &_left {
+                height: 573.24px;
+            }
             &_right {
                 width: 320px;
             }
         }
         &__title {
             &_img {
-                &-2 {
-                    top: 215px;
-                    left: 196px;
+                &-2, &-4 {
+                    display: none;
                 }
                 &-3 {
-                    bottom: -70px;
-                    left: -45px;
+                    bottom: -105px;
+                    left: -55px;
+                    width: 79px;
                 }
             }
         }
@@ -1029,6 +1097,7 @@
         &__cards {
             gap: 30px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         &__item {
@@ -1083,19 +1152,19 @@
 
 @media (max-width: 426px) {
     .btn {  
-        &--shop {
-            width: 40px;
-            height: 30px;            
-            svg {
-                width: 20px;
-                height: 20px;
-                top: 15%;
-                left: 23%
-            }
-        }
+        // &--shop {
+        //     width: 40px;
+        //     height: 30px;            
+        //     svg {
+        //         width: 20px;
+        //         height: 20px;
+        //         top: 15%;
+        //         left: 23%
+        //     }
+        // }
         
         &--download {
-            margin: 35px auto;
+            margin: 0 auto;
             // width: 121.77px;
             // height: 41.24px;
         }
@@ -1103,15 +1172,16 @@
             font-size: 20px;
             line-height: 45px;
         }
-        // &--send {
-        //     height: 81px;
-        // }
+        &--payment {
+            padding: 15px;
+            margin-top: 0;
+        }
     }
 
     .promo {
         &__row {
             background-size: 323px 288px;
-            background-position: center 515px;
+            background-position: center 480px;
             display: flex;
             text-align: center;
             width: 100%;
@@ -1173,27 +1243,35 @@
     }
 
     .quality {
-        padding: 67px 0px 0px;
         &__row {
-            height: 840px;
-            width: 100%;
-            background-position: 100px 410px;
+            padding: 47px 0px 570px;
+            background-position: 85px 460px;
         }
         
         &__col {
             margin-left: 0px;
             width: 100%;
         }
+
         &__title {
             padding-bottom: 37px;
             font-size: 30px;
             line-height: 34px;
             text-align: center;
         }
+
+        ul {
+            width: 315px;
+            margin-left: 20px;  
+            padding-bottom: 19px;      
+        }
+
         li {
             font-size: 11.96px;
             line-height: 18px;
+            padding-bottom: 16px;
         }
+
         &__decor {
             &-2 {
                 left: 25px;
@@ -1203,6 +1281,10 @@
                     width: 56.96px;
                     height: 101.14px;
                 }
+            }
+            &-3 {
+                left: 325px;
+                top: 40px;
             }
         }
 
@@ -1233,7 +1315,6 @@
         }
         &__slider {
             &_control {
-                right: 20px;
                 bottom: 0;
             }
         }
@@ -1366,16 +1447,17 @@
             }
             &_right {
                 width: 100%;
-                margin-left: 0;
-            }            
+            } 
+            textarea {
+                height: 210px;
+            }           
         }
         &__title {
             &_right {
                 display: block;
-                height: 150px;
                 margin-bottom: 46px;
                 text-align: center;
-                padding-top: 23.77px;
+                padding: 23.77px 0 97.23px;                
                 background:#6C5FBC;
                 color: white;
                 font-size: 30px;
@@ -1386,10 +1468,14 @@
             }
             &_img {
                 &-3 {
-                    display: none;
+                    width: 85px;
                     bottom: 385px;
-                    left: -45px;
-                    transform: rotate(51deg);                   
+                    left: -5px;
+                    top: -10px;
+                    transform: rotate(65deg);  
+                    path{
+                        stroke: white;
+                    }                 
                 }
             }
         }
@@ -1402,14 +1488,16 @@
         &__item {
             &_info {
                 width: 100%;
+                &-2 {
+                    padding-right: 20px;
+                }
             }
         }
         &__cards {
-            width: 95%;
             &_decor {
                 &-1 {
-                    top: -18px;
-                    right: -10px;
+                    top: -15px;
+                    right: -20px;
                     width: 20px;
                 }
                 &-2, &-3 {
@@ -1420,6 +1508,13 @@
         &__form form{
             input {
                 width: 70%;
+            }
+        }
+        &__pay {
+            &_item {
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: -0.02em;
             }
         }
     }
@@ -1481,7 +1576,7 @@
 
         &__bottom {
             position: relative;
-            right: -90px;
+            right: -95px;
             width: 290px;
             padding-top: 26px;
         }
@@ -1556,10 +1651,30 @@
 }
 
 @media (max-width: 376px) {
+    .btn {
+        &--apply-coupon {
+            padding: 15px 24px;
+        }
+    }
+
+    .promo {
+        &__row {
+            background-size: 278px 250px;
+            background-position: center 505px;
+        }
+        &__line {
+            left: 15px;
+        }
+    }
+
+    .container {
+        width: 85%;
+    }
+
     .btn {    
-        &--shop {
-            margin-right: -15px;
-        }    
+        // &--shop {
+        //     margin-right: -15px;
+        // }    
 
         // &--download {
         //     width: 121.77px;
@@ -1577,14 +1692,14 @@
             right: 55px;
         }
         &__burger {
-            margin-left: 80px;
+            margin-left: auto;
         }
     }
     
     .footer {
         &__bottom {
             width: 265px;
-            right: -70px;
+            right: -60px;
         }
     }
 
@@ -1595,9 +1710,11 @@
     }
 
     .shopping {
-        &__form form input {
+        &__form input {
             width: 75%;
-            padding-left: 60px;
+            padding: 15px 0;
+            padding-left: 38.5px;
+            background-position: 15px center;
         }
         &__item {
             height: 64.87px;            
@@ -1622,12 +1739,14 @@
                 }
             }
         }        
+        
     }
 
     .support {
         &__row {
             input, textarea {
-                font-size: small;
+                font-size: 11.03px;
+                line-height: 17px;
             }
         }
 
@@ -1658,8 +1777,22 @@
     }
 
     .quality {
+        ul {
+            margin-left: 0;
+        }
+
         &__row {
-            background-position: center 430px;
+            background-position: center 460px;
+        }
+
+        &__decor {
+            &-2 {
+                left: 10px;
+            }
+            &-3 {
+                left: 280px;
+                top: 45px;
+            }
         }
     }
 
@@ -1671,8 +1804,7 @@
 
     .customer {
         &__item {
-            width: 321.59px;
-            height: 265.15px;
+            width: 305px;
             padding: 10px;
         }
         &__title {
@@ -1680,12 +1812,12 @@
             line-height: 36px;
         }
         &__button {
-            width: 110px;
+            width: 100px;
         }
         &__slider {
             &_control {
-                right: 5px;
-                bottom: 0;
+                width: 100px;
+                left: 85px;
             }
         }
     }
@@ -1720,31 +1852,37 @@
             right: 10px;
         }
         &__bottom {
-            right: -20px;
+            right: -10px;
         }
     }
 
     .header {
-        &__burger {
-            margin-left: 30px;
-        } 
         &__menu.active {
             height: 64%;
             width: 96%;  
         }
     }
     
+    .promo {
+        &__row {
+            background-size: 240px 220px;
+            background-position: center 540px;
+        }
+        &__line {
+            left: 0px;
+        }
+    }
+
     .customer {
         &__item {
-            width: 275px;
+            width: 255px;
         }
         &__button {
-            width: 90px;
+            width: 80px;
         }
         &__slider {
             &_control {
-                right: 5px;
-                bottom: 0;
+                left: 70px;
             }
         }
     }
@@ -1781,14 +1919,20 @@
     }  
 
     .quality {
+        ul {
+            width: 250px;
+        }
         &__row {
-        background-position: 68px 465px;
+            background-position: 20px 465px;
         }
         &__decor {
             &-2 {
-                left: 0px;
+                left: -15px;
                 top: 50px;
                 transform: rotate(105.82deg);
+            }
+            &-3 {
+                display: none;
             }
         }
     }
@@ -1802,6 +1946,20 @@
                 width: 102.77px;
                 height: 102.77px;
             }
+        }
+    }
+
+    .shoping {
+        &__form {
+            input {
+                width: 223px;
+            }
+        }
+    }
+
+    .btn {
+        &--apply-coupon {
+            width: 79.22px;
         }
     }
 }

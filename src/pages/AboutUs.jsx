@@ -1,15 +1,18 @@
+
 import Header from "../laouts/Header"
 import Footer from "../laouts/Footer"
+
+import Map from "../laouts/Map"
+import About from "../laouts/About"
+import Questions from "../laouts/Questions"
 
 function AboutUs() {
     return (
         <>
         <Header/>
-        <div className="about">
-            <div className="container">
-                about
-            </div>               
-        </div>
+            <Map />
+            <About/>
+            <Questions/>
         <Footer/>
         </>
     )

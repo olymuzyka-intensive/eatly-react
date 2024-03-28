@@ -1,5 +1,5 @@
 .premium {
-    background: url(/img/premimum-bg.svg);
+    background: url(/src/img/premium-bg.svg);
     background-size: 100% auto;
     &__row {
         display: flex;
@@ -34,27 +34,24 @@
     
 }
 
-.quality {
-    padding: 100px 0;
+.quality {    
     &__row {
-        background: url(/img/quality-bg.png) no-repeat;
-        background-position: 10% top;
-        height: 745px;
+        padding: 100px 0 168px;
+        background: url(/src/img/quality-bg.png) no-repeat;
+        background-position: 10% 84.98px;
         border-bottom: 0.71px solid #CBCBCB;
-
     }
     &__col {
         margin-left: 53%;
         position: relative;
     }
     &__title {
-        padding: 85px 0;
+        padding-bottom: 63px;
         color: #18181B;
         font-size: 50.923px;
         font-weight: 700;
         line-height: 58.2px;
         text-transform: capitalize;
-        padding-bottom: 63px;
         span {
             color: $purple;
         }
@@ -69,12 +66,20 @@
         top: 50px;
         position: absolute;        
     }
+    &__decor-3 {
+        position: relative;
+        left: 420px;
+        top: -30px;
+    }
    
     ul {
         list-style: disc;
+        padding-bottom: 15px;
     }
     li {
+        font-family: $Inter;
         font-size: 20.5px;
+        line-height: 30.5px;
         padding-bottom: 27px;
         margin-left: 30px;
     }

@@ -1,15 +1,16 @@
 import Header from "../laouts/Header"
 import Footer from "../laouts/Footer"
+import Supersale from "../laouts/Supersale"
+import Questions from "../laouts/Questions"
+import Dishes from "../laouts/Dishes"
 
 function Menu() {
     return (
         <>
         <Header/>
-        <div className="menu">
-            <div className="container">
-                menu
-            </div>
-        </div>
+            <Supersale/>
+            <Dishes/>
+            <Questions/>
         <Footer/>
         </>
     )

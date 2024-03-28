@@ -7,6 +7,7 @@ import Blog from "./pages/Blog"
 import AboutUs from "./pages/AboutUs"
 import Contact from "./pages/Contact"
 import Cart from "./pages/Cart"
+import Popup from "./pages/Popup"
 
 export const AppContext = createContext();
 
@@ -21,7 +22,7 @@ function App() {
         <Route path="/aboutUs" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/cart" element={<Cart/>}/>
-
+        <Route path="/popup" element={<Popup/>}/>
       </Routes>
       </BrowserRouter>
     </>

@@ -57,22 +57,22 @@
             height: 275px;
         }
         &_img-1 {
-            background: url(/img/blog_img1.jpg) no-repeat;
+            background: url(/src/img/blog_img1.jpg) no-repeat;
         }
         &_img-2 {
-            background: url(/img/blog_img2.jpg) no-repeat;
+            background: url(/src/img/blog_img2.jpg) no-repeat;
         }
         &_img-3 {
-            background: url(/img/blog_img3.jpg) no-repeat;
+            background: url(/src/img/blog_img3.jpg) no-repeat;
         }
         &_img-4 {
-            background: url(/img/blog_img4.jpg) no-repeat;
+            background: url(/src/img/blog_img4.jpg) no-repeat;
         }
         &_img-5 {
-            background: url(/img/blog_img5.jpg) no-repeat;
+            background: url(/src/img/blog_img5.jpg) no-repeat;
         }
         &_img-6 {
-            background: url(/img/blog_img6.jpg) no-repeat;
+            background: url(/src/img/blog_img6.jpg) no-repeat;
         }
         &_card {
             margin-left: 20px;
@@ -81,7 +81,7 @@
             gap: 11.5px;
         }
         &_logo {
-            background: url(/img/blog_item_img.png) no-repeat center center;
+            background: url(/src/img/blog_item_img.png) no-repeat center center;
             width: 45px;
             height: 45px;
             border-radius: 25px;
@@ -195,7 +195,7 @@
     padding: 80px 0 80px;
     position: relative;
     &__row {
-        background: $purple url(/img/bg_supersale.png);
+        background: $purple url(/src/img/bg_supersale.png);
         border-radius: 30px;
         position: relative;
         display: flex;
@@ -252,10 +252,10 @@
 }
 
 .shopping {
-    padding-top: 120px;
+    padding: 120px 0 255px;
     &__row {
         position: relative;
-        width: 690px;
+        width: 692px;
         margin: 0 auto;
     }
     
@@ -288,22 +288,22 @@
         }
     }
 
-    &__form form {
-        margin: 90px auto 60px;
+    &__form {
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        margin: 89px 0 51.68px;
+        justify-content: space-between;
         input {     
-            width: 540px;
-            height: 70px;
+            width: 542px;
+            padding: 24px 0 24px 21px;
             border: none;
             border-radius: 14.2px;
             padding-left: 91px;
-            background: #EDEDED url(/img/coupon.svg) no-repeat;
+            background: #EDEDED url(/src/img/coupon.svg) no-repeat;
             background-position: 28.5px center;
             outline: 0;
-        }
-    
+        }    
+        
         input::placeholder {
             color: #AAABBA;
             font-family: $Poppins;
@@ -311,6 +311,7 @@
             font-weight: 500;
             line-height: 24px;
             letter-spacing: -0.02em;
+            padding: 25px 0;
         }
     }
 
@@ -322,13 +323,13 @@
         display: flex;
         justify-content: space-between;
         &:nth-child(1) {
-            background: $white url(/img/Food-1.png) no-repeat;
+            background: $white url(/src/img/Food-1.png) no-repeat;
             background-size: 100px 100px;
             background-position-y: bottom;    
         }
     
         &:nth-child(2) {
-            background: $white url(/img/Food-2.png) no-repeat;
+            background: $white url(/src/img/Food-2.png) no-repeat;
             background-size: 100px 100px;
             background-position-y: bottom;    
         }
@@ -358,7 +359,7 @@
                 height: 31.5px;
                 border: 1px solid black;
                 border-radius: 10px;
-                background: url(/img/Mins.svg) no-repeat;
+                background: url(/src/img/Mins.svg) no-repeat;
                 background-position: 50%;
                 cursor: pointer;
             }
@@ -389,7 +390,7 @@
                 height: 31.5px;
                 border: 0px;
                 border-radius: 10px;
-                background: $black url(/img/+.svg) no-repeat;
+                background: $black url(/src/img/+.svg) no-repeat;
                 background-position: 50%;
                 svg {
                     fill: $bgwhite;
@@ -416,9 +417,9 @@
         }    
     }
 
-    &__list {
-        position: relative;
-    }
+    // &__list {
+    //     position: relative;
+    // }
 
     &__pay {
         margin-bottom: 39px;
@@ -437,6 +438,7 @@
         }
         &_item:last-child {
             padding-top: 28.6px;
+            padding-bottom: 61px;
             font-size: 25px;
             font-weight: 600;
         }
@@ -464,17 +466,17 @@
     }  
 }
 
-.support {
-    padding: 120px 0;
+.support {    
+    padding: 210px 0;
     &__row {
+        
         display: flex;
-        height: 820px;
         position: relative;
         &_left {
             width: 530px;
             height: 100%;
             position: absolute;
-            background: $purple url(/img/decor10.svg) no-repeat;
+            background: $purple url(/srs/img/decor10.svg) no-repeat;
             background-position: 16.5% 5.75%;
             left: -100px;
             display: flex;
@@ -482,7 +484,7 @@
             align-items: center;
         }
         &_right {
-            width: 495px;
+            width: 493px;
             display: flex;
             flex-direction: column;
             // justify-content: space-between;
@@ -490,21 +492,20 @@
             position: relative;
         }
         input, textarea {
-            width: 100%;
-            height: 79px;
+            // width: 100%;
             border: 1px solid lightgray;
             outline: 0;
             border-radius: 17px;
             font-family: $Inter;
             font-size: 17px;
             line-height: 25px;
-            padding-left: 25px;
-            margin-bottom: 25px;
+            padding: 25.34px 26.5px;
+            margin-bottom: 26px;
         }
     
         textarea {
-            height: 345px;
-            padding-top: 25px;
+            // height: 345px;
+            padding: 22.65px 22.65px 294.35px 22.65px;
             overflow: hidden;
             resize:none;
             margin: 25px 0 43px;;
@@ -513,7 +514,11 @@
         input::placeholder, textarea::placeholder {
             text-transform: uppercase;
             font-weight: 600;
+            font-size: 16.89px;
+            line-height: 25px;
+            color: #B6B6B6;
         }
+
         input, textarea {
             &:hover {
                 border: 1px solid $purple;
@@ -533,21 +538,26 @@
         &_img {
             &-1 {
                 width: 336px;
-                height: 127.5px;
+                // height: 127.5px;
                 position: absolute;
                 top: 110px;
             }
             &-2 {
                 position: absolute;
                 left: 380px;
-                top: 265px;
+                top: 280px;
             }
             &-3 {
                 position: absolute;
-                bottom: -80px;
-                left: -125px;
+                bottom: -100px;
+                left: -100px;
                 width: 122px;
-            }                    
+            }             
+            &-4 {
+                position: absolute;
+                right: -215px;
+                top: 255px;
+            }       
         }
         &_right {
             color: #000;
@@ -611,7 +621,7 @@
         line-height: 25px;
         margin-left: 100px;
         padding-left: 20px;
-        list-style: url('/img/like.svg');
+        list-style: url('/src/img/like.svg');
         margin-top: 10px;
         }
     }
@@ -621,6 +631,13 @@
         font-weight: 400;
         line-height: 30px;
         margin-left: 50px;
+    }
+}
+
+.map {
+    iframe {
+        border: 0;
+        border-radius: 25px;
     }
 }
 
@@ -676,15 +693,15 @@
     }
     .input {
         &-name {
-            background: #EDEDED url(/img/UserIcon.svg) no-repeat;
+            background: #EDEDED url(/src/img/UserIcon.svg) no-repeat;
             background-position: 28.5px 50%;
         }
         &-email {
-            background: #EDEDED url(/img/Email.svg) no-repeat;
+            background: #EDEDED url(/src/img/Email.svg) no-repeat;
             background-position: 28.5px 50%;
         }
         &-phone {
-            background: #EDEDED url(/img/mobile.svg) no-repeat;
+            background: #EDEDED url(/src/img/mobile.svg) no-repeat;
             background-size: 19px;
             background-position: 28.5px 50%;
         }
@@ -697,7 +714,7 @@
     &__right {
         display: flex;
         flex-direction: column;
-        background: $purple url(/img/promo-bg.png) no-repeat;
+        background: $purple url(/src/img/promo-bg.png) no-repeat;
         background-position: 50% 20%;
         background-size: 550px;
         width: 50%;
