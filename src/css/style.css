@@ -223,7 +223,7 @@ h2 span {
   background: #6C5FBC;
   font-size: 15px;
   font-weight: 500;
-  width: 135px;
+  padding: 15.21px 25.39px;
   border-radius: 12.4px;
   color: #F9F9F9;
   line-height: 1.5;
@@ -270,17 +270,18 @@ h2 span {
   display: flex;
   background: #6C5FBC;
   font-weight: 500;
-  width: 200px;
-  border-radius: 12.4px;
+  width: 245px;
+  border-radius: 16.5px;
   font-size: 20.29px;
   color: #F9F9F9;
   line-height: 25.4px;
   text-transform: capitalize;
   align-items: center;
   justify-content: center;
+  padding: 16.9px 27.2px;
 }
 .btn--next-article span {
-  margin-left: 15px;
+  margin-left: 27.13px;
   margin-top: 10px;
 }
 .btn--next-article:hover {
@@ -982,7 +983,7 @@ h2 span {
   padding-bottom: 62px;
 }
 .content_logo {
-  background: url(/img/blog_item_img.png) no-repeat;
+  background: url(/src/img/blog_item_img.png) no-repeat;
   width: 55px;
   height: 55px;
 }
@@ -1034,28 +1035,24 @@ h2 span {
   position: relative;
 }
 .getsupersale__row {
+  padding: 60px 65px;
   background: #6C5FBC url(/src/img/bg_supersale.png);
   border-radius: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  padding-left: 60px;
-  height: 280px;
-  width: 100%;
 }
 .getsupersale__row_img {
   width: 274px;
   position: absolute;
-  right: 80px;
-  top: 60px;
+  right: 70px;
+  top: 70px;
 }
 .getsupersale__title {
   color: #FFF;
   font-size: 70px;
   font-weight: 800;
-  padding-bottom: 10px;
 }
 .getsupersale__form {
   position: relative;
@@ -1064,23 +1061,22 @@ h2 span {
 }
 .getsupersale__form_button {
   position: absolute;
-  left: 300px;
+  left: 293px;
 }
 .getsupersale input {
   width: 440px;
-  height: 70px;
+  padding: 22.5px;
   border: 1px solid #F9F9F9;
   border-radius: 14.2px;
-  padding-left: 22px;
   box-shadow: 0px 7.25333px 45.33334px 0px rgba(0, 0, 0, 0.1);
   outline: 0;
 }
 .getsupersale placeholder {
   color: #878787;
-  font-size: 16px;
+  font-size: 16.27px;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.488px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
   text-transform: capitalize;
 }
 

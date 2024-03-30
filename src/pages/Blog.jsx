@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import Header from "../laouts/Header"
 import Footer from "../laouts/Footer"
 
@@ -13,7 +15,7 @@ function Blog() {
                     </h2>
                     <ul className="blog__cards">
                         <li className="blog__item">
-                            <a href="blog_page.html">
+                            <Link to="/content">
                                 <div className="blog__item_img blog__item_img-1"></div>
                                 <div className="blog__item_title">
                                     How To Order Food ?
@@ -32,11 +34,11 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a>   
+                            </Link>   
                         </li>                                
                         
                         <li className="blog__item">
-                            <a href="blog_page.html">
+                            <Link to="/content">
                                 <div className="blog__item_img blog__item_img-2"></div>
                                 <div className="blog__item_title">
                                     How To Track The Order ?
@@ -55,11 +57,11 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a>    
+                            </Link>    
                         </li>
                         
                         <li className="blog__item">
-                            <a href="blog_page.html">
+                            <Link to="/content">
                                 <div className="blog__item_img blog__item_img-3"></div>
                                 <div className="blog__item_title">
                                     How To Manage Cards ?
@@ -78,12 +80,12 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         
                         
                         <li className="blog__item">
-                            <a href="blog_page.html">
+                            <Link to="/content">
                                 <div className="blog__item_img blog__item_img-4"></div>
                                 <div className="blog__item_title">
                                     Tips & Tricks For Business
@@ -102,11 +104,11 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a>   
+                            </Link>   
                         </li>
                     
                         <li className="blog__item">
-                            <a href="blog_page.html">    
+                            <Link to="/content">    
                                 <div className="blog__item_img blog__item_img-5"></div>
                                 <div className="blog__item_title">
                                     How To Control Money ?
@@ -125,12 +127,12 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                     
                         
                         <li className="blog__item">
-                            <a href="blog_page.html">  
+                            <Link to="/content">  
                                 <div className="blog__item_img blog__item_img-6"></div>
                                 <div className="blog__item_title">
                                     Top 5 Business Ideas
@@ -149,7 +151,7 @@ function Blog() {
                                         15 DEC, 2022
                                     </div>
                                 </div>
-                            </a> 
+                            </Link> 
                         </li>                           
                     </ul>
 

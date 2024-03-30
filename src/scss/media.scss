@@ -148,7 +148,6 @@
         &--Go-pro {
             font-weight: 500;
             border-radius: 8.9px;
-            // width: 78px;
             font-size: 11.6px;
             line-height: 17px;
         }
@@ -183,15 +182,15 @@
             line-height: 16px;
         }
         &--next-article {
-            // width: 174.5px;
-            border-radius: 8.9px;
+            width: 174.5px;
+            border-radius: 11.73px;
             font-weight: 600;
             font-size: 14.4px;
             line-height: 18px;
-            // height: 56.89px;
+            padding: 8px 16.52px 8px 19.35px;
             span {
                 margin-left: 15px;
-                margin-top: 10px;
+                margin-top: 7px;
             }        
         }
     }
@@ -484,7 +483,6 @@
             }
         }      
         input {
-            height: 53.35px;
             padding-left: 65px;
             background-position: 20.24px center;
         }
@@ -752,24 +750,25 @@
 
     .getsupersale {
         &__row {
-            height: 200px;
+            padding: 40.5px;
             &_img {
                 width: 195px;
                 height: 196px;
-                top: 55.5px;
-                right: 41px;
+                top: 51.24px;
+                right: 45.5px;
             }
         }
         &__title {
             font-size: 50px;
         }
         input {
-            width: 313px;
-            height: 50px;
+            width: 312.7px;
+            padding: 15.5px 143.22px 15.5px 15.5px;
+            border-radius: 10.12px;
         }
         &__form {
             &_button {
-                left: 215px;
+                left: 205px;
             }
         }
     }
@@ -942,8 +941,8 @@
             line-height: 14px;
             border-radius: 9.9px;
             span {
-                margin-left: 15px;
-                margin-top: 10px;
+                margin-left: 25px;
+                margin-top: 5px;
             }        
         }        
     }
@@ -1194,6 +1193,14 @@
             margin-left: 20px;
         }
     }
+
+    .getsupersale {
+        &__form {
+            &_button {
+                left: 210px;
+            }
+        }
+    }
 }
 
 @media (max-width: 426px) {
@@ -1370,8 +1377,7 @@
         }
     }
 
-    .supersale {
-        
+    .supersale {        
         &__row {
             flex-direction: column;
             align-items: center;
@@ -1547,6 +1553,7 @@
     }
 
     .shopping {
+        padding-bottom: 0;
         &__row {
             width: 100%;
         }
@@ -1581,12 +1588,6 @@
                 line-height: 14px;
                 letter-spacing: -0.02em;
             }
-        }
-    }
-
-    .getsupersale {
-        &__row {
-            display: none;
         }
     }
 
@@ -1713,6 +1714,33 @@
             line-height: 19px;
         }
     }    
+
+    .getsupersale {
+        padding: 67px 0 120px;
+        input {
+            width: 100%;
+        }
+        &__row {
+            padding: 35.64px 27.35px 95.73px 27.35px;
+            &_img {
+                width: 169px;
+                height: 170px;
+                top: 70%;
+                right: 25%;
+            }           
+        }
+        &__title {
+            font-size: 41.45px;
+            line-height: 62px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__form {
+            &_button {
+                left: 195px;
+            }
+        }
+    }
 }
 
 @media (max-width: 376px) {
@@ -1910,9 +1938,21 @@
             }
         }
     }
-    
-}
-    
+
+    .getsupersale {
+        &__form_button {
+            left: 150px;
+        }
+        placeholder {
+            font-size: 10.58px;
+            line-height: 16px;
+            letter-spacing: 0.03em;
+            padding-left: 5px;
+        }
+    }
+
+}       
+
 @media (max-width: 320px) {
     .footer {
         &__socials {
@@ -2032,5 +2072,9 @@
         &--apply-coupon {
             width: 79.22px;
         }
+    }
+
+    .getsupersale__form_button {
+        left: 102px;
     }
 }

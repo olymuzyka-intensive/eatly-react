@@ -138,7 +138,7 @@
     }
 
     &_logo {
-        background: url(/img/blog_item_img.png) no-repeat;
+        background: url(/src/img/blog_item_img.png) no-repeat;
         width: 55px;
         height: 55px;
     }
@@ -195,28 +195,24 @@
     padding: 80px 0 80px;
     position: relative;
     &__row {
+        padding: 60px 65px;
         background: $purple url(/src/img/bg_supersale.png);
         border-radius: 30px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
-        padding-left: 60px;
-        height: 280px;
-        width: 100%;
         &_img {
         width: 274px;
         position: absolute;
-        right: 80px;
-        top: 60px;
+        right: 70px;
+        top: 70px;
     }
     }
     &__title {
         color: #FFF;
         font-size: 70px;
         font-weight: 800;
-        padding-bottom: 10px;
     }
     &__form {
         position: relative;
@@ -224,25 +220,24 @@
         align-items:center;        
         &_button {
             position: absolute;
-            left: 300px;
+            left: 293px;
         }
     }
     input {     
         width: 440px;
-        height: 70px;
+        padding: 22.5px;
         border: 1px solid $bgwhite;
         border-radius: 14.2px;
-        padding-left: 22px;
         box-shadow: 0px 7.25333px 45.33334px 0px rgba(0, 0, 0, 0.10);
         outline: 0;
     }
 
     placeholder {
         color: #878787;
-        font-size: 16px;
+        font-size: 16.27px;
         font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0.488px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
         text-transform: capitalize;
     } 
 } 

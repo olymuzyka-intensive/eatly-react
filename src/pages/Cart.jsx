@@ -48,7 +48,7 @@ function Cart() {
                     <div>
                         <form className="shopping__form">
                             <input type="text" placeholder="Apply Coupon" value={discount} onChange={e => setDiscount(e.target.value)} />
-                            <button onClick={() => setDiscount(3.99)} type="submit" className="btn btn--apply-coupon">Apply</button>
+                            <button onClick={() => setDiscount(2.99)} type="submit" className="btn btn--apply-coupon">Apply</button>
                         </form>
                     </div>    
                     
