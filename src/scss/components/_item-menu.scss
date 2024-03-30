@@ -1,52 +1,56 @@
 .supersale {
-    padding-top: 120px;
-    padding-bottom: 75px;
     &__row {
-        position: relative;
+        padding: 120px 0 75px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 112px;
+        border-bottom: 0.71px solid #CBCBCB;
+
     }
+
     &__promo {
         display: flex;
         overflow: hidden;
         width: 60%;
         flex-direction: column;
+        // position: relative;
+
         &_decor {
             position: absolute;
-            top: -35px;
-            right: 460px;
+            top: 200px;
+            left: 58%;
         }
     }
+
     &__slider {
         display: flex;
-        width: 320%;
-        position: relative;
-        
+        width: 300%;
         &_item {
-            height: 250px;
-            width: 770px;
-            border-radius: 20px;
+            width: 760px;
+            border-radius: 18.69px;
             position: relative;
             background: url(/src/img/bg_supersale.png),  #6C5FBC;
-            padding: 30px 58.5px;
             margin-right: 10px;
             display: flex;
+            padding: 30px 0 107px 58.43px;
+
         }
         
         &_title {
             color: #FFF;
-            font-size: 70px;
+            font-size: 75px;
+            line-height: 112px;
             font-weight: 800;
-            // padding-bottom: 10px;
-        }
+        }        
         &_weekend {
             color: #7C6FCD;
-            font-size: 87.5px;
+            font-size: 81px;
+            line-height: 131px;
             font-weight: 800;
             position: absolute;
-            top: 90px;
+            top: 95px;
+            letter-spacing: -0.2rem;
         }
         &_img {
             width: 254px;
@@ -55,7 +59,7 @@
             right: 35.7px;
             top: 50px;
         }
-        }
+    }
 
     &__line {
         display: flex;
@@ -77,15 +81,26 @@
         }
     }    
 
+    
+}
+.search {
+    margin-top: auto;
+    position: relative;
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
     input {     
-        height: 75px;
         border: none;
-        border-radius: 14.2px;
-        padding-left: 91px;
-        margin-top: 88px;        
-        background: #EDEDED url(/src/img/Search.svg) no-repeat;
+        border-radius: 18.69px;
+        padding: 30.5px 0 25.5px 31px;
+        margin-top: auto;        
+        background: #EDEDED;
         background-position: 28.5px 19px;
         outline: 0;
+        width: 100%;
     }
 
     input::placeholder {
@@ -94,9 +109,8 @@
         font-size: 20.5px;
         font-weight: 500;
         line-height: 24px;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.02em;        
     }
-
 }
 
 .category {
@@ -106,12 +120,11 @@
     width: 377px;
     background: $bgwhite;
     border-radius: 23.8px;
-    box-shadow: 5.71212px 9.5202px 28.5606px 0.95202px rgba(108, 95, 188, 0.12); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 5.71212px 9.5202px 28.5606px 0.95202px rgba(108, 95, 188, 0.12);
 
     &__card {
         &_col {
-            padding: 13px 0 29px;
+            padding: 13px 0 28.88px;
             display: flex;
             flex-direction: column;
             gap: 9px;
@@ -126,6 +139,7 @@
             font-size: 15.5px;
             font-weight: 500;
             line-height: 29px; 
+            cursor: pointer;
             &-active {
                 color: $purple;
             }
@@ -153,7 +167,10 @@
             height: 25.45px;
             bottom: -10px;
             left: 35px;
-            cursor: pointer;
+            &:hover {
+                cursor: grab;
+            }
+            
         }
     }
     &__list {
@@ -161,12 +178,12 @@
         flex-direction: row;
         justify-content: space-between;
         padding-top: 18px;
-        padding-bottom: 26.5px;
+        padding-bottom: 25.5px;
     }
 
     &__item {
         width: 66px;
-        height: 96.5px;
+        // height: 96.5px;
         border-radius: 14.7px;
         cursor: pointer;
         &:nth-child(1) {
@@ -203,6 +220,8 @@
     }
     &__item_title {
         font-size: 13px;
+        line-height: 18px;
+
         font-weight: 500;
         text-align: center;
         padding: 68px 0 11px;

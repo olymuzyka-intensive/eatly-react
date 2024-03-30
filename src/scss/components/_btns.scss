@@ -145,7 +145,7 @@
 
     &--apply {
         background: $purple;
-        border-radius: 17.8px;
+        border-radius: 13.65px;
         color: $bgwhite;
         line-height: 1.5;
         text-transform: capitalize;
@@ -244,5 +244,11 @@
         background: $bgwhite;
         color: $purple;
         border: 1px solid $purple;
+    }
+    &--search {
+        background: none;
+        position: absolute;
+        bottom: -5px;
+        right: 0px;
     }
 }

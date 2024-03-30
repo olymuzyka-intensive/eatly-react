@@ -40,6 +40,7 @@ h2 span {
 }
 
 .container {
+  max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
@@ -48,9 +49,8 @@ h2 span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 48px;
-  padding-bottom: 24.6px;
   border-bottom: 0.71px solid #CBCBCB;
+  padding: 34px 0px 24.6px;
 }
 .header__nav {
   display: flex;
@@ -237,7 +237,7 @@ h2 span {
 }
 .btn--apply {
   background: #6C5FBC;
-  border-radius: 17.8px;
+  border-radius: 13.65px;
   color: #F9F9F9;
   line-height: 1.5;
   text-transform: capitalize;
@@ -324,6 +324,12 @@ h2 span {
   background: #F9F9F9;
   color: #6C5FBC;
   border: 1px solid #6C5FBC;
+}
+.btn--search {
+  background: none;
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
 }
 
 .promo__row {
@@ -761,6 +767,7 @@ h2 span {
 .questions__item_questions {
   display: flex;
   flex-direction: column;
+  width: 95%;
 }
 .questions__item_question {
   display: none;
@@ -777,18 +784,13 @@ h2 span {
 }
 .questions__item_button {
   background: url(/src/img/Plus.svg) no-repeat;
-  background-position-x: right;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  right: 100px;
+  width: 31px;
+  height: 31px;
   margin-top: 20px;
+  margin-right: 12px;
+  margin-left: auto;
 }
 .questions__item_button-active {
-  background: url(/src/img/minus.svg) no-repeat;
-  background-position-x: right;
-}
-.questions__item_button:active {
   background: url(/src/img/minus.svg) no-repeat;
   background-position-x: right;
 }
@@ -1087,7 +1089,7 @@ h2 span {
 }
 
 .shopping {
-  padding: 120px 0 255px;
+  padding: 120px 0 180px;
 }
 .shopping__row {
   position: relative;
@@ -1542,16 +1544,13 @@ h2 span {
   width: 90%;
 }
 
-.supersale {
-  padding-top: 120px;
-  padding-bottom: 75px;
-}
 .supersale__row {
-  position: relative;
+  padding: 120px 0 75px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 112px;
+  border-bottom: 0.71px solid #CBCBCB;
 }
 .supersale__promo {
   display: flex;
@@ -1561,35 +1560,36 @@ h2 span {
 }
 .supersale__promo_decor {
   position: absolute;
-  top: -35px;
-  right: 460px;
+  top: 200px;
+  left: 58%;
 }
 .supersale__slider {
   display: flex;
-  width: 320%;
-  position: relative;
+  width: 300%;
 }
 .supersale__slider_item {
-  height: 250px;
-  width: 770px;
-  border-radius: 20px;
+  width: 760px;
+  border-radius: 18.69px;
   position: relative;
   background: url(/src/img/bg_supersale.png), #6C5FBC;
-  padding: 30px 58.5px;
   margin-right: 10px;
   display: flex;
+  padding: 30px 0 107px 58.43px;
 }
 .supersale__slider_title {
   color: #FFF;
-  font-size: 70px;
+  font-size: 75px;
+  line-height: 112px;
   font-weight: 800;
 }
 .supersale__slider_weekend {
   color: #7C6FCD;
-  font-size: 87.5px;
+  font-size: 81px;
+  line-height: 131px;
   font-weight: 800;
   position: absolute;
-  top: 90px;
+  top: 95px;
+  letter-spacing: -0.2rem;
 }
 .supersale__slider_img {
   width: 254px;
@@ -1617,17 +1617,28 @@ h2 span {
   border-radius: 55.5px;
   background: #6C5FBC;
 }
-.supersale input {
-  height: 75px;
+
+.search {
+  margin-top: auto;
+  position: relative;
+}
+.search input[type=search]::-webkit-search-decoration,
+.search input[type=search]::-webkit-search-cancel-button,
+.search input[type=search]::-webkit-search-results-button,
+.search input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+.search input {
   border: none;
-  border-radius: 14.2px;
-  padding-left: 91px;
-  margin-top: 88px;
-  background: #EDEDED url(/src/img/Search.svg) no-repeat;
+  border-radius: 18.69px;
+  padding: 30.5px 0 25.5px 31px;
+  margin-top: auto;
+  background: #EDEDED;
   background-position: 28.5px 19px;
   outline: 0;
+  width: 100%;
 }
-.supersale input::-moz-placeholder {
+.search input::-moz-placeholder {
   color: #AAABBA;
   font-family: "Poppins", sans-serif;
   font-size: 20.5px;
@@ -1635,7 +1646,7 @@ h2 span {
   line-height: 24px;
   letter-spacing: -0.02em;
 }
-.supersale input::placeholder {
+.search input::placeholder {
   color: #AAABBA;
   font-family: "Poppins", sans-serif;
   font-size: 20.5px;
@@ -1652,10 +1663,9 @@ h2 span {
   background: #F9F9F9;
   border-radius: 23.8px;
   box-shadow: 5.71212px 9.5202px 28.5606px 0.95202px rgba(108, 95, 188, 0.12);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .category__card_col {
-  padding: 13px 0 29px;
+  padding: 13px 0 28.88px;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -1670,6 +1680,7 @@ h2 span {
   font-size: 15.5px;
   font-weight: 500;
   line-height: 29px;
+  cursor: pointer;
 }
 .category__card_history-active {
   color: #6C5FBC;
@@ -1696,18 +1707,19 @@ h2 span {
   height: 25.45px;
   bottom: -10px;
   left: 35px;
-  cursor: pointer;
+}
+.category__title_circle:hover {
+  cursor: grab;
 }
 .category__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 18px;
-  padding-bottom: 26.5px;
+  padding-bottom: 25.5px;
 }
 .category__item {
   width: 66px;
-  height: 96.5px;
   border-radius: 14.7px;
   cursor: pointer;
 }
@@ -1741,6 +1753,7 @@ h2 span {
 }
 .category__item_title {
   font-size: 13px;
+  line-height: 18px;
   font-weight: 500;
   text-align: center;
   padding: 68px 0 11px;

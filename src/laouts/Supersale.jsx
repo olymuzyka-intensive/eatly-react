@@ -5,6 +5,7 @@ function Getsupersale() {
             <div className="container"> 
                 <div className="supersale__row">
                     <div className="supersale__promo">
+                    <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
                         <ul className="supersale__slider">
                                 <li className="supersale__slider_item supersale__slider_item-active">
                                     <div className="supersale__slider_title">GET 50%</div>
@@ -22,15 +23,16 @@ function Getsupersale() {
                                     <img className="supersale__slider_img" src="/src/img/Food-1.png" alt="supersale"/>
                                 </li>
                         </ul>
-                        <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
 
                         <ul className="supersale__line">
                             <li className="supersale__line_item supersale__line_item-active"></li> 
                             <li className="supersale__line_item"></li> 
                             <li className="supersale__line_item"></li>
                         </ul>
-
-                        <input type="search" placeholder="Search"></input>
+                        <div className="search">
+                            <input type="search" placeholder="Search"/>
+                            <button className="btn btn--search" type="submit"> <img src="src/img/Search.svg" alt="search"/></button>
+                        </div>
                     </div>
                     
                     <div className="category">

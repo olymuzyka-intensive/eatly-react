@@ -1,5 +1,4 @@
-.questions {
-    
+.questions {    
     &__row {
         padding: 171.5px 0 164.5px;
     }
@@ -48,6 +47,7 @@
         &_questions {
             display: flex;
             flex-direction: column;
+            width: 95%;
         }
 
         &_question {
@@ -67,20 +67,16 @@
 
         &_button {
             background: url(/src/img/Plus.svg) no-repeat;
-            background-position-x: right;
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            right: 100px;
+            width: 31px;
+            height: 31px;
             margin-top: 20px;
+            margin-right: 12px;
+            margin-left: auto;
+            
             &-active {
                 background: url(/src/img/minus.svg) no-repeat;
                 background-position-x: right;
-            }
-            &:active {
-                background: url(/src/img/minus.svg) no-repeat;
-                background-position-x: right;
-            }
+            }            
         }        
     }
 }
