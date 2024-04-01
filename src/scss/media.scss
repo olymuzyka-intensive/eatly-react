@@ -22,6 +22,16 @@
     .supersale {
         &__promo {
             &_decor {
+                left: 57%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .supersale {
+        &__promo {
+            &_decor {
                 left: 58%;
             }
         }
@@ -451,9 +461,8 @@
         }
 
         &__promo {
-            width: 65%;
             &_decor {
-                left: 60%;
+                left: 58%;
                 top: 180px;
             }
         }
@@ -465,6 +474,7 @@
                 padding-bottom: 67.92px;
                 padding-left: 41.55px;
                 border-radius: 13.29px;
+                margin-right: 5px;
             }
             &_title {
                 font-size: 53.33px;
@@ -490,7 +500,6 @@
 
     .category {
         width: 268px;
-        height: 420px;
         padding: 22.75px;
         padding-bottom: 27.75px;         
         &__title {
@@ -768,7 +777,7 @@
         }
         &__form {
             &_button {
-                left: 205px;
+                left: 207px;
             }
         }
     }
@@ -1078,8 +1087,8 @@
         &__promo {
             width: 85%;
             &_decor {
-                right: 200px;
-                top: 185px;
+                left: 61%;
+                top: 190px;
                 width: 40px;
             }
         }
@@ -1106,7 +1115,7 @@
     }
 
     .category {
-        width: 300px;
+        width: 290px;
         padding: 10.75px;
         &__price {
             margin-bottom: 25px;
@@ -1197,7 +1206,7 @@
     .getsupersale {
         &__form {
             &_button {
-                left: 210px;
+                left: 212px;
             }
         }
     }
@@ -1375,6 +1384,9 @@
                 bottom: 0;
             }
         }
+        &__item {
+            width: 353px;
+        }
     }
 
     .supersale {        
@@ -1388,7 +1400,7 @@
             &_decor {
                 top: 150px;
                 width: 32px;
-                left: 88%;
+                left: 90%;
             }
         }
         &__slider {
@@ -1458,11 +1470,14 @@
     }   
     
     .category {
+        width: 100%;
+        padding: 26.82px;
+        padding-bottom: 32.72px;
         &__item {
             width: 55.48px;
             height: 80.76px;
             &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-                background-size: 28.96px 28.96px;
+                background-size: 28.98px 28.98px;
             }
             &_title {
                 font-size: 11px;
@@ -1891,7 +1906,7 @@
 
     .questions {
         &__header_decor {
-            right: 35px;
+            right: 30px;
         }
         &__item_button {
             margin-right: 5px;
@@ -2005,6 +2020,7 @@
 
     .category {
         width: 275px;
+        padding: 15px 15px 20px 15px;
     }
 
     .questions {
@@ -2049,6 +2065,11 @@
     }
    
     .supersale {
+        &__promo {
+            &_decor {
+                left: 89%;
+            }
+        }
         &__slider {
             &_item {
                 width: 272px;

@@ -132,30 +132,15 @@ h2 span {
   top: 0;
   left: 28%;
 }
-.btn--confirm {
-  background: #6C5FBC;
-  border-radius: 17.8px;
-  color: #F9F9F9;
-  line-height: 1.5;
-  text-transform: capitalize;
-  width: 100%;
-  padding: 25px;
-  text-align: center;
-}
-.btn--confirm:hover {
-  background: #F9F9F9;
-  color: #6C5FBC;
-  border: 1px solid #6C5FBC;
-}
 .btn--get-started {
-  font-weight: 500;
-  border-radius: 12.4px;
   color: #F9F9F9;
-  line-height: 24px;
   text-transform: capitalize;
   margin-right: 18px;
   padding: 18px 30px;
+  font-weight: 500;
+  border-radius: 12.4px;
   font-size: 16.27px;
+  line-height: 24px;
   letter-spacing: 0.01em;
   background: #6C5FBC;
 }
@@ -186,9 +171,10 @@ h2 span {
   font-weight: 500;
   width: 190px;
   padding: 9.5px 0px;
-  border-radius: 12.4px;
+  border-radius: 14.68px;
   color: #F9F9F9;
-  line-height: 23px;
+  line-height: 22.6px;
+  font-size: 18.06px;
   text-transform: capitalize;
   align-items: center;
   justify-content: center;
@@ -219,32 +205,28 @@ h2 span {
 .btn--view-all span {
   margin-left: 20px;
 }
-.btn--subscribe {
-  background: #6C5FBC;
-  font-size: 15px;
+.btn--search {
+  background: none;
+  position: absolute;
+  border-radius: 19.46px;
+  bottom: -5px;
+  right: 0px;
   font-weight: 500;
-  padding: 15.21px 25.39px;
-  border-radius: 12.4px;
-  color: #F9F9F9;
-  line-height: 1.5;
-  letter-spacing: 0.443px;
-  text-transform: uppercase;
-}
-.btn--subscribe:hover {
-  background: #F9F9F9;
-  color: #6C5FBC;
-  border: 1px solid #6C5FBC;
+  font-size: 20.54px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
 }
 .btn--apply {
   background: #6C5FBC;
   border-radius: 13.65px;
   color: #F9F9F9;
-  line-height: 1.5;
   text-transform: capitalize;
   width: 100%;
   font-size: 13.73px;
   font-weight: 600;
+  line-height: 21px;
   letter-spacing: -0.01em;
+  padding: 19.5px 0;
 }
 .btn--apply:hover {
   background: #F9F9F9;
@@ -252,16 +234,50 @@ h2 span {
   border: 1px solid #6C5FBC;
 }
 .btn--apply-coupon {
-  width: 132px;
   background: #6C5FBC;
-  border-radius: 17.8px;
+  border-radius: 9.97px;
   color: #F9F9F9;
-  font-size: 18px;
+  line-height: 21px;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: -0.02em;
+  padding: 24.5px 40px;
 }
 .btn--apply-coupon:hover {
+  background: #F9F9F9;
+  color: #6C5FBC;
+  border: 1px solid #6C5FBC;
+}
+.btn--payment {
+  display: block;
+  background: #6C5FBC;
+  border-radius: 15.04px;
+  color: #F9F9F9;
+  text-transform: uppercase;
+  padding: 23.5px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.btn--payment:hover {
+  background: #F9F9F9;
+  color: #6C5FBC;
+  border: 1px solid #6C5FBC;
+}
+.btn--subscribe {
+  background: #6C5FBC;
+  font-size: 14.75px;
+  font-weight: 500;
+  padding: 15.6px 23.99px;
+  border-radius: 11.25px;
+  color: #F9F9F9;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.btn--subscribe:hover {
   background: #F9F9F9;
   color: #6C5FBC;
   border: 1px solid #6C5FBC;
@@ -270,8 +286,7 @@ h2 span {
   display: flex;
   background: #6C5FBC;
   font-weight: 500;
-  width: 245px;
-  border-radius: 16.5px;
+  border-radius: 16.49px;
   font-size: 20.29px;
   color: #F9F9F9;
   line-height: 25.4px;
@@ -294,7 +309,7 @@ h2 span {
 }
 .btn--send {
   background: #6C5FBC;
-  border-radius: 17.8px;
+  border-radius: 15.88px;
   color: #F9F9F9;
   font-size: 20.81px;
   line-height: 31px;
@@ -302,35 +317,29 @@ h2 span {
   font-size: 20.81px;
   font-weight: 600;
   letter-spacing: 0.03em;
+  padding: 22.5px 0;
 }
 .btn--send:hover {
   background: #F9F9F9;
   color: #6C5FBC;
   border: 1px solid #6C5FBC;
 }
-.btn--payment {
-  display: block;
+.btn--confirm {
   background: #6C5FBC;
-  border-radius: 17.8px;
+  border-radius: 15.56px;
   color: #F9F9F9;
-  text-transform: capitalize;
-  padding: 24px;
+  font-size: 17.78px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 23.75px 0;
   text-align: center;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
 }
-.btn--payment:hover {
+.btn--confirm:hover {
   background: #F9F9F9;
   color: #6C5FBC;
   border: 1px solid #6C5FBC;
-}
-.btn--search {
-  background: none;
-  position: absolute;
-  bottom: -5px;
-  right: 0px;
 }
 
 .promo__row {
@@ -790,6 +799,7 @@ h2 span {
   margin-top: 20px;
   margin-right: 12px;
   margin-left: auto;
+  cursor: pointer;
 }
 .questions__item_button-active {
   background: url(/src/img/minus.svg) no-repeat;
@@ -856,7 +866,7 @@ h2 span {
 }
 .blog__row-top {
   padding-top: 0px;
-  margin-left: 30px;
+  margin-left: 24.18px;
   width: 326px;
 }
 .blog__promo {
@@ -897,6 +907,9 @@ h2 span {
   background: #FFF;
   display: flex;
   flex-direction: column;
+}
+.blog__item-promo {
+  width: 212px;
 }
 .blog__item:hover {
   box-shadow: 0px 3.9px 46.9px 0px rgba(197, 197, 197, 0.25);
@@ -1061,7 +1074,7 @@ h2 span {
 }
 .getsupersale__form_button {
   position: absolute;
-  left: 293px;
+  left: 298px;
 }
 .getsupersale input {
   width: 440px;
@@ -1125,9 +1138,9 @@ h2 span {
 }
 .shopping__form input {
   width: 542px;
-  padding: 24px 0 24px 21px;
+  padding: 25px 0 20px 21px;
   border: none;
-  border-radius: 14.2px;
+  border-radius: 9.97px;
   padding-left: 91px;
   background: #EDEDED url(/src/img/coupon.svg) no-repeat;
   background-position: 28.5px center;
@@ -1486,6 +1499,9 @@ h2 span {
   padding-left: 91px;
   outline: 0;
 }
+.popup__left input:hover {
+  border: 1px solid #6C5FBC;
+}
 .popup__left input[type=number]::-webkit-outer-spin-button,
 .popup__left input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1553,10 +1569,11 @@ h2 span {
   overflow: hidden;
   width: 60%;
   flex-direction: column;
+  position: static;
 }
 .supersale__promo_decor {
   position: absolute;
-  top: 200px;
+  top: 190px;
   left: 58%;
 }
 .supersale__slider {
@@ -1564,7 +1581,7 @@ h2 span {
   width: 300%;
 }
 .supersale__slider_item {
-  width: 760px;
+  width: 100%;
   border-radius: 18.69px;
   position: relative;
   background: url(/src/img/bg_supersale.png), #6C5FBC;

@@ -61,8 +61,7 @@
                 letter-spacing: 0.2px;
                 width: 90%;
                 padding: 20px 0 43px;   
-            }
-                      
+            }                      
         } 
 
         &_button {
@@ -72,7 +71,7 @@
             margin-top: 20px;
             margin-right: 12px;
             margin-left: auto;
-            
+            cursor: pointer;
             &-active {
                 background: url(/src/img/minus.svg) no-repeat;
                 background-position-x: right;

@@ -3,7 +3,7 @@
         padding: 100px 0 120px;
         &-top {
             padding-top: 0px;
-            margin-left: 30px;
+            margin-left: 24.18px;
             width: 326px;
         }
     }
@@ -48,6 +48,9 @@
         background: #FFF;        
         display: flex;
         flex-direction: column;
+        &-promo {
+            width: 212px;
+        }
         &:hover {
             box-shadow: 0px 3.9px 46.9px 0px rgba(197, 197, 197, 0.25);
         }
@@ -220,7 +223,7 @@
         align-items:center;        
         &_button {
             position: absolute;
-            left: 293px;
+            left: 298px;
         }
     }
     input {     
@@ -290,9 +293,9 @@
         justify-content: space-between;
         input {     
             width: 542px;
-            padding: 24px 0 24px 21px;
+            padding: 25px 0 20px 21px;
             border: none;
-            border-radius: 14.2px;
+            border-radius: 9.97px;
             padding-left: 91px;
             background: #EDEDED url(/src/img/coupon.svg) no-repeat;
             background-position: 28.5px center;
@@ -517,9 +520,7 @@
         input, textarea {
             &:hover {
                 border: 1px solid $purple;
-            }
-            
-
+            }          
         }
     }
 
@@ -673,7 +674,10 @@
             border: none;
             border-radius: 14.2px;
             padding-left: 91px;
-            outline: 0;            
+            outline: 0; 
+            &:hover {
+                border: 1px solid $purple;
+            }             
         }
         input[type="number"]::-webkit-outer-spin-button, 
         input[type="number"]::-webkit-inner-spin-button {

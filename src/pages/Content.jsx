@@ -86,7 +86,7 @@ function Content() {
                                     </div>
                                 </a>
                             </li>        
-                            <li className="blog__item">
+                            <li className="blog__item blog__item-promo">
                                 <a href="blog_page.html">  
                                     <div className="blog__item_img blog__item_img-6"></div>
                                     <div className="blog__item_title">
@@ -108,7 +108,7 @@ function Content() {
                                     </div>
                                 </a>
                             </li>
-                            <li className="blog__item">
+                            <li className="blog__item blog__item-promo">
                                 <a href="blog_page.html">  
                                     <div className="blog__item_img blog__item_img-5"></div>
                                     <div className="blog__item_title">

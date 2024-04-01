@@ -8,9 +8,6 @@
     font-size: 17.83px;
     &--shop {
         background: none;
-        // width: 85px;
-        // height: 62.66px;
-        // border-radius: 17.8px;
         position: relative;
         svg {
             fill: $purple;
@@ -21,41 +18,16 @@
             left: 28%;  
         }
     }
-
-    // &--shop:hover {
-    //     background: $bgwhite;
-    //     border: 1px solid $purple;
-    //     svg {
-    //         fill: $purple;
-    //     } 
-    // }
-
-    &--confirm {
-        background: $purple;
-        border-radius: 17.8px;
-        color: $bgwhite;
-        line-height: 1.5;
-        text-transform: capitalize;
-        width: 100%;
-        padding: 25px;
-        text-align: center;
-    }
-
-    &--confirm:hover {
-        background: $bgwhite;
-        color: $purple;
-        border: 1px solid $purple;
-    }
-    
-    &--get-started {
-        font-weight: 500;
-        border-radius: 12.4px;
-        color: $bgwhite;
-        line-height: 24px;
+    // home
+    &--get-started {        
+        color: $bgwhite;        
         text-transform: capitalize;
         margin-right: 18px;
         padding: 18px 30px;
+	    font-weight: 500;
+        border-radius: 12.4px;
         font-size: 16.27px;
+	    line-height: 24px;
         letter-spacing: 0.01em;
         background: $purple;
     }
@@ -90,9 +62,10 @@
         font-weight: 500;
         width: 190px;
         padding: 9.5px 0px;
-        border-radius: 12.4px;
+        border-radius: 14.68px;
         color: $bgwhite;
-        line-height: 23px;
+        line-height: 22.6px;
+	    font-size: 18.06px;
         text-transform: capitalize;
         align-items: center;
         justify-content: center;
@@ -110,7 +83,7 @@
             stroke: $purple;
         }
     }
-
+	
     &--view-all {
         display: flex;
         background: none;
@@ -125,15 +98,86 @@
         }
     }
 
+	// menu
+   &--search {
+        background: none;
+        position: absolute;
+	    border-radius: 19.46px;
+        bottom: -5px;
+        right: 0px;
+        font-weight: 500;
+        font-size: 20.54px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+    }
+
+   &--apply {
+        background: $purple;
+        border-radius: 13.65px;
+        color: $bgwhite;        
+        text-transform: capitalize;
+        width: 100%;
+        font-size: 13.73px;
+        font-weight: 600;
+	    line-height: 21px;
+        letter-spacing: -0.01em;
+        padding: 19.5px 0;
+    }
+
+    &--apply:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+	// cart
+    &--apply-coupon {
+        background: $purple;
+        border-radius: 9.97px;
+        color: $bgwhite;
+        line-height: 21px;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+	    padding: 24.5px 40px;
+    }
+
+    &--apply-coupon:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
+    &--payment {
+        display: block;
+        background: $purple;
+        border-radius: 15.04px;
+        color: $bgwhite;
+        // text-transform: capitalize;
+        text-transform: uppercase;
+        padding: 23.5px;
+        text-align: center;        
+        font-size: 20px;        
+        line-height: 30px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+
+    &--payment:hover {
+        background: $bgwhite;
+        color: $purple;
+        border: 1px solid $purple;
+    }
+
     &--subscribe {
         background: $purple;
-        font-size: 15px;
+        font-size: 14.75px;
         font-weight: 500;
-        padding: 15.21px 25.39px;
-        border-radius: 12.4px;
+        padding: 15.6px 23.99px;
+        border-radius: 11.25px;
         color: $bgwhite;
-        line-height: 1.5;
-        letter-spacing: 0.443px;
+        line-height: 22px;
+        letter-spacing: 0.03em;
         text-transform: uppercase;
     }
 
@@ -143,48 +187,13 @@
         border: 1px solid $purple;
     }
 
-    &--apply {
-        background: $purple;
-        border-radius: 13.65px;
-        color: $bgwhite;
-        line-height: 1.5;
-        text-transform: capitalize;
-        width: 100%;
-        font-size: 13.73px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-    }
-
-    &--apply:hover {
-        background: $bgwhite;
-        color: $purple;
-        border: 1px solid $purple;
-    }
-
-    &--apply-coupon {
-        width: 132px;
-        background: $purple;
-        border-radius: 17.8px;
-        color: $bgwhite;
-        // line-height: 21;
-        font-size: 18px;
-        font-weight: 600;
-        font-size: 18px;
-        letter-spacing: -0.02em;
-    }
-
-    &--apply-coupon:hover {
-        background: $bgwhite;
-        color: $purple;
-        border: 1px solid $purple;
-    }
-
+	// blog
     &--next-article {
         display: flex;
         background: $purple;
         font-weight: 500;
-        width: 245px;
-        border-radius: 16.5px;
+        // width: 245px;
+        border-radius: 16.49px;
         font-size: 20.29px;
         color: $bgwhite;
         line-height: 25.4px;
@@ -207,9 +216,10 @@
         }
     }  
 
+	// contact
     &--send {
         background: $purple;
-        border-radius: 17.8px;
+        border-radius: 15.88px;
         color: $bgwhite;
         font-size: 20.81px;
         line-height: 31px;
@@ -217,6 +227,7 @@
         font-size: 20.81px;
         font-weight: 600;
         letter-spacing: 0.03em;
+	    padding: 22.5px 0;
     }
 
     &--send:hover {
@@ -224,31 +235,281 @@
         color: $purple;
         border: 1px solid $purple;
     }
-    
-    &--payment {
-        display: block;
+          
+	// popup
+    &--confirm {
         background: $purple;
-        border-radius: 17.8px;
+        border-radius: 15.56px;
         color: $bgwhite;
-        text-transform: capitalize;
-        padding: 24px;
+        font-size: 17.78px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 23.75px 0;
         text-align: center;
-        // height: 77px;
-        font-size: 20px;        
-        line-height: 30px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
     }
 
-    &--payment:hover {
+    &--confirm:hover {
         background: $bgwhite;
         color: $purple;
         border: 1px solid $purple;
-    }
-    &--search {
-        background: none;
-        position: absolute;
-        bottom: -5px;
-        right: 0px;
-    }
+    }    
 }
+
+// .btn {
+//     cursor: pointer;    
+//     font-family: $Poppins;
+//     font-weight: 700;
+//     padding: 17.83px 26.74px;
+//     border: 1px solid transparent;
+//     transition: all 0.3s linear;
+//     font-size: 17.83px;
+//     &--shop {
+//         background: none;
+//         // width: 85px;
+//         // height: 62.66px;
+//         // border-radius: 17.8px;
+//         position: relative;
+//         svg {
+//             fill: $purple;
+//             width: 35px;
+//             height: 35px;
+//             position: absolute; 
+//             top: 0;
+//             left: 28%;  
+//         }
+//     }
+
+//     // &--shop:hover {
+//     //     background: $bgwhite;
+//     //     border: 1px solid $purple;
+//     //     svg {
+//     //         fill: $purple;
+//     //     } 
+//     // }
+        
+//     &--confirm {
+//         background: $purple;
+//         border-radius: 17.8px;
+//         color: $bgwhite;
+//         line-height: 1.5;
+//         text-transform: capitalize;
+//         width: 100%;
+//         padding: 25px;
+//         text-align: center;
+//     }
+
+//     &--confirm:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+    
+//     &--get-started {
+//         font-weight: 500;
+//         border-radius: 12.4px;
+//         color: $bgwhite;
+//         line-height: 24px;
+//         text-transform: capitalize;
+//         margin-right: 18px;
+//         padding: 18px 30px;
+//         font-size: 16.27px;
+//         letter-spacing: 0.01em;
+//         background: $purple;
+//     }
+
+//     &--get-started:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+
+//     &--Go-pro {
+//         border: 1.5px solid $purple;
+//         color: $purple;
+//         font-weight: 500;
+//         border-radius: 12.4px;
+//         background: $bgwhite;
+//         line-height: 24px;
+//         text-transform: capitalize;
+//         padding: 18px 30px;
+//         font-size: 16.27px;
+//         letter-spacing: 0.01em;
+//     }
+
+//     &--Go-pro:hover {
+//         background: $purple;
+//         color: $bgwhite;
+//     }
+
+//     &--download {
+//         display: flex;
+//         background: $purple;
+//         font-weight: 500;
+//         width: 190px;
+//         padding: 9.5px 0px;
+//         border-radius: 12.4px;
+//         color: $bgwhite;
+//         line-height: 23px;
+//         text-transform: capitalize;
+//         align-items: center;
+//         justify-content: center;
+//         span {
+//             margin-left: 15px;
+//             margin-top: 7px;
+//         }
+//     }
+
+//     &--download:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//         span svg path{
+//             stroke: $purple;
+//         }
+//     }
+
+//     &--view-all {
+//         display: flex;
+//         background: none;
+//         color: #ACADB9;
+//         font-size: 20px;
+//         font-weight: 500;
+//         line-height: 45px; 
+//         letter-spacing: -0.1px;
+//         float: right;     color: $gray;   
+//         span {
+//             margin-left: 20px;
+//         }
+//     }
+
+//     &--subscribe {
+//         background: $purple;
+//         font-size: 15px;
+//         font-weight: 500;
+//         padding: 15.21px 25.39px;
+//         border-radius: 12.4px;
+//         color: $bgwhite;
+//         line-height: 1.5;
+//         letter-spacing: 0.443px;
+//         text-transform: uppercase;
+//     }
+
+//     &--subscribe:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+
+//     &--apply {
+//         background: $purple;
+//         border-radius: 13.65px;
+//         color: $bgwhite;
+//         line-height: 1.5;
+//         text-transform: capitalize;
+//         width: 100%;
+//         font-size: 13.73px;
+//         font-weight: 600;
+//         letter-spacing: -0.01em;
+//         padding: 19.5px 0;
+//     }
+
+//     &--apply:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+
+//     &--apply-coupon {
+//         width: 132px;
+//         background: $purple;
+//         border-radius: 17.8px;
+//         color: $bgwhite;
+//         // line-height: 21;
+//         font-size: 18px;
+//         font-weight: 600;
+//         font-size: 18px;
+//         letter-spacing: -0.02em;
+//     }
+
+//     &--apply-coupon:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+
+//     &--next-article {
+//         display: flex;
+//         background: $purple;
+//         font-weight: 500;
+//         width: 245px;
+//         border-radius: 16.5px;
+//         font-size: 20.29px;
+//         color: $bgwhite;
+//         line-height: 25.4px;
+//         text-transform: capitalize;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 16.9px 27.2px;
+//             span {
+//                 margin-left: 27.13px;
+//                 margin-top: 10px;
+//             }        
+//     }
+
+//     &--next-article:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//         span svg path{
+//             stroke: $purple;
+//         }
+//     }  
+
+//     &--send {
+//         background: $purple;
+//         border-radius: 17.8px;
+//         color: $bgwhite;
+//         font-size: 20.81px;
+//         line-height: 31px;
+//         text-transform: capitalize;
+//         font-size: 20.81px;
+//         font-weight: 600;
+//         letter-spacing: 0.03em;
+//     }
+
+//     &--send:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+    
+//     &--payment {
+//         display: block;
+//         background: $purple;
+//         border-radius: 17.8px;
+//         color: $bgwhite;
+//         text-transform: capitalize;
+//         padding: 24px;
+//         text-align: center;
+//         // height: 77px;
+//         font-size: 20px;        
+//         line-height: 30px;
+//         font-weight: 600;
+//         letter-spacing: -0.01em;
+//     }
+
+//     &--payment:hover {
+//         background: $bgwhite;
+//         color: $purple;
+//         border: 1px solid $purple;
+//     }
+
+//     &--search {
+//         background: none;
+//         position: absolute;
+//         bottom: -5px;
+//         right: 0px;
+//     }
+// }

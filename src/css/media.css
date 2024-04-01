@@ -10,6 +10,11 @@
 }
 @media (max-width: 1600px) {
   .supersale__promo_decor {
+    left: 57%;
+  }
+}
+@media (max-width: 1440px) {
+  .supersale__promo_decor {
     left: 58%;
   }
 }
@@ -361,11 +366,8 @@
   .supersale__row {
     gap: 79.64px;
   }
-  .supersale__promo {
-    width: 65%;
-  }
   .supersale__promo_decor {
-    left: 60%;
+    left: 58%;
     top: 180px;
   }
   .supersale__slider_item {
@@ -374,6 +376,7 @@
     padding-bottom: 67.92px;
     padding-left: 41.55px;
     border-radius: 13.29px;
+    margin-right: 5px;
   }
   .supersale__slider_title {
     font-size: 53.33px;
@@ -396,7 +399,6 @@
   }
   .category {
     width: 268px;
-    height: 420px;
     padding: 22.75px;
     padding-bottom: 27.75px;
   }
@@ -628,7 +630,7 @@
     border-radius: 10.12px;
   }
   .getsupersale__form_button {
-    left: 205px;
+    left: 207px;
   }
   .support {
     padding: 145px 0 155px;
@@ -878,8 +880,8 @@
     width: 85%;
   }
   .supersale__promo_decor {
-    right: 200px;
-    top: 185px;
+    left: 61%;
+    top: 190px;
     width: 40px;
   }
   .supersale__slider_item {
@@ -901,7 +903,7 @@
     font-size: 45px;
   }
   .category {
-    width: 300px;
+    width: 290px;
     padding: 10.75px;
   }
   .category__price {
@@ -967,7 +969,7 @@
     margin-left: 20px;
   }
   .getsupersale__form_button {
-    left: 210px;
+    left: 212px;
   }
 }
 @media (max-width: 426px) {
@@ -1102,6 +1104,9 @@
   .customer__slider_control {
     bottom: 0;
   }
+  .customer__item {
+    width: 353px;
+  }
   .supersale__row {
     flex-direction: column;
     align-items: center;
@@ -1113,7 +1118,7 @@
   .supersale__promo_decor {
     top: 150px;
     width: 32px;
-    left: 88%;
+    left: 90%;
   }
   .supersale__slider_item {
     height: 120px;
@@ -1166,12 +1171,17 @@
     font-size: 11px;
     line-height: 18px;
   }
+  .category {
+    width: 100%;
+    padding: 26.82px;
+    padding-bottom: 32.72px;
+  }
   .category__item {
     width: 55.48px;
     height: 80.76px;
   }
   .category__item:nth-child(1), .category__item:nth-child(2), .category__item:nth-child(3), .category__item:nth-child(4) {
-    background-size: 28.96px 28.96px;
+    background-size: 28.98px 28.98px;
   }
   .category__item_title {
     font-size: 11px;
@@ -1494,7 +1504,7 @@
     top: 45px;
   }
   .questions__header_decor {
-    right: 35px;
+    right: 30px;
   }
   .questions__item_button {
     margin-right: 5px;
@@ -1570,6 +1580,7 @@
   }
   .category {
     width: 275px;
+    padding: 15px 15px 20px 15px;
   }
   .questions__item_question-active {
     width: 80%;
@@ -1596,6 +1607,9 @@
   }
   .quality__decor-3 {
     display: none;
+  }
+  .supersale__promo_decor {
+    left: 89%;
   }
   .supersale__slider_item {
     width: 272px;

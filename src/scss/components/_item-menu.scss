@@ -14,11 +14,11 @@
         overflow: hidden;
         width: 60%;
         flex-direction: column;
-        // position: relative;
+        position: static;
 
         &_decor {
             position: absolute;
-            top: 200px;
+            top: 190px;
             left: 58%;
         }
     }
@@ -27,7 +27,7 @@
         display: flex;
         width: 300%;
         &_item {
-            width: 760px;
+            width: 100%;
             border-radius: 18.69px;
             position: relative;
             background: url(/src/img/bg_supersale.png),  #6C5FBC;
@@ -83,6 +83,7 @@
 
     
 }
+
 .search {
     margin-top: auto;
     position: relative;
