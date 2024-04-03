@@ -1,5 +1,12 @@
 .header {
-    &__row {
+    position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: $bgwhite;  
+        background-size: auto;   
+        z-index: 1;
+    &__row {        
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -13,8 +20,10 @@
 
     &__logo {
         margin-right: 103px;
-        align-self: center;
         outline: none;
+        img {
+            vertical-align: middle;
+        }
     }
 
     &__button {

@@ -46,6 +46,15 @@ h2 span {
   margin: 0 auto;
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #F9F9F9;
+  background-size: auto;
+  z-index: 1;
+}
 .header__row {
   display: flex;
   flex-direction: row;
@@ -58,8 +67,10 @@ h2 span {
 }
 .header__logo {
   margin-right: 103px;
-  align-self: center;
   outline: none;
+}
+.header__logo img {
+  vertical-align: middle;
 }
 .header__button {
   margin-left: auto;
@@ -348,6 +359,9 @@ h2 span {
   border: 1px solid #6C5FBC;
 }
 
+.promo {
+  margin-top: 107px;
+}
 .promo__row {
   padding: 120px 0;
   background: url("/src/img/promo-bg.png") no-repeat;
@@ -1050,6 +1064,7 @@ h2 span {
 }
 
 .getsupersale {
+  margin-top: 107px;
   padding: 80px 0 80px;
   position: relative;
 }
@@ -1104,6 +1119,7 @@ h2 span {
 }
 
 .shopping {
+  margin-top: 107px;
   padding: 120px 0 180px;
 }
 .shopping__row {
@@ -1309,6 +1325,7 @@ h2 span {
 }
 
 .support {
+  margin-top: 107px;
   padding: 210px 0;
 }
 .support__row {
@@ -1462,6 +1479,9 @@ h2 span {
   margin-left: 50px;
 }
 
+.map {
+  margin-top: 107px;
+}
 .map iframe {
   border: 0;
   border-radius: 25px;
@@ -1572,6 +1592,9 @@ h2 span {
   max-width: 1440px;
 }
 
+.supersale {
+  margin-top: 107px;
+}
 .supersale__row {
   padding: 120px 0 75px;
   display: flex;

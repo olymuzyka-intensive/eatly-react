@@ -1,17 +1,20 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Header() {
-    
+    const [isOpen, setIsOpen] = useState()  
+    const [isActive, setIsActive] = useState()
+
     return (
         <div className="header">
             <div className="container">
                 <div className="header__row">                    
-                    <nav className="header__nav">
+                    <nav className={`header__nav ${isOpen ? "active" : " "}`}>
                         <Link to="/" className="header__logo">
                             <img src="src/img/Logo.svg" alt="Logo"/>
-                        </Link>
+                        </Link> 
 
-                        <ul className="header__menu">
+                        <ul className={`header__menu ${isOpen ? " " : "active"}`}>
                             <li className="menu__item">
                                 <Link to="/menu" className="menu__link">Menu</Link>
                             </li>
@@ -35,7 +38,7 @@ function Header() {
                         </Link>
                     </div>
 
-                    <button className="header__burger">
+                    <button className={`header__burger ${isActive ? " " : "active"}`} onClick={() => {setIsOpen(!isOpen); setIsActive(!isActive)}}>
                         <span></span>
                     </button>
                     
