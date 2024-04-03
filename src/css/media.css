@@ -246,16 +246,17 @@
     display: none;
   }
   .header__menu.active {
+    padding-top: 80px;
     display: flex;
     position: absolute;
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-    right: 40px;
-    top: 30px;
+    right: 0;
+    top: 0;
     background: #6C5FBC no-repeat;
-    width: 40%;
-    height: 800px;
+    width: 45%;
+    height: 100vh;
     z-index: 1;
     font-size: 17px;
     line-height: 24px;
@@ -1387,8 +1388,7 @@
     display: block;
   }
   .header__menu.active {
-    height: 55%;
-    width: 98%;
+    width: 100%;
   }
   .header__burger.active {
     right: 20px;
@@ -1657,10 +1657,6 @@
   }
   .footer__bottom {
     right: -10px;
-  }
-  .header__menu.active {
-    height: 64%;
-    width: 96%;
   }
   .promo__row {
     background-size: 240px 220px;

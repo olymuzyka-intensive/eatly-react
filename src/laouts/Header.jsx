@@ -2,14 +2,14 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Header() {
-    const [isOpen, setIsOpen] = useState()  
-    const [isActive, setIsActive] = useState()
+    const [isOpen, setIsOpen] = useState(true)  
+    const [isActive, setIsActive] = useState(true)
 
     return (
         <div className="header">
             <div className="container">
                 <div className="header__row">                    
-                    <nav className={`header__nav ${isOpen ? "active" : " "}`}>
+                    <nav className="header__nav">
                         <Link to="/" className="header__logo">
                             <img src="src/img/Logo.svg" alt="Logo"/>
                         </Link> 
