@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Header from "../laouts/Header"
 import Footer from "../laouts/Footer"
 
@@ -60,13 +61,15 @@ function Content() {
 
                 <div className="blog__promo">
                     <div className="blog__row blog__row-top">
-                        <p className="blog__title_promo">
+                        <p className="blog__title-promo">
                             Top Articles
                         </p>
                         <ul className="blog__cards blog__cards_promo">
                             <li className="blog__item blog__item-promo">
-                                <a href="blog_page.html">  
-                                    <div className="blog__item_img blog__item_img-1"></div>
+                                <Link to="/Blog">  
+                                    <div className="blog__item_img blog__item_img-promo">
+                                        <img src="/src/img/blog_img1.jpg" alt="img"></img>
+                                    </div>
                                     <div className="blog__item_title">
                                         How To Order Food ?
                                     </div>
@@ -84,11 +87,13 @@ function Content() {
                                             15 DEC, 2022
                                         </div>
                                     </div>
-                                </a>
+                                </Link>                         
                             </li>        
                             <li className="blog__item blog__item-promo">
-                                <a href="blog_page.html">  
-                                    <div className="blog__item_img blog__item_img-6"></div>
+                                <Link to="/Blog">  
+                                    <div className="blog__item_img blog__item_img-promo">
+                                        <img src="/src/img/blog_img6.jpg" alt="img"></img>
+                                    </div>
                                     <div className="blog__item_title">
                                         Top 5 Business Ideas
                                     </div>
@@ -106,11 +111,13 @@ function Content() {
                                             15 DEC, 2022
                                         </div>
                                     </div>
-                                </a>
+                                </Link>                         
                             </li>
                             <li className="blog__item blog__item-promo">
-                                <a href="blog_page.html">  
-                                    <div className="blog__item_img blog__item_img-5"></div>
+                                <Link to="/Blog">  
+                                    <div className="blog__item_img blog__item_img-promo">
+                                        <img src="/src/img/blog_img5.jpg" alt="img"></img>
+                                    </div>
                                     <div className="blog__item_title">
                                         How To Control Money ?
                                     </div>
@@ -128,7 +135,7 @@ function Content() {
                                             15 DEC, 2022
                                         </div>
                                     </div>
-                                </a>
+                                </Link>                         
                             </li>
                         </ul>
                     </div>                    

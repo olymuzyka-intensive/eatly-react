@@ -22,6 +22,7 @@ ul {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 h2 {
@@ -58,10 +59,12 @@ h2 span {
 .header__logo {
   margin-right: 103px;
   align-self: center;
+  outline: none;
 }
 .header__button {
   margin-left: auto;
   display: flex;
+  outline: none;
 }
 .header__burger {
   display: none;
@@ -73,6 +76,7 @@ h2 span {
   z-index: 1;
   background: none;
   border: 0;
+  outline: none;
 }
 .header__burger span, .header__burger span::before, .header__burger span::after {
   display: block;
@@ -119,6 +123,7 @@ h2 span {
   border: 1px solid transparent;
   transition: all 0.3s linear;
   font-size: 17.83px;
+  outline: none;
 }
 .btn--shop {
   background: none;
@@ -335,6 +340,7 @@ h2 span {
   width: 100%;
   padding: 23.75px 0;
   text-align: center;
+  margin-top: 13px;
 }
 .btn--confirm:hover {
   background: #F9F9F9;
@@ -407,14 +413,33 @@ h2 span {
 }
 
 .premium {
-  background: url(/src/img/premium-bg.svg);
-  background-size: 100% auto;
+  background: #6C5FBC;
+  overflow: hidden;
+}
+.premium__decor {
+  position: relative;
+}
+.premium__decor-1 {
+  position: absolute;
+  left: -70px;
+}
+.premium__decor-2 {
+  position: absolute;
+  left: -70px;
+}
+.premium__decor-3 {
+  position: absolute;
+  right: -70px;
+}
+.premium__decor-4 {
+  position: absolute;
+  right: -70px;
 }
 .premium__row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 50px 0;
+  padding: 49.5px 0;
 }
 .premium__col {
   display: flex;
@@ -426,8 +451,8 @@ h2 span {
   font-family: "Public Sans", sans-serif;
   font-size: 43.2px;
   font-weight: 700;
-  line-height: 1.25;
-  padding-bottom: 10px;
+  line-height: 54px;
+  padding-bottom: 23.5px;
 }
 .premium__text {
   color: #C5BFED;
@@ -435,7 +460,7 @@ h2 span {
   font-family: "Inter", sans-serif;
   font-size: 14.4px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 21.6px;
 }
 
 .quality__row {
@@ -880,12 +905,13 @@ h2 span {
 .blog__title span {
   color: #6C5FBC;
 }
-.blog__title_promo {
+.blog__title-promo {
   color: #252525;
   font-size: 30px;
   font-weight: 600;
   line-height: 44.5px;
   padding-bottom: 34px;
+  margin-left: 10px;
 }
 .blog__cards {
   display: grid;
@@ -902,45 +928,26 @@ h2 span {
 }
 .blog__item {
   width: 350px;
-  height: 440px;
   border-radius: 15.9px;
   background: #FFF;
   display: flex;
   flex-direction: column;
+  padding: 25px 20px 30.5px 20px;
 }
 .blog__item-promo {
-  width: 212px;
+  width: 298px;
 }
 .blog__item:hover {
   box-shadow: 0px 3.9px 46.9px 0px rgba(197, 197, 197, 0.25);
 }
-.blog__item_img {
-  margin: 25px 20px auto 20px;
-  width: 310px;
-  height: 275px;
+.blog__item_img img {
+  width: 100%;
 }
-.blog__item_img-1 {
-  background: url(/src/img/blog_img1.jpg) no-repeat;
-}
-.blog__item_img-2 {
-  background: url(/src/img/blog_img2.jpg) no-repeat;
-}
-.blog__item_img-3 {
-  background: url(/src/img/blog_img3.jpg) no-repeat;
-}
-.blog__item_img-4 {
-  background: url(/src/img/blog_img4.jpg) no-repeat;
-}
-.blog__item_img-5 {
-  background: url(/src/img/blog_img5.jpg) no-repeat;
-}
-.blog__item_img-6 {
-  background: url(/src/img/blog_img6.jpg) no-repeat;
+.blog__item_img img-promo img {
+  width: 85%;
 }
 .blog__item_card {
-  margin-left: 20px;
   display: flex;
-  padding-bottom: 30px;
   gap: 11.5px;
 }
 .blog__item_logo {
@@ -950,7 +957,7 @@ h2 span {
   border-radius: 25px;
 }
 .blog__item_title {
-  padding: 20px;
+  padding: 20px 0;
   color: #252525;
   font-size: 22px;
   font-weight: 600;
@@ -973,7 +980,6 @@ h2 span {
   font-weight: 500;
   line-height: 31.5px;
   margin-left: auto;
-  padding-right: 20px;
   align-self: self-end;
 }
 
@@ -1464,25 +1470,24 @@ h2 span {
 .popup__row {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .popup__left {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 750px;
 }
 .popup__left_form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  width: 388px;
-  height: 691.71px;
-  margin: 90px auto;
-  justify-content: space-between;
+  gap: 24.46px;
+  width: 385.54px;
+  padding: 88.16px 0 163px;
+  margin: 0 auto;
 }
 .popup__left_logo {
-  margin-top: 20px;
+  padding: 32px 0 0 48px;
 }
 .popup__left_title {
   font-weight: 600;
@@ -1490,17 +1495,31 @@ h2 span {
   line-height: 44px;
   letter-spacing: -0.04em;
   color: #323142;
+  padding-bottom: 80px;
 }
 .popup__left input {
-  width: 385px;
-  height: 75px;
-  border: none;
-  border-radius: 14.2px;
-  padding-left: 91px;
-  outline: 0;
+  width: 385.54px;
+  border: 1px solid transparent;
+  border-radius: 14.27px;
+  padding: 24.46px 0 25.03px 91px;
+  outline: none;
+  text-transform: uppercase;
 }
 .popup__left input:hover {
   border: 1px solid #6C5FBC;
+}
+.popup__left input[type=text] {
+  background: #EDEDED url(/src/img/UserIcon.svg) no-repeat;
+  background-position: 28.5px 50%;
+}
+.popup__left input[type=email] {
+  background: #EDEDED url(/src/img/Email.svg) no-repeat;
+  background-position: 28.5px 50%;
+}
+.popup__left input[type=number] {
+  background: #EDEDED url(/src/img/mobile.svg) no-repeat;
+  background-size: 19px;
+  background-position: 28.5px 50%;
 }
 .popup__left input[type=number]::-webkit-outer-spin-button,
 .popup__left input[type=number]::-webkit-inner-spin-button {
@@ -1512,29 +1531,22 @@ h2 span {
   -webkit-appearance: textfield;
           appearance: textfield;
 }
-.popup .input-name {
-  background: #EDEDED url(/src/img/UserIcon.svg) no-repeat;
-  background-position: 28.5px 50%;
-}
-.popup .input-email {
-  background: #EDEDED url(/src/img/Email.svg) no-repeat;
-  background-position: 28.5px 50%;
-}
-.popup .input-phone {
-  background: #EDEDED url(/src/img/mobile.svg) no-repeat;
-  background-size: 19px;
-  background-position: 28.5px 50%;
+.popup__left placeholder {
+  font-weight: 600;
+  font-size: 16.68px;
+  line-height: 25px;
+  letter-spacing: 0.07em;
 }
 .popup__right {
   display: flex;
   flex-direction: column;
   background: #6C5FBC url(/src/img/promo-bg.png) no-repeat;
-  background-position: 50% 20%;
+  background-position: 50% 30%;
   background-size: 550px;
   width: 50%;
   justify-content: end;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 112px;
 }
 .popup__right_title {
   font-weight: 800;
@@ -1554,6 +1566,10 @@ h2 span {
   color: #fff;
   padding-top: 15px;
   width: 90%;
+}
+.popup .container {
+  width: 100%;
+  max-width: 1440px;
 }
 
 .supersale__row {

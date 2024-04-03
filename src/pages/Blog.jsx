@@ -19,7 +19,9 @@ function Blog() {
                     <ul className="blog__cards">
                         <li className="blog__item">
                             <Link to="/content">
-                                <div className="blog__item_img blog__item_img-1"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img1.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     How To Order Food ?
                                 </div>
@@ -42,7 +44,9 @@ function Blog() {
                         
                         <li className="blog__item">
                             <Link to="/content">
-                                <div className="blog__item_img blog__item_img-2"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img2.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     How To Track The Order ?
                                 </div>
@@ -65,7 +69,9 @@ function Blog() {
                         
                         <li className="blog__item">
                             <Link to="/content">
-                                <div className="blog__item_img blog__item_img-3"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img3.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     How To Manage Cards ?
                                 </div>
@@ -89,7 +95,9 @@ function Blog() {
                         
                         <li className="blog__item">
                             <Link to="/content">
-                                <div className="blog__item_img blog__item_img-4"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img4.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     Tips & Tricks For Business
                                 </div>
@@ -112,7 +120,9 @@ function Blog() {
                     
                         <li className="blog__item">
                             <Link to="/content">    
-                                <div className="blog__item_img blog__item_img-5"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img5.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     How To Control Money ?
                                 </div>
@@ -136,7 +146,9 @@ function Blog() {
                         
                         <li className="blog__item">
                             <Link to="/content">  
-                                <div className="blog__item_img blog__item_img-6"></div>
+                                <div className="blog__item_img">
+                                    <img src="/src/img/blog_img6.jpg" alt="img"></img>
+                                </div>
                                 <div className="blog__item_title">
                                     Top 5 Business Ideas
                                 </div>
