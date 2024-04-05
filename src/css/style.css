@@ -697,19 +697,18 @@ h2 span {
   bottom: 45px;
 }
 .customer__button {
-  border: none;
   background: #e7e5f4;
   border-radius: 78.5px;
   width: 191px;
   height: 11px;
   margin-right: -5px;
   border: none;
+  outline: none;
   cursor: pointer;
 }
-.customer__button-active {
+.customer__button.active {
   background: #6C5FBC;
   position: relative;
-  margin-left: 20px;
 }
 .customer__item {
   background: #fff;
@@ -740,7 +739,6 @@ h2 span {
   margin-left: auto;
 }
 .customer__item_img {
-  background: url(/src/img/customer_foto.jpg) no-repeat center center;
   border-radius: 50px;
   width: 71px;
   height: 71px;
@@ -755,7 +753,7 @@ h2 span {
   line-height: 26px;
   padding-bottom: 32px;
 }
-.customer__item_text-top {
+.customer__item_text.active {
   color: #636363;
   padding-bottom: 39px;
 }
@@ -767,7 +765,7 @@ h2 span {
 .customer__item_top {
   display: none;
 }
-.customer__item_top-active {
+.customer__item_top.active {
   display: flex;
   flex-direction: row;
   margin-bottom: 32px;
