@@ -1093,11 +1093,12 @@
     font-size: 46.24px;
     line-height: 55px;
   }
-  .promo_text {
+  .promo__text {
     font-size: 11.1px;
     line-height: 17px;
-    margin: 0 auto;
     max-width: 95%;
+    display: flex;
+    margin: 0 auto;
   }
   .premium {
     background-size: auto;
@@ -1256,6 +1257,9 @@
   }
   .questions__item_button {
     margin-top: 5px;
+    background-size: 25px;
+  }
+  .questions__item_button.active {
     background-size: 25px;
   }
   .questions__item_question-active {
@@ -1687,6 +1691,9 @@
     width: 80%;
   }
   .questions__item_button {
+    background-size: 20px;
+  }
+  .questions__item_button.active {
     background-size: 20px;
   }
   .questions__item_title {

@@ -1,4 +1,33 @@
+import React, { useState } from "react"
+
 function Getsupersale() {
+    const [isActive, setIsActive] = useState(0)
+    
+    const toggleActive = (index) => {
+        setIsActive(index)
+    }
+    
+    const slider = [
+        {
+            title: "GET 50%",
+            promo: "WEEKENDS",
+            image: "/src/img/Food-2.png"
+        },
+        {
+            title: "GET 30%",
+            promo: "TODAY",
+            image: "/src/img/Food-3.png"           
+        },
+        {
+            title: "GET 20%",
+            promo: "MONTH",
+            image: "/src/img/Food-1.png"           
+        },
+    ]
+
+    const control = [
+        {}, {}, {}
+    ]
 
     return (
         <div className="supersale">
@@ -7,31 +36,26 @@ function Getsupersale() {
                     <div className="supersale__promo">
                     <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
                         <ul className="supersale__slider">
-                                <li className="supersale__slider_item supersale__slider_item-active">
-                                    <div className="supersale__slider_title">GET 50%</div>
-                                    <div className="supersale__slider_weekend">WEEKENDS</div>
-                                    <img className="supersale__slider_img" src="/src/img/Food-2.png" alt="supersale"/>
-                                </li>
-                                <li className="supersale__slider_item">
-                                    <div className="supersale__slider_title">GET 30%</div>
-                                    <div className="supersale__slider_weekend">TODAY</div>
-                                    <img className="supersale__slider_img" src="/src/img/Food-3.png" alt="supersale"/>
-                                </li>
-                                <li className="supersale__slider_item">
-                                    <div className="supersale__slider_title">GET 20%</div>
-                                    <div className="supersale__slider_weekend">MONTH</div>
-                                    <img className="supersale__slider_img" src="/src/img/Food-1.png" alt="supersale"/>
-                                </li>
+                            <div className="supersale__list">
+                                {slider.map((slide, index) =>  
+                                    <li key={index} className={isActive === index ? "supersale__slider_item active" : "supersale__slider_item"}>
+                                        <div className="supersale__slider_title">{slide.title}</div>
+                                        <div className="supersale__slider_promo">{slide.promo}</div>
+                                        <img className="supersale__slider_img" src={slide.image}/>
+                                    </li>
+                                    )
+                                }    
+                            </div>           
                         </ul>
 
-                        <ul className="supersale__line">
-                            <li className="supersale__line_item supersale__line_item-active"></li> 
-                            <li className="supersale__line_item"></li> 
-                            <li className="supersale__line_item"></li>
+                        <ul className="supersale__line"> {control.map((item, index) => 
+                            <li key={index} className={isActive === index ? "supersale__line_item-active" : "supersale__line_item"} onClick={() => toggleActive(index)} ></li> 
+                        )}
                         </ul>
+
                         <div className="search">
                             <input type="search" placeholder="Search"/>
-                            <button className="btn btn--search" type="submit"> <img src="src/img/Search.svg" alt="search"/></button>
+                            <button className="btn btn--search" type="submit"> <img src="/src/img/Search.svg" alt="search"/></button>
                         </div>
                     </div>
                     
@@ -80,7 +104,7 @@ function Getsupersale() {
             </div>
         </div>
 
-)
+    )
   }
   
   export default Getsupersale

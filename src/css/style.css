@@ -676,25 +676,25 @@ h2 span {
 .customer__card {
   display: flex;
   gap: 30px;
-  position: relative;
   overflow: hidden;
 }
 .customer__list {
   display: flex;
   padding-bottom: 43px;
-  flex-direction: column;
+  position: relative;
+  gap: 45px;
 }
 .customer__slider {
   display: flex;
-  gap: 45px;
+  min-height: 400px;
 }
 .customer__slider_control {
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: absolute;
-  right: 140px;
-  bottom: 45px;
+  bottom: 5%;
+  left: 25%;
 }
 .customer__button {
   background: #e7e5f4;
@@ -708,15 +708,16 @@ h2 span {
 }
 .customer__button.active {
   background: #6C5FBC;
-  position: relative;
+  z-index: 100;
 }
 .customer__item {
   background: #fff;
   border-radius: 21px;
-  width: 528px;
+  flex: 0 0 528px;
   padding: 43px;
   height: -moz-fit-content;
   height: fit-content;
+  transition: transform 0.5s;
 }
 .customer__item_col {
   margin-left: 21px;
@@ -753,9 +754,13 @@ h2 span {
   line-height: 26px;
   padding-bottom: 32px;
 }
-.customer__item_text.active {
+.customer__item_text-active {
   color: #636363;
   padding-bottom: 39px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
 }
 .customer__item_rating {
   display: flex;
@@ -769,6 +774,22 @@ h2 span {
   display: flex;
   flex-direction: row;
   margin-bottom: 32px;
+}
+.customer__item:nth-child(1) {
+  transform: translate3d(575px, 0px, 0px);
+  transition: 1s ease-in-out;
+}
+.customer__item.active:nth-child(1) {
+  transform: translate3d(0, 0px, 0px);
+  transition: 1s ease-in-out;
+}
+.customer__item.active:nth-child(2) {
+  transform: translate3d(-575px, 0px, 0px);
+  transition: 1s ease-in-out;
+}
+.customer__item.active:nth-child(3) {
+  transform: translate3d(-1145px, 0px, 0px);
+  transition: 1s ease-in-out;
 }
 
 .questions__row {
@@ -800,8 +821,8 @@ h2 span {
   flex-direction: row;
   border-bottom: 1px solid #8E97A6;
   min-height: 100px;
-  min-width: 100%;
-  padding-left: 8px;
+  width: 100%;
+  margin-left: 8px;
 }
 .questions__item_title {
   position: relative;
@@ -838,9 +859,12 @@ h2 span {
   margin-left: auto;
   cursor: pointer;
 }
-.questions__item_button-active {
+.questions__item_button.active {
   background: url(/src/img/minus.svg) no-repeat;
-  background-position-x: right;
+}
+.questions__item.active {
+  display: flex;
+  border-bottom: 1px solid #8E97A6;
 }
 
 .footer {
@@ -1613,9 +1637,11 @@ h2 span {
   top: 190px;
   left: 58%;
 }
-.supersale__slider {
+.supersale__list {
   display: flex;
+  flex-direction: row;
   width: 300%;
+  position: relative;
 }
 .supersale__slider_item {
   width: 100%;
@@ -1626,13 +1652,34 @@ h2 span {
   display: flex;
   padding: 30px 0 107px 58.43px;
 }
+.supersale__slider__item.active {
+  width: 100%;
+  border-radius: 18.69px;
+  position: relative;
+  background: url(/src/img/bg_supersale.png), #6C5FBC;
+  margin-right: 10px;
+  display: flex;
+  padding: 30px 0 107px 58.43px;
+}
+.supersale__slider__item.active:nth-child(1) {
+  transform: translate(0px, 0px, 0px);
+  transition: 1s ease-in-out;
+}
+.supersale__slider__item.active:nth-child(2) {
+  transform: translate(-500px, 0px, 0px);
+  transition: 1s ease-in-out;
+}
+.supersale__slider__item.active:nth-child(3) {
+  transform: translate(-800px, 0px, 0px);
+  transition: 1s ease-in-out;
+}
 .supersale__slider_title {
   color: #FFF;
   font-size: 75px;
   line-height: 112px;
   font-weight: 800;
 }
-.supersale__slider_weekend {
+.supersale__slider_promo {
   color: #7C6FCD;
   font-size: 81px;
   line-height: 131px;

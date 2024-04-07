@@ -24,9 +24,14 @@
         }
     }
 
-    &__slider {
+    &__list {
         display: flex;
+        flex-direction: row;
         width: 300%;
+        position: relative;
+    }
+
+    &__slider {
         &_item {
             width: 100%;
             border-radius: 18.69px;
@@ -34,8 +39,29 @@
             background: url(/src/img/bg_supersale.png),  #6C5FBC;
             margin-right: 10px;
             display: flex;
-            padding: 30px 0 107px 58.43px;
-
+            padding: 30px 0 107px 58.43px;            
+        }
+        &__item.active {
+            width: 100%;
+            border-radius: 18.69px;
+            position: relative;
+            background: url(/src/img/bg_supersale.png),  #6C5FBC;
+            margin-right: 10px;
+            display: flex;
+            padding: 30px 0 107px 58.43px;            
+        }
+        &__item.active:nth-child(1) {
+            transform: translate(0px, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(2) {
+            transform: translate(-500px, 0px, 0px);        
+            transition: 1s ease-in-out;
+        }
+        &__item.active:nth-child(3) {
+            transform: translate(-800px, 0px, 0px);        
+            transition: 1s ease-in-out;
         }
         
         &_title {
@@ -44,7 +70,8 @@
             line-height: 112px;
             font-weight: 800;
         }        
-        &_weekend {
+
+        &_promo {
             color: #7C6FCD;
             font-size: 81px;
             line-height: 131px;
@@ -53,6 +80,7 @@
             top: 95px;
             letter-spacing: -0.2rem;
         }
+
         &_img {
             width: 254px;
             height: 256px;
