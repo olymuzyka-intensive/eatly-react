@@ -31,7 +31,7 @@
             justify-content: center;
             position: absolute;
             bottom: 5%;
-            left: 25%;
+            right: 5%;
         }
     }
 
@@ -55,12 +55,12 @@
         background: $white;
         border-radius: 21px;
         flex: 0 0 528px;
-
-        // width: 528px;
         padding: 43px;
         height: fit-content; 
-        // position: relative;
+        position: relative;
         transition: transform 0.5s;
+        transform: translate3d(0px, 0px, 0px);  
+
         &_col {
             margin-left: 21px;
         }

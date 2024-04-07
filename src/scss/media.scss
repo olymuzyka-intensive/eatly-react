@@ -156,14 +156,6 @@
             }
         }
     }
-
-    .customer {
-        &__slider {
-            &_control {
-                right: 0px;
-            }
-        }
-    }
 }
 
 @media (max-width: 1024px) {
@@ -276,10 +268,10 @@
             font-size: 12.68px;
             line-height: 19px;            
         }
-        &__item {
-            margin-top: 40px;
-            margin-bottom: 20px;            
-        }
+        // &__item {
+        //     margin-top: 40px;
+        //     margin-bottom: 20px;            
+        // }
     }
 
     .header {
@@ -350,6 +342,7 @@
             box-shadow: 2px 2px 6px darkblue;
             animation: show 0.5s forwards;
             animation-delay: -2s;
+            
             @keyframes show {
                 0% {
                     transform: scale(0);
@@ -374,8 +367,13 @@
             }
             a:hover {
                 text-shadow: rgb(32, 31, 30) 1px 0 10px;
-            }         
-        }          
+            }  
+        }  
+        .menu__item {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }       
+    
     }
 
     .footer {
@@ -637,15 +635,13 @@
         }
 
         &__slider {
-            gap: 29.11px;
-            &_control {
-                right: 110px;
-            }
+            gap: 29.11px;            
         }
 
         &__item {
-            width: 375.5px;
+            flex: 0 0 375.5px;
             padding: 27px 30.5px;
+
             &_img {
                 width: 50.52px;
                 height: 50.52px;
@@ -661,14 +657,37 @@
                     padding-bottom: 27.4px;
                 }
             }
+            &_text-active {
+                font-size: 12.8px;
+                line-height: 19px;
+                padding-bottom: 22.42px;
+            }
             &_top {
                 margin-bottom: 22.73px;
-                height: 52px;
             }
             &_decor img {
                 width: 41.5px;
                 height: 31.5px;
             }
+        }
+
+        &__item:nth-child(1) {
+            transform: translate3d(420px, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(1) {
+            transform: translate3d(0, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(2) {
+            transform: translate3d(-420px, 0px, 0px);        
+            transition: 1s ease-in-out;
+        }
+        &__item.active:nth-child(3) {
+            transform: translate3d(-840px, 0px, 0px);        
+            transition: 1s ease-in-out;
         }
 
         &__button {
@@ -1085,16 +1104,12 @@
     }
 
     .customer {
-        // &__item {
-        //     width: 88vw;
+        // &__slider {
+        //     &_control {
+        //         // bottom: 10px;
+        //         width: 100%;
+        //     }
         // }
-        &__slider {
-            &_control {
-                right: 2%;
-                bottom: 10px;
-                width: 100%;
-            }
-        }
         &__button {
             width: 225px;
         }
@@ -1503,11 +1518,29 @@
         }
         &__slider {
             &_control {
-                bottom: 0;
+                left: 0px;
             }
         }
         &__item {
-            width: 353px;
+            flex: 0 0 353px;
+        }
+        &__item:nth-child(1) {
+            transform: translate3d(575px, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(1) {
+            transform: translate3d(0, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(2) {
+            transform: translate3d(-400px, 0px, 0px);        
+            transition: 1s ease-in-out;
+        }
+        &__item.active:nth-child(3) {
+            transform: translate3d(-800px, 0px, 0px);        
+            transition: 1s ease-in-out;
         }
     }
 
@@ -1735,6 +1768,7 @@
     }
 
     .popup {
+    margin-top: 100px;
         &__row {
             flex-direction: column;
             width: 100%;
@@ -2053,8 +2087,26 @@
 
     .customer {
         &__item {
-            width: 305px;
+            flex: 0 0 305px;
             padding: 10px;
+        }
+        &__item:nth-child(1) {
+            transform: translate3d(575px, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(1) {
+            transform: translate3d(0, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(2) {
+            transform: translate3d(-350px, 0px, 0px);        
+            transition: 1s ease-in-out;
+        }
+        &__item.active:nth-child(3) {
+            transform: translate3d(-700px, 0px, 0px);        
+            transition: 1s ease-in-out;
         }
         &__title {
             font-size: 30px;
@@ -2065,8 +2117,8 @@
         }
         &__slider {
             &_control {
-                width: 100px;
-                left: 85px;
+                width: 300px;
+                left: 0px;
             }
         }
     }
@@ -2101,6 +2153,9 @@
             line-height: 16px;
             letter-spacing: 0.03em;
             padding-left: 5px;
+        }
+        &__row_img {
+            right: 22%;
         }
     }
 
@@ -2138,14 +2193,27 @@
 
     .customer {
         &__item {
-            width: 255px;
+            flex: 0 0 255px;
+        }
+        &__item.active:nth-child(1) {
+            transform: translate3d(0, 0px, 0px);  
+            transition: 1s ease-in-out;
+        }
+    
+        &__item.active:nth-child(2) {
+            transform: translate3d(-300px, 0px, 0px);        
+            transition: 1s ease-in-out;
+        }
+        &__item.active:nth-child(3) {
+            transform: translate3d(-600px, 0px, 0px);        
+            transition: 1s ease-in-out;
         }
         &__button {
             width: 80px;
         }
         &__slider {
             &_control {
-                left: 70px;
+                width: 255px;
             }
         }
     }
@@ -2238,8 +2306,14 @@
         }
     }
 
-    .getsupersale__form_button {
-        left: 102px;
+    .getsupersale {
+        &__form_button {
+            left: 102px;
+        }
+        &__row_img {
+            right: 17%;
+            top: 75%;
+        }
     }
 
     .premium {

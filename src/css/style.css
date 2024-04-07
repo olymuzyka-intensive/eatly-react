@@ -694,7 +694,7 @@ h2 span {
   justify-content: center;
   position: absolute;
   bottom: 5%;
-  left: 25%;
+  right: 5%;
 }
 .customer__button {
   background: #e7e5f4;
@@ -717,7 +717,9 @@ h2 span {
   padding: 43px;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
   transition: transform 0.5s;
+  transform: translate3d(0px, 0px, 0px);
 }
 .customer__item_col {
   margin-left: 21px;
