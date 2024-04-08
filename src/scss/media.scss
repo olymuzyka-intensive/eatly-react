@@ -385,12 +385,22 @@
                 height: 40.53px;
                 }
         }
+
         &__bottom {
             padding-top: 40.53px;
         }
+
         &__text {
             font-size: 12.09px;
             line-height: 17.8px;
+        }
+
+        &__socials {
+            gap: 38px;
+        }
+
+        &__icon svg{
+            height: 15.23px;
         }
     }  
 
@@ -571,7 +581,7 @@
                 font-size: 53.33px;
                 line-height: 80px;
             }
-            &_weekend {
+            &_promo {
                 font-size: 62.16px;
                 top: 55px;
                 letter-spacing: -0.2rem;
@@ -703,6 +713,11 @@
 
         &__cards {
             &_decor {
+                &-1 {
+                    width: 29.16px;
+                    top: -30px;
+                    right: -35px;
+                }
                 &-2 {
                     right: -90px;
                     width: 85px;
@@ -713,8 +728,10 @@
                 }
             }
         } 
+
         &__item {
-            width: 485px;
+            padding: 17.35px 0;
+            background-size: 70.2px;
             &_subtitle {
                 font-size: 15.6px;
                 line-height: 22px;
@@ -733,7 +750,23 @@
                 height: 22.5px;
                 background-size: 8.5px;
             }
-            &_info-1, &_info-2 {
+            &_info {                
+                &:nth-child(1) {
+                    background-size: 70.2px 72.75px;
+                    background-position-y: center;
+                }
+                &:nth-child(2) {
+                    background-size: 70.2px 72.75px;
+                    background-position-y: center;
+                }
+                &-1 {
+                    padding-left: 81.54px
+                }
+                &-2 {
+                    padding-right: 20px;
+                }
+
+                &-1, &-2 {
                 gap: 6px;
             }
             &_counter {
@@ -776,6 +809,42 @@
                 padding-bottom: 4.8px;
             }
         }    
+        }
+
+        &__pay {
+            &_item {
+                font-size: 14.22px;
+                line-height: 16.71px;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        &__price {
+            &_sub {
+                font-size: 14.22px;
+                line-height: 17px;
+                letter-spacing: -0.02em;
+            }
+            &_total {
+                font-size: 17.78px;
+                line-height: 21px;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        &__form {
+            input {
+                width: 375px;
+                padding: 17.1px 0;
+                padding-left: 55px;
+                background-position: 14.94px center;
+            }
+            input::placeholder {
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: -0.02em;
+            }
+        }
     }
 
     .blog {
@@ -848,7 +917,8 @@
         }
         &__header {
             &_decor {
-                right: 200px;
+                right: 230px;
+                width: 23.82px;
             }
         }
         &__list {
@@ -865,6 +935,16 @@
         &__item {
             &_button {
                 margin-top: 10px;
+            }
+            &_title {
+                font-size: 16.65px;
+                line-height: 42px;
+                padding-top: 20.44px;
+            }
+            &_question {
+                &-active {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -973,6 +1053,7 @@
             background-position: 50% 25%;
         }
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -1226,7 +1307,7 @@
             &_title {
                 font-size: 50px;
             }
-            &_weekend {
+            &_promo {
                 font-size: 45px;
             }
         }
@@ -1253,8 +1334,18 @@
             }
         }
         &__item {
+            &_title {
+                font-size: 16.54px;
+                line-height: 42.13px;
+            }
             &_button {
                 margin-top: 10px;
+            }
+            &_question {
+                // font-size: 14px;
+                &-active {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -1518,7 +1609,7 @@
         }
         &__slider {
             &_control {
-                left: 0px;
+                right: auto;
             }
         }
         &__item {
@@ -1569,7 +1660,7 @@
                 line-height: 45px;
             }
 
-            &_weekend {
+            &_promo {
                 font-size: 35.33px;
                 line-height: 53px;
             }
@@ -1610,6 +1701,7 @@
             &_title {
                 font-size: 12.3px;
                 line-height: 31px;
+                padding: 15px 0;
             }
             &_questions {
                 width: 316px;
@@ -1734,11 +1826,9 @@
             width: 100%;
         }
         &__item {
+            
             &_info {
                 width: 100%;
-                &-2 {
-                    padding-right: 20px;
-                }
             }
         }
         &__cards {
@@ -1768,7 +1858,7 @@
     }
 
     .popup {
-    margin-top: 100px;
+        margin-top: 100px;
         &__row {
             flex-direction: column;
             width: 100%;
@@ -2288,6 +2378,7 @@
             &_img {
                 width: 102.77px;
                 height: 102.77px;
+                right: 10px;
             }
         }
     }

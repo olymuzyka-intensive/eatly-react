@@ -36,11 +36,12 @@ function Questions() {
   
   const handleItemClick = (item) => {
       
-    if (!disabled) {
+    if (disabled) {
       setIsActive(item)
       console.log('enable')
     } else {
-      setDisabled(!setDisabled)
+      setDisabled(!disabled)
+      !setIsActive(item)
     }
   } 
 
@@ -55,6 +56,20 @@ function Questions() {
 
                 <ul className="questions__list"> 
                   {dataQuestions.map((item) =>  
+                    <li key={item.id} className="questions__item">
+                        <div onClick={() => {handleItemClick(item)}} className={item === isActive ? "questions__item_questions" : "questions__item_questions active"}>
+                            <div className="questions__item_title">{item.title}</div>
+                            <div className={item === isActive ? "questions__item_question-active" : "questions__item_question"}onClick={() => {!handleItemClick()}}>{item.question}</div>
+                          </div>
+                        <div className={item === isActive ? "questions__item_button active" : "questions__item_button"} onClick={() => {!handleItemClick(), console.log('disable')}}>
+                        </div>                        
+                    </li>  
+                  )}
+                  
+                </ul>
+
+                {/* <ul className="questions__list"> 
+                  {dataQuestions.map((item) =>  
                     <li key={item.id} onClick={() => {handleItemClick(item)}} 
                       className={item === isActive ? "questions__item active" : "questions__item"}>
                         <div className="questions__item_questions">
@@ -66,21 +81,8 @@ function Questions() {
                     </li>  
                   )}
                   
-                </ul>
-                {/* <ul className="questions__list"> 
-                  {dataQuestions.map((item) =>  
-                    <li key={item.id} onClick={() => {handleItemClick(item)}} 
-                      className={item === isActive ? "questions__item active" : "questions__item"}>
-                        <div className="questions__item_questions">
-                            <div className="questions__item_title">{item.title}</div>
-                            <div className={item === isActive ? "questions__item_question-active" : "questions__item_question"}>{item.question}</div>
-                          </div>
-                        <div className={item === isActive ? "questions__item_button active" : "questions__item_button"} onClick={() => {handleItemClick()}}>
-                          
-                        </div>                        
-                    </li>  
-                  )}
                 </ul> */}
+
 
             </div>
 

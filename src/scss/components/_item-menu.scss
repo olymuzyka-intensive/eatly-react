@@ -12,11 +12,10 @@
 
     &__promo {
         display: flex;
-        overflow: hidden;
         width: 60%;
         flex-direction: column;
         position: static;
-
+        overflow: hidden;
         &_decor {
             position: absolute;
             top: 190px;
@@ -27,41 +26,46 @@
     &__list {
         display: flex;
         flex-direction: row;
-        width: 300%;
         position: relative;
     }
 
     &__slider {
+        width: 300%;
         &_item {
             width: 100%;
             border-radius: 18.69px;
             position: relative;
             background: url(/src/img/bg_supersale.png),  #6C5FBC;
             margin-right: 10px;
-            display: flex;
-            padding: 30px 0 107px 58.43px;            
-        }
-        &__item.active {
-            width: 100%;
-            border-radius: 18.69px;
-            position: relative;
-            background: url(/src/img/bg_supersale.png),  #6C5FBC;
-            margin-right: 10px;
-            display: flex;
-            padding: 30px 0 107px 58.43px;            
-        }
-        &__item.active:nth-child(1) {
-            transform: translate(0px, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
-    
-        &__item.active:nth-child(2) {
-            transform: translate(-500px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__item.active:nth-child(3) {
-            transform: translate(-800px, 0px, 0px);        
-            transition: 1s ease-in-out;
+            // display: flex;
+            padding: 30px 0 107px 58.43px; 
+            // transition: transform 0.5s; 
+            &:nth-child(1) {
+                transform: translateX(-110%); 
+                transition: 1s ease-in-out;
+            }
+        
+            &:nth-child(2) {
+                transform: translateX(90%); 
+                transition: 1s ease-in-out;
+            }
+            &:nth-child(3) {
+                transform: translateX(180%); 
+                transition: 1s ease-in-out;
+            }
+            &:nth-child(1).active {
+                transform: translateX(0%); 
+                transition: 1s ease-in-out;
+            }
+        
+            &:nth-child(2).active {
+                transform: translateX(-101%); 
+                transition: 1s ease-in-out;
+            }
+            &:nth-child(3).active {
+                transform: translateX(-202%); 
+                transition: 1s ease-in-out;
+            }
         }
         
         &_title {

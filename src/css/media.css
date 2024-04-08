@@ -303,6 +303,12 @@
     font-size: 12.09px;
     line-height: 17.8px;
   }
+  .footer__socials {
+    gap: 38px;
+  }
+  .footer__icon svg {
+    height: 15.23px;
+  }
   .promo__title {
     font-size: 53.5px;
   }
@@ -447,7 +453,7 @@
     font-size: 53.33px;
     line-height: 80px;
   }
-  .supersale__slider_weekend {
+  .supersale__slider_promo {
     font-size: 62.16px;
     top: 55px;
     letter-spacing: -0.2rem;
@@ -557,6 +563,11 @@
   .shopping__row {
     width: 492px;
   }
+  .shopping__cards_decor-1 {
+    width: 29.16px;
+    top: -30px;
+    right: -35px;
+  }
   .shopping__cards_decor-2 {
     right: -90px;
     width: 85px;
@@ -566,7 +577,8 @@
     width: 85px;
   }
   .shopping__item {
-    width: 485px;
+    padding: 17.35px 0;
+    background-size: 70.2px;
   }
   .shopping__item_subtitle {
     font-size: 15.6px;
@@ -585,42 +597,87 @@
     height: 22.5px;
     background-size: 8.5px;
   }
+  .shopping__item_info:nth-child(1) {
+    background-size: 70.2px 72.75px;
+    background-position-y: center;
+  }
+  .shopping__item_info:nth-child(2) {
+    background-size: 70.2px 72.75px;
+    background-position-y: center;
+  }
+  .shopping__item_info-1 {
+    padding-left: 81.54px;
+  }
+  .shopping__item_info-2 {
+    padding-right: 20px;
+  }
   .shopping__item_info-1, .shopping__item_info-2 {
     gap: 6px;
   }
-  .shopping__item_counter input {
+  .shopping__item_info_counter input {
     width: 30px;
   }
-  .shopping__form {
+  .shopping__item__form {
     gap: 5.69px;
   }
-  .shopping__form input {
+  .shopping__item__form input {
     border-radius: 7.09px;
     width: 384.71px;
     background-size: 15.5px 21.3px;
     padding: 17.7px 0 17.4px 60px;
   }
-  .shopping__form input::-moz-placeholder {
+  .shopping__item__form input::-moz-placeholder {
     font-size: 12.8px;
     line-height: 15px;
   }
-  .shopping__form input::placeholder {
+  .shopping__item__form input::placeholder {
     font-size: 12.8px;
     line-height: 15px;
   }
-  .shopping__price_sub {
+  .shopping__item__price_sub {
     font-size: 14.2px;
     line-height: 17px;
     letter-spacing: -0.02em;
   }
-  .shopping__price_total {
+  .shopping__item__price_total {
     font-size: 17.8px;
     line-height: 17px;
     letter-spacing: -0.02em;
   }
-  .shopping__pay_item:not(:last-child) {
+  .shopping__item__pay_item:not(:last-child) {
     padding-top: 11px;
     padding-bottom: 4.8px;
+  }
+  .shopping__pay_item {
+    font-size: 14.22px;
+    line-height: 16.71px;
+    letter-spacing: -0.02em;
+  }
+  .shopping__price_sub {
+    font-size: 14.22px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+  }
+  .shopping__price_total {
+    font-size: 17.78px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+  }
+  .shopping__form input {
+    width: 375px;
+    padding: 17.1px 0;
+    padding-left: 55px;
+    background-position: 14.94px center;
+  }
+  .shopping__form input::-moz-placeholder {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+  }
+  .shopping__form input::placeholder {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
   }
   .blog__row {
     padding: 75px 0 86px;
@@ -680,7 +737,8 @@
     padding: 72px 0 103px;
   }
   .questions__header_decor {
-    right: 200px;
+    right: 230px;
+    width: 23.82px;
   }
   .questions__list__item {
     height: 75px;
@@ -693,6 +751,14 @@
   }
   .questions__item_button {
     margin-top: 10px;
+  }
+  .questions__item_title {
+    font-size: 16.65px;
+    line-height: 42px;
+    padding-top: 20.44px;
+  }
+  .questions__item_question-active {
+    font-size: 14px;
   }
   .getsupersale__row {
     padding: 40.5px;
@@ -985,7 +1051,7 @@
   .supersale__slider_title {
     font-size: 50px;
   }
-  .supersale__slider_weekend {
+  .supersale__slider_promo {
     font-size: 45px;
   }
   .supersale input {
@@ -1004,8 +1070,15 @@
   .questions__header_decor {
     right: 90px;
   }
+  .questions__item_title {
+    font-size: 16.54px;
+    line-height: 42.13px;
+  }
   .questions__item_button {
     margin-top: 10px;
+  }
+  .questions__item_question-active {
+    font-size: 15px;
   }
   .dishes__item {
     border-radius: 22.62px;
@@ -1200,7 +1273,7 @@
     width: 117px;
   }
   .customer__slider_control {
-    left: 0px;
+    right: auto;
   }
   .customer__item {
     flex: 0 0 353px;
@@ -1242,7 +1315,7 @@
     font-size: 30.31px;
     line-height: 45px;
   }
-  .supersale__slider_weekend {
+  .supersale__slider_promo {
     font-size: 35.33px;
     line-height: 53px;
   }
@@ -1276,6 +1349,7 @@
   .questions__item_title {
     font-size: 12.3px;
     line-height: 31px;
+    padding: 15px 0;
   }
   .questions__item_questions {
     width: 316px;
@@ -1376,9 +1450,6 @@
   }
   .shopping__item_info {
     width: 100%;
-  }
-  .shopping__item_info-2 {
-    padding-right: 20px;
   }
   .shopping__cards_decor-1 {
     top: -15px;
@@ -1784,6 +1855,7 @@
   .supersale__slider_img {
     width: 102.77px;
     height: 102.77px;
+    right: 10px;
   }
   .shoping__form input {
     width: 223px;

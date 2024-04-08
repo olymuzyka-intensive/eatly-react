@@ -802,8 +802,9 @@ h2 span {
 }
 .questions__header_decor {
   position: absolute;
-  top: -35px;
-  right: 385px;
+  top: -25px;
+  right: 410px;
+  width: 32.8px;
 }
 .questions__header_title {
   font-size: 45px;
@@ -822,9 +823,10 @@ h2 span {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #8E97A6;
-  min-height: 100px;
+  min-height: 110px;
   width: 100%;
   margin-left: 8px;
+  padding: 45px 0 30px;
 }
 .questions__item_title {
   position: relative;
@@ -856,7 +858,7 @@ h2 span {
   background: url(/src/img/Plus.svg) no-repeat;
   width: 31px;
   height: 31px;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-right: 12px;
   margin-left: auto;
   cursor: pointer;
@@ -904,7 +906,7 @@ h2 span {
   gap: 53.8px;
   align-items: flex-end;
 }
-.footer__icon {
+.footer__icon svg {
   fill: #081420;
   height: 21.42px;
 }
@@ -1089,7 +1091,7 @@ h2 span {
 
 .getsupersale {
   margin-top: 107px;
-  padding: 80px 0 80px;
+  padding: 60px 0 80px;
   position: relative;
 }
 .getsupersale__row {
@@ -1138,13 +1140,9 @@ h2 span {
   text-transform: capitalize;
 }
 
-.map {
-  padding-top: 120px;
-}
-
 .shopping {
   margin-top: 107px;
-  padding: 120px 0 180px;
+  padding: 120px 0;
 }
 .shopping__row {
   position: relative;
@@ -1212,18 +1210,18 @@ h2 span {
 }
 .shopping__item {
   width: 100%;
-  height: 110px;
+  padding: 24.5px 0;
   border-radius: 12px;
   border: 1.4px solid #F4F4F6;
   display: flex;
   justify-content: space-between;
 }
-.shopping__item:nth-child(1) {
+.shopping__item_info:nth-child(1) {
   background: #fff url(/src/img/Food-1.png) no-repeat;
   background-size: 100px 100px;
   background-position-y: bottom;
 }
-.shopping__item:nth-child(2) {
+.shopping__item_info:nth-child(2) {
   background: #fff url(/src/img/Food-2.png) no-repeat;
   background-size: 100px 100px;
   background-position-y: bottom;
@@ -1336,16 +1334,18 @@ h2 span {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  line-height: 40.345px;
 }
 .shopping__price_sub {
   font-weight: 400;
   font-size: 20px;
   margin-top: 3px;
+  color: #323142;
+  line-height: 17px;
 }
 .shopping__price_total {
   font-weight: 600;
   font-size: 25px;
+  line-height: 17px;
 }
 
 .support {
@@ -1505,6 +1505,7 @@ h2 span {
 
 .map {
   margin-top: 107px;
+  padding-top: 120px;
 }
 .map iframe {
   border: 0;
@@ -1629,10 +1630,10 @@ h2 span {
 }
 .supersale__promo {
   display: flex;
-  overflow: hidden;
   width: 60%;
   flex-direction: column;
   position: static;
+  overflow: hidden;
 }
 .supersale__promo_decor {
   position: absolute;
@@ -1642,8 +1643,10 @@ h2 span {
 .supersale__list {
   display: flex;
   flex-direction: row;
-  width: 300%;
   position: relative;
+}
+.supersale__slider {
+  width: 300%;
 }
 .supersale__slider_item {
   width: 100%;
@@ -1651,28 +1654,30 @@ h2 span {
   position: relative;
   background: url(/src/img/bg_supersale.png), #6C5FBC;
   margin-right: 10px;
-  display: flex;
   padding: 30px 0 107px 58.43px;
 }
-.supersale__slider__item.active {
-  width: 100%;
-  border-radius: 18.69px;
-  position: relative;
-  background: url(/src/img/bg_supersale.png), #6C5FBC;
-  margin-right: 10px;
-  display: flex;
-  padding: 30px 0 107px 58.43px;
-}
-.supersale__slider__item.active:nth-child(1) {
-  transform: translate(0px, 0px, 0px);
+.supersale__slider_item:nth-child(1) {
+  transform: translateX(-110%);
   transition: 1s ease-in-out;
 }
-.supersale__slider__item.active:nth-child(2) {
-  transform: translate(-500px, 0px, 0px);
+.supersale__slider_item:nth-child(2) {
+  transform: translateX(90%);
   transition: 1s ease-in-out;
 }
-.supersale__slider__item.active:nth-child(3) {
-  transform: translate(-800px, 0px, 0px);
+.supersale__slider_item:nth-child(3) {
+  transform: translateX(180%);
+  transition: 1s ease-in-out;
+}
+.supersale__slider_item:nth-child(1).active {
+  transform: translateX(0%);
+  transition: 1s ease-in-out;
+}
+.supersale__slider_item:nth-child(2).active {
+  transform: translateX(-101%);
+  transition: 1s ease-in-out;
+}
+.supersale__slider_item:nth-child(3).active {
+  transform: translateX(-202%);
   transition: 1s ease-in-out;
 }
 .supersale__slider_title {

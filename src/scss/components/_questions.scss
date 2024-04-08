@@ -7,8 +7,9 @@
         position: relative;
         &_decor {
             position: absolute;
-            top: -35px;
-            right: 385px;
+            top: -25px;
+            right: 410px;
+            width: 32.8px;
         }
         &_title {
             font-size: 45px;
@@ -30,9 +31,10 @@
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid $gray;
-        min-height: 100px;    
+        min-height: 110px;    
         width: 100%;
-        margin-left: 8px;   
+        margin-left: 8px;
+        padding: 45px 0 30px;   
         &_title {
             position: relative;
             color: #323142;
@@ -66,7 +68,7 @@
             background: url(/src/img/Plus.svg) no-repeat;
             width: 31px;
             height: 31px;
-            margin-top: 20px;
+            margin-top: 15px;
             margin-right: 12px;
             margin-left: auto;
             cursor: pointer;
