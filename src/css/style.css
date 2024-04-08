@@ -778,19 +778,27 @@ h2 span {
   margin-bottom: 32px;
 }
 .customer__item:nth-child(1) {
-  transform: translate3d(575px, 0px, 0px);
+  transform: translateX(-110%);
+  transition: 1s ease-in-out;
+}
+.customer__item:nth-child(2) {
+  transform: translateX(0%);
+  transition: 1s ease-in-out;
+}
+.customer__item:nth-child(3) {
+  transform: translateX(0%);
   transition: 1s ease-in-out;
 }
 .customer__item.active:nth-child(1) {
-  transform: translate3d(0, 0px, 0px);
+  transform: translateX(0%);
   transition: 1s ease-in-out;
 }
 .customer__item.active:nth-child(2) {
-  transform: translate3d(-575px, 0px, 0px);
+  transform: translateX(-110%);
   transition: 1s ease-in-out;
 }
 .customer__item.active:nth-child(3) {
-  transform: translate3d(-1145px, 0px, 0px);
+  transform: translateX(-217%);
   transition: 1s ease-in-out;
 }
 
@@ -852,7 +860,6 @@ h2 span {
   line-height: 32px;
   letter-spacing: 0.2px;
   width: 90%;
-  padding: 20px 0 43px;
 }
 .questions__item_button {
   background: url(/src/img/Plus.svg) no-repeat;
