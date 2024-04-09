@@ -22,7 +22,6 @@
     }
     &__item {
         width: 225px;
-        height: 390px;
         border-radius: 34.5px;
         border: 1.4px solid #F4F4F6;
         box-shadow: 6.84842px 82.18102px 41.09051px 0px rgba(229, 229, 229, 0.70);
@@ -100,7 +99,7 @@
         font-size: 20px;
         line-height: 26px;
         display: flex;
-        margin-bottom: 7px;
+        margin-bottom: 10.82px;
         &_star {
             padding-left: 6.5px;
             padding-right: 6.5px;
@@ -136,12 +135,12 @@
             right: 33%;
         }
     }
-    &__pagemenu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 46px;
-        margin-bottom: 65px;
-        align-items: baseline;
-    }
+    // &__pagemenu {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     // height: 46px;
+    //     margin-bottom: 65px;
+    //     align-items: baseline;
+    // }
 }  
