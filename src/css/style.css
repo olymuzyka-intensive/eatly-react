@@ -360,7 +360,7 @@ h2 span {
 }
 
 .promo {
-  margin-top: 107px;
+  margin-top: 102.59px;
 }
 .promo__row {
   padding: 120px 0;
@@ -823,9 +823,7 @@ h2 span {
   flex-direction: row;
   border-bottom: 1px solid #8E97A6;
   min-height: 110px;
-  width: 100%;
-  margin-left: 8px;
-  padding: 45px 0 30px;
+  padding: 45px 0 30px 8px;
 }
 .questions__item_title {
   position: relative;
@@ -850,12 +848,11 @@ h2 span {
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.2px;
-  width: 90%;
 }
 .questions__item_button {
   background: url(/src/img/Plus.svg) no-repeat;
-  width: 31px;
-  height: 31px;
+  background-size: 30.12px;
+  width: 30.12px;
   margin-top: 15px;
   margin-right: 12px;
   margin-left: auto;
@@ -863,6 +860,7 @@ h2 span {
 }
 .questions__item_button.active {
   background: url(/src/img/minus.svg) no-repeat;
+  background-size: 30.12px;
 }
 .questions__item.active {
   display: flex;
@@ -1022,6 +1020,7 @@ h2 span {
 }
 
 .content {
+  margin-top: 102.59px;
   padding-bottom: 160px;
 }
 .content__row {
@@ -1088,7 +1087,7 @@ h2 span {
 }
 
 .getsupersale {
-  margin-top: 107px;
+  margin-top: 102.59px;
   padding: 60px 0 80px;
   position: relative;
 }
@@ -1139,7 +1138,7 @@ h2 span {
 }
 
 .shopping {
-  margin-top: 107px;
+  margin-top: 102.59px;
   padding: 120px 0;
 }
 .shopping__row {
@@ -1347,7 +1346,7 @@ h2 span {
 }
 
 .support {
-  margin-top: 107px;
+  margin-top: 102.59px;
   padding: 210px 0;
 }
 .support__row {
@@ -1502,7 +1501,7 @@ h2 span {
 }
 
 .map {
-  margin-top: 107px;
+  margin-top: 102.59px;
   padding-top: 120px;
 }
 .map iframe {
@@ -1616,7 +1615,7 @@ h2 span {
 }
 
 .supersale {
-  margin-top: 107px;
+  margin-top: 102.59px;
 }
 .supersale__row {
   padding: 120px 0 75px;

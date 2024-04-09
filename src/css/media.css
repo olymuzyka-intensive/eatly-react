@@ -309,6 +309,9 @@
   .footer__icon svg {
     height: 15.23px;
   }
+  .promo {
+    margin-top: 90px;
+  }
   .promo__title {
     font-size: 53.5px;
   }
@@ -427,6 +430,9 @@
   .dishes__cards {
     margin-bottom: 46.5px;
     gap: 21.89px;
+  }
+  .supersale {
+    margin-top: 90px;
   }
   .supersale__row {
     gap: 79.64px;
@@ -553,6 +559,9 @@
   .customer__button {
     width: 135px;
     height: 7.82px;
+  }
+  .shopping {
+    margin-top: 90px;
   }
   .shopping__row {
     width: 492px;
@@ -716,6 +725,9 @@
     width: 31px;
     height: 31px;
   }
+  .content {
+    margin-top: 90px;
+  }
   .content__row {
     padding: 89.6px 0 120px;
   }
@@ -731,20 +743,12 @@
     padding: 72px 0 103px;
   }
   .questions__header_decor {
+    top: -15px;
     right: 230px;
     width: 23.82px;
   }
-  .questions__list__item {
-    height: 75px;
-  }
-  .questions__list_title {
-    font-size: 16.65px;
-  }
-  .questions__list_button {
-    background-size: 21.5px;
-  }
   .questions__item {
-    padding: 30px 0 20px;
+    padding: 30px 0 20px 8px;
   }
   .questions__item_title {
     font-size: 16.65px;
@@ -752,6 +756,19 @@
   }
   .questions__item_question-active {
     font-size: 14px;
+  }
+  .questions__item_button {
+    margin-top: 9.38px;
+    background-size: 21.5px;
+  }
+  .questions__item_button svg {
+    width: 21.5px;
+  }
+  .questions__item_button.active {
+    background-size: 21.5px;
+  }
+  .getsupersale {
+    margin-top: 90px;
   }
   .getsupersale__row {
     padding: 40.5px;
@@ -774,6 +791,7 @@
     left: 207px;
   }
   .support {
+    margin-top: 90px;
     padding: 145px 0 155px;
   }
   .support__row input, .support__row textarea {
@@ -840,6 +858,9 @@
     background-size: 388.27px;
     padding-bottom: 100px;
     background-position: 50% 25%;
+  }
+  .map {
+    margin-top: 90px;
   }
 }
 @media (max-width: 768px) {
@@ -1061,7 +1082,7 @@
     padding: 85px 0 66px;
   }
   .questions__header_decor {
-    right: 90px;
+    right: 120px;
   }
   .questions__item {
     padding: 25px 0 20px;
@@ -1327,7 +1348,7 @@
     line-height: 28px;
   }
   .questions__header_decor {
-    right: 55px;
+    right: 50px;
     width: 21.54px;
     top: -15px;
   }
@@ -1338,15 +1359,13 @@
     font-size: 12.3px;
     line-height: 31px;
   }
-  .questions__item_questions {
-    width: 316px;
-  }
   .questions__item_button {
+    width: 15.82px;
     margin-top: 5px;
-    background-size: 25px;
+    background-size: 15.82px;
   }
   .questions__item_button.active {
-    background-size: 25px;
+    background-size: 15.82px;
   }
   .questions__item_question-active {
     font-size: 11px;
@@ -1814,17 +1833,11 @@
   .questions__item_question-active {
     width: 80%;
   }
-  .questions__item_button {
-    background-size: 20px;
-  }
-  .questions__item_button.active {
-    background-size: 20px;
-  }
   .questions__item_title {
     width: 200px;
   }
   .questions__header_decor {
-    right: 10px;
+    right: 5px;
   }
   .quality ul {
     width: 250px;
