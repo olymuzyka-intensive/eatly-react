@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Promo() {
 
     return (
@@ -11,7 +13,7 @@ function Promo() {
                         <p className="promo__text">
                             EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. Get a $20 bonus.
                         </p>
-                        <a href="/pages/menu.html" className="btn btn--get-started">Get Started </a>
+                        <Link to="/menu" className="btn btn--get-started">Get Started </Link>
                         <a href="https://play.google.com/store/apps?hl=ru&gl=US&pli=1" className="btn btn--Go-pro">Go Pro
                         </a>
                         <div className="promo__left_bottom">

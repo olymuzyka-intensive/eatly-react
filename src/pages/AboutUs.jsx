@@ -1,6 +1,5 @@
-
-import Header from "../laouts/Header"
-import Footer from "../laouts/Footer"
+// import Header from "../laouts/Header"
+// import Footer from "../laouts/Footer"
 
 import Map from "../laouts/Map"
 import About from "../laouts/About"
@@ -9,11 +8,11 @@ import Questions from "../laouts/Questions"
 function AboutUs() {
     return (
         <>
-        <Header/>
+        {/* <Header/> */}
             <Map />
             <About/>
             <Questions/>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }

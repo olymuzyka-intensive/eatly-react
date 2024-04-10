@@ -1,5 +1,5 @@
-import Header from "../laouts/Header"
-import Footer from "../laouts/Footer"
+// import Header from "../laouts/Header"
+// import Footer from "../laouts/Footer"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import GetSupersale from "../laouts/GetSupersale "
@@ -9,7 +9,7 @@ function Cart() {
     
     return (
         <>
-        <Header/>        
+        {/* <Header/>         */}
         <div className="shopping">
             <div className="container">
                 <div className="shopping__row">
@@ -79,7 +79,7 @@ function Cart() {
             </div>
         </div>
         <GetSupersale/>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }

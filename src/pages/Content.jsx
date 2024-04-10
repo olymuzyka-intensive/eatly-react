@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import Header from "../laouts/Header"
-import Footer from "../laouts/Footer"
+// import Header from "../laouts/Header"
+// import Footer from "../laouts/Footer"
 
 function Content() {
     return (
     <>
-    <Header/>
+    {/* <Header/> */}
       <div className="content">
         <div className="container">
         <div className="content__row">
@@ -143,7 +143,7 @@ function Content() {
             </div>    
         </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
     )
   }

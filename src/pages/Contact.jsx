@@ -1,10 +1,10 @@
-import Header from "../laouts/Header"
-import Footer from "../laouts/Footer"
+// import Header from "../laouts/Header"
+// import Footer from "../laouts/Footer"
 
 function Contact() {
     return (
         <>
-        <Header/>
+        {/* <Header/> */}
         <div className="support">
             <div className="container">
                 <div className="support__row">
@@ -30,7 +30,7 @@ function Contact() {
 
 </div>               
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }

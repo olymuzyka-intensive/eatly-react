@@ -1,5 +1,5 @@
-import Header from "../laouts/Header"
-import Footer from "../laouts/Footer"
+// import Header from "../laouts/Header"
+// import Footer from "../laouts/Footer"
 import Promo from "../laouts/Promo"
 import Premium from "../laouts/Premium"
 import Quality from "../laouts/Quality"
@@ -9,7 +9,7 @@ import Customer from "../laouts/Customer"
 function Home() {
     return (
         <>
-        <Header/>
+        {/* <Header/> */}
         <div className="home">
             <Promo/>
             <Premium/> 
@@ -17,7 +17,7 @@ function Home() {
             <Dishes/>
             <Customer/>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
