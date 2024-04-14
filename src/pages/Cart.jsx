@@ -1,12 +1,64 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
-import { useState } from "react"
+import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import GetSupersale from "../laouts/GetSupersale "
 
+// import { AppContext } from "./../App"
+// import { MainContext } from "../Main"
+
 function Cart() {
-    const [discount, setDiscount] = useState('')
-    
+    const [discount, setDiscount] = useState('');
+    // const {cart, setCart} = useContext(AppContext)
+
+    // const data = useContext(MainContext)
+
+    // const [cartList, setCartList] = useState([])
+    // const [total, setTotal] = useState(0)
+
+    // const changeQuantity = (id, value) => {
+    //     if (+value == 0) {
+    //         remove(id);
+    //         return;
+    //     }
+
+    //     const cartItem = cart.find((item) => item.id == id)
+
+    //     if (cartItem) {
+    //         cartItem.quantity = +value;
+
+    //         const cartTmp = cart;
+
+    //         setCart([...cartTmp]);
+    //         localStorage.setItem('cart', JSON.stringify(cartTmp));
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     const cartListTmp = data.filter((product) => {
+    //         const cartItem = cart.find((item) => {
+    //             product.quantity = item.quantity;
+    //             return item.id == product.id;
+    //         });
+
+    //         if (cartItem) return product;
+    //     });
+
+    //     if (cartListTmp && cartListTmp.length > 0) setCartList([...cartListTmp])
+    // }, [cart])
+
+    // useEffect(() => {
+    //     let totalTmp = 0;
+
+    //     cartList.forEach((item) => {
+    //         totalTmp += item.price * item.quantity
+    //     });
+
+    //     totalTmp = totalTmp.toFixed(2);
+
+    //     setTotal(totalTmp);
+    // }, [cartList])
+
     return (
         <>
         {/* <Header/>         */}

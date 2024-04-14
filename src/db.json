@@ -1,0 +1,224 @@
+{
+    "dishes": [
+        { 
+            "id": "1", 
+            "image": "url()",
+            "subcategory": "main",
+            "category": "Healthy",
+            "subtitle": "Chicken Hell", 
+            "comment": "24 min",
+            "star": "4.8",
+            "price": "12",
+            "pricesub": "99"
+        },
+        { 
+            "id": "2", 
+            "image": "url()",
+            "subcategory": "main",
+            "category": "Trending",
+            "subtitle": "Swe Dish", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "3", 
+            "image": "url()",
+            "subcategory": "main",
+            "category": "Supreme",
+            "subtitle": "Swe Dish", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "4", 
+            "image": "url()",
+            "subcategory": "main",
+            "category": "Healthy",
+            "subtitle": "Chicken Hell", 
+            "comment": "24 min",
+            "star": "4.8",
+            "price": "12",
+            "pricesub": "99"
+        },
+        { 
+            "id": "5", 
+            "image": "url()",
+            "subcategory": "main",
+            "category": "Trending",
+            "subtitle": "Swe Dish", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "6", 
+            "image": "url()",
+            "subcategory": "pizza",
+            "category": "Healthy",
+            "subtitle": "Cheese", 
+            "comment": "24 min",
+            "star": "4.8",
+            "price": "12",
+            "pricesub": "99"
+        },
+        { 
+            "id": "7", 
+            "image": "url()",
+            "subcategory": "pizza",
+            "category": "Trending",
+            "subtitle": "Veggie", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "8", 
+            "image": "url()",
+            "subcategory": "pizza",
+            "category": "Supreme",
+            "subtitle": "BBQ Chicken", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "9", 
+            "image": "url()",
+            "subcategory": "pizza",
+            "category": "Healthy",
+            "subtitle": "Chicago Deep", 
+            "comment": "24 min",
+            "star": "4.8",
+            "price": "12",
+            "pricesub": "99"
+        },
+        { 
+            "id": "10", 
+            "image": "url()",
+            "subcategory": "pizza",
+            "category": "Trending",
+            "subtitle": "Pepperoni", 
+            "comment": "34 min",
+            "star": "4.9",
+            "price": "19",
+            "pricesub": "99"
+        },
+        { 
+            "id": "11", 
+            "image": "url()",
+            "subcategory": "donut",
+            "category": "Healthy",
+            "subtitle": "GranDonut",
+            "comment": "6 min",
+            "star": "4.8",
+            "price": "3",
+            "pricesub": "99"
+        },
+        { 
+            "id": "12", 
+            "image": "url()",
+            "subcategory": "donut",
+            "category": "Trending",
+            "subtitle": "Donuterg", 
+            "comment": "4 min",
+            "star": "4.9",
+            "price": "4",
+            "pricesub": "99"
+        },
+        { 
+            "id": "13", 
+            "image": "url()",
+            "subcategory": "donut",
+            "category": "Supreme",
+            "subtitle": "Donutada", 
+            "comment": "4 min",
+            "star": "4.9",
+            "price": "4",
+            "pricesub": "99"
+        },
+        { 
+            "id": "14", 
+            "image": "url()",
+            "subcategory": "donut",
+            "category": "Healthy",
+            "subtitle": "Donutola", 
+            "comment": "6 min",
+            "star": "4.8",
+            "price": "4",
+            "pricesub": "99"
+        },
+        { 
+            "id": "15", 
+            "image": "url()",
+            "subcategory": "donut",
+            "category": "Trending",
+            "subtitle": "Donutia", 
+            "comment": "4 min",
+            "star": "4.9",
+            "price": "5",
+            "pricesub": "99"
+        },
+        { 
+            "id": "16", 
+            "image": "url()",
+            "subcategory": "ice",
+            "category": "Healthy",
+            "subtitle": "Eskimo", 
+            "comment": "14 min",
+            "star": "4.8",
+            "price": "4",
+            "pricesub": "99"
+        },
+        { 
+            "id": "17", 
+            "image": "url()",
+            "subcategory": "ice",
+            "category": "Trending",
+            "subtitle": "Neapolitan", 
+            "comment": "13 min",
+            "star": "4.9",
+            "price": "3",
+            "pricesub": "99"
+        },
+        { 
+            "id": "18", 
+            "image": "url()",
+            "subcategory": "ice",
+            "category": "Supreme",
+            "subtitle": "Vanilla", 
+            "comment": "14 min",
+            "star": "4.9",
+            "price": "6",
+            "pricesub": "99"
+        },
+        { 
+            "id": "19", 
+            "image": "url()",
+            "subcategory": "ice",
+            "category": "Healthy",
+            "subtitle": "Rocky road", 
+            "comment": "12 min",
+            "star": "4.8",
+            "price": "5",
+            "pricesub": "99"
+        },
+        { 
+            "id": "20", 
+            "image": "url()",
+            "subcategory": "ice",
+            "category": "Trending",
+            "subtitle": "Butter Pecan", 
+            "comment": "11 min",
+            "star": "4.9",
+            "price": "3",
+            "pricesub": "99"
+        }
+    ]    
+  }

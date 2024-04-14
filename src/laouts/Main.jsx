@@ -1,4 +1,4 @@
-import { createContext } from "react"
+import { createContext, useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 
 import Home from "../pages/Home"
@@ -10,9 +10,32 @@ import Cart from "../pages/Cart"
 import Popup from "../pages/Popup"
 import Content from "../pages/Content"
 
-export const AppContext = createContext();
+export const MainContext = createContext();
 
 function Main() {
+  const [data, setData] = useState([]);
+
+    const getData = async () => {
+        const dataServer = await fetch('https://foodish-api.com/')
+        .then(response => response.json());
+
+        localStorage.setItem('data', JSON.stringify(dataServer));
+        setData([...dataServer]);
+    };
+
+    useEffect(() => {
+        if (data.length == 0) {
+            let dataLocal = localStorage.getItem('data');
+            dataLocal = JSON.parse(dataLocal);
+
+            if (dataLocal && dataLocal.length > 0) {
+                setData([...dataLocal]);
+            } else {
+                getData();
+            }
+        }
+    }, [data]);
+
   return (
     <>
       <Routes>
