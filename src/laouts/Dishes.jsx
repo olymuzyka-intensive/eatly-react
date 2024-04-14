@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Dishes() {
 
     return (
@@ -108,7 +110,7 @@ function Dishes() {
                         </li>
                     </ul>
                     <div className="dishes__button">
-                        <a href="#" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></a>
+                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
                     </div>
                 </div>
             </div>

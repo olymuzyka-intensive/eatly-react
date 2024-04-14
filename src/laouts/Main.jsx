@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 
 import Home from "../pages/Home"
 import Menu from "../pages/Menu"
+import MenuAll from "../pages/MenuAll"
 import Blog from "../pages/Blog"
 import AboutUs from "../pages/AboutUs"
 import Contact from "../pages/Contact"
@@ -16,7 +17,7 @@ function Main() {
   const [data, setData] = useState([]);
 
     const getData = async () => {
-        const dataServer = await fetch('https://foodish-api.com/')
+        const dataServer = await fetch('http://localhost:3000/dishes')
         .then(response => response.json());
 
         localStorage.setItem('data', JSON.stringify(dataServer));
@@ -41,6 +42,8 @@ function Main() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
+        <Route path="/menuAll" element={<MenuAll/>}/>
+
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/content" element={<Content/>}/>
         <Route path="/aboutUs" element={<AboutUs/>}/>
