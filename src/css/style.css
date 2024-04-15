@@ -542,7 +542,7 @@ h2 span {
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-bottom: 65.36px;
 }
 .dishes__item {
@@ -552,6 +552,7 @@ h2 span {
   box-shadow: 6.84842px 82.18102px 41.09051px 0px rgba(229, 229, 229, 0.7);
   position: relative;
   transition: transform 0.3s ease;
+  background: #fff;
 }
 .dishes__item_like {
   cursor: pointer;
@@ -565,25 +566,12 @@ h2 span {
 .dishes__item:hover {
   transform: scale(1.1);
 }
-.dishes__item:nth-child(1) {
-  background: #fff url(/src/img/Food-1.png) no-repeat;
-  background-position: 50% 20%;
-}
-.dishes__item:nth-child(2) {
-  background: #fff url(/src/img/Food-2.png) no-repeat;
-  background-position: 50% 20%;
-}
-.dishes__item:nth-child(3) {
-  background: #fff url(/src/img/Food-3.png) no-repeat;
-  background-position: 50% 20%;
-}
-.dishes__item:nth-child(4) {
-  background: #fff url(/src/img/Food-1.png) no-repeat;
-  background-position: 50% 20%;
-}
-.dishes__item:nth-child(5) {
-  background: #fff url(/src/img/Food-2.png) no-repeat;
-  background-position: 50% 20%;
+.dishes__img {
+  position: absolute;
+  top: 40px;
+  width: 180px;
+  left: 20px;
+  border-radius: 20px;
 }
 .dishes__category {
   display: inline-flex;

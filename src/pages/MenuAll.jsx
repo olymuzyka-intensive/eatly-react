@@ -1,16 +1,14 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
-import Supersale from "../laouts/Supersale"
-import Questions from "../laouts/Questions"
+import GetSupersale  from "../laouts/GetSupersale "
 import Dishes from "../laouts/Dishes"
 
 function MenuAll() {
     return (
         <>
         {/* <Header/> */}
-            <Supersale/>
+            <GetSupersale/>
             <Dishes/>
-            <Questions/>
         {/* <Footer/> */}
         </>
     )

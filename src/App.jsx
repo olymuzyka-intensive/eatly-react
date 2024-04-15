@@ -39,11 +39,13 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Header/>
-        <Main/>
-        <Footer/>
-      </BrowserRouter>
+      <AppContext.Provider value={{cart, setCart, cartAdd}}>
+        <BrowserRouter>
+          <Header/>
+          <Main/>
+          <Footer/>
+        </BrowserRouter>
+      </AppContext.Provider>
     </>
   )
 }

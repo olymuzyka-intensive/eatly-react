@@ -17,7 +17,7 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 30px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin-bottom: 65.36px;
     }
     &__item {
@@ -27,6 +27,7 @@
         box-shadow: 6.84842px 82.18102px 41.09051px 0px rgba(229, 229, 229, 0.70);
         position: relative; 
         transition: transform 0.3s ease;
+        background: $white;
         &_like {
             cursor: pointer;
             position: absolute;
@@ -40,25 +41,32 @@
     &__item:hover {
         transform: scale(1.1);
     }
-    &__item:nth-child(1) {
-        background: $white url(/src/img/Food-1.png) no-repeat;
-        background-position: 50% 20%;
-    }
-    &__item:nth-child(2) {
-        background: $white url(/src/img/Food-2.png) no-repeat;
-        background-position: 50% 20%;
-    }
-    &__item:nth-child(3) {
-        background: $white url(/src/img/Food-3.png) no-repeat;
-        background-position: 50% 20%;
-    }
-    &__item:nth-child(4) {
-        background: $white url(/src/img/Food-1.png) no-repeat;
-        background-position: 50% 20%;
-    }
-    &__item:nth-child(5) {
-        background: $white url(/src/img/Food-2.png) no-repeat;
-        background-position: 50% 20%;
+    // &__item:nth-child(1) {
+    //     background: $white url(/src/img/Food-1.png) no-repeat;
+    //     background-position: 50% 20%;
+    // }
+    // &__item:nth-child(2) {
+    //     background: $white url(/src/img/Food-2.png) no-repeat;
+    //     background-position: 50% 20%;
+    // }
+    // &__item:nth-child(3) {
+    //     background: $white url(/src/img/Food-3.png) no-repeat;
+    //     background-position: 50% 20%;
+    // }
+    // &__item:nth-child(4) {
+    //     background: $white url(/src/img/Food-1.png) no-repeat;
+    //     background-position: 50% 20%;
+    // }
+    // &__item:nth-child(5) {
+    //     background: $white url(/src/img/Food-2.png) no-repeat;
+    //     background-position: 50% 20%;
+    // }
+    &__img {
+        position: absolute;
+        top: 40px;
+        width: 180px;
+        left: 20px;
+        border-radius: 20px;
     }
     &__category {
         display: inline-flex;

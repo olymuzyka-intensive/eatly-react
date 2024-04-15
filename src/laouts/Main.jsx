@@ -38,12 +38,13 @@ function Main() {
     }, [data]);
 
   return (
+    <MainContext.Provider value={data}>
+
     <>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
         <Route path="/menuAll" element={<MenuAll/>}/>
-
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/content" element={<Content/>}/>
         <Route path="/aboutUs" element={<AboutUs/>}/>
@@ -52,6 +53,8 @@ function Main() {
         <Route path="/popup" element={<Popup/>}/>
       </Routes>
     </>
+    </MainContext.Provider>
+
   )
 }
 
