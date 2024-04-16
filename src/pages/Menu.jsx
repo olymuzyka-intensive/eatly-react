@@ -2,14 +2,14 @@
 // import Footer from "../laouts/Footer"
 import Supersale from "../laouts/Supersale"
 import Questions from "../laouts/Questions"
-import Dishes from "../laouts/Dishes"
+import DishesFilter from "../laouts/DishesFilter"
 
 function Menu() {
     return (
         <>
         {/* <Header/> */}
             <Supersale/>
-            <Dishes/>
+            <DishesFilter/>
             <Questions/>
         {/* <Footer/> */}
         </>

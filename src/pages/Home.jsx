@@ -3,8 +3,8 @@
 import Promo from "../laouts/Promo"
 import Premium from "../laouts/Premium"
 import Quality from "../laouts/Quality"
-import Dishes from "../laouts/Dishes"
 import Customer from "../laouts/Customer"
+import DishesTop from "../laouts/DishesTop"
 
 function Home() {
     return (
@@ -14,7 +14,7 @@ function Home() {
             <Promo/>
             <Premium/> 
             <Quality/> 
-            <Dishes/>
+            <DishesTop/>
             <Customer/>
         </div>
         {/* <Footer/> */}

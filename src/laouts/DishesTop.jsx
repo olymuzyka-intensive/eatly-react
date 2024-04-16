@@ -7,10 +7,15 @@ import { MainContext } from "./Main"
 import { AppContext } from '../App';
 
 
-function Dishes() {
+function DishesTop() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext);
 
+    const dataTmp = data.filter(function(item) {
+        if (item.star > 4.8) {
+            return true
+        }        
+    })
     // const { product_id } = useParams();
 
     // const [product, setProduct] = useState({});
@@ -29,9 +34,10 @@ function Dishes() {
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
-                    <h2 className="dishes__title">Our <span>Dishes</span></h2>
+                    <h2 className="dishes__title">Our Top <span>Dishes</span></h2>
                     <ul className="dishes__cards">
-                        {data.map((item, index) => {
+                        {dataTmp.map((item, index) => {
+                            if (index <= 4)
                             return (
                             <li key={index} className="dishes__item">
                                 <div className="dishes__category_card">
@@ -57,13 +63,13 @@ function Dishes() {
                             )
                         })}
                     </ul>
-                    {/* <div className="dishes__button">
+                    <div className="dishes__button">
                         <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
     )
   }
   
-  export default Dishes
+  export default DishesTop
