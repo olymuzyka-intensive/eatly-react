@@ -554,24 +554,27 @@ h2 span {
   transition: transform 0.3s ease;
   background: #fff;
 }
-.dishes__item_like {
-  cursor: pointer;
-  position: absolute;
-  top: 24px;
-  right: 22px;
-}
-.dishes__item_like:active {
-  background: url(/src/img/Heart-fill.svg) no-repeat;
-}
-.dishes__item:hover {
-  transform: scale(1.1);
-}
-.dishes__img {
+.dishes__item_img {
   position: absolute;
   top: 40px;
   width: 180px;
   left: 20px;
   border-radius: 20px;
+}
+.dishes__item_like {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.dishes__item_like svg {
+  width: 21.95px;
+}
+.dishes__item_like:active svg {
+  fill: #5C4EAE;
+}
+.dishes__item:hover {
+  transform: scale(1.1);
 }
 .dishes__category {
   display: inline-flex;
@@ -580,6 +583,8 @@ h2 span {
   line-height: 17px;
   padding: 5px 7.5px;
   border-radius: 5.4px;
+  z-index: 100;
+  position: relative;
 }
 .dishes__category_1 {
   color: #DAA31A;
@@ -636,13 +641,11 @@ h2 span {
   background-position: 50%;
   border-radius: 9px;
   margin-left: auto;
-  position: relative;
   cursor: pointer;
 }
-.dishes__add svg {
-  position: absolute;
-  top: 33%;
-  right: 33%;
+.dishes__add:active {
+  background: #6C5FBC url(/src/img/+.svg) no-repeat;
+  background-position: 50%;
 }
 
 .customer__row {
@@ -1200,16 +1203,15 @@ h2 span {
   border: 1.4px solid #F4F4F6;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-.shopping__item_info:nth-child(1) {
-  background: #fff url(/src/img/Food-1.png) no-repeat;
-  background-size: 100px 100px;
-  background-position-y: bottom;
+.shopping__item_img {
+  width: 98.71px;
+  position: absolute;
+  left: 7px;
 }
-.shopping__item_info:nth-child(2) {
-  background: #fff url(/src/img/Food-2.png) no-repeat;
-  background-size: 100px 100px;
-  background-position-y: bottom;
+.shopping__item_info {
+  background: #fff;
 }
 .shopping__item_info-1 {
   justify-content: center;

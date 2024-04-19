@@ -28,46 +28,32 @@
         position: relative; 
         transition: transform 0.3s ease;
         background: $white;
+        &_img {
+            position: absolute;
+            top: 40px;
+            width: 180px;
+            left: 20px;
+            border-radius: 20px;
+        }
         &_like {
             cursor: pointer;
             position: absolute;
-            top: 24px;
-            right: 22px;
+            top: 25px;
+            right: 25px;
+            svg {
+                width: 21.95px;
+            }          
         } 
         &_like:active {
-            background: url(/src/img/Heart-fill.svg) no-repeat;
-        }   
+            svg {                
+                fill: #5C4EAE;
+            }
+        }
     }
     &__item:hover {
         transform: scale(1.1);
     }
-    // &__item:nth-child(1) {
-    //     background: $white url(/src/img/Food-1.png) no-repeat;
-    //     background-position: 50% 20%;
-    // }
-    // &__item:nth-child(2) {
-    //     background: $white url(/src/img/Food-2.png) no-repeat;
-    //     background-position: 50% 20%;
-    // }
-    // &__item:nth-child(3) {
-    //     background: $white url(/src/img/Food-3.png) no-repeat;
-    //     background-position: 50% 20%;
-    // }
-    // &__item:nth-child(4) {
-    //     background: $white url(/src/img/Food-1.png) no-repeat;
-    //     background-position: 50% 20%;
-    // }
-    // &__item:nth-child(5) {
-    //     background: $white url(/src/img/Food-2.png) no-repeat;
-    //     background-position: 50% 20%;
-    // }
-    &__img {
-        position: absolute;
-        top: 40px;
-        width: 180px;
-        left: 20px;
-        border-radius: 20px;
-    }
+    
     &__category {
         display: inline-flex;
         font-size: 11.5px;
@@ -75,7 +61,8 @@
         line-height: 17px;
         padding: 5px 7.5px;
         border-radius: 5.4px;
-
+        z-index: 100;
+        position: relative;
         
         &_1 {     
             color:  #DAA31A;
@@ -135,20 +122,11 @@
         background-position: 50%;
         border-radius: 9px;
         margin-left: auto;
-        position: relative; 
+        // position: relative; 
         cursor: pointer;
-        svg {
-            position: absolute;
-            top: 33%;
-            right: 33%;
+        &:active {
+            background: $purple url(/src/img/+.svg) no-repeat;
+            background-position: 50%;
         }
     }
-    // &__pagemenu {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     // height: 46px;
-    //     margin-bottom: 65px;
-    //     align-items: baseline;
-    // }
 }  

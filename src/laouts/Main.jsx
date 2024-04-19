@@ -17,7 +17,10 @@ function Main() {
   const [data, setData] = useState([]);
 
     const getData = async () => {
+      
         const dataServer = await fetch('http://localhost:3000/dishes')
+
+        // const dataServer = await fetch('https://api.npoint.io/788ae13712e2c2cb7c97')
         // const dataServer = await fetch('./db.json')
 
         .then(response => response.json());

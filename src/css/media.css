@@ -388,19 +388,27 @@
     width: 160px;
     border-radius: 24.59px;
   }
-  .dishes__item:nth-child(1), .dishes__item:nth-child(2), .dishes__item:nth-child(3), .dishes__item:nth-child(4), .dishes__item:nth-child(5) {
-    background-size: 130px 130px;
+  .dishes__item_img {
+    width: 131.5px;
+    left: 15px;
+    top: 26px;
   }
   .dishes__item_like {
     top: 17px;
-    right: 15.5px;
+    right: 15.45px;
+  }
+  .dishes__item_like svg {
+    width: 15.61px;
+  }
+  .dishes__item_like:active {
+    background-size: 15.61px;
   }
   .dishes__category {
     font-size: 8px;
     padding: 2px 5.5px;
   }
   .dishes__category_card {
-    margin-top: 140px;
+    margin-top: 159.73px;
     padding: 0 16.4px 19.48px 21.5px;
   }
   .dishes__comment {
@@ -583,6 +591,10 @@
     padding: 17.35px 0;
     background-size: 70.2px;
   }
+  .shopping__item_img {
+    width: 65.23px;
+    left: 5px;
+  }
   .shopping__item_subtitle {
     font-size: 15.6px;
     line-height: 22px;
@@ -600,14 +612,6 @@
     height: 22.5px;
     background-size: 8.5px;
   }
-  .shopping__item_info:nth-child(1) {
-    background-size: 70.2px 72.75px;
-    background-position-y: center;
-  }
-  .shopping__item_info:nth-child(2) {
-    background-size: 70.2px 72.75px;
-    background-position-y: center;
-  }
   .shopping__item_info-1 {
     padding-left: 81.54px;
   }
@@ -617,37 +621,37 @@
   .shopping__item_info-1, .shopping__item_info-2 {
     gap: 6px;
   }
-  .shopping__item_info_counter input {
+  .shopping__item_counter input {
     width: 30px;
   }
-  .shopping__item__form {
+  .shopping__form {
     gap: 5.69px;
   }
-  .shopping__item__form input {
+  .shopping__form input {
     border-radius: 7.09px;
     width: 384.71px;
     background-size: 15.5px 21.3px;
     padding: 17.7px 0 17.4px 60px;
   }
-  .shopping__item__form input::-moz-placeholder {
+  .shopping__form input::-moz-placeholder {
     font-size: 12.8px;
     line-height: 15px;
   }
-  .shopping__item__form input::placeholder {
+  .shopping__form input::placeholder {
     font-size: 12.8px;
     line-height: 15px;
   }
-  .shopping__item__price_sub {
+  .shopping__price_sub {
     font-size: 14.2px;
     line-height: 17px;
     letter-spacing: -0.02em;
   }
-  .shopping__item__price_total {
+  .shopping__price_total {
     font-size: 17.8px;
     line-height: 17px;
     letter-spacing: -0.02em;
   }
-  .shopping__item__pay_item:not(:last-child) {
+  .shopping__pay_item:not(:last-child) {
     padding-top: 11px;
     padding-bottom: 4.8px;
   }
@@ -1101,8 +1105,8 @@
     border-radius: 22.62px;
     width: 146.93px;
   }
-  .dishes__item:nth-child(1), .dishes__item:nth-child(2), .dishes__item:nth-child(3), .dishes__item:nth-child(4), .dishes__item:nth-child(5) {
-    background-size: 120px 120px;
+  .dishes__item_img {
+    left: 7px;
   }
   .dishes__cards {
     gap: 30px;
@@ -1620,6 +1624,9 @@
   .btn--apply-coupon {
     padding: 15px 24px;
   }
+  .btn--view-all {
+    margin-left: -36px;
+  }
   .promo__row {
     background-size: 278px 250px;
     background-position: center 505px;
@@ -1629,9 +1636,6 @@
   }
   .container {
     width: 85%;
-  }
-  .btn--view-all {
-    margin-left: -36px;
   }
   .header__button {
     position: absolute;
@@ -1656,16 +1660,15 @@
   .shopping__item {
     height: 64.87px;
   }
-  .shopping__item_info:nth-child(1), .shopping__item_info:nth-child(2) {
-    background-size: 55px 55px;
-    background-position-y: center;
-    background-position-x: 5px;
-  }
   .shopping__item_info-1 {
     padding-left: 70px;
   }
   .shopping__item_info-2 {
     padding-right: 15px;
+  }
+  .shopping__item_img {
+    width: 55.05px;
+    left: 8.73px;
   }
   .shopping__item_counter-raise, .shopping__item_counter-lower {
     border-radius: 5.95px;
