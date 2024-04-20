@@ -36,6 +36,9 @@ function Cart() {
 
     const [total, setTotal] = useState(0)
 
+    // const delivery = 2.99
+    const delivery = parseFloat(2.99)
+
     const changeQuantity = (id, value) => {
         if (+value == 0) {
             remove(id);
@@ -54,9 +57,8 @@ function Cart() {
         }
     }
     const [price, setPrice] = useState(total)
-    const [discount, setDiscount] = useState(0);
 
-    const delivery = parseFloat(299/100)
+    const [discount, setDiscount] = useState(0);
 
     const applyCoupon = (PromoCode) => {
         if (PromoCode === "sale50") {
@@ -79,17 +81,24 @@ function Cart() {
 
     useEffect(() => {
         let totalTmp = 0;
+        let priceTmp = 0
         cartList.forEach((item) => {
             totalTmp += (Math.floor(item.price) + Math.round(item.pricesub) / 100)* item.quantity
         });
         totalTmp = totalTmp.toFixed(2);
+
         setTotal(totalTmp);
-        
+        priceTmp = +totalTmp + delivery
+        setPrice(priceTmp)
+        priceTmp = priceTmp.toFixed(2);
+
     }, [cartList])
 
     useEffect(() => {
         const discountPrice = total * (discount/100);
-        const price =  total - discountPrice + delivery;
+        let price =  total - discountPrice + delivery;
+        price = price.toFixed(2);
+
         setPrice(price);
     }, [discount])
 
