@@ -3,7 +3,25 @@
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import GetSupersale from "../laouts/GetSupersale "
-import PromoCode from "../laouts/PromoCode";
+
+const PromoCode = ({applyCoupon}) => {
+    const [promoCode, setPromoCode] = useState('')
+    // const [codeAccept, setCodeAccept] = useState(false)
+
+    const handleApplyCoupon = (e) => {
+        e.preventDefault()
+        applyCoupon(promoCode)
+    }
+
+    return (
+        <div>
+            <form className="shopping__form">
+                <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} />
+                <button onClick={handleApplyCoupon} className="btn btn--apply-coupon" >Apply</button>
+            </form>
+        </div>                   
+    )
+} ;
 
 
 import { AppContext } from "../App";
@@ -15,20 +33,8 @@ function Cart() {
     const data = useContext(MainContext);
 
     const [cartList, setCartList] = useState([]);
-    
-    const [discount, setDiscount] = useState(0);
-
-    const applyCoupon = (PromoCode) => {
-        if (PromoCode === "sale5") {
-            setDiscount(5)
-        }
-    }
-
-    const delivery = 299;
 
     const [total, setTotal] = useState(0)
-    const [fullTotal, setFullTotal] = useState(0)
-
 
     const changeQuantity = (id, value) => {
         if (+value == 0) {
@@ -47,7 +53,17 @@ function Cart() {
             localStorage.setItem('cart', JSON.stringify(cartTmp));
         }
     }
+    const [price, setPrice] = useState(total)
+    const [discount, setDiscount] = useState(0);
 
+    const delivery = parseFloat(299/100)
+
+    const applyCoupon = (PromoCode) => {
+        if (PromoCode === "sale50") {
+            setDiscount(50)
+        }
+    }
+    
     useEffect(() => {
         const cartListTmp = data.filter((product) => {
             const cartItem = cart.find((item) => {
@@ -68,9 +84,14 @@ function Cart() {
         });
         totalTmp = totalTmp.toFixed(2);
         setTotal(totalTmp);
-        setDiscount(discount)
-        setFullTotal(totalTmp + delivery - discount)
+        
     }, [cartList])
+
+    useEffect(() => {
+        const discountPrice = total * (discount/100);
+        const price =  total - discountPrice + delivery;
+        setPrice(price);
+    }, [discount])
 
     return (
         <>
@@ -101,11 +122,7 @@ function Cart() {
                         })}
                     </ul>
                     <div>
-                        <PromoCode/>
-                        <form className="shopping__form">
-                            {/* <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} />
-                            <button onClick={handleApplyCoupon} type="submit" className="btn btn--apply-coupon">Apply</button> */}
-                        </form>
+                        <PromoCode applyCoupon={applyCoupon}/>
                     </div>                   
                     
                     <div className="shopping__list">
@@ -116,15 +133,15 @@ function Cart() {
                             </li>
                             <li className="shopping__pay_item">
                                 <div className="shopping__price_sub">Delivery</div>   
-                                <div className="shopping__price_sub">$ {delivery/100}</div>
+                                <div className="shopping__price_sub">$ {delivery}</div>
                             </li>
                             <li className="shopping__pay_item">
                                 <div className="shopping__price_sub">Discount</div>   
-                                <div className="shopping__price_sub">$ {discount} </div>
+                                <div className="shopping__price_sub">$ {total * discount/100} </div>
                             </li>
                             <li className="shopping__pay_item">
                                 <div className="shopping__price_total">Total</div> 
-                                <div className="shopping__price_total">$ {fullTotal} </div>  
+                                <div className="shopping__price_total">$ {price} </div>  
                             </li>
                         </ul>
                         <Link to="/popup"  className="btn btn--payment">Buy</Link>
