@@ -23,7 +23,6 @@ const PromoCode = ({applyCoupon}) => {
     )
 } ;
 
-
 import { AppContext } from "../App";
 import { MainContext } from "../laouts/Main";
 
@@ -38,6 +37,29 @@ function Cart() {
 
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
+
+    let [cartCount, setCartCount] = useState(1)
+
+    // const { product_id } = useParams();
+
+    // const [product, setProduct] = useState({});
+
+    // useEffect(() => {
+    //     if (data.length > 0) {
+    //         const product = data.find((item) => {
+    //             return item.id == product_id
+    //         });
+
+    //         if (product.id) setProduct(product);
+    //     }
+    // }, [data]);
+
+    const handleAdd = (id) => {  
+        console.log("+")
+    }
+    const handleRemove = (id) => {
+        console.log("-")
+    }
 
     const changeQuantity = (id, value) => {
         if (+value == 0) {
@@ -89,15 +111,17 @@ function Cart() {
 
         setTotal(totalTmp);
         priceTmp = +totalTmp + delivery
+        priceTmp = Math.round(priceTmp*100)/100;
+
         setPrice(priceTmp)
-        priceTmp = priceTmp.toFixed(2);
 
     }, [cartList])
 
     useEffect(() => {
-        const discountPrice = total * (discount/100);
+        let discountPrice = total * (discount/100);
+        discountPrice = discountPrice.toFixed(2)
         let price =  total - discountPrice + delivery;
-        price = price.toFixed(2);
+        price = Math.round(price*100)/100;
 
         setPrice(price);
     }, [discount])
@@ -120,9 +144,9 @@ function Cart() {
                             </div>
                             <div className="shopping__item_info-2">
                                 <div className="shopping__item_counter">
-                                    <button className="shopping__item_counter-lower" type="button"></button>
+                                    <button className="shopping__item_counter-lower" type="button" onClick={handleRemove}></button>
                                     <input className="shopping__item_counter-count" type="number" max="9999" min="1" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} defaultValue={item.quantity}></input>
-                                    <button className="shopping__item_counter-raise" type="button"></button>
+                                    <button className="shopping__item_counter-raise" type="button" onClick={handleAdd}></button>
                                 </div>
                                 <div className="shopping__item_price shopping__item_price-total">$ {(Math.floor(item.price) + Math.round(item.pricesub)/100)* item.quantity}</div>  
                             </div>
