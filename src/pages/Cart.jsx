@@ -35,10 +35,13 @@ function Cart() {
 
     const [total, setTotal] = useState(0)
 
+
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
 
-   const handleIncrement = (id) => {  
+    const [cartItem, setCartItem] = useState(cartList)
+
+    const handleIncrement = (id) => {  
         console.log("+")
         const cartTmp = cart;
         
@@ -50,8 +53,6 @@ function Cart() {
             // }
                    
         });            
-            // cartTmp.push(item);
-
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
@@ -65,16 +66,39 @@ function Cart() {
             return item.quantity = --item.quantity;     
             // }       
         });
-        // cartTmp.push(item);
-
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
 
+    // const handleIncrement = (id) => {  
+    //     setCart((cart) => cart.map((item) => {
+    //         if (item.id === id) {
+    //             return {
+    //                 ...cart,
+    //                 quantity : quantity + 1
+    //             }
+    //         }
+    //     return cart
+    //     }))
+    // // setCartItem(cartItem)
+    // }
+    //     const handleDecrement = (id) => {  
+    //         // // let updateCart = [...cart]
+    //         // const cartItem = cart.map((item) => {
+    //         //     if (item.id === id) {
+    //         //     return {
+    //         //         ...cart,
+    //         //         quantity : item.quantity - 1
+    //         //     }
+    //         // }
+    //         // return cart
+    //         // });
+    //         // // setCartItem(cartItem)
+    // }
 
-    const changeQuantity = (id, item) => {
+    const changeQuantity = (id, value) => {
         
-        if (item.quantity == 0) {
+        if (value == 0) {
             remove(item.id);
             return;
         }
@@ -82,7 +106,7 @@ function Cart() {
         const cartItem = cart.find((item) => item.id == id)
 
         if (cartItem) {
-            cartItem.quantity = ++item.quantity;
+            cartItem.quantity = +value;
 
             const cartTmp = cart;
 
