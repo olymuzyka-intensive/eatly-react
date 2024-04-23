@@ -39,19 +39,15 @@ function Cart() {
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
 
-    const [cartItem, setCartItem] = useState(cartList)
-
     const handleIncrement = (id) => {  
         console.log("+")
         const cartTmp = cart;
-        
-        let item = cartTmp.find((item) => {
-            // if (item.id === id) {
+        let cartItem = cartTmp.map((item) => {
+            // if (item.id == id) { /// как только включаешт перестает работать вообще. пробовала  
                 return {
                     quantity : ++item.quantity
                 }  
-            // }
-                   
+            // }                   
         });            
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
@@ -60,8 +56,7 @@ function Cart() {
     const handleDecrement = (id) => {
         console.log("-")
         const cartTmp = cart;
-        
-        let item = cartTmp.find((item) => {
+        let cartItem = cartTmp.map((item) => {
             // if (item.id === id) {
             return item.quantity = --item.quantity;     
             // }       
@@ -96,6 +91,8 @@ function Cart() {
     //         // // setCartItem(cartItem)
     // }
 
+    // работает только в инпуте
+    
     const changeQuantity = (id, value) => {
         
         if (value == 0) {
