@@ -5,25 +5,6 @@ import { Link } from "react-router-dom"
 import GetSupersale from "../laouts/GetSupersale "
 import PromoCode from "../laouts/PromoCode"
 
-// const PromoCode = ({applyCoupon}) => {
-//     const [promoCode, setPromoCode] = useState('')
-//     // const [codeAccept, setCodeAccept] = useState(false)
-
-//     const handleApplyCoupon = (e) => {
-//         e.preventDefault()
-//         applyCoupon(promoCode)
-//     }
-
-//     return (
-//         <div>
-//             <form className="shopping__form">
-//                 <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} />
-//                 <button onClick={handleApplyCoupon} className="btn btn--apply-coupon" >Apply</button>
-//             </form>
-//         </div>                   
-//     )
-// } ;
-
 import { AppContext } from "../App";
 import { MainContext } from "../laouts/Main";
 
@@ -50,7 +31,6 @@ function Cart() {
     }, [])
 
     const handleIncrement = (id) => {  
-        console.log("+")
         const cartTmp = cartItems;
         const updateCartItem = cartTmp.map((item) => {
             if (item.id === id) { 
@@ -64,7 +44,6 @@ function Cart() {
     }
 
     const handleDecrement = (id) => {
-        console.log("-")
         const cartTmp = cartItems;
         let updateCartItem = cartTmp.map((item) => {
             if (item.id === id && item.quantity > 0) {
