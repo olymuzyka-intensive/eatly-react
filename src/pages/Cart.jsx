@@ -35,19 +35,28 @@ function Cart() {
 
     const [total, setTotal] = useState(0)
 
-
+    const [cartItems, setCartItems] = useState([])
+    
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
+    
+    useEffect (() => {
+        const saveCart = localStorage.getItem('cart');
+        if (saveCart) {
+            const parsedCart = JSON.parse(saveCart);
+            setCartItems(parsedCart)
+        }
+    }, [])
 
     const handleIncrement = (id) => {  
         console.log("+")
-        const cartTmp = cart;
-        let cartItem = cartTmp.map((item) => {
-            // if (item.id == id) { /// как только включаешт перестает работать вообще. пробовала  
+        const cartTmp = cartItems;
+        const updateCartItem = cartTmp.map((item) => {
+            if (item.id === id) { 
                 return {
                     quantity : ++item.quantity
                 }  
-            // }                   
+            }                   
         });            
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
@@ -55,11 +64,11 @@ function Cart() {
 
     const handleDecrement = (id) => {
         console.log("-")
-        const cartTmp = cart;
-        let cartItem = cartTmp.map((item) => {
-            // if (item.id === id) {
+        const cartTmp = cartItems;
+        let updateCartItem = cartTmp.map((item) => {
+            if (item.id === id && item.quantity > 0) {
             return item.quantity = --item.quantity;     
-            // }       
+            }       
         });
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
@@ -183,9 +192,13 @@ function Cart() {
                             </div>
                             <div className="shopping__item_info-2">
                                 <div className="shopping__item_counter">
-                                    <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button>
+                                    {/* <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button> */}
+                                    <button className="shopping__item_counter-lower" type="button" onClick={() => handleDecrement(item.id)}></button>
+
                                     <input className="shopping__item_counter-count" type="number" max="9999" min="1" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
-                                    <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button>
+                                    {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
+                                    <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
+
                                 </div>
                                 <div className="shopping__item_price shopping__item_price-total">$ {((Math.floor(item.price) + Math.round(item.pricesub)/100)* item.quantity).toFixed(2)}</div>  
 
