@@ -3,25 +3,26 @@
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import GetSupersale from "../laouts/GetSupersale "
+import PromoCode from "../laouts/PromoCode"
 
-const PromoCode = ({applyCoupon}) => {
-    const [promoCode, setPromoCode] = useState('')
-    // const [codeAccept, setCodeAccept] = useState(false)
+// const PromoCode = ({applyCoupon}) => {
+//     const [promoCode, setPromoCode] = useState('')
+//     // const [codeAccept, setCodeAccept] = useState(false)
 
-    const handleApplyCoupon = (e) => {
-        e.preventDefault()
-        applyCoupon(promoCode)
-    }
+//     const handleApplyCoupon = (e) => {
+//         e.preventDefault()
+//         applyCoupon(promoCode)
+//     }
 
-    return (
-        <div>
-            <form className="shopping__form">
-                <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} />
-                <button onClick={handleApplyCoupon} className="btn btn--apply-coupon" >Apply</button>
-            </form>
-        </div>                   
-    )
-} ;
+//     return (
+//         <div>
+//             <form className="shopping__form">
+//                 <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} />
+//                 <button onClick={handleApplyCoupon} className="btn btn--apply-coupon" >Apply</button>
+//             </form>
+//         </div>                   
+//     )
+// } ;
 
 import { AppContext } from "../App";
 import { MainContext } from "../laouts/Main";
@@ -104,11 +105,6 @@ function Cart() {
     
     const changeQuantity = (id, value) => {
         
-        if (value == 0) {
-            remove(item.id);
-            return;
-        }
-
         const cartItem = cart.find((item) => item.id == id)
 
         if (cartItem) {
