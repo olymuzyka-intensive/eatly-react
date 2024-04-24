@@ -5,16 +5,20 @@ function PromoCode({applyCoupon}) {
 
     const [isCorrect, setIsCorrect] = useState(false)
 
+    const handleChange = (e) => {
+        setPromoCode(e.target.value)
+    }
     const handleApplyCoupon = (e) => {
         e.preventDefault()
         applyCoupon(promoCode)
         setIsCorrect(true)
+        setPromoCode('')
     }
 
     return (
         <div>
             <form className="shopping__form">
-                <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={e => setPromoCode(e.target.value)} style={{borderColor: isCorrect ? 'green' : 'initial'}} />
+                <input type="text" placeholder="Apply Coupon" value={promoCode} onChange={handleChange} />
                 <button onClick={handleApplyCoupon} className="btn btn--apply-coupon" >Apply</button>
             </form>
         </div>                   

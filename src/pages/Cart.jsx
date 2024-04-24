@@ -40,7 +40,7 @@ function Cart() {
     
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
-    
+
     useEffect (() => {
         const saveCart = localStorage.getItem('cart');
         if (saveCart) {
@@ -220,7 +220,7 @@ function Cart() {
                             </li>
                             <li className="shopping__pay_item">
                                 <div className="shopping__price_sub">Discount</div>   
-                                <div className="shopping__price_sub">$ {total * discount/100} </div>
+                                <div className="shopping__price_sub">$ {(total * discount/100).toFixed(2)} </div>
                             </li>
                             <li className="shopping__pay_item">
                                 <div className="shopping__price_total">Total</div> 
