@@ -20,7 +20,7 @@ function PromoCode({applyCoupon}) {
             setIsCorrect(true)
         }
         
-        setPromoCode('')
+        // setPromoCode('')
     }
 
     return (

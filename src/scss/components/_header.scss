@@ -30,6 +30,22 @@
         margin-left: auto;
         display: flex;
         outline: none;
+        position: relative;
+        &_count {      
+            position: absolute;  
+            left: -15px;    
+            font-size: 10px;
+            font-weight: 600;
+            height: 15px;
+            padding: 0px 3px;
+            position: relative;
+            background: $bgwhite;
+            border: 1px solid $purple;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__burger {

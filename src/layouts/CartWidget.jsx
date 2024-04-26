@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 
-import { AppContext } from '../../App';
+import { AppContext } from '../App';
 
 import { Link } from "react-router-dom"
 
@@ -23,10 +23,11 @@ function CartWidget() {
     }, [cart]);
 
     return (
-        <div className="header__cart">
-            <span className="header__cart_count">{cartCount}</span>&nbsp;
-            <Link to="/cart/">My Cart</Link>
-        </div>
+        <>
+            <Link to="/cart/"> 
+                <span className="header__button_count">{cartCount}</span>&nbsp;
+            </Link>
+        </>
     )
 }
 
