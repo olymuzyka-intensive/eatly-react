@@ -67,7 +67,7 @@ function Getsupersale() {
                                     <h4 className="category__item_title category__item_title-1">Pizza</h4>
                                 </li>
                                 <li className="category__item category__item-active" >
-                                    <h4 className="category__item_title category__item_title-2">Asian</h4>
+                                    <h4 className="category__item_title category__item_title-2">Dish</h4>
                                 </li>
                                 <li className="category__item">
                                     <h4 className="category__item_title category__item_title-3">Donat</h4>
