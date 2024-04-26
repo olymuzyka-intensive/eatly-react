@@ -2,11 +2,11 @@
 // import Footer from "../laouts/Footer"
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
-import GetSupersale from "../laouts/GetSupersale "
-import PromoCode from "../laouts/PromoCode"
+import GetSupersale from "../layouts/GetSupersale "
+import PromoCode from "../layouts/PromoCode"
 
 import { AppContext } from "../App";
-import { MainContext } from "../laouts/Main";
+import { MainContext } from "../layouts/Main";
 
 function Cart() {
     const {cart, setCart} = useContext(AppContext)

@@ -1,8 +1,8 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
-import Supersale from "../laouts/Supersale"
-import Questions from "../laouts/Questions"
-import DishesFilter from "../laouts/DishesFilter"
+import Supersale from "../layouts/Supersale"
+import Questions from "../layouts/Questions"
+import DishesFilter from "../layouts/DishesFilter"
 
 function Menu() {
     return (

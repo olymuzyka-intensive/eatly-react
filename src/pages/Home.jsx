@@ -1,10 +1,10 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
-import Promo from "../laouts/Promo"
-import Premium from "../laouts/Premium"
-import Quality from "../laouts/Quality"
-import Customer from "../laouts/Customer"
-import DishesTop from "../laouts/DishesTop"
+import Promo from "../layouts/Promo"
+import Premium from "../layouts/Premium"
+import Quality from "../layouts/Quality"
+import Customer from "../layouts/Customer"
+import DishesTop from "../layouts/DishesTop"
 
 function Home() {
     return (

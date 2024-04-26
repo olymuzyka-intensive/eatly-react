@@ -1,9 +1,9 @@
 import { createContext, useState, useEffect} from "react"
 import { BrowserRouter} from "react-router-dom"
 
-import Footer from "./laouts/Footer";
-import Header from "./laouts/Header";
-import Main from "./laouts/Main"
+import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
+import Main from "./layouts/Main"
 
 export const AppContext = createContext();
 

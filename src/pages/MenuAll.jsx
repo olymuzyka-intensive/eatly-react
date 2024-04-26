@@ -1,7 +1,7 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
-import GetSupersale  from "../laouts/GetSupersale "
-import Dishes from "../laouts/Dishes"
+import GetSupersale  from "../layouts/GetSupersale "
+import Dishes from "../layouts/Dishes"
 
 function MenuAll() {
     return (

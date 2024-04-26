@@ -1,9 +1,9 @@
 // import Header from "../laouts/Header"
 // import Footer from "../laouts/Footer"
 
-import Map from "../laouts/Map"
-import About from "../laouts/About"
-import Questions from "../laouts/Questions"
+import Map from "../layouts/Map"
+import About from "../layouts/About"
+import Questions from "../layouts/Questions"
 
 function AboutUs() {
     return (
