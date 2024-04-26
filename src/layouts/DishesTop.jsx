@@ -12,31 +12,10 @@ function DishesTop() {
     const data = useContext(MainContext);
    
     const dataTop = data.filter(function(item) {
-        // const dataTmp = []; 
-        // for (let i = 0; i < 5; i++) {
-        //     const randomIndex = Math.floor(Math.random() * data.lenght);
-        //     dataTmp.push(data[randomIndex])
-        
-        if (item.star > 4.8) {  
+        if (item.star >= 4.9) {  
             return true
         } 
-    // }
     })
-
-
-    // const { product_id } = useParams();
-
-    // const [product, setProduct] = useState({});
-
-    // useEffect(() => {
-    //     if (data.length > 0) {
-    //         const product = data.find((item) => {
-    //             return item.id == product_id
-    //         });
-
-    //         if (product.id) setProduct(product);
-    //     }
-    // }, [data]);
 
     return (
         <div className="dishes">

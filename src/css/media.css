@@ -1458,9 +1458,6 @@
   .shopping__row {
     width: 100%;
   }
-  .shopping__item_info {
-    width: 100%;
-  }
   .shopping__cards_decor-1 {
     top: -15px;
     right: -20px;
@@ -1656,9 +1653,6 @@
     padding: 15px 0;
     padding-left: 55px;
     background-position: 15px center;
-  }
-  .shopping__item {
-    height: 64.87px;
   }
   .shopping__item_info-1 {
     padding-left: 70px;

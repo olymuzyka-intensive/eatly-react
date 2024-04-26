@@ -122,19 +122,14 @@ function Cart() {
         let totalTmp = 0;
         let priceTmp = 0
         cartList.forEach((item) => {
-            totalTmp += (Math.floor(item.price) + Math.round(item.pricesub) / 100)* item.quantity
+            totalTmp += item.price * item.quantity
         });
         totalTmp = totalTmp.toFixed(2);
-        // totalTmp = Math.round(totalTmp*100)/100;
-        // totalTmp = Math.floor(totalTmp*100)/100;
-        // totalTmp = Math.ceil(totalTmp*100)/100;
-        // totalTmp = parseFloat(totalTmp.toFixed(2));
-
 
         setTotal(totalTmp);
 
         priceTmp = +totalTmp + delivery
-        priceTmp = Math.round(priceTmp*100)/100;
+        priceTmp = priceTmp.toFixed(2);
 
         setPrice(priceTmp)
 
@@ -144,7 +139,7 @@ function Cart() {
         let discountPrice = total * (discount/100);
         discountPrice = discountPrice.toFixed(2)
         let price =  total - discountPrice + delivery;
-        price = Math.round(price*100)/100;
+        price = price.toFixed(2);
 
         setPrice(price);
     }, [discount, total])
@@ -162,8 +157,8 @@ function Cart() {
                         <li key={index} className="shopping__item shopping__item_info">
                             <div className="shopping__item_info-1">
                                 <img src={item.image} className="shopping__item_img" alt='dish'/>
-                                <div className="shopping__item_subtitle"> {item.subtitle}</div>
-                                <div className="shopping__item_price">$ {item.price}<span className="shopping__item_price">.{item.pricesub}</span></div>
+                                <div className="shopping__item_subtitle"> {item.title}</div>
+                                <div className="shopping__item_price">$ {item.price}</div>
                             </div>
                             <div className="shopping__item_info-2">
                                 <div className="shopping__item_counter">
@@ -175,7 +170,7 @@ function Cart() {
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
 
                                 </div>
-                                <div className="shopping__item_price shopping__item_price-total">$ {((Math.floor(item.price) + Math.round(item.pricesub)/100)* item.quantity).toFixed(2)}</div>  
+                                <div className="shopping__item_price shopping__item_price-total">$ {(item.price * item.quantity).toFixed(2)}</div>  
 
                                 {/* <div className="shopping__item_price shopping__item_price-total">$ {(Math.floor(item.price) + Math.round(item.pricesub)/100)* item.quantity}</div>   */}
                             </div>

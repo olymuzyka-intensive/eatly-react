@@ -76,16 +76,14 @@ h2 span {
   margin-left: auto;
   display: flex;
   outline: none;
-  position: relative;
 }
 .header__button_count {
-  position: absolute;
+  position: relative;
   left: -15px;
   font-size: 10px;
   font-weight: 600;
   height: 15px;
   padding: 0px 3px;
-  position: relative;
   background: #F9F9F9;
   border: 1px solid #6C5FBC;
   border-radius: 25px;

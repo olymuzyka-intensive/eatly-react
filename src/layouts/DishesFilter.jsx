@@ -17,20 +17,6 @@ function DishesFilter() {
         }        
     })
 
-    // const { product_id } = useParams();
-
-    // const [product, setProduct] = useState({});
-
-    // useEffect(() => {
-    //     if (data.length > 0) {
-    //         const product = data.find((item) => {
-    //             return item.id == product_id
-    //         });
-
-    //         if (product.id) setProduct(product);
-    //     }
-    // }, [data]);
-
     return (
         <div className="dishes">
             <div className="container">
