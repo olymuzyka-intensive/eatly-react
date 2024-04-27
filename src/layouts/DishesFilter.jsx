@@ -12,7 +12,7 @@ function DishesFilter() {
     const data = useContext(MainContext);
 
     const dataTmp = data.filter(function(item) {
-        if (item.subcategory == "main") {
+        if (item.category == "main") {
             return true
         }        
     })

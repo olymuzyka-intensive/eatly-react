@@ -33,11 +33,13 @@
         &_count {      
             position: relative;
             left: -15px;    
-            font-size: 10px;
-            font-weight: 600;
-            height: 15px;
-            padding: 0px 3px;
-            background: $bgwhite;
+            font-size: 15px;
+            font-weight: 500;
+            height: 22.5px;
+            width: 22.5px;
+            // padding: 0px 3px;
+            background: $purple;
+            color: white;
             border: 1px solid $purple;
             border-radius: 25px;
             display: flex;

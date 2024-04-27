@@ -12,7 +12,7 @@ function DishesTop() {
     const data = useContext(MainContext);
    
     const dataTop = data.filter(function(item) {
-        if (item.star >= 4.9) {  
+        if (item.star > 4.9) {  
             return true
         } 
     })

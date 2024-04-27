@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
-// import HeaderPopup from "../laouts/HeaderPopup"
-// import FooterPopup from "../laouts/FooterPopup"
+import HeaderPopup from "../layouts/HeaderPopup"
+import FooterPopup from "../layouts/FooterPopup"
 
 function Popup() {
     return (
