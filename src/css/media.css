@@ -390,8 +390,6 @@
   }
   .dishes__item_img {
     width: 131.5px;
-    left: 15px;
-    top: 26px;
   }
   .dishes__item_like {
     top: 17px;
@@ -408,8 +406,7 @@
     padding: 2px 5.5px;
   }
   .dishes__category_card {
-    margin-top: 159.73px;
-    padding: 0 16.4px 19.48px 21.5px;
+    padding: 40px 16.4px 19.48px 21.5px;
   }
   .dishes__comment {
     font-size: 12.3px;

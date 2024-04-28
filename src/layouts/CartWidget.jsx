@@ -25,7 +25,7 @@ function CartWidget() {
     return (
         <>
             <Link to="/cart/"> 
-                <span className="header__button_count">{cartCount}</span>&nbsp;
+                <span className="header__button_count">{cartCount}</span>
             </Link>
         </>
     )

@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom"
 import Home from "../pages/Home"
 import Menu from "../pages/Menu"
 import MenuAll from "../pages/MenuAll"
+import MenuFavourites from "../pages/MenuFavourites"
+
 import Blog from "../pages/Blog"
 import AboutUs from "../pages/AboutUs"
 import Contact from "../pages/Contact"
@@ -50,6 +52,7 @@ function Main() {
         <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
         <Route path="/menuAll" element={<MenuAll/>}/>
+        <Route path="/menuFavourites" element={<MenuFavourites/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/content" element={<Content/>}/>
         <Route path="/aboutUs" element={<AboutUs/>}/>

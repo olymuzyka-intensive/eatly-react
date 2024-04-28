@@ -30,18 +30,31 @@
         margin-left: auto;
         display: flex;
         outline: none;
+        position: relative;
         &_count {      
-            position: relative;
-            left: -15px;    
+            position: absolute;
+            right: 0px;    
             font-size: 15px;
             font-weight: 500;
             height: 22.5px;
             width: 22.5px;
-            // padding: 0px 3px;
             background: $purple;
             color: white;
             border: 1px solid $purple;
             border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &_likeCount {
+            position: absolute;
+            right: 40px;    
+            font-size: 15px;
+            font-weight: 500;
+            height: 25px;
+            width: 30px;
+            background: url(/src/img/Heartfill.svg) no-repeat;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;

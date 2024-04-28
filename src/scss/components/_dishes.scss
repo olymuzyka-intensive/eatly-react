@@ -15,12 +15,13 @@
     &__cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
         gap: 30px;
         flex-wrap: wrap;
         margin-bottom: 65.36px;
     }
     &__item {
+        display: flex;
         width: 225px;
         border-radius: 34.5px;
         border: 1.4px solid #F4F4F6;
@@ -28,11 +29,12 @@
         position: relative; 
         transition: transform 0.3s ease;
         background: $white;
+        justify-content: center;
         &_img {
-            position: absolute;
-            top: 40px;
-            width: 180px;
-            left: 20px;
+            // position: absolute;
+            padding-top: 20px;
+            width: 184.69px;
+            // left: 20px;
             border-radius: 20px;
         }
         &_like {
@@ -41,7 +43,7 @@
             top: 25px;
             right: 25px;
             svg {
-                width: 21.95px;
+                width: 22px;
             }          
         } 
         &_like:active {
@@ -77,8 +79,7 @@
             background:#dfe8d7;
         }
         &_card {
-            margin-top: 225px;
-            padding: 0 23.05px 23.28px 31.01px;
+            padding: 24px 24px 29.6px 24px;
         }
     }
     
