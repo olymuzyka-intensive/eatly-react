@@ -508,6 +508,7 @@
         border-radius: 24.59px;
             &_img {
                 width: 131.50px;
+                padding-top: 10px;
                 // left: 15px;
                 // top: 26px;
             }
@@ -516,6 +517,7 @@
                 right: 15.45px;
                 svg {
                     width: 15.61px;
+                    height: 12.93px;
                 }                
             }    
             &_like:active {
@@ -527,7 +529,7 @@
             font-size: 8px;
             padding: 2px 5.5px;
             &_card {
-                padding: 40px 16.4px 19.48px 21.5px;
+                padding: 20px 16.4px 19.48px 21.5px;
             }
         }
 
@@ -772,17 +774,6 @@
             }
 
             &_info {                
-                // &:nth-child(1) {
-                //     background-size: 70.2px 72.75px;
-                //     background-position-y: center;
-                // }
-                // &:nth-child(2) {
-                //     background-size: 70.2px 72.75px;
-                //     background-position-y: center;
-                // }
-                &-1 {
-                    padding-left: 81.54px
-                }
                 &-2 {
                     padding-right: 20px;
                 }
@@ -1382,7 +1373,7 @@
             border-radius: 22.62px;
             width: 146.93px;
             &_img {
-                left: 7px;
+                width: 120.95px;
             }
         }
 
@@ -1445,6 +1436,10 @@
                 left: 212px;
             }
         }
+    }
+
+    .shopping__item_img-info {
+        margin-left: 11.25px;
     }
 }
 
@@ -2075,7 +2070,15 @@
     .dishes { 
         &__cards {
             gap: 20px;
-        }        
+        }  
+        &__item {
+            &_like {
+                svg {
+                    width: 14.36px;
+                    height: 11.9px;
+                }
+            }
+        }      
     }
 
     .shopping {
@@ -2088,9 +2091,6 @@
         &__item {
             // height: 64.87px;            
             &_info {
-                &-1 {
-                    padding-left: 70px;
-                }
                 &-2 {
                     padding-right: 15px;
                 }
@@ -2098,6 +2098,9 @@
             &_img {
                 width: 55.05px;
                 left: 8.73px;
+                &-info {
+                    margin-left: 8.38px;
+                }
             }
             &_counter {
                 &-raise, &-lower {

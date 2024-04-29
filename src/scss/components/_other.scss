@@ -309,31 +309,26 @@
         border: 1.4px solid #F4F4F6;
         display: flex;
         justify-content: space-between;
-        position: relative;
+        // position: relative;
         &_img {
             width: 98.71px;
-            position: absolute;
-            left: 7px;
+            // position: absolute;
+            padding-left: 7px;
+            &-info {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                margin-left: 16px;
+            }
         }
         
         &_info {
             background: $white;            
-            // &:nth-child(1) {
-            //     background: $white url(/src/img/Food-1.png) no-repeat;
-            //     background-size: 100px 100px;
-            //     background-position-y: bottom;    
-            // }
-        
-            // &:nth-child(2) {
-            //     background: $white url(/src/img/Food-2.png) no-repeat;
-            //     background-size: 100px 100px;
-            //     background-position-y: bottom;    
-            // }
             &-1 {                    
                 justify-content: center;
                 display: flex;
-                flex-direction: column;
-                padding-left: 115px;
+                // flex-direction: column;
+                // padding-left: 115px;
                 gap: 4px;
             }
             &-2 {

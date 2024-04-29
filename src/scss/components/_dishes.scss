@@ -30,6 +30,9 @@
         transition: transform 0.3s ease;
         background: $white;
         justify-content: center;
+        align-self: stretch;
+        align-items: end;
+       
         &_img {
             // position: absolute;
             padding-top: 20px;
@@ -43,7 +46,8 @@
             top: 25px;
             right: 25px;
             svg {
-                width: 22px;
+                width: 23px;
+                height: 21px;
             }          
         } 
         &_like:active {
@@ -83,7 +87,7 @@
         }
     }
     
-    &__subtitle a {
+    &__subtitle a{
         color: $black;
         font-size: 23px;
         font-weight: 600;

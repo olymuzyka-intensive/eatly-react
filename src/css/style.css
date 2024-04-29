@@ -583,6 +583,8 @@ h2 span {
   transition: transform 0.3s ease;
   background: #fff;
   justify-content: center;
+  align-self: stretch;
+  align-items: end;
 }
 .dishes__item_img {
   padding-top: 20px;
@@ -596,7 +598,8 @@ h2 span {
   right: 25px;
 }
 .dishes__item_like svg {
-  width: 22px;
+  width: 23px;
+  height: 21px;
 }
 .dishes__item_like:active svg {
   fill: #5C4EAE;
@@ -1229,12 +1232,16 @@ h2 span {
   border: 1.4px solid #F4F4F6;
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 .shopping__item_img {
   width: 98.71px;
-  position: absolute;
-  left: 7px;
+  padding-left: 7px;
+}
+.shopping__item_img-info {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
 }
 .shopping__item_info {
   background: #fff;
@@ -1242,8 +1249,6 @@ h2 span {
 .shopping__item_info-1 {
   justify-content: center;
   display: flex;
-  flex-direction: column;
-  padding-left: 115px;
   gap: 4px;
 }
 .shopping__item_info-2 {

@@ -68,7 +68,7 @@
     },
     {
       "id": "7",
-      "image": "/src/img/food/7.jpg",
+      "image": "/src/img/food/7.png",
       "category": "main",
       "subcategory": "Trending",
 	    "sortcategory": "",
@@ -90,7 +90,7 @@
     },
     {
       "id": "9",
-      "image": "/src/img/food/9.jpg",
+      "image": "/src/img/food/9.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "image": "/src/img/food/10.jpg",
+      "image": "/src/img/food/10.png",
       "category": "main",
       "subcategory": "Trending",
 	    "sortcategory": "",
@@ -112,7 +112,7 @@
     },
     {
       "id": "11",
-      "image": "/src/img/food/11.png",
+      "image": "/src/img/food/11.jpg",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -123,7 +123,7 @@
     },
     {
       "id": "12",
-      "image": "/src/img/food/12.jpg",
+      "image": "/src/img/food/12.png",
       "category": "main",
       "subcategory": "Trending",
 	    "sortcategory": "",
@@ -134,7 +134,7 @@
     },
     {
       "id": "13",
-      "image": "/src/img/food/13.jpg",
+      "image": "/src/img/food/13.png",
       "category": "main",
       "subcategory": "Supreme",
 	    "sortcategory": "",
@@ -145,7 +145,7 @@
     },
     {
       "id": "14",
-      "image": "/src/img/food/14.jpg",
+      "image": "/src/img/food/14.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -156,7 +156,7 @@
     },
     {
       "id": "15",
-      "image": "/src/img/food/15.jpg",
+      "image": "/src/img/food/15.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -167,7 +167,7 @@
     },
     {
       "id": "16",
-      "image": "/src/img/food/16.jpg",
+      "image": "/src/img/food/16.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -178,7 +178,7 @@
     },
     {
       "id": "17",
-      "image": "/src/img/food/17.jpg",
+      "image": "/src/img/food/17.png",
       "category": "main",
       "subcategory": "Trending",
 	    "sortcategory": "",
@@ -200,7 +200,7 @@
     },
     {
       "id": "19",
-      "image": "/src/img/food/19.jpg",
+      "image": "/src/img/food/19.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -244,7 +244,7 @@
     },
     {
       "id": "23",
-      "image": "src/img/food/23.jpg",
+      "image": "src/img/food/23.png",
       "category": "main",
       "subcategory": "Supreme",
 	    "sortcategory": "",
@@ -255,7 +255,7 @@
     },
     {
       "id": "24",
-      "image": "/src/img/food/24.jpg",
+      "image": "/src/img/food/24.png",
       "category": "main",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -431,7 +431,7 @@
     },
     {
       "id": "40",
-      "image": "/src/img/food/ice1.jpg",
+      "image": "/src/img/food/ice1.png",
       "category": "ice",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -464,7 +464,7 @@
     },
     {
       "id": "43",
-      "image": "/src/img/food/ice4.jpg",
+      "image": "/src/img/food/ice4.png",
       "category": "ice",
       "subcategory": "Healthy",
 	    "sortcategory": "",
@@ -475,7 +475,7 @@
     },
     {
       "id": "44",
-      "image": "/src/img/food/ice5.jpg",
+      "image": "/src/img/food/ice5.png",
       "category": "ice",
       "subcategory": "Trending",
 	    "sortcategory": "",

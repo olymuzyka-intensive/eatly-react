@@ -390,6 +390,7 @@
   }
   .dishes__item_img {
     width: 131.5px;
+    padding-top: 10px;
   }
   .dishes__item_like {
     top: 17px;
@@ -397,6 +398,7 @@
   }
   .dishes__item_like svg {
     width: 15.61px;
+    height: 12.93px;
   }
   .dishes__item_like:active {
     background-size: 15.61px;
@@ -406,7 +408,7 @@
     padding: 2px 5.5px;
   }
   .dishes__category_card {
-    padding: 40px 16.4px 19.48px 21.5px;
+    padding: 20px 16.4px 19.48px 21.5px;
   }
   .dishes__comment {
     font-size: 12.3px;
@@ -608,9 +610,6 @@
     width: 24px;
     height: 22.5px;
     background-size: 8.5px;
-  }
-  .shopping__item_info-1 {
-    padding-left: 81.54px;
   }
   .shopping__item_info-2 {
     padding-right: 20px;
@@ -1103,7 +1102,7 @@
     width: 146.93px;
   }
   .dishes__item_img {
-    left: 7px;
+    width: 120.95px;
   }
   .dishes__cards {
     gap: 30px;
@@ -1146,6 +1145,9 @@
   }
   .getsupersale__form_button {
     left: 212px;
+  }
+  .shopping__item_img-info {
+    margin-left: 11.25px;
   }
 }
 @media (max-width: 426px) {
@@ -1645,14 +1647,15 @@
   .dishes__cards {
     gap: 20px;
   }
+  .dishes__item_like svg {
+    width: 14.36px;
+    height: 11.9px;
+  }
   .shopping__form input {
     width: 75%;
     padding: 15px 0;
     padding-left: 55px;
     background-position: 15px center;
-  }
-  .shopping__item_info-1 {
-    padding-left: 70px;
   }
   .shopping__item_info-2 {
     padding-right: 15px;
@@ -1660,6 +1663,9 @@
   .shopping__item_img {
     width: 55.05px;
     left: 8.73px;
+  }
+  .shopping__item_img-info {
+    margin-left: 8.38px;
   }
   .shopping__item_counter-raise, .shopping__item_counter-lower {
     border-radius: 5.95px;

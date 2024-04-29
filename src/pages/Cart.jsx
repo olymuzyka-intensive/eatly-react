@@ -157,8 +157,10 @@ function Cart() {
                         <li key={index} className="shopping__item shopping__item_info">
                             <div className="shopping__item_info-1">
                                 <img src={item.image} className="shopping__item_img" alt='dish'/>
-                                <div className="shopping__item_subtitle"> {item.title}</div>
-                                <div className="shopping__item_price">$ {item.price}</div>
+                                <div className="shopping__item_img-info">
+                                    <div className="shopping__item_subtitle"> {item.title}</div>
+                                    <div className="shopping__item_price">$ {item.price}</div>
+                                </div>
                             </div>
                             <div className="shopping__item_info-2">
                                 <div className="shopping__item_counter">
