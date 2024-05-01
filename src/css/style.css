@@ -631,7 +631,7 @@ h2 span {
 .dishes__category_card {
   padding: 24px 24px 29.6px 24px;
 }
-.dishes__subtitle a {
+.dishes__subtitle {
   color: #323142;
   font-size: 23px;
   font-weight: 600;
@@ -1138,7 +1138,7 @@ h2 span {
 }
 .getsupersale__form_button {
   position: absolute;
-  left: 298px;
+  right: 3px;
 }
 .getsupersale input {
   width: 440px;
@@ -1147,6 +1147,7 @@ h2 span {
   border-radius: 14.2px;
   box-shadow: 0px 7.25333px 45.33334px 0px rgba(0, 0, 0, 0.1);
   outline: 0;
+  font-size: 16.27px;
 }
 .getsupersale placeholder {
   color: #878787;

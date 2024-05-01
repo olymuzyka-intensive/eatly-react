@@ -10,7 +10,7 @@ function Getsupersale() {
     const slider = [
         {
             title: "GET 50%",
-            promo: "WEEKENDS",
+            promo: "WEEKEND",
             image: "/src/img/Food-2.png"
         },
         {

@@ -784,11 +784,12 @@
   }
   .getsupersale input {
     width: 312.7px;
-    padding: 15.5px 143.22px 15.5px 15.5px;
+    padding: 15.5px;
     border-radius: 10.12px;
+    font-size: 16.27px;
   }
-  .getsupersale__form_button {
-    left: 207px;
+  .getsupersale placeholder {
+    font-size: 16.27px;
   }
   .support {
     margin-top: 90px;
@@ -1142,9 +1143,6 @@
     font-size: 15px;
     line-height: 23px;
     margin-left: 20px;
-  }
-  .getsupersale__form_button {
-    left: 212px;
   }
   .shopping__item_img-info {
     margin-left: 11.25px;
@@ -1590,12 +1588,12 @@
   .getsupersale {
     padding: 67px 0 120px;
   }
-  .getsupersale input {
+  .getsupersale__form {
     width: 100%;
-    padding: 15.5px 109.22px 15.5px 15.5px;
   }
-  .getsupersale placeholder {
-    padding-left: -100px;
+  .getsupersale input {
+    padding: 15.5px;
+    font-size: 12px;
   }
   .getsupersale__row {
     padding: 35.64px 27.35px 95.73px 27.35px;
@@ -1611,9 +1609,6 @@
     line-height: 62px;
     text-align: center;
     margin-bottom: 30px;
-  }
-  .getsupersale__form_button {
-    left: 195px;
   }
 }
 @media (max-width: 376px) {
@@ -1769,14 +1764,17 @@
     right: -18px;
     width: 30px;
   }
-  .getsupersale__form_button {
-    left: 150px;
+  .getsupersale__form {
+    width: 100%;
+  }
+  .getsupersale__form input {
+    padding-left: 5px;
+    font-size: 11px;
   }
   .getsupersale placeholder {
-    font-size: 10.58px;
+    font-size: 10px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    padding-left: 5px;
   }
   .getsupersale__row_img {
     right: 22%;
@@ -1870,12 +1868,19 @@
   .btn--apply-coupon {
     width: 79.22px;
   }
-  .getsupersale__form_button {
-    left: 102px;
+  .getsupersale__row {
+    padding: 20px;
+    padding-bottom: 70px;
   }
   .getsupersale__row_img {
     right: 17%;
     top: 75%;
+  }
+  .getsupersale__form_button {
+    right: 2px;
+  }
+  .getsupersale__form input {
+    font-size: 9px;
   }
   .premium__decor-3, .premium__decor-4 {
     top: 520px;

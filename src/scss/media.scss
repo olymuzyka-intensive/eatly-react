@@ -976,13 +976,12 @@
         }
         input {
             width: 312.7px;
-            padding: 15.5px 143.22px 15.5px 15.5px;
+            padding: 15.5px;
             border-radius: 10.12px;
+            font-size: 16.27px;
         }
-        &__form {
-            &_button {
-                left: 207px;
-            }
+        placeholder {
+            font-size: 16.27px;
         }
     }
 
@@ -1427,14 +1426,6 @@
             font-size: 15px;
             line-height: 23px;
             margin-left: 20px;
-        }
-    }
-
-    .getsupersale {
-        &__form {
-            &_button {
-                left: 212px;
-            }
         }
     }
 
@@ -1996,12 +1987,12 @@
 
     .getsupersale {
         padding: 67px 0 120px;
-        input {
+        &__form {
             width: 100%;
-            padding: 15.5px 109.22px 15.5px 15.5px;
         }
-        placeholder {
-            padding-left: -100px;
+        input {
+            padding: 15.5px;
+            font-size: 12px;
         }
         &__row {
             padding: 35.64px 27.35px 95.73px 27.35px;
@@ -2017,11 +2008,6 @@
             line-height: 62px;
             text-align: center;
             margin-bottom: 30px;
-        }
-        &__form {
-            &_button {
-                left: 195px;
-            }
         }
     }
 }
@@ -2245,14 +2231,18 @@
     }
 
     .getsupersale {
-        &__form_button {
-            left: 150px;
+        &__form {
+            width: 100%;
+            input {
+                padding-left: 5px;
+                font-size: 11px;
+            }
         }
         placeholder {
-            font-size: 10.58px;
+            font-size: 10px;
             line-height: 16px;
             letter-spacing: 0.03em;
-            padding-left: 5px;
+            // padding-left: 5px;
         }
         &__row_img {
             right: 22%;
@@ -2402,13 +2392,24 @@
     }
 
     .getsupersale {
-        &__form_button {
-            left: 102px;
-        }
-        &__row_img {
+        &__row {
+            padding: 20px; 
+            padding-bottom: 70px;
+            &_img {
             right: 17%;
             top: 75%;
+            }
         }
+        &__form {
+            &_button {
+                right: 2px;
+            }  
+            input {
+                font-size: 9px;
+            }
+        }
+        
+        
     }
 
     .premium {

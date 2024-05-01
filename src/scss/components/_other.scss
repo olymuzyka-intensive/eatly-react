@@ -215,7 +215,7 @@
         align-items:center;        
         &_button {
             position: absolute;
-            left: 298px;
+            right: 3px;
         }
     }
     input {     
@@ -225,6 +225,7 @@
         border-radius: 14.2px;
         box-shadow: 0px 7.25333px 45.33334px 0px rgba(0, 0, 0, 0.10);
         outline: 0;
+        font-size: 16.27px;
     }
 
     placeholder {
