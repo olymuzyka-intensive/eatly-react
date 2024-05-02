@@ -9,6 +9,7 @@ export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [isCartLikes, setIsCartLikes] = useState()
 
     const cartAdd = (id) => {
         const cartTmp = cart;
@@ -37,9 +38,31 @@ function App() {
         }
     }, [cart])
 
+    useEffect(() => {
+      const cartLikes = JSON.parse(localStorage.getItem('cart') || '[]') 
+      setIsCartLikes(cartLikes.includes(cart.id))
+      // if (cartLikes) {
+      //   setIsCartLikes(cartLikes)
+      // }
+  }, [])
+  // useEffect(() => {
+  //   localStorage.setItem('cartLike', JSON.stringify(isCartLikes))
+  //   }, [isCartLikes])
+
+  const addCartLike = () => {
+    const cartLikes = JSON.parse(localStorage.getItem('cartLike') || '[]') 
+    if (isCartLikes) {
+      const updateLikes = cartLikes.filter(id => id !== cart.id)
+      localStorage.setItem('cartLike', JSON.stringify(updateLikes))
+    } else {
+      localStorage.setItem('cartLike', JSON.stringify([...cartLikes, cartLikes]))
+    }
+    setIsCartLikes(isCartLikes)
+  }
+
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, addCartLike}}>
         <BrowserRouter>
           <Header/>
           <Main/>

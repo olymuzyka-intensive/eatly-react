@@ -8,30 +8,11 @@ import { AppContext } from '../App';
 
 
 function Dishes(cart) {
-    const {cartAdd} = useContext(AppContext)
+    const {cartAdd, addCartLike} = useContext(AppContext)
 
     const data = useContext(MainContext);
 
-    const [isCartLike, setIsCartLike] = useState()
-
-    useEffect(() => {
-        const cartLike = JSON.parse(localStorage.getItem('dataLike') || '[]')
-        setIsCartLike(cartLike.includes(cart.id))
-    }, [cart])
-
-    const addCartLike = () => {
-        const cartLike = JSON.parse(localStorage.getItem('dataLike') || '[]')
-
-        if (isCartLike) {
-            const updateCartLike = cartLike.filter(id => id != cart.id)
-            localStorage.setItem('dataLike', JSON.stringify(updateCartLike))
-        } else {
-            localStorage.setItem('dataLike', JSON.stringify([...cartLike, cart]))
-        }
-        setIsCartLike(!isCartLike)
-    }
-
-        return (
+    return (
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
