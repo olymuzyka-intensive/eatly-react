@@ -8,6 +8,7 @@ function MenuAll() {
         <>
         {/* <Header/> */}
             <GetSupersale/>
+            <h2 className="dishes__title">Our Favourites <span>Dishes</span></h2>
             <DishesFavourtes/>
         {/* <Footer/> */}
         </>

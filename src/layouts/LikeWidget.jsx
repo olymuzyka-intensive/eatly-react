@@ -1,18 +1,26 @@
 import { useContext, useEffect, useState } from "react"
 
 import { AppContext } from '../App';
-import { MainContext } from "../layouts/Main";
 
 import { Link } from "react-router-dom"
 
-function LikeWidget(cartLike) {
-    const [likeCount, setLikeCount] = useState([]);
+function LikeWidget() {
+    const {cartLike} = useContext(AppContext)
+    const [likeCount, setLikeCount] = useState(0);
 
+    const getQuantityLike = () => {
+        let count = 0;
+
+        cartLike.forEach(item => {
+            count++;
+        });
+
+        return count;
+    };
 
     useEffect(() => {
-        const cartLike = JSON.parse(localStorage.getItem('cartLike') || '[]')
-        setLikeCount(cartLike.length)
-    }, [cartLike])
+        setLikeCount(getQuantityLike());
+    }, [cartLike]);
 
     return (
         <>
