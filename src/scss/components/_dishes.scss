@@ -50,9 +50,15 @@
                 height: 21px;
             }          
         } 
-        &_like:active {
+        &_like-active {
             svg {                
                 fill: #5C4EAE;
+                width: 23px;
+                height: 21px;
+                cursor: pointer;
+                position: absolute;
+                top: 25px;
+                right: 25px;
             }
         }
     }

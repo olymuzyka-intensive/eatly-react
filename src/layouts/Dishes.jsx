@@ -5,10 +5,11 @@ import { useContext, useEffect, useState } from 'react';
 // import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
+import DishesFavourites from './DishesFavourites';
 
 
 function Dishes(cart) {
-    const {cartAdd, addCartLike} = useContext(AppContext)
+    const {cartAdd} = useContext(AppContext)
 
     const data = useContext(MainContext);
 
@@ -22,9 +23,7 @@ function Dishes(cart) {
                             return (
                             <li key={index} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                    <div className="dishes__item_like" onClick={addCartLike}>
-                                        <svg viewBox="0 0 12.00 12.00" enableBackground="new 0 0 12 12" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5C4EAE"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M8.5,1C7.5206299,1,6.6352539,1.4022217,6,2.0504761C5.3648071,1.4022827,4.4793701,1,3.5,1 C1.5670166,1,0,2.5670166,0,4.5S2,8,6,11c4-3,6-4.5670166,6-6.5S10.4329834,1,8.5,1z"></path></g></svg>                                    
-                                    </div>
+                                    <DishesFavourites/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>
@@ -52,40 +51,3 @@ function Dishes(cart) {
   }
   
   export default Dishes
-
-
-
-//   const [cartListFavourites, setCartListFavourites] = useState([]);
-//   const [likeCount, setLikeCount] = useState(0);
-
-//   useEffect (() => {
-//       const cartFavourites = localStorage.getItem('dataLike');
-//       if (cartFavourites) {
-//           setCartListFavourites(JSON.parse(cartFavourites));
-//           setLikeCount(JSON.parse(cartFavourites).lenght)
-//       }
-//   }, [])
-
-//   const cartAddFavourite = (id) => {
-//       const cartTmp = cartListFavourites
-//       let item = cartTmp.find((item) => {
-//           return item = {
-//               id: id, 
-//               // count: 1
-//           }
-//       })
-//       if (item ) {
-//           count += likeCount;
-//       } 
-//       // setCartListFavourites([...cartTmp]);
-//       // localStorage.setItem('dataLike', JSON.stringify(cartTmp));
-//       // setCartListFavourites(cartListFavourites)
-//       // setLikeCount(cartListFavourites.length)
-//       const updateFavourite = [...cartListFavourites, item]
-//       setCartListFavourites(updateFavourite)
-//       setLikeCount(updateFavourite.length)
-//       localStorage.setItem('dataLike', JSON.stringify(updateFavourite))
-//   }
-
-
-// ({likeCount}) onClick={cartAddFavourite}
