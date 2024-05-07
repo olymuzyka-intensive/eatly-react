@@ -25,7 +25,7 @@ function LikeWidget() {
     return (
         <>
             <Link to="/menuFavourites/"> 
-                <div className="header__button_likeCount"><span>{likeCount}</span></div>
+                <div className="header__buttonLike_count"><span>{likeCount}</span></div>
             </Link>
         </>
     )

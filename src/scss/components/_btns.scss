@@ -8,7 +8,7 @@
     font-size: 17.83px;
     outline: none;
 
-    &--shop {
+    &--shop, &--like {
         background: none;
         position: relative;
         svg {
@@ -20,6 +20,7 @@
             left: 28%;  
         }
     }
+
     // home
     &--get-started {        
         color: $bgwhite;        

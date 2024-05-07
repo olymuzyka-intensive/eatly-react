@@ -158,11 +158,11 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .btn {
         padding: 12.68px 19.02px;
         font-size: 12.68px;
-        &--shop {
+        &--shop, &--like {
             svg {
                 width: 25px;
                 height: 25px;
@@ -284,8 +284,21 @@
 
         &__button {
             margin-right: 15px;
+            &_count {
+                height: 18px;
+                width: 18px;
+                font-size: 13px;
+            }
         }
-
+        &__buttonLike {
+            margin-right: 15px;
+            &_count {
+                left: 25px;
+                height: 18px;
+                width: 18px;
+                font-size: 13px;
+            }
+        }
         &__burger {
             display: flex; 
             position: relative; 
@@ -520,8 +533,13 @@
                     height: 12.93px;
                 }                
             }    
-            &_like:active {
-                background-size: 15.61px;
+            &_like-active {
+                top: 17px;
+                right: 15.45px;
+                svg {
+                    width: 15.61px;
+                    height: 12.93px;
+                }               
             }
         }
 
@@ -544,7 +562,7 @@
             }
         }
 
-        &__subtitle a {
+        &__subtitle{
             font-size: 16.4px;
         }
         &__price {
@@ -1072,9 +1090,9 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .btn {
-        &--shop {
+        &--shop, &--like {
             top: -5px;
             svg {
                 width: 25px;
@@ -1387,6 +1405,10 @@
                 top: 15px;
                 right: 15px;
             }
+            &_like-active {
+                top: 15px;
+                right: 15px;
+            }
         }
 
         &__subtitle a{
@@ -1440,7 +1462,7 @@
     }
 
     .btn {  
-        // &--shop {
+        // &--shop, &--like {
         //     width: 40px;
         //     height: 30px;            
         //     svg {
@@ -1453,8 +1475,6 @@
         
         &--download {
             margin: 0 auto;
-            // width: 121.77px;
-            // height: 41.24px;
         }
         &--view-all {
             font-size: 20px;

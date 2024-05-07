@@ -46,21 +46,31 @@
             justify-content: center;
             align-items: center;
         }
-        &_likeCount {
+    }
+    &__buttonLike {
+        // margin-left: auto;
+        display: flex;
+        outline: none;
+        position: relative;
+        &_count {
             position: absolute;
-            right: 40px;    
+            left: 40px;
+            // right: 50px;    
             font-size: 15px;
             font-weight: 500;
-            height: 25px;
-            width: 30px;
-            background: url(/src/img/Heartfill.svg) no-repeat;
+            font-weight: 500;
+            height: 22.5px;
+            width: 22.5px;
+            background: $purple;
             color: white;
+            border: 1px solid $purple;
+            border-radius: 25px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-    }
 
+    }
     &__burger {
         display: none; 
         transition: all 0.3s ease-in;

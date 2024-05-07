@@ -98,12 +98,12 @@
     left: -90px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .btn {
     padding: 12.68px 19.02px;
     font-size: 12.68px;
   }
-  .btn--shop svg {
+  .btn--shop svg, .btn--like svg {
     width: 25px;
     height: 25px;
   }
@@ -202,6 +202,20 @@
   }
   .header__button {
     margin-right: 15px;
+  }
+  .header__button_count {
+    height: 18px;
+    width: 18px;
+    font-size: 13px;
+  }
+  .header__buttonLike {
+    margin-right: 15px;
+  }
+  .header__buttonLike_count {
+    left: 25px;
+    height: 18px;
+    width: 18px;
+    font-size: 13px;
   }
   .header__burger {
     display: flex;
@@ -400,8 +414,13 @@
     width: 15.61px;
     height: 12.93px;
   }
-  .dishes__item_like:active {
-    background-size: 15.61px;
+  .dishes__item_like-active {
+    top: 17px;
+    right: 15.45px;
+  }
+  .dishes__item_like-active svg {
+    width: 15.61px;
+    height: 12.93px;
   }
   .dishes__category {
     font-size: 8px;
@@ -420,7 +439,7 @@
     width: 11px;
     height: 11px;
   }
-  .dishes__subtitle a {
+  .dishes__subtitle {
     font-size: 16.4px;
   }
   .dishes__price {
@@ -864,11 +883,11 @@
     margin-top: 90px;
   }
 }
-@media (max-width: 768px) {
-  .btn--shop {
+@media (max-width: 769px) {
+  .btn--shop, .btn--like {
     top: -5px;
   }
-  .btn--shop svg {
+  .btn--shop svg, .btn--like svg {
     width: 25px;
     height: 25px;
     top: 15%;
@@ -1111,6 +1130,10 @@
     justify-content: center;
   }
   .dishes__item_like {
+    top: 15px;
+    right: 15px;
+  }
+  .dishes__item_like-active {
     top: 15px;
     right: 15px;
   }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 function DishesLike(cart) {
-        const [isCartLike, setIsCartLike] = useState()
+        // const [isCartLike, setIsCartLike] = useState()
 
     
 

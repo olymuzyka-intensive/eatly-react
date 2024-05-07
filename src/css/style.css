@@ -93,15 +93,23 @@ h2 span {
   justify-content: center;
   align-items: center;
 }
-.header__button_likeCount {
+.header__buttonLike {
+  display: flex;
+  outline: none;
+  position: relative;
+}
+.header__buttonLike_count {
   position: absolute;
-  right: 40px;
+  left: 40px;
   font-size: 15px;
   font-weight: 500;
-  height: 25px;
-  width: 30px;
-  background: url(/src/img/Heartfill.svg) no-repeat;
+  font-weight: 500;
+  height: 22.5px;
+  width: 22.5px;
+  background: #6C5FBC;
   color: white;
+  border: 1px solid #6C5FBC;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,11 +173,11 @@ h2 span {
   font-size: 17.83px;
   outline: none;
 }
-.btn--shop {
+.btn--shop, .btn--like {
   background: none;
   position: relative;
 }
-.btn--shop svg {
+.btn--shop svg, .btn--like svg {
   fill: #6C5FBC;
   width: 35px;
   height: 35px;
@@ -601,14 +609,16 @@ h2 span {
   width: 23px;
   height: 21px;
 }
+.dishes__item_like-active {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
 .dishes__item_like-active svg {
   fill: #5C4EAE;
   width: 23px;
   height: 21px;
   cursor: pointer;
-  position: absolute;
-  top: 25px;
-  right: 25px;
 }
 .dishes__item:hover {
   transform: scale(1.1);
