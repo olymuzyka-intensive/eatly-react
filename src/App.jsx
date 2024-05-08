@@ -3,14 +3,24 @@ import { BrowserRouter} from "react-router-dom"
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main, { MainContext } from "./layouts/Main"
-// import { MainContext } from "../layouts/Main";
+import Main from "./layouts/Main"
 
 export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
+  const [isFavorite, setIsFavorite] = useState(false)
+       
+  const addCartFavourite = (item) => {
+      const cartLikeTmp = cartLike.includes(item)
+      ? cartLike.filter((itemLike) => itemLike !== item)
+      : [...cartLike, item]
+      setCartLike(cartLikeTmp);
+      setIsFavorite(!isFavorite)   
+      localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+ 
+  }
 
     const cartAdd = (id) => {
         const cartTmp = cart;
@@ -37,38 +47,41 @@ function App() {
 
             if (cartDataLocal && cartDataLocal.length > 0) setCart([...cartDataLocal]);
         }
+        
     }, [cart])
 
-    const cartLikeAdd = (id) => {
-      const cartLikeTmp = cartLike;
+  //   const cartLikeAdd = (id) => {
+  //     const cartLikeTmp = cartLike;
         
-        let item = cartLikeTmp.find((item) => {
-            return +item.id == +id;
-        });
+  //       let item = cartLikeTmp.find((item) => {
+  //           return +item.id === +id;
+  //       });
 
-        if (item) {
-            item.favourite = true;
-        } else { 
-            item = { id: id, favourite: false };
-            cartLikeTmp.push(item);
-        }
+  //       if (item.id === id) {
+  //           item.favourite = true;
+  //       } 
+  //     // else { 
+  //     //       item = { id: id, favourite: false };
+  //     //       cartLikeTmp.push(item);
+  //     //   }
 
-        setCartLike([...cartLikeTmp]);
-        localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+      // setCartLike([...cartLikeTmp]);
+      // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+  //   }
+
+  useEffect(() => {
+    if (cartLike.length == 0) {
+    let cartLikeDataLocal = localStorage.getItem('cartLike');
+    cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
+
+    if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
     }
-
-    useEffect(() => {
-      if (cartLike.length == 0) {
-          let cartLikeDataLocal = localStorage.getItem('cartLike');
-          cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
-
-          if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
-      }
   }, [cartLike])
 
+  
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, cartLikeAdd}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
         <BrowserRouter>
           <Header/>
           <Main/>
