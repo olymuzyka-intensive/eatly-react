@@ -14,22 +14,19 @@ function App() {
   const addCartFavourite = (id) => {
     const cartLikeTmp = cartLike;
         let itemLike
-        // let itemLike = cartLikeTmp.find((item) => {
-        //     return +item.id == +id
-        // });
         if (itemLike !== id) {
           itemLike = { id: id, favourite: true };
-          setCartLike([...cartLikeTmp]);
-          // cartLikeTmp.push(itemLike);
+          // setCartLike([...cartLikeTmp]);
+          // cartLikeTmp.push(cartLike);
           cartLikeTmp.push(...cartLike, itemLike);
 
-          localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+          // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));--
       } else { 
           itemLike = { id: id, favourite: false };
-          // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+          // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));++
 
       }
-
+        //++
         localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
   }
 
@@ -60,16 +57,17 @@ function App() {
         }
         
     }, [cart])
-  //   useEffect(() => {
-  //     if (cartLike.length == 0) {
-  //         let cartDataLocalLike = localStorage.getItem('cartLike');
-  //         cartDataLocalLike = JSON.parse(cartDataLocalLike);
 
-  //         if (cartDataLocalLike && cartDataLocalLike.length > 0) setCart([...cartDataLocalLike]);
-  //     }
-      
-  // }, [cartLike])
+    // useEffect(() => {
+    //   const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
+    //   if (storedFavorites) {
+    //     setCartLike(cartLike);
+    //   }
+    // }, []);
+    // useEffect(() => {
+    //   localStorage.setItem('cartLike', JSON.stringify(cartLike));
 
+    // }, [cartLike]);
   return (
     <>
       <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>

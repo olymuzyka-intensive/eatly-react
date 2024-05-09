@@ -6,13 +6,11 @@ import { AppContext } from '../App';
 function DishesLike({}) {
     const {addCartFavourite} = useContext(AppContext)
     const {cartLike, setCartLike} = useContext(AppContext)
-    const [likeCount, setLikeCount] = useState(0);
 
 
     const [isFavorite, setIsFavorite] = useState(false)
 
     const addFavourite = (item) => {
-        // let count = 0
         const cartLikeTmp = cartLike.includes(item)
         ? cartLike.filter((itemLike) => itemLike !== item)
         : [...cartLike, item.id]
@@ -20,12 +18,9 @@ function DishesLike({}) {
         // setIsFavorite(!isFavorite)   
         if (!isFavorite) {
             setIsFavorite(true);
-            // count++
         } else {
             setIsFavorite(false);
-            // count--
         } 
-        // return count            
     }
  useEffect (() => {
     // setIsFavorite(isFavorite)
