@@ -266,7 +266,7 @@
     },
     {
       "id": "23",
-      "image": "src/img/food/23.png",
+      "image": "/src/img/food/23.png",
       "category": "main",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",

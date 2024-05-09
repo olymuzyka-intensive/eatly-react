@@ -8,7 +8,6 @@ function LikeWidget() {
     const {cartLike} = useContext(AppContext)
     const [likeCount, setLikeCount] = useState(0);
     let count = 0;
-    let isFavorite = new Set()
     const getQuantityLike = () => {
         cartLike.forEach(item => {            
             count++;

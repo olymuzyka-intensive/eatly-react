@@ -7,7 +7,7 @@ import DishesLike from './DishesLike';
 
 function DishesFavourites() {
     const {cartAdd} = useContext(AppContext)
-    const data = useContext(MainContext)
+    const dataFavourite = useContext(MainContext)
 
     return (
         <div className="dishes">
@@ -15,7 +15,7 @@ function DishesFavourites() {
                 <div className="dishes__row">
                     {/* <h2 className="dishes__title">Our <span>Dishes</span></h2> */}
                     <ul className="dishes__cards">
-                        {data.map((item, index) => {
+                        {dataFavourite.map((item, index) => {
                             return (
                             <li key={index} className="dishes__item" >
                                 <div className="dishes__category_card">

@@ -3,20 +3,28 @@ import { useContext, useEffect, useState } from 'react';
 
 import { AppContext } from '../App';
 
-
-function DishesLike() {
+function DishesLike({}) {
+    // const {addCartFavourite} = useContext(AppContext)
     const {cartLike, setCartLike} = useContext(AppContext)
-    
-    const [isFavorite, setIsFavorite] = useState()
-       
+
+    const [isFavorite, setIsFavorite] = useState(false)
+
     const addCartFavourite = (item) => {
         const cartLikeTmp = cartLike.includes(item)
         ? cartLike.filter((itemLike) => itemLike !== item)
-        : [...cartLike, item]
+        : [...cartLike, item.id]
         setCartLike(cartLikeTmp);
-        setIsFavorite(!isFavorite)          
-      
+        setIsFavorite(!isFavorite)   
+        // if (!isFavorite) {
+        //     setIsFavorite(true);
+        // } else {
+        //     setIsFavorite(false);
+        // }             
     }
+ useEffect (() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(isFavorite)
+})
 
     return (
         <div className={isFavorite ? 'dishes__item_like-active' : 'dishes__item_like'} onClick={addCartFavourite}>

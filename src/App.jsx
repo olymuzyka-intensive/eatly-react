@@ -10,16 +10,23 @@ export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
-  const [isFavorite, setIsFavorite] = useState(false)
        
-  const addCartFavourite = (item) => {
-      const cartLikeTmp = cartLike.includes(item)
-      ? cartLike.filter((itemLike) => itemLike !== item)
-      : [...cartLike, item]
-      setCartLike(cartLikeTmp);
-      setIsFavorite(!isFavorite)   
-      localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
- 
+  const addCartFavourite = (id) => {
+    // const cartLikeTmp = cartLike;
+        
+    // let itemLike = cartLikeTmp.find((itemLike) => {
+    //     return +itemLike.id == +id;
+    // });
+
+    // if (itemLike) {
+    //     itemLike.favourite = itemLike.favourite;
+    // } else { 
+    //     itemLike = { id: id, favourite: true };
+    //     cartLikeTmp.push(itemLike);
+    // }
+
+    // setCart([...cartLikeTmp]);
+    // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
   }
 
     const cartAdd = (id) => {
