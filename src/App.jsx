@@ -10,10 +10,11 @@ export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
+  
        
   useEffect(() => {
-    const storeFavourite = JSON.parse(localStorage.getItem('datalike'))
-    if (storeFavourite) {
+    const storeFavourite = JSON.parse(localStorage.getItem('data'))
+    if (!storeFavourite) {
       setCartLike(storeFavourite)
     }
   }, [])
