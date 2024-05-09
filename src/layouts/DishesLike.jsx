@@ -10,11 +10,11 @@ function DishesLike({}) {
     const [isFavorite, setIsFavorite] = useState(false)
 
     const addFavourite = (id) => {
-        if (cartLike.includes(id)) {
-            setCartLike(cartLike.filter(item => item !== id))
-           } else {
-            setCartLike([...cartLike, id])
-           } 
+        // if (cartLike.includes(id)) {
+        //     setCartLike(cartLike.filter(item => item !== id))
+        //    } else {
+        //     setCartLike([...cartLike, id])
+        //    } 
            setIsFavorite(!isFavorite)   
        
     }

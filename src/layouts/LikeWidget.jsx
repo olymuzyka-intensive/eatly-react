@@ -7,11 +7,16 @@ import { Link } from "react-router-dom"
 function LikeWidget() {
     const {cartLike} = useContext(AppContext)
     const [likeCount, setLikeCount] = useState(0);
+
     let count = 0;
-    const getQuantityLike = () => {
-        cartLike.forEach(item => {            
-            count++;
-        });
+    const getQuantityLike = (id) => {
+        // cartLike.forEach(item => {     
+        //     if (item === id) {
+        //         count++;
+        //     } else {
+        //         count--
+        //     }  
+        // })
         return count;
     };
 
@@ -38,4 +43,4 @@ export default LikeWidget
 //     } else {
 //         count--
 //     }  
-// }
+// })

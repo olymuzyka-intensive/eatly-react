@@ -1,33 +1,35 @@
-import { createContext, useState, useEffect} from "react"
+import { createContext, useState, useEffect, useContext} from "react"
 import { BrowserRouter} from "react-router-dom"
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main from "./layouts/Main"
+import Main, { MainContext } from "./layouts/Main"
 
 export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
-  
+  // const data = useContext(MainContext)
+  let objects = JSON.parse(localStorage.getItem('data'))
        
   useEffect(() => {
-    const storeFavourite = JSON.parse(localStorage.getItem('data'))
-    if (!storeFavourite) {
+    const storeFavourite = JSON.parse(localStorage.getItem('dataLike'))
+    if (storeFavourite) {
       setCartLike(storeFavourite)
     }
   }, [])
 
   // toggle
   const addCartFavourite = (id) => {
-    const cartLikeTmp = cartLike
-    if (cartLikeTmp.includes(id)) {
-      setCartLike(cartLikeTmp.filter(item => item !== id))
-    } else {
-      setCartLike([...cartLikeTmp, id])
-    }
-      localStorage.setItem('dataLike', JSON.stringify(cartLikeTmp));
+    objects = objects.filter(obj => {
+      if (obj.id === id) {
+        return { ...obj, favourites: true}
+      }
+      return obj
+    })
+    localStorage.setItem('dataLike', JSON.stringify(objects));
+
   }
   
   useEffect(() => {
@@ -76,3 +78,7 @@ function App() {
 }
 
 export default App
+
+
+
+
