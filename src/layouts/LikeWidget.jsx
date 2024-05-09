@@ -12,13 +12,6 @@ function LikeWidget() {
         cartLike.forEach(item => {            
             count++;
         });
-        // cartLike.forEach(item => {            
-        //     if (isFavorite) {
-        //         count++
-        //     } else {
-        //         count--
-        //     }            
-        // });
         return count;
     };
 
@@ -36,3 +29,13 @@ function LikeWidget() {
 }
 
 export default LikeWidget
+
+
+// работает кажется также, странно
+// cartLike.forEach(item => {     
+//     if (item === id) {
+//         count++;
+//     } else {
+//         count--
+//     }  
+// }

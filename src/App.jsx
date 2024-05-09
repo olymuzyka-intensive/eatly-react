@@ -11,23 +11,27 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
        
+  useEffect(() => {
+    const storeFavourite = JSON.parse(localStorage.getItem('datalike'))
+    if (storeFavourite) {
+      setCartLike(storeFavourite)
+    }
+  }, [])
+
+  // toggle
   const addCartFavourite = (id) => {
-    // const cartLikeTmp = cartLike;
-        
-    // let itemLike = cartLikeTmp.find((itemLike) => {
-    //     return +itemLike.id == +id;
-    // });
-
-    // if (itemLike) {
-    //     itemLike.favourite = itemLike.favourite;
-    // } else { 
-    //     itemLike = { id: id, favourite: true };
-    //     cartLikeTmp.push(itemLike);
-    // }
-
-    // setCart([...cartLikeTmp]);
-    // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+    const cartLikeTmp = cartLike
+    if (cartLikeTmp.includes(id)) {
+      setCartLike(cartLikeTmp.filter(item => item !== id))
+    } else {
+      setCartLike([...cartLikeTmp, id])
+    }
+      localStorage.setItem('dataLike', JSON.stringify(cartLikeTmp));
   }
+  
+  useEffect(() => {
+    localStorage.setItem('dataLike', JSON.stringify(cartLike));
+  }, [cartLike])
 
     const cartAdd = (id) => {
         const cartTmp = cart;
@@ -57,35 +61,6 @@ function App() {
         
     }, [cart])
 
-  //   const cartLikeAdd = (id) => {
-  //     const cartLikeTmp = cartLike;
-        
-  //       let item = cartLikeTmp.find((item) => {
-  //           return +item.id === +id;
-  //       });
-
-  //       if (item.id === id) {
-  //           item.favourite = true;
-  //       } 
-  //     // else { 
-  //     //       item = { id: id, favourite: false };
-  //     //       cartLikeTmp.push(item);
-  //     //   }
-
-      // setCartLike([...cartLikeTmp]);
-      // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
-  //   }
-
-  useEffect(() => {
-    if (cartLike.length == 0) {
-    let cartLikeDataLocal = localStorage.getItem('cartLike');
-    cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
-
-    if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
-    }
-  }, [cartLike])
-
-  
   return (
     <>
       <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
