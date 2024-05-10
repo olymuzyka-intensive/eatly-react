@@ -10,7 +10,7 @@ function LikeWidget() {
 
     useEffect(() => {
         setLikeCount(cartLike.length);
-    }, [cartLike]);
+    });
 
     return (
         <>

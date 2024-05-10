@@ -15,17 +15,16 @@ function DishesLike({}) {
         ? cartLike.filter((itemLike) => itemLike !== item)
         : [...cartLike, item.id]
         setCartLike(cartLikeTmp);
-        // setIsFavorite(!isFavorite)   
-        if (!isFavorite) {
-            setIsFavorite(true);
-        } else {
-            setIsFavorite(false);
-        } 
+        setIsFavorite(!isFavorite)   
+        // if (!isFavorite) {
+        //     setIsFavorite(true);
+        // } else {
+        //     setIsFavorite(false);
+        // } 
     }
  useEffect (() => {
-    // setIsFavorite(isFavorite)
     addCartFavourite()
-})
+}, [cartLike])
 
     return (
         <div className={isFavorite ? 'dishes__item_like-active' : 'dishes__item_like'} onClick={addFavourite}>

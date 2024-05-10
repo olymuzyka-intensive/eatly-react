@@ -10,25 +10,31 @@ export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
-       
-  const addCartFavourite = (id) => {
+
+  useEffect(() => {
+    localStorage.setItem('cartLike', JSON.stringify(cartLike));
+    console.log('компонент отрисовался')
+  }, []);
+
+const addCartFavourite = (id) => {
     const cartLikeTmp = cartLike;
-        let itemLike
-        if (itemLike !== id) {
-          itemLike = { id: id, favourite: true };
-          // setCartLike([...cartLikeTmp]);
-          // cartLikeTmp.push(cartLike);
-          cartLikeTmp.push(...cartLike, itemLike);
-
-          // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));--
-      } else { 
-          itemLike = { id: id, favourite: false };
-          // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));++
-
-      }
-        //++
-        localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+        let itemLike = cartLikeTmp.find((item) => {
+          if (item !== id) {
+            item = { id: id, favourite: true };
+            cartLikeTmp.push(...cartLike, itemLike);
+      }    
+    })
+    localStorage.setItem('cartLike', JSON.stringify(cartLike));
   }
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
+    if (storedFavorites) {
+      setCartLike(cartLike);
+    }
+    console.log('компонент обновился')
+
+  }, [cartLike]);
+
 
     const cartAdd = (id) => {
         const cartTmp = cart;
@@ -58,16 +64,6 @@ function App() {
         
     }, [cart])
 
-    // useEffect(() => {
-    //   const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
-    //   if (storedFavorites) {
-    //     setCartLike(cartLike);
-    //   }
-    // }, []);
-    // useEffect(() => {
-    //   localStorage.setItem('cartLike', JSON.stringify(cartLike));
-
-    // }, [cartLike]);
   return (
     <>
       <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
