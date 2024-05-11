@@ -27,27 +27,48 @@ function App() {
     localStorage.setItem('cartLike', JSON.stringify(cartLike))
   }, [cartLike])
 
+  // 1
 // const addCartFavourite = (itemLike) => {
 //   const storedFavorites = JSON.parse(localStorage.getItem('cartLke')) || [];
 //   storedFavorites.push(itemLike)
 //   localStorage.setItem('cartLike', JSON.stringify(storedFavorites))
 //   console.log('товар добавлен в избранное')
 //   }
+
+// 2
 // const addCartFavourite = (itemId) => {
 //      objLike.find(item => {
 //       if (item.id === itemId) {
 //         item.favourites = true;
 //       }
 //       console.log('товар добавлен в избранное')
-  
 //     })
 //   }
-const addCartFavourite = (item) => {
-  const updateLike = [...cartLike, item]
-  setCartLike(updateLike);
-  localStorage.setItem('cartLike', JSON.stringify(updateLike))
-  console.log('компонент обновился')
-}
+
+// 3
+// const addCartFavourite = (item) => {
+// const updateLike = [...cartLike, item]
+// setCartLike(updateLike);
+// localStorage.setItem('cartLike', JSON.stringify(updateLike))
+// console.log('компонент обновился')
+//   }
+
+// 4
+    const addCartFavourite = (id) => {
+      const cartTmp = cart;
+      let item = cartTmp.find((item) => {
+        return +item.id == +id;
+      });      
+      if (item) {
+        item.favourite = true;
+      } else { 
+          item = { id: id, favourite: false };
+          cartTmp.push(item);
+      }
+      setLikeCart([...cartTmp]);    
+      localStorage.setItem('cartLike', JSON.stringify(updateLike))
+      console.log('компонент обновился')
+    }
 
     const cartAdd = (id) => {
         const cartTmp = cart;
