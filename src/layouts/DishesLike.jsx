@@ -23,7 +23,7 @@ function DishesLike({}) {
         // } 
     }
  useEffect (() => {
-    addCartFavourite()
+    // addCartFavourite()
 }, [cartLike])
 
     return (

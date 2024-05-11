@@ -9,8 +9,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "2",
@@ -21,8 +20,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "5.0",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "3",
@@ -33,8 +31,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "4",
@@ -45,8 +42,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "5.0",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "5",
@@ -57,8 +53,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "6",
@@ -69,8 +64,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "7",
@@ -81,8 +75,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "8",
@@ -93,8 +86,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "9",
@@ -105,8 +97,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"   
+      "price": "12.99"  
     },
     {
       "id": "10",
@@ -117,8 +108,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "11",
@@ -129,8 +119,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "12",
@@ -141,8 +130,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "13",
@@ -153,8 +141,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "14",
@@ -165,8 +152,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "15",
@@ -177,8 +163,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "16",
@@ -189,8 +174,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "17",
@@ -201,8 +185,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "18",
@@ -213,8 +196,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "19",
@@ -225,8 +207,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "20",
@@ -237,8 +218,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "21",
@@ -249,8 +229,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "22",
@@ -261,8 +240,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "23",
@@ -273,8 +251,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "24",
@@ -285,8 +262,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "25",
@@ -297,8 +273,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "26",
@@ -309,8 +284,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "27",
@@ -321,8 +295,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "28",
@@ -333,8 +306,7 @@
       "title": "Swe Dish",
       "timing": "34 min",
       "star": "4.9",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "29",
@@ -345,8 +317,7 @@
       "title": "Chicken Hell",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "30",
@@ -357,8 +328,7 @@
       "title": "Cheese",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "31",
@@ -369,8 +339,7 @@
       "title": "Veggie",
       "timing": "34 min",
       "star": "5.0",
-      "price": "19.99",
-      "favourites": "false"
+      "price": "19.99"
     },
     {
       "id": "32",
@@ -381,8 +350,7 @@
       "title": "BBQ Chicken",
       "timing": "29 min",
       "star": "4.9",
-      "price": "18.99",
-      "favourites": "false"
+      "price": "18.99"
     },
     {
       "id": "33",
@@ -393,8 +361,7 @@
       "title": "Chicago Deep",
       "timing": "24 min",
       "star": "4.8",
-      "price": "12.99",
-      "favourites": "false"
+      "price": "12.99"
     },
     {
       "id": "34",
@@ -405,8 +372,7 @@
       "title": "Pepperoni",
       "timing": "32 min",
       "star": "4.9",
-      "price": "17.99",
-      "favourites": "false"
+      "price": "17.99"
     },
     {
       "id": "35",
@@ -417,8 +383,7 @@
       "title": "GranDonut",
       "timing": "6 min",
       "star": "4.8",
-      "price": "3.99",
-      "favourites": "false"
+      "price": "3.99"
     },
     {
       "id": "36",
@@ -429,8 +394,7 @@
       "title": "Donuterg",
       "timing": "4 min",
       "star": "5.0",
-      "price": "4.99",
-      "favourites": "false"     
+      "price": "4.99"    
     },
     {
       "id": "37",
@@ -441,8 +405,7 @@
       "title": "Donutada",
       "timing": "4 min",
       "star": "4.9",
-      "price": "4.99",
-      "favourites": "false"
+      "price": "4.99"
     },
     {
       "id": "38",
@@ -453,8 +416,7 @@
       "title": "Donutola",
       "timing": "6 min",
       "star": "4.8",
-      "price": "4.99",
-      "favourites": "false"
+      "price": "4.99"
     },
     {
       "id": "39",
@@ -465,8 +427,7 @@
       "title": "Donutia",
       "timing": "4 min",
       "star": "4.9",
-      "price": "5.99",
-      "favourites": "false"
+      "price": "5.99"
     },
     {
       "id": "40",
@@ -477,8 +438,7 @@
       "title": "Eskimo",
       "timing": "14 min",
       "star": "4.8",
-      "price": "4.99",
-      "favourites": "false"
+      "price": "4.99"
     },
     {
       "id": "41",
@@ -489,8 +449,7 @@
       "title": "Neapolitan",
       "timing": "13 min",
       "star": "5.0",
-      "price": "3.99",
-      "favourites": "false"
+      "price": "3.99"
     },
     {
       "id": "42",
@@ -501,8 +460,7 @@
       "title": "Vanilla",
       "timing": "14 min",
       "star": "4.9",
-      "price": "6.99",
-      "favourites": "false"
+      "price": "6.99"
     },
     {
       "id": "43",
@@ -513,8 +471,7 @@
       "title": "Rocky road",
       "timing": "12 min",
       "star": "4.8",
-      "price": "5.99",
-      "favourites": "false"
+      "price": "5.99"
     },
     {
       "id": "44",
@@ -525,9 +482,7 @@
       "title": "Butter Pecan",
       "timing": "11 min",
       "star": "4.9",
-      "price": "3.99",
-      "favourites": "false"
+      "price": "3.99"
     }
   ]
 }
-

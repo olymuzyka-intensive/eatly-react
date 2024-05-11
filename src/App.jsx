@@ -1,40 +1,53 @@
-import { createContext, useState, useEffect} from "react"
+import { createContext, useState, useEffect, useContext} from "react"
 import { BrowserRouter} from "react-router-dom"
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main from "./layouts/Main"
+import Main, { MainContext } from "./layouts/Main"
 
 export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
-    console.log('компонент отрисовался')
-  }, []);
-
-const addCartFavourite = (id) => {
-    const cartLikeTmp = cartLike;
-        let itemLike = cartLikeTmp.find((item) => {
-          if (item !== id) {
-            item = { id: id, favourite: true };
-            cartLikeTmp.push(...cartLike, itemLike);
-      }    
-    })
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
-  }
+  const [isFavorite, setIsFavorite] = useState(false)
+  const data = useContext(MainContext)
+  const objLike = data
+  
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
     if (storedFavorites) {
-      setCartLike(cartLike);
+      setCartLike(storedFavorites);
     }
     console.log('компонент обновился')
 
-  }, [cartLike]);
+  }, []);
 
+  useEffect(() => {
+    localStorage.setItem('cartLike', JSON.stringify(cartLike))
+  }, [cartLike])
+
+// const addCartFavourite = (itemLike) => {
+//   const storedFavorites = JSON.parse(localStorage.getItem('cartLke')) || [];
+//   storedFavorites.push(itemLike)
+//   localStorage.setItem('cartLike', JSON.stringify(storedFavorites))
+//   console.log('товар добавлен в избранное')
+//   }
+// const addCartFavourite = (itemId) => {
+//      objLike.find(item => {
+//       if (item.id === itemId) {
+//         item.favourites = true;
+//       }
+//       console.log('товар добавлен в избранное')
+  
+//     })
+//   }
+const addCartFavourite = (item) => {
+  const updateLike = [...cartLike, item]
+  setCartLike(updateLike);
+  localStorage.setItem('cartLike', JSON.stringify(updateLike))
+  console.log('компонент обновился')
+}
 
     const cartAdd = (id) => {
         const cartTmp = cart;
@@ -52,6 +65,7 @@ const addCartFavourite = (id) => {
 
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
+        console.log('товар добавлен')
     }
 
     useEffect(() => {
@@ -78,3 +92,60 @@ const addCartFavourite = (id) => {
 }
 
 export default App
+
+
+// {
+//   useEffect(() => {
+//     const storedFavorites = localStorage.getItem('cartLke');
+//     if (storedFavorites) {
+//       setCartLike(JSON.parse(storedFavorites))
+//       setLikeCount(JSON.parse(storedFavorites).length)
+//     }
+//     console.log('компонент обновился')
+//   }, []);
+
+
+// const addCartFavourite = (item) => {
+//   const updateLike = [...cartLike, item]
+//   setCartLike(updateLike);
+//   setLikeCount(updateLike.length)
+//   localStorage.setItem('cartLIke', JSON.stringify(updateLike))
+//   console.log('компонент обновился')
+
+//   // data = data.map(item => {
+//   //   if (item.id === id) {
+//   //     return {...item, isFavorite: true}
+//   //   }
+//   //   return item
+//   // })
+//   // const cartLikeTmp = cartLike.includes(id)
+//   // ? cartLike.filter((itemLike) => itemLike === id)
+//   // : [...cartLike, id]
+//   // setCartLike([...cartLike]);
+//   // setCartLike(cartLikeTmp);
+//   // setIsFavorite(!isFavorite)   
+
+// //   const cartLikeTmp = cartLike;
+// //   let itemLike = cartLikeTmp.find((item) => {
+    
+// //     if (item === id) {
+// //       // item = { id: id, favourite: true };
+// //       // cartLikeTmp.push(...cartLike, item);
+// //       console.log('add')
+// // }    
+
+//     // const cartLikeTmp = cartLike;
+//     //     let itemLike = cartLikeTmp.find((item) => {
+          
+//     //       if (item !== id) {
+//     //         item = { id: id, favourite: true };
+//     //         cartLikeTmp.push(...cartLike, itemLike);
+//     //         console.log('add')
+//     //   }    
+//     // })
+// //     localStorage.setItem('cartLike', JSON.stringify(cartLike));
+//       // localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
+
+//   }
+
+// }
