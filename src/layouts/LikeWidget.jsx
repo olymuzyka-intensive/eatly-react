@@ -6,11 +6,14 @@ import { Link } from "react-router-dom"
 
 function LikeWidget() {
     const {cartLike} = useContext(AppContext)
-    const [likeCount, setLikeCount] = useState(0);
+    // const [likeCount, setLikeCount] = useState(0);
+    const {likeCount, setLikeCount} = useContext(AppContext)
 
-    useEffect(() => {
-        setLikeCount(cartLike.length);
-    });
+    // useEffect(() => {
+    //     // setLikeCount(likeCount);
+    //     setLikeCount(cartLike.length);
+
+    // });
 
     return (
         <>

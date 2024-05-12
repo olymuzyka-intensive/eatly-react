@@ -11,9 +11,10 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false)
-  const data = useContext(MainContext)
-  const objLike = data
-  
+  // const data = useContext(MainContext)
+  // const objLike = data
+  const [likeCount, setLikeCount] = useState(0);
+
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
     if (storedFavorites) {
@@ -54,22 +55,43 @@ function App() {
 //   }
 
 // 4
-    const addCartFavourite = (id) => {
-      const cartTmp = cart;
-      let item = cartTmp.find((item) => {
-        return +item.id == +id;
-      });      
-      if (item) {
-        item.favourite = true;
-      } else { 
-          item = { id: id, favourite: false };
-          cartTmp.push(item);
-      }
-      setLikeCart([...cartTmp]);    
-      localStorage.setItem('cartLike', JSON.stringify(updateLike))
-      console.log('компонент обновился')
-    }
+    // const addCartFavourite = (id) => {
+    //   const cartTmp = cart;
+    //   let item = cartTmp.find((item) => {
+    //     return +item.id == +id;
+    //   });      
+    //   if (item) {
+    //     item.favourite = true;
+    //   } else { 
+    //       item = { id: id, favourite: false };
+    //       cartTmp.push(item);
+    //   }
+    //   setLikeCart([...cartTmp]);    
+    //   localStorage.setItem('cartLike', JSON.stringify(updateLike))
+    //   console.log('компонент обновился')
+    // }
 
+// 5 
+  const addCartFavourite = (item) => {
+        const cartLikeTmp = cartLike.includes(item)
+        ? cartLike.filter((itemLike) => itemLike !== item)
+        : [...cartLike, item.id]
+const updateLike = [...cartLike, item]
+setCartLike(updateLike);
+// localStorage.setItem('cartLike', JSON.stringify(updateLike))
+console.log('компонент обновился')
+
+        setCartLike(cartLikeTmp);
+        // setIsFavorite(!isFavorite)   
+        if (!isFavorite) {
+            setIsFavorite(true);
+            setLikeCount(prevCount => prevCount + 1)
+        } else {
+            setIsFavorite(false);
+            setLikeCount(prevCount => prevCount - 1)
+        } 
+
+  }
     const cartAdd = (id) => {
         const cartTmp = cart;
         
@@ -101,7 +123,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, isFavorite, likeCount, addCartFavourite}}>
         <BrowserRouter>
           <Header/>
           <Main/>
