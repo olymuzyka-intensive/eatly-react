@@ -18,13 +18,31 @@ function App() {
 
 const addCartFavourite = (id) => {
     const cartLikeTmp = cartLike;
-        let itemLike = cartLikeTmp.find((item) => {
-          if (item !== id) {
-            item = { id: id, favourite: true };
-            cartLikeTmp.push(...cartLike, itemLike);
-      }    
-    })
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
+    //     let itemLike = cartLikeTmp.find((item) => {
+    //       if (item !== id) {
+    //         item = { id: id, favourite: true };
+    //         cartLikeTmp.push(...cartLike, itemLike.id);
+    //       } else { 
+    //         item = { id: id, favourite: false };
+    //         cartTmp.push(itemLike);
+    //       }
+    // })
+    let item = cartLikeTmp.find((item) => {
+      return +item.id == +id;
+  });
+
+  if (item) {
+      item = { id: id, favourites: true };
+      cartLikeTmp.push(item);
+      setCartLike(cartLikeTmp);
+  } else { 
+            item.favourites = false;
+
+  }
+
+
+    setCartLike([...cartLikeTmp])
+    localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
   }
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
