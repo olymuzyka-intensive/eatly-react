@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { AppContext } from '../App';
 import { MainContext } from './Main';
@@ -7,8 +7,7 @@ import DishesLike from './DishesLike';
 
 function DishesFavourites() {
     const {cartAdd} = useContext(AppContext)
-    const dataFavourite = useContext(MainContext)
-
+    
     return (
         <div className="dishes">
             <div className="container">
