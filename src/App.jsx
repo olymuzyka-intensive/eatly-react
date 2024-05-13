@@ -1,49 +1,49 @@
-import { createContext, useState, useEffect} from "react"
+import { createContext, useState, useEffect, useContext} from "react"
 import { BrowserRouter} from "react-router-dom"
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main from "./layouts/Main"
+import Main, { MainContext } from "./layouts/Main"
 
 export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
+  const [isFavourites, setIsFavourites] = useState(false)
+  const data = useContext(MainContext)
+  
+const addCartFavourite = (id) => {
+  const cartLike = JSON.parse(localStorage.getItem('data'));
+        
+  let itemLike = cartLike.filter((item) => {
+      return +item.id == +id;
+  });
 
+  // const cartLikeTmp = data.find(item)
+  // ? cartLike.filter((itemLike) => itemLike !== item)
+  // : [...cartLike, item]
+  // setCartLike([...cartLikeTmp])
+  // // setIsFavorites(!isFavourites)   
+  if (itemLike) {
+      // setIsFavourites(true);
+      itemLike = { id: itemLike.id, favourites: true };
+            cartLike.push(itemLike);
+            setCartLike([...cartLike])
+     console.log('добавился в избранное')    
+    localStorage.setItem('cartLike', JSON.stringify(cartLike));
+
+  } 
+  else {
+      // setIsFavourites(false);
+      item = { id: item.id, favourites: false };
+  } 
+  }
   useEffect(() => {
     localStorage.setItem('cartLike', JSON.stringify(cartLike));
     console.log('компонент отрисовался')
   }, []);
 
-const addCartFavourite = (id) => {
-    const cartLikeTmp = cartLike;
-    //     let itemLike = cartLikeTmp.find((item) => {
-    //       if (item !== id) {
-    //         item = { id: id, favourite: true };
-    //         cartLikeTmp.push(...cartLike, itemLike.id);
-    //       } else { 
-    //         item = { id: id, favourite: false };
-    //         cartTmp.push(itemLike);
-    //       }
-    // })
-    let item = cartLikeTmp.find((item) => {
-      return +item.id == +id;
-  });
-
-  if (item) {
-      item = { id: id, favourites: true };
-      cartLikeTmp.push(item);
-      setCartLike(cartLikeTmp);
-  } else { 
-            item.favourites = false;
-
-  }
-
-
-    setCartLike([...cartLikeTmp])
-    localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
-  }
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
     if (storedFavorites) {
@@ -52,6 +52,21 @@ const addCartFavourite = (id) => {
     console.log('компонент обновился')
 
   }, [cartLike]);
+
+    // useEffect(() => {
+    //     const storedFavourites = localStorage.getItem('cartLike');
+    //     if (!storedFavourites) {
+    //       setIsFavourites((storedFavourites));
+    //     }
+    //   }, []);
+
+    //   useEffect(() => {
+    //     localStorage.setItem('cartLike', JSON.stringify(isFavourites))
+    //     // console.log(storedFavourites)
+    //     localStorage.setItem('cartLike', JSON.stringify(cartLike));
+
+    //     console.log('компонент обновился')
+    //   }, [cartLike])
 
 
     const cartAdd = (id) => {
@@ -84,7 +99,7 @@ const addCartFavourite = (id) => {
 
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, isFavourites, setIsFavourites, addCartFavourite}}>
         <BrowserRouter>
           <Header/>
           <Main/>
