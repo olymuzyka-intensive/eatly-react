@@ -10,7 +10,7 @@ export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
-  const [cartLikeCount, setCartLikeCount] = useState(0)
+  // const [cartLikeCount, setCartLikeCount] = useState(0)
 
   useEffect(() => {
     if (cartLike.length == 0) {
@@ -44,8 +44,8 @@ function App() {
         //   // localStorage.setItem('cartLike', JSON.stringify(itemLike));  
         const cartLikeTmp = cartLike;
         
-        let itemLike = cartLikeTmp.find((item) => {
-            return +item.id == +id;
+        let itemLike = cartLikeTmp.find((itemFav) => {
+            return itemFav.id == id;
         });
 
         if (itemLike) {
@@ -63,7 +63,7 @@ function App() {
         const cartTmp = cart;
         
         let item = cartTmp.find((item) => {
-            return +item.id == +id;
+            return item.id == id;
         });
 
         if (item) {
@@ -89,7 +89,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite, cartLikeCount}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
         <BrowserRouter>
           <Header/>
           <Main/>
