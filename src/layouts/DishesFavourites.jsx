@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import { AppContext } from '../App';
 import { MainContext } from './Main';
-import DishesLike from './DishesLike';
+// import DishesLike from './DishesLike';
 
 
 function DishesFavourites() {
@@ -19,7 +19,7 @@ function DishesFavourites() {
                             return (
                             <li key={index} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                    <DishesLike />
+                                    {/* <DishesLike /> */}
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>

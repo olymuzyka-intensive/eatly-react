@@ -1,39 +1,64 @@
-import { createContext, useState, useEffect} from "react"
+import { createContext, useState, useEffect, useContext} from "react"
 import { BrowserRouter} from "react-router-dom"
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main from "./layouts/Main"
+import Main, { MainContext } from "./layouts/Main"
 
 export const AppContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
+  // const data = JSON.parse(localStorage.getItem('data'))    
+  // console.log (data) //проверка проходит
+
+  // useEffect(() => {
+  //   const storedFavorites = JSON.parse(localStorage.getItem('cartLike'));
+  //   if (storedFavorites) {
+  //     setCartLike(cartLike);
+  //   }
+  //   console.log('компонент отрисовался')
+  //   // console.log(storedFavorites)
+  //   // console.log(cartLike)
+
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('cartLike', JSON.stringify(cartLike));
-    console.log('компонент отрисовался')
-  }, []);
-
-const addCartFavourite = (id) => {
-    const cartLikeTmp = cartLike;
-        let itemLike = cartLikeTmp.find((item) => {
-          if (item !== id) {
-            item = { id: id, favourite: true };
-            cartLikeTmp.push(...cartLike, itemLike);
-      }    
-    })
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
-  }
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
-    if (storedFavorites) {
-      setCartLike(cartLike);
-    }
     console.log('компонент обновился')
 
   }, [cartLike]);
+
+// const addCartFavourite = (id) => {
+//     const cartLikeTmp = cartLike;
+//         let itemLike = cartLikeTmp.find((item) => {
+//           if (item !== id) {
+//             item = { id: id, favourite: true };
+//             cartLikeTmp.push(...cartLike, itemLike);
+//       }    
+//       console.log(cartLike)
+//     })
+//     localStorage.setItem('cartLike', JSON.stringify(cartLike));
+//   }
+
+const addCartFavourite = (id) => {
+  const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
+  // console.log(cartLikeTmp) //проверка проходит
+
+  if (cartLikeTmp && cartLikeTmp.length > 0) {
+      const isFavorite = cartLikeTmp.find(item => item.id === id)
+        if (isFavorite) {
+          const updateLike = cartLikeTmp.filter(item => item.id !== id)
+          setCartLike(updateLike)          
+          console.log('yes', id)
+        } else {
+          console.log('no', isFavorite)
+        }
+       
+  }
+}    
+
 
 
     const cartAdd = (id) => {
