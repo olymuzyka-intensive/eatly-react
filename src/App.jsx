@@ -13,13 +13,18 @@ function App() {
   const [cartLikeCount, setCartLikeCount] = useState(0)
 
   useEffect(() => {
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
-    console.log('компонент отрисовался')
-  }, []);
+    if (cartLike.length == 0) {
+      let cartLikeDataLocal = localStorage.getItem('cartLike');
+      cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
 
-const addCartFavourite = (item) => {
-    const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
-    // console.log(cartLikeTmp)
+      if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
+  }
+    console.log('компонент обновился')
+  }, [cartLike]);
+
+    const addCartFavourite = (item) => {
+        const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
+        // console.log(cartLikeTmp)
 
         let itemLike = cartLikeTmp.find((itemFavourite) => itemFavourite.id === item.id)
           if (itemLike) {
@@ -27,25 +32,15 @@ const addCartFavourite = (item) => {
              const saveFavourites = cartLike.filter((itemFavourite) => itemFavourite.id !== item.id)
              setCartLike(saveFavourites)
              setCartLikeCount(saveFavourites.length)
-             console.log(saveFavourites)
           }  else {  
           // Логика, если элемент не найден
             const saveFavourites = [...cartLike, item]
             setCartLike(saveFavourites)
             setCartLikeCount(saveFavourites.length)
-            
           }
-    // localStorage.setItem('cartLike', JSON.stringify(cartLike));
-  }
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
-    if (storedFavorites) {
-      setCartLike(cartLike);
+          // localStorage.setItem('cartLike', JSON.stringify(itemLike));  
+      
     }
-    console.log('компонент обновился')
-
-  }, [cartLike]);
-
 
     const cartAdd = (id) => {
         const cartTmp = cart;
