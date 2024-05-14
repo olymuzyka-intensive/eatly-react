@@ -20,26 +20,43 @@ function App() {
       if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
   }
     console.log('компонент обновился')
+    console.log(cartLike)
   }, [cartLike]);
 
-    const addCartFavourite = (item) => {
-        const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
-        // console.log(cartLikeTmp)
+    const addCartFavourite = (id) => {
+        // const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
+        // // console.log(cartLikeTmp)
 
-        let itemLike = cartLikeTmp.find((itemFavourite) => itemFavourite.id === item.id)
-          if (itemLike) {
-             // Логика, если элемент найден
-             const saveFavourites = cartLike.filter((itemFavourite) => itemFavourite.id !== item.id)
-             setCartLike(saveFavourites)
-             setCartLikeCount(saveFavourites.length)
-          }  else {  
-          // Логика, если элемент не найден
-            const saveFavourites = [...cartLike, item]
-            setCartLike(saveFavourites)
-            setCartLikeCount(saveFavourites.length)
-          }
-          // localStorage.setItem('cartLike', JSON.stringify(itemLike));  
-      
+        // let itemLike = cartLikeTmp.find((itemFavourite) => itemFavourite.id === id)
+        //   if (itemLike) {
+            
+        //      // Логика, если элемент найден
+        //      const saveFavourites = cartLike.filter((itemFavourite) => itemFavourite.id !== id)
+        //      setCartLike(saveFavourites)
+        //      localStorage.setItem('cartLike', JSON.stringify(cartLike));
+        //     //  setCartLikeCount(saveFavourites.length)
+        //   }  else {  
+        //   // Логика, если элемент не найден
+        //     const saveFavourites = [...cartLike, id]
+        //     setCartLike(saveFavourites)
+        //     // setCartLikeCount(saveFavourites.length)
+        //   }
+        //   // localStorage.setItem('cartLike', JSON.stringify(itemLike));  
+        const cartLikeTmp = cartLike;
+        
+        let itemLike = cartLikeTmp.find((item) => {
+            return +item.id == +id;
+        });
+
+        if (itemLike) {
+            itemLike.favourites = false;
+        } else { 
+            itemLike = { id: +id, favourites: true };
+            cartLikeTmp.push(itemLike);
+        }
+
+        setCartLike([...cartLikeTmp]);
+        localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
     }
 
     const cartAdd = (id) => {
@@ -72,7 +89,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
+      <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite, cartLikeCount}}>
         <BrowserRouter>
           <Header/>
           <Main/>
