@@ -517,10 +517,10 @@
         }
 
         &__item {
-        width:160px;
+        width: 200px;
         border-radius: 24.59px;
             &_img {
-                width: 131.50px;
+                width: 160px;
                 padding-top: 10px;
                 // left: 15px;
                 // top: 26px;
@@ -529,16 +529,16 @@
                 top: 17px;
                 right: 15.45px;
                 svg {
-                    width: 15.61px;
-                    height: 12.93px;
+                    width: 20px;
+                    height: 18px;
                 }                
             }    
             &_like-active {
                 top: 17px;
                 right: 15.45px;
                 svg {
-                    width: 15.61px;
-                    height: 12.93px;
+                    width: 20px;
+                    height: 18px;
                 }               
             }
         }
@@ -547,32 +547,32 @@
             font-size: 8px;
             padding: 2px 5.5px;
             &_card {
-                padding: 20px 16.4px 19.48px 21.5px;
+                padding: 20px 10.5px 19.48px 10.5px;
             }
         }
 
         &__comment {
-            font-size: 12.3px;
+            font-size: 16px;
             &_star {
                 padding-right: 10px;
                 svg {
-                    width: 11px;
-                    height: 11px;
+                    width: 20px;
+                    height: 21px;
                 }
             }
         }
 
         &__subtitle{
-            font-size: 16.4px;
+            font-size: 20px;
         }
-        &__price {
-            font-size: 18.5px;
-            // height: 28.7px;
-            span {
-                font-size: 18.5px;
-                margin-top: 0px;
-            }
-        }
+        // &__price {
+        //     font-size: 18.5px;
+        //     // height: 28.7px;
+        //     span {
+        //         font-size: 18.5px;
+        //         margin-top: 0px;
+        //     }
+        // }
         &__add {
             width: 31px;
             height: 28px;
@@ -596,7 +596,8 @@
         &__promo {
             &_decor {
                 left: 58%;
-                top: 180px;
+                top: 185px;
+                width: 50px;
             }
         }
 
@@ -1388,19 +1389,10 @@
     .dishes {
         &__item {
             border-radius: 22.62px;
-            width: 146.93px;
+            // width: 146.93px;
             &_img {
-                width: 120.95px;
+                width: 150px;
             }
-        }
-
-        &__cards {
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        &__item {
             &_like {
                 top: 15px;
                 right: 15px;
@@ -1411,19 +1403,25 @@
             }
         }
 
-        &__subtitle a{
-            font-size: 15.08px;
+        &__cards {
+            gap: 35px;
+            // justify-content: center;
+            // flex-wrap: wrap;
+        }
+
+        &__subtitle {
+            font-size: 18px;
             line-height: 25px;
             padding-bottom: 0px;
         }
 
-        &__comment {
-            font-size: 11.31px;
-            height: 15px;
-        }
+        // &__comment {
+        //     font-size: 14px;
+        //     // height: 15px;
+        // }
 
         &__price {
-            font-size: 16.96px;
+            font-size: 22px;
             line-height: 26px;
             // align-items: baseline;
             // height: 26px;
@@ -1618,7 +1616,9 @@
         &__row {
             padding: 92px 0;
         }
-
+        &__cards {
+            justify-content: center;
+        }
         &__button-menu {
             position: absolute;
             top: 920px;
@@ -2073,19 +2073,19 @@
         }
     }
 
-    .dishes { 
-        &__cards {
-            gap: 20px;
-        }  
-        &__item {
-            &_like {
-                svg {
-                    width: 14.36px;
-                    height: 11.9px;
-                }
-            }
-        }      
-    }
+    // .dishes { 
+    //     &__cards {
+    //         gap: 20px;
+    //     }  
+    //     &__item {
+    //         &_like {
+    //             svg {
+    //                 width: 14.36px;
+    //                 height: 11.9px;
+    //             }
+    //         }
+    //     }      
+    // }
 
     .shopping {
         &__form input {

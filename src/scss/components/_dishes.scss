@@ -30,7 +30,7 @@
         transition: transform 0.3s ease;
         background: $white;
         justify-content: center;
-        align-self: stretch;
+        // align-self: stretch;
         align-items: end;
        
         &_img {
@@ -67,7 +67,7 @@
     }
     
     &__category {
-        display: inline-flex;
+        max-width: fit-content;
         font-size: 11.5px;
         font-weight: 400;
         line-height: 17px;

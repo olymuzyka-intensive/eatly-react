@@ -399,11 +399,11 @@
     padding-bottom: 53.5px;
   }
   .dishes__item {
-    width: 160px;
+    width: 200px;
     border-radius: 24.59px;
   }
   .dishes__item_img {
-    width: 131.5px;
+    width: 160px;
     padding-top: 10px;
   }
   .dishes__item_like {
@@ -411,43 +411,36 @@
     right: 15.45px;
   }
   .dishes__item_like svg {
-    width: 15.61px;
-    height: 12.93px;
+    width: 20px;
+    height: 18px;
   }
   .dishes__item_like-active {
     top: 17px;
     right: 15.45px;
   }
   .dishes__item_like-active svg {
-    width: 15.61px;
-    height: 12.93px;
+    width: 20px;
+    height: 18px;
   }
   .dishes__category {
     font-size: 8px;
     padding: 2px 5.5px;
   }
   .dishes__category_card {
-    padding: 20px 16.4px 19.48px 21.5px;
+    padding: 20px 10.5px 19.48px 10.5px;
   }
   .dishes__comment {
-    font-size: 12.3px;
+    font-size: 16px;
   }
   .dishes__comment_star {
     padding-right: 10px;
   }
   .dishes__comment_star svg {
-    width: 11px;
-    height: 11px;
+    width: 20px;
+    height: 21px;
   }
   .dishes__subtitle {
-    font-size: 16.4px;
-  }
-  .dishes__price {
-    font-size: 18.5px;
-  }
-  .dishes__price span {
-    font-size: 18.5px;
-    margin-top: 0px;
+    font-size: 20px;
   }
   .dishes__add {
     width: 31px;
@@ -465,7 +458,8 @@
   }
   .supersale__promo_decor {
     left: 58%;
-    top: 180px;
+    top: 185px;
+    width: 50px;
   }
   .supersale__slider_item {
     width: 557px;
@@ -1119,15 +1113,9 @@
   }
   .dishes__item {
     border-radius: 22.62px;
-    width: 146.93px;
   }
   .dishes__item_img {
-    width: 120.95px;
-  }
-  .dishes__cards {
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 150px;
   }
   .dishes__item_like {
     top: 15px;
@@ -1137,17 +1125,16 @@
     top: 15px;
     right: 15px;
   }
-  .dishes__subtitle a {
-    font-size: 15.08px;
+  .dishes__cards {
+    gap: 35px;
+  }
+  .dishes__subtitle {
+    font-size: 18px;
     line-height: 25px;
     padding-bottom: 0px;
   }
-  .dishes__comment {
-    font-size: 11.31px;
-    height: 15px;
-  }
   .dishes__price {
-    font-size: 16.96px;
+    font-size: 22px;
     line-height: 26px;
   }
   .dishes__price span {
@@ -1292,6 +1279,9 @@
   }
   .dishes__row {
     padding: 92px 0;
+  }
+  .dishes__cards {
+    justify-content: center;
   }
   .dishes__button-menu {
     position: absolute;
@@ -1661,13 +1651,6 @@
   .footer__bottom {
     width: 265px;
     right: -60px;
-  }
-  .dishes__cards {
-    gap: 20px;
-  }
-  .dishes__item_like svg {
-    width: 14.36px;
-    height: 11.9px;
   }
   .shopping__form input {
     width: 75%;
