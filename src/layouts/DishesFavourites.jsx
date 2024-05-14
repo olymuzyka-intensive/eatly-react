@@ -1,13 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { AppContext } from '../App';
-import { MainContext } from './Main';
-import DishesLike from './DishesLike';
+import DishesLikeButton from './DishesLikeButton';
 
 
 function DishesFavourites() {
     const {cartAdd} = useContext(AppContext)
-    const dataFavourite = useContext(MainContext)
+    const [favouritesDishes, setFavouritesDishes] = useState([])
 
     return (
         <div className="dishes">
@@ -15,11 +14,11 @@ function DishesFavourites() {
                 <div className="dishes__row">
                     {/* <h2 className="dishes__title">Our <span>Dishes</span></h2> */}
                     <ul className="dishes__cards">
-                        {dataFavourite.map((item, index) => {
+                        {favouritesDishes.map((item) => {
                             return (
-                            <li key={index} className="dishes__item" >
+                            <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                    <DishesLike />
+                                    <DishesLikeButton />
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>

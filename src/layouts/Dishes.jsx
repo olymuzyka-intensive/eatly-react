@@ -5,10 +5,10 @@ import { useContext, useEffect, useState } from 'react';
 // import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
-import DishesLike from './DishesLike';
+import DishesLikeButton from './DishesLikeButton';
 
 
-function Dishes() {
+function Dishes({}) {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext)
 
@@ -18,11 +18,11 @@ function Dishes() {
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our <span>Dishes</span></h2>
                     <ul className="dishes__cards">
-                        {data.map((item, index) => {
+                        {data.map((item) => {
                             return (
-                            <li key={index} className="dishes__item" >
+                            <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                    <DishesLike />
+                                    <DishesLikeButton />
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>

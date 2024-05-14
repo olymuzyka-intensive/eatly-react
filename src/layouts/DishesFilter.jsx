@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
-import DishesLike from './DishesLike';
+import DishesLikeButton from './DishesLikeButton';
 
 
 function DishesFilter() {
@@ -24,12 +24,12 @@ function DishesFilter() {
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our Selected <span>Dishes</span></h2>
                     <ul className="dishes__cards">
-                        {dataTmp.map((item, index) => {
+                        {dataTmp.map((item) => {
                             return (
-                            <li key={index} className="dishes__item">
+                            <li key={item.id} className="dishes__item">
                                 <div className="dishes__category_card">
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
-                                    <DishesLike />
+                                    <DishesLikeButton />
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle"> {item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
