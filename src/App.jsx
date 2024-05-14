@@ -12,28 +12,26 @@ function App() {
   const [cartLike, setCartLike] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem('cartLike', JSON.stringify(cartLike));
-    console.log('компонент отрисовался')
-  }, []);
+    if (cartLike.length == 0) {
+      let cartDataLocal = localStorage.getItem('cartLike');
+      cartDataLocal = JSON.parse(cartDataLocal);
+
+      if (cartDataLocal && cartDataLocal.length > 0) setCartLike([...cartDataLocal]);
+  }
+    // localStorage.setItem('cartLike', JSON.stringify(cartLike));
+    console.log('компонент обновился')
+  }, [cartLike]);
 
 const addCartFavourite = (id) => {
-    const cartLikeTmp = cartLike;
+    const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
         let itemLike = cartLikeTmp.find((item) => {
-          if (item !== id) {
-            item = { id: id, favourite: true };
-            cartLikeTmp.push(...cartLike, itemLike);
+          if (item === id) {
+            item = { id: id, favourites: true };
       }    
     })
+    // cartLikeTmp.push(...cartLike, itemLike);
     localStorage.setItem('cartLike', JSON.stringify(cartLike));
   }
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('cartLke'));
-    if (storedFavorites) {
-      setCartLike(cartLike);
-    }
-    console.log('компонент обновился')
-
-  }, [cartLike]);
 
 
     const cartAdd = (id) => {
