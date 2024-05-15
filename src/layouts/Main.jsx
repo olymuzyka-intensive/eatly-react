@@ -48,18 +48,20 @@ function Main() {
     <MainContext.Provider value={data}>
 
     <>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/menu" element={<Menu/>}/>
-        <Route path="/menuAll" element={<MenuAll/>}/>
-        <Route path="/menuFavourites" element={<MenuFavourites/>}/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/content" element={<Content/>}/>
-        <Route path="/aboutUs" element={<AboutUs/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="/popup" element={<Popup/>}/>
-      </Routes>
+    
+        <Routes>        
+          <Route path="/" element={<Home/>}/>
+          <Route path="/menu" element={<Menu/>}/>
+          <Route path="/menuAll" element={<MenuAll/>}/>
+          <Route path="/menuFavourites" element={<MenuFavourites/>}/>
+          <Route path="/blog" element={<Blog/>}/>
+          <Route path="/content" element={<Content/>}/>
+          <Route path="/aboutUs" element={<AboutUs/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/popup" element={<Popup/>}/>
+        </Routes>
+
     </>
     </MainContext.Provider>
 

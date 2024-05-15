@@ -7,6 +7,11 @@ function Header() {
     const [isOpen, setIsOpen] = useState(true)  
     const [isActive, setIsActive] = useState(true)
 
+    const closeMenu = () => {
+        setIsOpen(!isOpen);
+        setIsActive(!isActive)
+    }
+
     return (
         <div className="header">
             <div className="container">
@@ -18,16 +23,16 @@ function Header() {
 
                         <ul className={`header__menu ${isOpen ? " " : "active"}`}>
                             <li className="menu__item">
-                                <Link to="/menu" className="menu__link">Menu</Link>
+                                <Link to="/menu" className="menu__link" onClick={closeMenu}>Menu</Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="/blog" className="menu__link">Blog</Link>
+                                <Link to="/blog" className="menu__link" onClick={closeMenu}>Blog</Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="/aboutUs" className="menu__link">About Us</Link>
+                                <Link to="/aboutUs" className="menu__link" onClick={closeMenu}>About Us</Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="/contact" className="menu__link">Contact</Link>
+                                <Link to="/contact" className="menu__link" onClick={closeMenu}>Contact</Link>
                             </li>
                         </ul>                    
                     </nav>                    

@@ -1,9 +1,10 @@
 import { createContext, useState, useEffect} from "react"
 import { BrowserRouter} from "react-router-dom"
+import ScrollToTop from './layouts/ScrollToTop'
 
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import Main from "./layouts/Main"
+import Main from "./layouts/Main";
 
 export const AppContext = createContext();
 
@@ -24,7 +25,7 @@ function App() {
   }, [cartLike]);
 
     const addCartFavourite = (id) => {
-        // const cartLikeTmp = JSON.parse(localStorage.getItem('data'))
+        // const cartLikeTmp = JSON.parse(localStorage.getItem('data')) //для проверки
         // // console.log(cartLikeTmp)
 
         // let itemLike = cartLikeTmp.find((itemFavourite) => itemFavourite.id === id)
@@ -91,6 +92,7 @@ function App() {
     <>
       <AppContext.Provider value={{cart, setCart, cartAdd, cartLike, setCartLike, addCartFavourite}}>
         <BrowserRouter>
+        <ScrollToTop />
           <Header/>
           <Main/>
           <Footer/>
