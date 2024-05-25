@@ -23,7 +23,7 @@ function Popup() {
                             <input type="text" placeholder="Full Name"></input>
                             <input type="email" placeholder="Email"></input>
                             <input type="number" placeholder="Phone" max="15" min="1"></input>
-                            <Link to="/aboutUs" className="btn btn--confirm">confirm</Link>
+                            <Link to="/#" className="btn btn--confirm">confirm</Link>
                         </form>
                     </div>
                     <div className="popup__right">

@@ -993,6 +993,11 @@
         &__title {
             font-size: 50px;
         }
+        &__form {
+            &_button {
+                right: 3px;
+            }
+        }
         input {
             width: 312.7px;
             padding: 15.5px;
@@ -1972,41 +1977,41 @@
         line-height: 19px;
     }
 
-    .footer-popup {
-        display: flow;  
-        &__row {
-        display: grid;
-        position: relative;
-        }
-        &__bottom {
-            position: relative;
-            right: -90px;
-            width: 290px;
-            padding: 40.53px 0 36px;
-        }
-        &__socials {
-            position: absolute;
-            gap: 20px;
-            right: 20px;
-            top: -235px;
-        }
-        .logo {
-            align-self: self-start;
-        }
-        .menu {
-            display: grid;
-            gap: 30px;
-            line-height: 1.5;
-            text-transform: capitalize;
-            margin-top: 53.09px;
-        }
-        .menu__link {
-            color: #606060;
-            text-transform: uppercase;
-            font-size: 14px;
-            line-height: 19px;
-        }
-    }    
+    // .footer-popup {
+    //     display: flow;  
+    //     &__row {
+    //     display: grid;
+    //     position: relative;
+    //     }
+    //     &__bottom {
+    //         position: relative;
+    //         right: -90px;
+    //         width: 290px;
+    //         padding: 40.53px 0 36px;
+    //     }
+    //     &__socials {
+    //         position: absolute;
+    //         gap: 20px;
+    //         right: 20px;
+    //         top: -235px;
+    //     }
+    //     .logo {
+    //         align-self: self-start;
+    //     }
+    //     .menu {
+    //         display: grid;
+    //         gap: 30px;
+    //         line-height: 1.5;
+    //         text-transform: capitalize;
+    //         margin-top: 53.09px;
+    //     }
+    //     .menu__link {
+    //         color: #606060;
+    //         text-transform: uppercase;
+    //         font-size: 14px;
+    //         line-height: 19px;
+    //     }
+    // }    
 
     .getsupersale {
         padding: 67px 0 120px;
