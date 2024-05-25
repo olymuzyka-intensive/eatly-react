@@ -682,8 +682,8 @@
         }
 
         &__item {
-            flex: 0 0 375.5px;
-            padding: 27px 30.5px;
+            // flex: 0 0 375.5px;
+            // padding: 27px 30.5px;
 
             &_img {
                 width: 50.52px;
@@ -714,24 +714,24 @@
             }
         }
 
-        &__item:nth-child(1) {
-            transform: translate3d(420px, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item:nth-child(1) {
+        //     transform: translate3d(420px, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(1) {
-            transform: translate3d(0, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(1) {
+        //     transform: translate3d(0, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(2) {
-            transform: translate3d(-420px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__item.active:nth-child(3) {
-            transform: translate3d(-840px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(2) {
+        //     transform: translate3d(-420px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
+        // &__item.active:nth-child(3) {
+        //     transform: translate3d(-840px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
 
         &__button {
             width: 135px;
@@ -1634,32 +1634,32 @@
         &__button {
             width: 117px;
         }
-        &__slider {
-            &_control {
-                right: auto;
-            }
-        }
+        // &__slider {
+        //     &_control {
+        //         right: auto;
+        //     }
+        // }
         &__item {
             flex: 0 0 353px;
         }
-        &__item:nth-child(1) {
-            transform: translate3d(575px, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item:nth-child(1) {
+        //     transform: translate3d(575px, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(1) {
-            transform: translate3d(0, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(1) {
+        //     transform: translate3d(0, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(2) {
-            transform: translate3d(-400px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__item.active:nth-child(3) {
-            transform: translate3d(-800px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(2) {
+        //     transform: translate3d(-400px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
+        // &__item.active:nth-child(3) {
+        //     transform: translate3d(-800px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
     }
 
     .supersale {        
@@ -2196,24 +2196,24 @@
             flex: 0 0 305px;
             padding: 10px;
         }
-        &__item:nth-child(1) {
-            transform: translate3d(575px, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item:nth-child(1) {
+        //     transform: translate3d(575px, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(1) {
-            transform: translate3d(0, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(1) {
+        //     transform: translate3d(0, 0px, 0px);  
+        //     transition: 1s ease-in-out;
+        // }
     
-        &__item.active:nth-child(2) {
-            transform: translate3d(-350px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__item.active:nth-child(3) {
-            transform: translate3d(-700px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
+        // &__item.active:nth-child(2) {
+        //     transform: translate3d(-350px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
+        // &__item.active:nth-child(3) {
+        //     transform: translate3d(-700px, 0px, 0px);        
+        //     transition: 1s ease-in-out;
+        // }
         &__title {
             font-size: 30px;
             line-height: 36px;
@@ -2221,12 +2221,12 @@
         &__button {
             width: 100px;
         }
-        &__slider {
-            &_control {
-                width: 300px;
-                left: 0px;
-            }
-        }
+        // &__slider {
+        //     &_control {
+        //         width: 300px;
+        //         left: 0px;
+        //     }
+        // }
     }
 
     .content {
@@ -2301,32 +2301,32 @@
         }
     }
 
-    .customer {
-        &__item {
-            flex: 0 0 255px;
-        }
-        &__item.active:nth-child(1) {
-            transform: translate3d(0, 0px, 0px);  
-            transition: 1s ease-in-out;
-        }
+    // .customer {
+    //     &__item {
+    //         flex: 0 0 255px;
+    //     }
+    //     &__item.active:nth-child(1) {
+    //         transform: translate3d(0, 0px, 0px);  
+    //         transition: 1s ease-in-out;
+    //     }
     
-        &__item.active:nth-child(2) {
-            transform: translate3d(-300px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__item.active:nth-child(3) {
-            transform: translate3d(-600px, 0px, 0px);        
-            transition: 1s ease-in-out;
-        }
-        &__button {
-            width: 80px;
-        }
-        &__slider {
-            &_control {
-                width: 255px;
-            }
-        }
-    }
+    //     &__item.active:nth-child(2) {
+    //         transform: translate3d(-300px, 0px, 0px);        
+    //         transition: 1s ease-in-out;
+    //     }
+    //     &__item.active:nth-child(3) {
+    //         transform: translate3d(-600px, 0px, 0px);        
+    //         transition: 1s ease-in-out;
+    //     }
+    //     &__button {
+    //         width: 80px;
+    //     }
+    //     &__slider {
+    //         &_control {
+    //             width: 255px;
+    //         }
+    //     }
+    // }
 
     .dishes {
         &__button-menu {

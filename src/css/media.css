@@ -529,10 +529,6 @@
   .customer__slider {
     gap: 29.11px;
   }
-  .customer__item {
-    flex: 0 0 375.5px;
-    padding: 27px 30.5px;
-  }
   .customer__item_img {
     width: 50.52px;
     height: 50.52px;
@@ -559,22 +555,6 @@
   .customer__item_decor img {
     width: 41.5px;
     height: 31.5px;
-  }
-  .customer__item:nth-child(1) {
-    transform: translate3d(420px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(1) {
-    transform: translate3d(0, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(2) {
-    transform: translate3d(-420px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(3) {
-    transform: translate3d(-840px, 0px, 0px);
-    transition: 1s ease-in-out;
   }
   .customer__button {
     width: 135px;
@@ -1295,27 +1275,8 @@
   .customer__button {
     width: 117px;
   }
-  .customer__slider_control {
-    right: auto;
-  }
   .customer__item {
     flex: 0 0 353px;
-  }
-  .customer__item:nth-child(1) {
-    transform: translate3d(575px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(1) {
-    transform: translate3d(0, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(2) {
-    transform: translate3d(-400px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(3) {
-    transform: translate3d(-800px, 0px, 0px);
-    transition: 1s ease-in-out;
   }
   .supersale__row {
     flex-direction: column;
@@ -1732,32 +1693,12 @@
     flex: 0 0 305px;
     padding: 10px;
   }
-  .customer__item:nth-child(1) {
-    transform: translate3d(575px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(1) {
-    transform: translate3d(0, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(2) {
-    transform: translate3d(-350px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(3) {
-    transform: translate3d(-700px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
   .customer__title {
     font-size: 30px;
     line-height: 36px;
   }
   .customer__button {
     width: 100px;
-  }
-  .customer__slider_control {
-    width: 300px;
-    left: 0px;
   }
   .content__title {
     font-size: 20px;
@@ -1803,27 +1744,6 @@
   }
   .promo__line {
     left: 0px;
-  }
-  .customer__item {
-    flex: 0 0 255px;
-  }
-  .customer__item.active:nth-child(1) {
-    transform: translate3d(0, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(2) {
-    transform: translate3d(-300px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__item.active:nth-child(3) {
-    transform: translate3d(-600px, 0px, 0px);
-    transition: 1s ease-in-out;
-  }
-  .customer__button {
-    width: 80px;
-  }
-  .customer__slider_control {
-    width: 255px;
   }
   .dishes__button-menu {
     position: absolute;
