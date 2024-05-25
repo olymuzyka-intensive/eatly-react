@@ -26,17 +26,21 @@ function Customer() {
     dots: true,
     responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1440,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
           }
         },
         {
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+        {
           breakpoint: 769,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
+            slidesToShow: 1,
           }
         }
       ],

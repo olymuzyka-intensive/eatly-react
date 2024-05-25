@@ -786,11 +786,33 @@ h2 span {
 .customer .slick-dots {
   width: 550px;
   right: 5%;
-  bottom: -10%;
+  bottom: -15%;
   display: flex !important;
   z-index: 1000;
   margin: 10px;
-  margin-left: 50%;
+}
+@media (max-width: 769px) {
+  .customer .slick-dots {
+    right: 9%;
+  }
+}
+@media (max-width: 426px) {
+  .customer .slick-dots {
+    width: 300px;
+    right: 8%;
+  }
+}
+@media (max-width: 376px) {
+  .customer .slick-dots {
+    width: 200px;
+    right: 18%;
+    bottom: -45px;
+  }
+}
+@media (max-width: 320px) {
+  .customer .slick-dots {
+    right: 12%;
+  }
 }
 
 .customer .slick-dots li {
@@ -813,9 +835,21 @@ h2 span {
   padding: 0;
   cursor: pointer;
 }
+@media (max-width: 426px) {
+  .customer .slick-dots button {
+    width: 110px;
+  }
+}
+@media (max-width: 376px) {
+  .customer .slick-dots button {
+    width: 75px;
+  }
+}
 
 .customer .slick-dots li button:before {
   content: "";
+  width: 0;
+  height: 0;
 }
 
 .slick-prev, .slick-next {

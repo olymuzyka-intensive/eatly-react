@@ -1639,9 +1639,12 @@
         //         right: auto;
         //     }
         // }
-        &__item {
-            flex: 0 0 353px;
-        }
+        // &__item {
+        //     flex: 0 0 353px;
+        //     &_text {
+        //         // font-size: 12px;
+        //     }
+        // }
         // &__item:nth-child(1) {
         //     transform: translate3d(575px, 0px, 0px);  
         //     transition: 1s ease-in-out;

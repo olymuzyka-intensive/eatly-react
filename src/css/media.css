@@ -1275,9 +1275,6 @@
   .customer__button {
     width: 117px;
   }
-  .customer__item {
-    flex: 0 0 353px;
-  }
   .supersale__row {
     flex-direction: column;
     align-items: center;
