@@ -34,7 +34,7 @@ function Getsupersale() {
             <div className="container"> 
                 <div className="supersale__row">
                     <div className="supersale__promo">
-                    <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
+                        <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
                         <ul className="supersale__slider">
                             <div className="supersale__list">
                                 {slider.map((slide, index) =>  
@@ -54,7 +54,9 @@ function Getsupersale() {
                         </ul>
 
                         <div className="search">
-                            <input type="search" placeholder="Search"/>
+                            {/* <input type="text" onChange= {onChange} placeholder="Search"/> */}
+                            <input type="text"  placeholder="Search"/>
+
                             <button className="btn btn--search" type="submit"> <img src="/src/img/Search.svg" alt="search"/></button>
                         </div>
                     </div>

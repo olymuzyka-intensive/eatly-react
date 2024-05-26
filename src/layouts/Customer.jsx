@@ -15,7 +15,7 @@ function Customer() {
         setIsActive(index)
         // setIsActiveComment()   
     }
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
     const settings = {
     infinite: true,
@@ -44,15 +44,19 @@ function Customer() {
           }
         }
       ],
-    // dotsClass: 'customer__slider_control',
+      beforeChange(oldIndex, newIndex) {
+        setActiveSlideIndex(newIndex);
+      },
+      // customPaging: (slideIndex) => (
+      //   <li key={slideIndex} active={slideIndex === activeSlideIndex}></li>
+      // ),
+    // dotsClass: "customer__slider_control",
     // baforeChange: (current, next) => {
     //     setCurrentSlide(next);
     //   }
     // appendDots: dots => (
-    //     <div>
     //       <ul className="customer__slider_control">
     //         { dots }</ul>
-    //     </div>
     //   ),
     // customPaging: index => (
     //         <li className={isActive === index ? "customer__button active" : "customer__button"} onClick={() => toggleActive(index)} ></li>
@@ -121,7 +125,7 @@ function Customer() {
                                             //         </div>
                                             //     </div>
                                             // </li>
-                                        // стили активны все, пока думаю
+                                        // стили активны все, пока думаю о тонком переключении
                                             <li key={index} className={"customer__item active" }>
                                             <div className={"customer__item_top active" }>
                                                 <img src={comment.image} className="customer__item_img"/>

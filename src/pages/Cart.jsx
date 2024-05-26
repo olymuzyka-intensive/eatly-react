@@ -36,7 +36,7 @@ function Cart() {
             if (item.id === id) { 
                 return {
                     quantity : ++item.quantity
-                }  
+                }                  
             }                   
         });            
         setCart([...cartTmp]);
@@ -54,36 +54,9 @@ function Cart() {
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
 
-    // const handleIncrement = (id) => {  
-    //     setCart((cart) => cart.map((item) => {
-    //         if (item.id === id) {
-    //             return {
-    //                 ...cart,
-    //                 quantity : quantity + 1
-    //             }
-    //         }
-    //     return cart
-    //     }))
-    // // setCartItem(cartItem)
-    // }
-    //     const handleDecrement = (id) => {  
-    //         // // let updateCart = [...cart]
-    //         // const cartItem = cart.map((item) => {
-    //         //     if (item.id === id) {
-    //         //     return {
-    //         //         ...cart,
-    //         //         quantity : item.quantity - 1
-    //         //     }
-    //         // }
-    //         // return cart
-    //         // });
-    //         // // setCartItem(cartItem)
-    // }
-
     // работает только в инпуте
     
-    const changeQuantity = (id, value) => {
-        
+    const changeQuantity = (id, value) => {        
         const cartItem = cart.find((item) => item.id == id)
 
         if (cartItem) {
@@ -166,7 +139,6 @@ function Cart() {
                                 <div className="shopping__item_counter">
                                     {/* <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button> */}
                                     <button className="shopping__item_counter-lower" type="button" onClick={() => handleDecrement(item.id)}></button>
-
                                     <input className="shopping__item_counter-count" type="number" max="9999" min="1" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
                                     {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
