@@ -1,11 +1,15 @@
 import React, { useState } from "react"
+import SubcategoryStyle from './SubcategoryStyle';
+import DishesLikeButton from './DishesLikeButton';
 
-function CategoryFilter({items}) {
+
+function CategoryFilter({data}) {
     const [selectedCategory, setSelectedCategory] = useState(null)
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category)
-    }
+    // const handleCategoryChange = (category) => {
+    //     setSelectedCategory(category)
+    // }
     // const filteredItems = selectedCategory === 'main' ? items : items.filter(item => item.category === selectedCategory)
+    // const filteredItems = selectedCategory ? data.filter(item => item.category === selectedCategory) : data
 
     return (
         <div className="category">
@@ -13,21 +17,20 @@ function CategoryFilter({items}) {
             <div className="category__title">Category</div>
         
             <ul className="category__list">
-           {}
-                {/* <li className="category__item" onClick={() => setSelectedCategory('pizza')}> */}
-                <li className="category__item">
+                <li className="category__item" onClick={() => setSelectedCategory('pizza')}>
+                {/* <li className="category__item"> */}
                     <h4 className="category__item_title category__item_title-1" >Pizza</h4>
                 </li>
-                {/* <li className="category__item category__item-active" onClick={() => setSelectedCategory('main')} > */}
-                <li className="category__item category__item-active" >
+                <li className="category__item category__item-active" onClick={() => setSelectedCategory('main')} >
+                {/* <li className="category__item category__item-active" > */}
                     <h4 className="category__item_title category__item_title-2" >Dish</h4>
                 </li>
-                {/* <li className="category__item" onClick={() => setSelectedCategory('donat')}> */}
-                <li className="category__item">
+                <li className="category__item" onClick={() => setSelectedCategory('donat')}>
+                {/* <li className="category__item"> */}
                     <h4 className="category__item_title category__item_title-3" >Donat</h4>
                 </li>
-                {/* <li className="category__item" onClick={() => setSelectedCategory('ice')}> */}
-                <li className="category__item">
+                <li className="category__item" onClick={() => setSelectedCategory('ice')}>
+                {/* <li className="category__item"> */}
                     <h4 className="category__item_title category__item_title-4" >Ice</h4>
                 </li>
             </ul>

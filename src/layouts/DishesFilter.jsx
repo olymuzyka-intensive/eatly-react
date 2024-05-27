@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
+import CategoryFilter from './CategoryFilter';
+import SubcategoryStyle from './SubcategoryStyle';
 
 
 function DishesFilter() {
@@ -51,6 +53,7 @@ function DishesFilter() {
     })
 
     return (
+      
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
@@ -60,9 +63,9 @@ function DishesFilter() {
                             return (
                             <li key={item.id} className="dishes__item">
                                 <div className="dishes__category_card">
-                                    <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <DishesLikeButton product-id={item.id}/>
-                                    <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
+                                    <img src={item.image} className="dishes__item_img" alt='dish'/>
+                                    <SubcategoryStyle subcategory={item.subcategory}/>
                                     <div className="dishes__subtitle"> {item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
                                         <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">

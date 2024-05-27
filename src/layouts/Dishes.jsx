@@ -25,8 +25,8 @@ function Dishes({}) {
                                 <div className="dishes__category_card">
                                     <DishesLikeButton product-id={item.id}/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
-                                    <h4 className={`dishes__category dishes__category_1`}>{item.subcategory}</h4>
-                                    {/* <SubcategoryStyle /> */}
+                                    {/* <h4 className={`dishes__category dishes__category_1`}>{item.subcategory}</h4> */}
+                                    <SubcategoryStyle subcategory={item.subcategory}/>
                                     <div className="dishes__subtitle">{item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
                                         <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,22 +1,21 @@
 import React from "react";
 
-function SubcategoryStyle(item) {
-    
+function SubcategoryStyle(props) {
     let className;
-    switch(item.subcategory) {
+    switch(props.subcategory) {
         case 'Healthy': 
-            className = 'dishes__category_1';
+            className = 'dishes__category dishes__category_1';
             break;
         case 'Trending': 
-            className = 'dishes__category_2';
+            className = 'dishes__category dishes__category_2';
             break;
         case 'Supreme': 
-            className = 'dishes__category_3';
+            className = 'dishes__category dishes__category_3';
             break;
     }
     return (
         <div>
-            <h4 className={className}>{item.subcategory}</h4>
+            <h4 className={className}>{props.subcategory}</h4>
         </div>
     )
   }

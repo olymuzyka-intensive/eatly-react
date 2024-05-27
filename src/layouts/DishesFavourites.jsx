@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 
 import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
+import SubcategoryStyle from './SubcategoryStyle';
 
 
 function DishesFavourites() {
@@ -20,6 +21,7 @@ function DishesFavourites() {
                                 <div className="dishes__category_card">
                                 <DishesLikeButton product-id={item.id}/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
+                                    <SubcategoryStyle subcategory={item.subcategory}/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
