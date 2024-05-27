@@ -10,7 +10,7 @@ import Blog from "../pages/Blog"
 import AboutUs from "../pages/AboutUs"
 import Contact from "../pages/Contact"
 import Cart from "../pages/Cart"
-import Popup from "../pages/Popup"
+import Popup from "../pages/Sign"
 import Content from "../pages/Content"
 
 export const MainContext = createContext();

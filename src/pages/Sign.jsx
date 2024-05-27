@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom"
 
-import HeaderPopup from "../layouts/HeaderPopup"
-import FooterPopup from "../layouts/FooterPopup"
 
-function Popup() {
+function Sign() {
     return (
     <>
-    <HeaderPopup/>
         <div className="popup">
             <div className="container">
                 <div className="popup__row">
@@ -37,8 +34,7 @@ function Popup() {
                 </div>
             </div>
         </div>
-    <FooterPopup/>
     </>
     )
 }
-export default Popup
+export default Sign

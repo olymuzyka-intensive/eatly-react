@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import Search from "./Search"
+import CategoryFilter from "./CategoryFilter"
 
 function Getsupersale() {
     const [isActive, setIsActive] = useState(0)
@@ -52,16 +54,10 @@ function Getsupersale() {
                             <li key={index} className={isActive === index ? "supersale__line_item-active" : "supersale__line_item"} onClick={() => toggleActive(index)} ></li> 
                         )}
                         </ul>
-
-                        <div className="search">
-                            {/* <input type="text" onChange= {onChange} placeholder="Search"/> */}
-                            <input type="text"  placeholder="Search"/>
-
-                            <button className="btn btn--search" type="submit"> <img src="/src/img/Search.svg" alt="search"/></button>
-                        </div>
+                        <Search/>
                     </div>
-                    
-                    <div className="category">
+                    <CategoryFilter />
+                    {/* <div className="category">
                         <div className="category__card">
                             <div className="category__title">Category</div>
                             <ul className="category__list">
@@ -101,7 +97,7 @@ function Getsupersale() {
                                 <button type="button" className="btn btn--apply">Apply</button>
                             </div>
                         </div>
-                    </div>                
+                    </div> */}
                 </div>    
             </div>
         </div>

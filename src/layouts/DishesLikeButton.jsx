@@ -3,7 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 
 import { AppContext } from '../App';
 
-function DishesLikeButton({}) {
+function DishesLikeButton(props) {
+    let id = props['product-id'] || null
     const {addCartFavourite} = useContext(AppContext)
     // const {cartLike, setCartLike} = useContext(AppContext)
 
@@ -11,7 +12,7 @@ function DishesLikeButton({}) {
 
     const handleToggleFavourite = () => {
         setIsFavorite(!isFavorite)   
-        addCartFavourite()
+        addCartFavourite(id)
     }
 
     return (

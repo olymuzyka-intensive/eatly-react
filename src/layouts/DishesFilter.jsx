@@ -13,9 +13,41 @@ function DishesFilter() {
     const data = useContext(MainContext);
 
     const dataTmp = data.filter(function(item) {
+        // let className;
+
+        // switch(item.category) {
+        //             case 'main': 
+        //             return true
+        //             case 'pizza': 
+        //             return true
+        //             case 'donut': 
+        //             return true
+        //             case 'ice': 
+        //             return true
+        //         }
+        
         if (item.category == "main") {
             return true
         }        
+        // if (item.category == "pizza") {
+        //     return true
+        // }   
+        // if (item.category == "donut") {
+        //     return true
+        // }   
+        // if (item.category == "ice") {
+        //     return true
+        // }   
+        // if (item.sortcategory == "Recomended") {
+        //     return true
+        // }  
+        // if (item.sortcategory == "Fast Delivery") {
+        //     return true
+        // }  
+        // if (item.sortcategory == "Most Popular") {
+        //     return true
+        // }  
+
     })
 
     return (
@@ -29,7 +61,7 @@ function DishesFilter() {
                             <li key={item.id} className="dishes__item">
                                 <div className="dishes__category_card">
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
-                                    <DishesLikeButton />
+                                    <DishesLikeButton product-id={item.id}/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle"> {item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">

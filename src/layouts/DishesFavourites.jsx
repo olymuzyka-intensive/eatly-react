@@ -18,7 +18,7 @@ function DishesFavourites() {
                             return (
                             <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                    <DishesLikeButton />
+                                <DishesLikeButton product-id={item.id}/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle">{item.title}</div>

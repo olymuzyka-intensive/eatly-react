@@ -31,7 +31,7 @@ function DishesTop() {
                             <li key={item.id} className="dishes__item">
                                 <div className="dishes__category_card">
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
-                                    <DishesLikeButton />
+                                    <DishesLikeButton product-id={item.id}/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
                                     <div className="dishes__subtitle"> {item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
