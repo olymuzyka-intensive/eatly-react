@@ -19,30 +19,10 @@ function App() {
       cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
 
       if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
-  }
-    // console.log('компонент обновился')
-    // console.log(cartLike)
+    }
   }, [cartLike]);
 
     const addCartFavourite = (id) => {
-        // const cartLikeTmp = JSON.parse(localStorage.getItem('data')) //для проверки
-        // // console.log(cartLikeTmp)
-
-        // let itemLike = cartLikeTmp.find((itemFavourite) => itemFavourite.id === id)
-        //   if (itemLike) {
-            
-        //      // Логика, если элемент найден
-        //      const saveFavourites = cartLike.filter((itemFavourite) => itemFavourite.id !== id)
-        //      setCartLike(saveFavourites)
-        //      localStorage.setItem('cartLike', JSON.stringify(cartLike));
-        //     //  setCartLikeCount(saveFavourites.length)
-        //   }  else {  
-        //   // Логика, если элемент не найден
-        //     const saveFavourites = [...cartLike, id]
-        //     setCartLike(saveFavourites)
-        //     // setCartLikeCount(saveFavourites.length)
-        //   }
-        //   // localStorage.setItem('cartLike', JSON.stringify(itemLike));  
         const cartLikeTmp = cartLike;
         
         let itemLike = cartLikeTmp.find((itemFav) => {
@@ -58,7 +38,7 @@ function App() {
           itemLike.favourites = false;
           
           // setCartLike(cartLike.filter(item => item.id !== id))
-          // cartLikeTmp.splice(id,1);
+          cartLikeTmp.splice(id,1);
           localStorage.removeItem('cartLike')
         } 
         setCartLike([...cartLikeTmp]);

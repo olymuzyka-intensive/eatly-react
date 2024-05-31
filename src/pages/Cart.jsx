@@ -38,6 +38,8 @@ function Cart({item}) {
         setCart([...cartTmp])
         localStorage.setItem('cart', JSON.stringify(cartTmp))
     }
+
+
     const handleIncrement = (id) => {  
         const cartTmp = cartItems;
         const updateCartItem = cartTmp.find((item) => {
@@ -47,8 +49,7 @@ function Cart({item}) {
                 }   
             }             
         });            
-        // setCart(updateCartItem)
-        setCart([...cartTmp]);
+        setCart([...cartTmp], updateCartItem);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
     const handleDecrement = (id) => {
@@ -60,9 +61,8 @@ function Cart({item}) {
                 }                     
             }
         });
-        // setCart(updateCartItem)
 
-        setCart([...cartTmp]);
+        setCart([...cartTmp], updateCartItem);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
 

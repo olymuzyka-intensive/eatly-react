@@ -9,12 +9,14 @@ import { AppContext } from '../App';
 function DishesFavourites() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext);
-
+    const dataJson = localStorage.getItem('cartLike')
     const [favouritesDishes, setFavouritesDishes] = useState([])
-    const dataTmp = data.filter(function(item) {
+    
+    const dataTmp = data.map(function(item) {
         if (item.favourites == "true") {
             return true
-        }        
+        }  
+        // setFavouritesDishes([...favouritesDishes])      
     })
 
     return (
@@ -22,14 +24,15 @@ function DishesFavourites() {
             <div className="container">
                 <div className="dishes__row">
                     <ul className="dishes__cards">
-                        {dataTmp.map((item) => {
+                        // пока бутафория
+                        {data.map((item) => {
                             return (
                             <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
                                     <DishesLikeButton product-id={item.id}/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <SubcategoryStyle subcategory={item.subcategory}/>
-                                    <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
+                                    {/* <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4> */}
                                     <div className="dishes__subtitle">{item.title}</div>
                                     <div className="dishes__comment">{item.timing} •<span className="dishes__comment_star">
                                         <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
