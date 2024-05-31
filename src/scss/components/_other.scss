@@ -310,7 +310,7 @@
         border: 1.4px solid #F4F4F6;
         display: flex;
         justify-content: space-between;
-        // position: relative;
+        position: relative;
         &_img {
             width: 98.71px;
             // position: absolute;
@@ -388,6 +388,19 @@
                     fill: $bgwhite;
                 }
             }
+            &-remove {
+                cursor: pointer;
+                border: 0;
+                color: gray;
+                font-size: 16px;
+                font-weight: 700;
+                background: none;
+                position: absolute;
+                top: 1%;
+                right: 1%;
+                width: 20px;
+                height: 20px;
+            } 
         }
 
         &_subtitle {

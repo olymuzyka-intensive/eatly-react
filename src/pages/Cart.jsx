@@ -8,7 +8,7 @@ import PromoCode from "../layouts/PromoCode"
 import { AppContext } from "../App";
 import { MainContext } from "../layouts/Main";
 
-function Cart() {
+function Cart({item}) {
     const {cart, setCart} = useContext(AppContext)
 
     const data = useContext(MainContext);
@@ -18,6 +18,8 @@ function Cart() {
     const [total, setTotal] = useState(0)
 
     const [cartItems, setCartItems] = useState([])
+
+    // const [quantity, setQuantity] = useState('')
     
     // const delivery = 2.99
     const delivery = parseFloat(2.99)
@@ -30,29 +32,43 @@ function Cart() {
         }
     }, [])
 
+    const remove = (id) => {
+
+        const cartTmp = cart.filter((item) => !(item.id == id) )
+
+        setCart([...cartTmp])
+        localStorage.setItem('cart', JSON.stringify(cartTmp))
+    }
     const handleIncrement = (id) => {  
         const cartTmp = cartItems;
         const updateCartItem = cartTmp.map((item) => {
             if (item.id === id) { 
                 return {
                     quantity : ++item.quantity
-                }                  
-            }                   
+                }   
+            }             
         });            
+        setCart(updateCartItem)
+        setCart([...cartTmp]);
+        localStorage.setItem('cart', JSON.stringify(cartTmp));
+    }
+    const handleDecrement = (id) => {
+        const cartTmp = cartItems;
+        let updateCartItem = cartTmp.map((item) => {      
+            if (item.id === id) {
+                if (item.quantity > 1) {
+                    return item.quantity = --item.quantity;   
+                }                     
+            }
+        });
+        setCart(updateCartItem)
+
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
 
-    const handleDecrement = (id) => {
-        const cartTmp = cartItems;
-        let updateCartItem = cartTmp.map((item) => {
-            if (item.id === id && item.quantity > 0) {
-            return item.quantity = --item.quantity;     
-            }       
-        });
-        setCart([...cartTmp]);
-        localStorage.setItem('cart', JSON.stringify(cartTmp));
-    }
+
+
 
     // работает только в инпуте
     
@@ -88,7 +104,8 @@ function Cart() {
             if (cartItem) return product;
         });
 
-        if (cartListTmp && cartListTmp.length > 0) setCartList([...cartListTmp])
+        if (cartListTmp && cartListTmp.length >= 0) setCartList([...cartListTmp])
+        // localStorage.setItem('cart', cartListTmp)
     }, [cart])
 
     useEffect(() => {
@@ -139,9 +156,10 @@ function Cart() {
                                 <div className="shopping__item_counter">
                                     {/* <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button> */}
                                     <button className="shopping__item_counter-lower" type="button" onClick={() => handleDecrement(item.id)}></button>
-                                    <input className="shopping__item_counter-count" type="number" max="9999" min="1" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
+                                    <input className="shopping__item_counter-count" type="number" max="9999" min="0" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
                                     {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
+                                    <button  className="shopping__item_counter-remove" onClick={() => { remove(item.id) }}>x</button>
 
                                 </div>
                                 <div className="shopping__item_price shopping__item_price-total">$ {(item.price * item.quantity).toFixed(2)}</div>  

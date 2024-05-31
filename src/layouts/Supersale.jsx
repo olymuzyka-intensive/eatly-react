@@ -54,7 +54,7 @@ function Getsupersale() {
                             <li key={index} className={isActive === index ? "supersale__line_item-active" : "supersale__line_item"} onClick={() => toggleActive(index)} ></li> 
                         )}
                         </ul>
-                        <Search/>
+                        <Search />
                     </div>
                     <CategoryFilter />
                     {/* <div className="category">

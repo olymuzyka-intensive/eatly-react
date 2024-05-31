@@ -105,49 +105,49 @@ function Customer() {
                                 <Slider {...settings}>
                                 {comments.map((comment, index) => 
                                         // переключение стилей 
-                                            // <li key={index} className={isActive === index ? "customer__item active" : "customer__item"}>
-                                            //     <div className={isActive === index ? "customer__item_top active" : "customer__item_top"}>
-                                            //         <img src={comment.image} className="customer__item_img"/>
-                                            //         <div className="customer__item_col">
-                                            //             <div className="customer__item_name">{comment.name}</div>
-                                            //             <div className="customer__item_date">{comment.data}</div>                                            
-                                            //         </div>
-                                            //         <div className="customer__item_decor"><img src="/src/img/decor6.png" alt="decor"/></div>
-                                            //     </div>
-                                            //     <div className="customer__item_row">    
-                                            //         <div className={isActive === index ? "customer__item_text-active" : "customer__item_text"}>{comment.text}</div>
-                                            //         <div className="customer__item_rating">
-                                            //             <img src="./src/img/star.png" alt="Star"/> 
-                                            //             <img src="./src/img/star.png" alt="Star"/>
-                                            //             <img src="./src/img/star.png" alt="Star"/>
-                                            //             <img src="./src/img/star.png" alt="Star"/>
-                                            //             <img src="./src/img/star.png" alt="Star"/>
-                                            //         </div>
-                                            //     </div>
-                                            // </li>
-                                        // стили активны все, пока думаю о тонком переключении
-                                            <li key={index} className={"customer__item active" }>
-                                            <div className={"customer__item_top active" }>
-                                                <img src={comment.image} className="customer__item_img"/>
-                                                <div className="customer__item_col">
-                                                    <div className="customer__item_name">{comment.name}</div>
-                                                    <div className="customer__item_date">{comment.data}</div>                                            
+                                            <li key={index} className={isActive === index ? "customer__item active" : "customer__item"}>
+                                                <div className={isActive === index ? "customer__item_top active" : "customer__item_top"}>
+                                                    <img src={comment.image} className="customer__item_img"/>
+                                                    <div className="customer__item_col">
+                                                        <div className="customer__item_name">{comment.name}</div>
+                                                        <div className="customer__item_date">{comment.data}</div>                                            
+                                                    </div>
+                                                    <div className="customer__item_decor"><img src="/src/img/decor6.png" alt="decor"/></div>
                                                 </div>
-                                                <div className="customer__item_decor"><img src="/src/img/decor6.png" alt="decor"/></div>
-                                            </div>
-                                            <div className="customer__item_row" >    
-                                                {/* <div className={"customer__item_text-active"}>{comment.text}</div> */}
-                                                <div className={"customer__item_text"}>{comment.text}</div>
-
-                                                <div className="customer__item_rating">
-                                                    <img src="./src/img/star.png" alt="Star"/> 
-                                                    <img src="./src/img/star.png" alt="Star"/>
-                                                    <img src="./src/img/star.png" alt="Star"/>
-                                                    <img src="./src/img/star.png" alt="Star"/>
-                                                    <img src="./src/img/star.png" alt="Star"/>
+                                                <div className="customer__item_row">    
+                                                    <div className={isActive === index ? "customer__item_text-active" : "customer__item_text"}>{comment.text}</div>
+                                                    <div className="customer__item_rating">
+                                                        <img src="./src/img/star.png" alt="Star"/> 
+                                                        <img src="./src/img/star.png" alt="Star"/>
+                                                        <img src="./src/img/star.png" alt="Star"/>
+                                                        <img src="./src/img/star.png" alt="Star"/>
+                                                        <img src="./src/img/star.png" alt="Star"/>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             </li>
+                                        // стили активны все, пока думаю о тонком переключении
+                                            // <li key={index} className={"customer__item active" }>
+                                            // <div className={"customer__item_top active" }>
+                                            //     <img src={comment.image} className="customer__item_img"/>
+                                            //     <div className="customer__item_col">
+                                            //         <div className="customer__item_name">{comment.name}</div>
+                                            //         <div className="customer__item_date">{comment.data}</div>                                            
+                                            //     </div>
+                                            //     <div className="customer__item_decor"><img src="/src/img/decor6.png" alt="decor"/></div>
+                                            // </div>
+                                            // <div className="customer__item_row" >    
+                                            //     {/* <div className={"customer__item_text-active"}>{comment.text}</div> */}
+                                            //     <div className={"customer__item_text"}>{comment.text}</div>
+
+                                            //     <div className="customer__item_rating">
+                                            //         <img src="./src/img/star.png" alt="Star"/> 
+                                            //         <img src="./src/img/star.png" alt="Star"/>
+                                            //         <img src="./src/img/star.png" alt="Star"/>
+                                            //         <img src="./src/img/star.png" alt="Star"/>
+                                            //         <img src="./src/img/star.png" alt="Star"/>
+                                            //     </div>
+                                            // </div>
+                                            // </li>
 
                                             )
                                         }

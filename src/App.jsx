@@ -16,12 +16,12 @@ function App() {
   useEffect(() => {
     if (cartLike.length == 0) {
       let cartLikeDataLocal = localStorage.getItem('cartLike');
-      cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
+      // cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
 
       if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
   }
-    console.log('компонент обновился')
-    console.log(cartLike)
+    // console.log('компонент обновился')
+    // console.log(cartLike)
   }, [cartLike]);
 
     const addCartFavourite = (id) => {
@@ -49,13 +49,18 @@ function App() {
             return itemFav.id == id;
         });
 
-        if (itemLike) {
-            itemLike.favourites = false;
-        } else { 
+        if (!itemLike) {
             itemLike = { id: +id, favourites: true };
             cartLikeTmp.push(itemLike);
-        }
 
+        } 
+        else {
+          itemLike.favourites = false;
+          
+          // setCartLike(cartLike.filter(item => item.id !== id))
+          // cartLikeTmp.splice(id,1);
+          localStorage.removeItem('cartLike')
+        } 
         setCartLike([...cartLikeTmp]);
         localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
     }
@@ -81,7 +86,7 @@ function App() {
     useEffect(() => {
         if (cart.length == 0) {
             let cartDataLocal = localStorage.getItem('cart');
-            cartDataLocal = JSON.parse(cartDataLocal);
+            // cartDataLocal = JSON.parse(cartDataLocal);
 
             if (cartDataLocal && cartDataLocal.length > 0) setCart([...cartDataLocal]);
         }

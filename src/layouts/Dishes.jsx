@@ -8,7 +8,7 @@ import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
 import SubcategoryStyle from './SubcategoryStyle';
 
-function Dishes({}) {
+function Dishes() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext)
 

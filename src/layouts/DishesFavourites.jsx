@@ -1,25 +1,32 @@
 import { useContext, useState } from 'react';
 
-import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
 import SubcategoryStyle from './SubcategoryStyle';
+import { MainContext } from "./Main"
+import { AppContext } from '../App';
 
 
 function DishesFavourites() {
     const {cartAdd} = useContext(AppContext)
+    const data = useContext(MainContext);
+
     const [favouritesDishes, setFavouritesDishes] = useState([])
+    const dataTmp = data.filter(function(item) {
+        if (item.favourites == "true") {
+            return true
+        }        
+    })
 
     return (
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
-                    {/* <h2 className="dishes__title">Our <span>Dishes</span></h2> */}
                     <ul className="dishes__cards">
-                        {favouritesDishes.map((item) => {
+                        {dataTmp.map((item) => {
                             return (
                             <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
-                                <DishesLikeButton product-id={item.id}/>
+                                    <DishesLikeButton product-id={item.id}/>
                                     <img src={item.image} className="dishes__item_img" alt='dish'/>
                                     <SubcategoryStyle subcategory={item.subcategory}/>
                                     <h4 className="dishes__category dishes__category_1">{item.subcategory}</h4>
@@ -38,9 +45,6 @@ function DishesFavourites() {
                             )
                         })}
                     </ul>
-                    {/* <div className="dishes__button">
-                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
-                    </div> */}
                 </div>
             </div>
         </div>

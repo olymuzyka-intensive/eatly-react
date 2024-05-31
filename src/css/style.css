@@ -268,6 +268,7 @@ h2 span {
   font-size: 20.54px;
   line-height: 24px;
   letter-spacing: -0.02em;
+  cursor: inherit;
 }
 .btn--apply {
   background: #6C5FBC;
@@ -1276,6 +1277,7 @@ h2 span {
   border: 1.4px solid #F4F4F6;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .shopping__item_img {
   width: 98.71px;
@@ -1349,6 +1351,19 @@ h2 span {
 }
 .shopping__item_counter-raise svg {
   fill: #F9F9F9;
+}
+.shopping__item_counter-remove {
+  cursor: pointer;
+  border: 0;
+  color: gray;
+  font-size: 16px;
+  font-weight: 700;
+  background: none;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 20px;
+  height: 20px;
 }
 .shopping__item_subtitle {
   font-weight: 600;

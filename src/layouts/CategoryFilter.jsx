@@ -5,9 +5,10 @@ import DishesLikeButton from './DishesLikeButton';
 
 function CategoryFilter({data}) {
     const [selectedCategory, setSelectedCategory] = useState(null)
-    // const handleCategoryChange = (category) => {
-    //     setSelectedCategory(category)
-    // }
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category)
+    }
     // const filteredItems = selectedCategory === 'main' ? items : items.filter(item => item.category === selectedCategory)
     // const filteredItems = selectedCategory ? data.filter(item => item.category === selectedCategory) : data
 
@@ -44,10 +45,13 @@ function CategoryFilter({data}) {
            </div>
 
            {/* временно отключено */}
-            {/* <div className="category__title">Price</div>
-            <div className="category__title_line"> <div className="category__title_circle"></div></div> */}
+            <div className="category__title">Price</div>
+            <div className="category__title_line"> 
+                <div className="category__title_circle">            
+                </div>
+            </div>
             
-            {/* <ul className="category__price">
+            <ul className="category__price">
                 <li className="category__price_item">$ 0</li>
                 <li className="category__price_item">$ 25</li>
                 <li className="category__price_item">$ 50</li>
@@ -57,7 +61,7 @@ function CategoryFilter({data}) {
             </ul>
             <div className="categotyr__button">
                 <button type="button" className="btn btn--apply">Apply</button>
-            </div> */}
+            </div>
         </div>
     </div>                
 

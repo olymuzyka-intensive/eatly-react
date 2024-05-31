@@ -15,19 +15,6 @@ function DishesFilter() {
     const data = useContext(MainContext);
 
     const dataTmp = data.filter(function(item) {
-        // let className;
-
-        // switch(item.category) {
-        //             case 'main': 
-        //             return true
-        //             case 'pizza': 
-        //             return true
-        //             case 'donut': 
-        //             return true
-        //             case 'ice': 
-        //             return true
-        //         }
-        
         if (item.category == "main") {
             return true
         }        
@@ -52,12 +39,12 @@ function DishesFilter() {
 
     })
 
-    return (
-      
+    return (      
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our Selected <span>Dishes</span></h2>
+
                     <ul className="dishes__cards">
                         {dataTmp.map((item) => {
                             return (
