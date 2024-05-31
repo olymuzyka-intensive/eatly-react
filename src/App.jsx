@@ -12,6 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
   // const [cartLikeCount, setCartLikeCount] = useState(0)
+  const [isFavorite, setIsFavorite] = useState(false)
 
   useEffect(() => {
     if (cartLike.length == 0) {
@@ -38,7 +39,7 @@ function App() {
           itemLike.favourites = false;
           
           // setCartLike(cartLike.filter(item => item.id !== id))
-          cartLikeTmp.splice(id,1);
+          // cartLikeTmp.splice(id,1);
           localStorage.removeItem('cartLike')
         } 
         setCartLike([...cartLikeTmp]);

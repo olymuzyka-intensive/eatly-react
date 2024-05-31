@@ -13,6 +13,8 @@ import Cart from "../pages/Cart"
 import Popup from "../pages/Sign"
 import Content from "../pages/Content"
 
+import DishesLikeButton from "./DishesLikeButton"
+
 export const MainContext = createContext();
 
 function Main() {
@@ -63,9 +65,10 @@ function Main() {
         </Routes>
 
     </>
+    
     </MainContext.Provider>
-
   )
 }
+
 
 export default Main
