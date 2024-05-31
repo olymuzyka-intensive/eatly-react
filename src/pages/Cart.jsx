@@ -33,35 +33,34 @@ function Cart({item}) {
     }, [])
 
     const remove = (id) => {
-
-        const cartTmp = cart.filter((item) => !(item.id == id) )
+        const cartTmp = cart.filter((item) => id !== item.id) 
 
         setCart([...cartTmp])
         localStorage.setItem('cart', JSON.stringify(cartTmp))
     }
     const handleIncrement = (id) => {  
         const cartTmp = cartItems;
-        const updateCartItem = cartTmp.map((item) => {
+        const updateCartItem = cartTmp.find((item) => {
             if (item.id === id) { 
                 return {
                     quantity : ++item.quantity
                 }   
             }             
         });            
-        setCart(updateCartItem)
+        // setCart(updateCartItem)
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
     const handleDecrement = (id) => {
         const cartTmp = cartItems;
-        let updateCartItem = cartTmp.map((item) => {      
+        let updateCartItem = cartTmp.find((item) => {      
             if (item.id === id) {
                 if (item.quantity > 1) {
                     return item.quantity = --item.quantity;   
                 }                     
             }
         });
-        setCart(updateCartItem)
+        // setCart(updateCartItem)
 
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));

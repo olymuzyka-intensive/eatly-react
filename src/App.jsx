@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     if (cartLike.length == 0) {
       let cartLikeDataLocal = localStorage.getItem('cartLike');
-      // cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
+      cartLikeDataLocal = JSON.parse(cartLikeDataLocal);
 
       if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
   }
@@ -86,7 +86,7 @@ function App() {
     useEffect(() => {
         if (cart.length == 0) {
             let cartDataLocal = localStorage.getItem('cart');
-            // cartDataLocal = JSON.parse(cartDataLocal);
+            cartDataLocal = JSON.parse(cartDataLocal);
 
             if (cartDataLocal && cartDataLocal.length > 0) setCart([...cartDataLocal]);
         }
