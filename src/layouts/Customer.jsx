@@ -45,7 +45,7 @@ function Customer() {
             }
           }
         ],
-        beforeChange(oldIndex, newIndex) {
+        beforeChange(index, newIndex) {
           setIsActive(newIndex);
         },
         // customPaging: (slideIndex) => (

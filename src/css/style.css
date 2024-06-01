@@ -815,6 +815,26 @@ h2 span {
   align-items: flex-start;
   gap: 45px;
 }
+@media (max-width: 1025px) {
+  .customer .slick-track {
+    gap: 35px;
+  }
+}
+@media (max-width: 769px) {
+  .customer .slick-track {
+    gap: 25px;
+  }
+}
+@media (max-width: 426px) {
+  .customer .slick-track {
+    gap: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .customer .slick-track {
+    gap: 10px;
+  }
+}
 
 .customer .slick-dots {
   width: 550px;
@@ -904,7 +924,12 @@ h2 span {
 }
 @media (max-width: 426px) {
   .slick-slide {
-    width: 315px;
+    width: 340px;
+  }
+}
+@media (max-width: 376px) {
+  .slick-slide {
+    width: 310px;
   }
 }
 @media (max-width: 320px) {
