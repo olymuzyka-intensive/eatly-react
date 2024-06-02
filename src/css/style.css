@@ -562,6 +562,9 @@ h2 span {
   margin-left: 30px;
 }
 
+.dishes {
+  position: relative;
+}
 .dishes__row {
   padding-top: 100px;
   padding-bottom: 120px;
@@ -692,6 +695,17 @@ h2 span {
 .dishes__add:active {
   background: #6C5FBC url(/src/img/+.svg) no-repeat;
   background-position: 50%;
+}
+.dishes__empty {
+  width: 90%;
+  margin: 0 auto 30px;
+  padding: 24.5px 0;
+  border-radius: 12px;
+  border: 1.4px solid #F4F4F6;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .customer__row {
@@ -1051,7 +1065,7 @@ h2 span {
   fill: #081420;
   height: 21.42px;
 }
-.footer__icon:hover {
+.footer__icon svg:hover {
   fill: #6C5FBC;
 }
 .footer-popup {
@@ -1504,6 +1518,16 @@ h2 span {
   font-weight: 600;
   font-size: 25px;
   line-height: 17px;
+}
+.shopping__empty {
+  margin: 0 auto 30px;
+  padding: 24.5px 0;
+  border-radius: 12px;
+  border: 1.4px solid #F4F4F6;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .support {

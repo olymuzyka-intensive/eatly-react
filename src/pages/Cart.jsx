@@ -39,7 +39,6 @@ function Cart({item}) {
         localStorage.setItem('cart', JSON.stringify(cartTmp))
     }
 
-
     const handleIncrement = (id) => {  
         const cartTmp = cartItems;
         const updateCartItem = cartTmp.find((item) => {
@@ -52,6 +51,7 @@ function Cart({item}) {
         setCart([...cartTmp], updateCartItem);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
+
     const handleDecrement = (id) => {
         const cartTmp = cartItems;
         let updateCartItem = cartTmp.find((item) => {      
@@ -65,9 +65,6 @@ function Cart({item}) {
         setCart([...cartTmp], updateCartItem);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
-
-
-
 
     // работает только в инпуте
     
@@ -121,7 +118,7 @@ function Cart({item}) {
         priceTmp = priceTmp.toFixed(2);
 
         setPrice(priceTmp)
-
+        
     }, [cartList])
 
     useEffect(() => {
@@ -132,6 +129,17 @@ function Cart({item}) {
 
         setPrice(price);
     }, [discount, total])
+
+    if (cartList.length === 0) {
+        return (
+            <div className="shopping">
+                <div className="shopping__row">
+                    <div className='shopping__empty'>There's nothing here yet</div>
+                    <img className="shopping__cards_decor-1" src="/src/img/decor8.svg" alt="decor"/>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>

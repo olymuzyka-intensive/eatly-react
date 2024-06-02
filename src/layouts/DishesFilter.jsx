@@ -13,7 +13,9 @@ import SubcategoryStyle from './SubcategoryStyle';
 function DishesFilter() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext);
-
+    const COMPLETE_FILTER = {
+        
+    }
     const dataTmp = data.filter(function(item) {
         if (item.category == "main") {
             return true

@@ -1,4 +1,5 @@
 .dishes {
+    position: relative;
     &__row {
         padding-top: 100px;
         padding-bottom: 120px;
@@ -139,5 +140,16 @@
             background: $purple url(/src/img/+.svg) no-repeat;
             background-position: 50%;
         }
+    }
+    &__empty {
+        width: 90%;
+        margin: 0 auto 30px;
+        padding: 24.5px 0;
+        border-radius: 12px;
+        border: 1.4px solid #F4F4F6;
+        display: flex;
+        background: $white;
+        justify-content: center;
+        font-size: 24px ;        
     }
 }  

@@ -3,7 +3,7 @@ import SubcategoryStyle from './SubcategoryStyle';
 import DishesLikeButton from './DishesLikeButton';
 
 
-function CategoryFilter({data}) {
+function CategoryFilter() {
     const [selectedCategory, setSelectedCategory] = useState(null)
 
     const handleCategoryChange = (category) => {

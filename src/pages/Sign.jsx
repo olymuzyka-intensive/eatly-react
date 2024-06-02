@@ -20,7 +20,9 @@ function Sign() {
                             <input type="text" placeholder="Full Name"></input>
                             <input type="email" placeholder="Email"></input>
                             <input type="number" placeholder="Phone" max="15" min="1"></input>
-                            <Link to="/#" className="btn btn--confirm">confirm</Link>
+                            {/* <Link to="/#" className="btn btn--confirm">confirm</Link> */}
+                            <button className="btn btn--confirm">confirm</button>
+
                         </form>
                     </div>
                     <div className="popup__right">

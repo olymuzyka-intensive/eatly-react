@@ -6,7 +6,7 @@ import CategoryFilter from './CategoryFilter';
 import SubcategoryStyle from './SubcategoryStyle';
 
 
-const Search = (props) => {
+const Search = () => {
     const data = useContext(MainContext);
     const [search, setSearch] = useState('')
     const [searchResult, setSearchResult] = useState(data)

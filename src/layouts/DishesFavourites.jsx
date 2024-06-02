@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 import DishesLikeButton from './DishesLikeButton';
 import SubcategoryStyle from './SubcategoryStyle';
@@ -6,26 +6,43 @@ import { MainContext } from "./Main"
 import { AppContext } from '../App';
 
 
-function DishesFavourites() {
+function DishesFavourites({id, title, image, timing, star, price}) {
     const {cartAdd} = useContext(AppContext)
-    const data = useContext(MainContext);
-    const dataJson = localStorage.getItem('cartLike')
+    const {cartLike, setCartLike} = useContext(AppContext)
+
+    const dataTmp = JSON.parse(localStorage.getItem('cartLike')) || []
     const [favouritesDishes, setFavouritesDishes] = useState([])
-    
-    const dataTmp = data.map(function(item) {
-        if (item.favourites == "true") {
-            return true
-        }  
-        // setFavouritesDishes([...favouritesDishes])      
-    })
+
+    useEffect(() => {
+        const favouriteItems = JSON.parse(localStorage.getItem('cartLike')) || [];
+
+        const favouriteItemsFilter = favouriteItems.filter((item) => {
+            if (item.favourites === true) {
+                return true
+            }  
+        })
+        const otherProducts = JSON.parse(localStorage.getItem('data')) || [];
+        const selectedProducts = favouriteItemsFilter.map(selectedProduct => {
+            return otherProducts.find(product => product.id === selectedProduct.id)
+        })
+
+        setFavouritesDishes(selectedProducts);
+    }, [cartLike]);
+
+    if (favouritesDishes.length === 0) {
+        return (
+            <div className="dishes">
+                <li className='dishes__empty'>There's nothing here yet</li>
+            </div>
+        )
+    }
 
     return (
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
                     <ul className="dishes__cards">
-                        // пока бутафория
-                        {data.map((item) => {
+                        {favouritesDishes.map((item) => {
                             return (
                             <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">
