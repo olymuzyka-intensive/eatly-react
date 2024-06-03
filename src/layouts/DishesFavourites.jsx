@@ -10,16 +10,23 @@ function DishesFavourites({id, title, image, timing, star, price}) {
     const {cartAdd} = useContext(AppContext)
     const {cartLike, setCartLike} = useContext(AppContext)
 
-    const dataTmp = JSON.parse(localStorage.getItem('cartLike')) || []
     const [favouritesDishes, setFavouritesDishes] = useState([])
+    const [isFavorite, setIsFavorite] = useState(false)
 
+    useEffect(() => {
+        const favouriteItems = JSON.parse(localStorage.getItem('cartLike'))
+        if (favouriteItems && favouriteItems.favourites) {
+            setIsFavorite(true)
+        }
+    }, [])
     useEffect(() => {
         const favouriteItems = JSON.parse(localStorage.getItem('cartLike')) || [];
 
         const favouriteItemsFilter = favouriteItems.filter((item) => {
             if (item.favourites === true) {
                 return true
-            }  
+            }    
+                  
         })
         const otherProducts = JSON.parse(localStorage.getItem('data')) || [];
         const selectedProducts = favouriteItemsFilter.map(selectedProduct => {
@@ -27,7 +34,7 @@ function DishesFavourites({id, title, image, timing, star, price}) {
         })
 
         setFavouritesDishes(selectedProducts);
-    }, [cartLike]);
+    }, [cartLike]); //[]
 
     if (favouritesDishes.length === 0) {
         return (

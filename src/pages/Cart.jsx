@@ -30,7 +30,7 @@ function Cart({item}) {
             const parsedCart = JSON.parse(saveCart);
             setCartItems(parsedCart)
         }
-    }, [])
+    },[cart])
 
     const remove = (id) => {
         const cartTmp = cart.filter((item) => id !== item.id) 

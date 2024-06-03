@@ -12,7 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartLike, setCartLike] = useState([]);
   // const [cartLikeCount, setCartLikeCount] = useState(0)
-  const [isFavorite, setIsFavorite] = useState(false)
+  // const [isFavorite, setIsFavorite] = useState(false)
 
   useEffect(() => {
     if (cartLike.length == 0) {
@@ -36,7 +36,6 @@ function App() {
               favourites: true 
             };
             cartLikeTmp.push(itemLike);
-
         } 
         else {
           itemLike.favourites = false;
