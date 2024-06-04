@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react"
-import SubcategoryStyle from './SubcategoryStyle';
-import DishesLikeButton from './DishesLikeButton';
-
 
 function CategoryFilter({ products, setFilteredProducts }) {
-    const [selectedCategory, setSelectedCategory] = useState()
-   
+    const [selectedCategory, setSelectedCategory] = useState(products)
+    const [sortCategory, setSortCategory] = useState('reconended')
+    const [maxPrice, setMaxPrice] = useState(100)
 
-    const handleCategorySelect = (category) => {
+    
+    const handleCategorySelect = (category) => {        
         setSelectedCategory(category)
-        const filteredProducts = products.filter(product => category === null ? true : product.category === category)
+        const filteredProducts = products.filter(product => category === null ? true : product.category === category) 
         setFilteredProducts(filteredProducts)
+    }
+    const handleCategorySort = (sort) => {        
+        setSortCategory(sort)
+        const sortProducts = products.filter(product => sortCategory === null ? true : product.sortcategory === sort)
+        setFilteredProducts(sortProducts)
     }
 
     return (
@@ -36,10 +40,10 @@ function CategoryFilter({ products, setFilteredProducts }) {
             <div className="category__title">Sort By</div>
             <div className="category__card_col">
                 <div className="category__card_row">
-                    <div className="category__card_history">Recomended</div>
-                    <div className="category__card_history category__card_history-active">Fast Delivery</div>
+                    <div className={sortCategory === 'Recomended' ? "category__card_history-active" : "category__card_history"}  onClick={() => handleCategorySort('Recomended')}>Recomended</div>
+                    <div className={sortCategory === 'Fast Delivery' ? "category__card_history-active" : "category__card_history"}  onClick={() => handleCategorySort('Fast Delivery')}>Fast Delivery</div>
                 </div>
-                <div className="category__card_history">Most Popular</div> 
+                <div className={sortCategory === 'Most Popular' ? "category__card_history-active" : "category__card_history"}  onClick={() => handleCategorySort('Most Popular')}>Most Popular</div> 
            </div>
 
             <div className="category__title">Price</div>
@@ -57,7 +61,7 @@ function CategoryFilter({ products, setFilteredProducts }) {
                 <li className="category__price_item">$ 50</li>
             </ul>
             <div className="categotyr__button">
-                <button type="button" className="btn btn--apply" onClick={() => handleCategorySelect(null)}>Reset</button>
+                <button type="button" className="btn btn--apply" onClick={() => {handleCategorySelect(null), handleCategorySort(null)}}>Reset</button>
             </div>
         </div>
     </div>                

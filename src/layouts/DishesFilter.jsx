@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
 
 // import { useParams } from "react-router-dom"
 
@@ -19,9 +19,10 @@ function DishesFilter() {
     
     const [filteredProducts, setFilteredProducts] = useState(products)
 
-    useEffect(() => {
-        
+    useLayoutEffect(() => {
+        setFilteredProducts(filteredProducts)
     },[])
+
     return (      
         <div className="dishes">
             <div className="container">

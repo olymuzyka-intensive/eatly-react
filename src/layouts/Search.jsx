@@ -7,7 +7,7 @@ const SearchContext = createContext();
 const Search = ({ products, setFilteredProducts}) => {
 
     const handleSearch = (elem) => {
-        const query = elem.target.value.toLowerCase()
+        const query = elem.target.value
         const filteredProduct = products.filter(product => product.title.toLowerCase().includes(query.toLowerCase())
         )
         setFilteredProducts(filteredProduct)

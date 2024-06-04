@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import SearchContext from "./Search"
 import CategoryFilter from "./CategoryFilter"
-
+// import PriceSlider from '../layouts/PricesSlider'
 function Getsupersale( {products, setFilteredProducts} ) {
     
     const [isActive, setIsActive] = useState(0)
@@ -38,6 +38,7 @@ function Getsupersale( {products, setFilteredProducts} ) {
                 <div className="supersale__row">
                     <div className="supersale__promo">
                         <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
+                        {/* <PriceSlider /> */}
                         <ul className="supersale__slider">
                             <div className="supersale__list">
                                 {slider.map((slide, index) =>  
