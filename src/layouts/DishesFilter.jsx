@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
+import Search from './Search';
 import CategoryFilter from './CategoryFilter';
 import SubcategoryStyle from './SubcategoryStyle';
 
@@ -13,42 +14,23 @@ import SubcategoryStyle from './SubcategoryStyle';
 function DishesFilter() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext);
-    const COMPLETE_FILTER = {
+    
+    const products = data
+    
+    const [filteredProducts, setFilteredProducts] = useState(products)
+
+    useEffect(() => {
         
-    }
-    const dataTmp = data.filter(function(item) {
-        if (item.category == "main") {
-            return true
-        }        
-        // if (item.category == "pizza") {
-        //     return true
-        // }   
-        // if (item.category == "donut") {
-        //     return true
-        // }   
-        // if (item.category == "ice") {
-        //     return true
-        // }   
-        // if (item.sortcategory == "Recomended") {
-        //     return true
-        // }  
-        // if (item.sortcategory == "Fast Delivery") {
-        //     return true
-        // }  
-        // if (item.sortcategory == "Most Popular") {
-        //     return true
-        // }  
-
-    })
-
+    },[])
     return (      
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our Selected <span>Dishes</span></h2>
-
+                    <Search products={products} setFilteredProducts={setFilteredProducts} />
+                    <CategoryFilter products={products} setFilteredProducts={setFilteredProducts} />
                     <ul className="dishes__cards">
-                        {dataTmp.map((item) => {
+                        {filteredProducts.map((item) => {
                             return (
                             <li key={item.id} className="dishes__item">
                                 <div className="dishes__category_card">
