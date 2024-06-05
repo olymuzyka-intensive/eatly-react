@@ -1994,9 +1994,7 @@ h2 span {
   height: 25.45px;
   bottom: -10px;
   left: 35px;
-}
-.category__title_circle:hover {
-  cursor: grab;
+  cursor: pointer;
 }
 .category__list {
   display: flex;

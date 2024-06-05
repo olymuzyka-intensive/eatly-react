@@ -1,8 +1,6 @@
+import React from "react"
 import { useContext, useEffect, useState } from 'react';
 
-// import { useParams } from "react-router-dom"
-
-// import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
 import DishesLikeButton from './DishesLikeButton';
@@ -12,6 +10,8 @@ function Dishes() {
     const {cartAdd} = useContext(AppContext)
     const data = useContext(MainContext)
 
+    const products = data
+
     
     return (
         <div className="dishes">
@@ -19,7 +19,7 @@ function Dishes() {
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our <span>Dishes</span></h2>
                     <ul className="dishes__cards">
-                        {data.map((item) => {
+                        {products.map((item) => {
                             return (
                             <li key={item.id} className="dishes__item" >
                                 <div className="dishes__category_card">

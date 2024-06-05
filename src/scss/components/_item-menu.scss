@@ -202,10 +202,7 @@
             height: 25.45px;
             bottom: -10px;
             left: 35px;
-            &:hover {
-                cursor: grab;
-            }
-            
+            cursor: pointer;
         }
     }
     &__list {

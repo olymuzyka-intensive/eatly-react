@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react"
-import PriceSlider from "../layouts/PriceSlider"
 
 function CategoryFilter({ products, setFilteredProducts }) {
     
     const [selectedCategory, setSelectedCategory] = useState(products)
     const [sortCategory, setSortCategory] = useState('reconended')
-    const [maxPrice, setMaxPrice] = useState(100)
+
+    const [priceFilter, setPriceFilter] = useState(50)
 
     // useEffect(() => {
+    //     let filtered = products.filter(product => product.category.includes(selectedCategory) && product.price >= priceFilter)
+    //     setSelectedCategory(filtered)
+    // },[products, CategoryFilter, selectedCategory])
 
-    // },[])
-    
     const handleCategorySelect = (category) => {        
         setSelectedCategory(category)
         const filteredProducts = products.filter(product => category === null ? true : product.category === category) 
@@ -20,6 +21,10 @@ function CategoryFilter({ products, setFilteredProducts }) {
         setSortCategory(sort)
         const sortProducts = products.filter(product => sortCategory === null ? true : product.sortcategory === sort)
         setFilteredProducts(sortProducts)
+    }
+
+    const handlePriceSelect = (price) => {
+        setPriceFilter(price.target.value)
     }
 
     return (
@@ -51,11 +56,9 @@ function CategoryFilter({ products, setFilteredProducts }) {
                 <div className={sortCategory === 'Most Popular' ? "category__card_history-active" : "category__card_history"}  onClick={() => handleCategorySort('Most Popular')}>Most Popular</div> 
            </div>
 
-            <PriceSlider />
-            {/* <div className="category__title">Price</div>
+            <div className="category__title">Price</div>
             <div className="category__title_line"> 
-                <div className="category__title_circle">            
-                </div>
+                <input className="category__title_circle" type="range" min="0" max="100" value={priceFilter} onChange={handlePriceSelect} />            
             </div>
             
             <ul className="category__price">
@@ -65,7 +68,7 @@ function CategoryFilter({ products, setFilteredProducts }) {
                 <li className="category__price_item">$ 30</li>
                 <li className="category__price_item">$ 40</li>
                 <li className="category__price_item">$ 50</li>
-            </ul> */}
+            </ul>
             <div className="categotyr__button">
                 <button type="button" className="btn btn--apply" onClick={() => {handleCategorySelect(null), handleCategorySort(null)}}>Reset</button>
             </div>
