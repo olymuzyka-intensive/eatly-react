@@ -1,4 +1,4 @@
-import { useContext, useLayoutEffect, useState } from 'react';
+import { useContext, useLayoutEffect, useEffect, useState } from 'react';
 
 // import { useParams } from "react-router-dom"
 
@@ -17,19 +17,80 @@ function DishesFilter() {
     
     const products = data
     
-    const [filteredProducts, setFilteredProducts] = useState(products)
+    const [filteredProducts, setFilteredProducts] = useState([])
+    // const [showAll, setShowAll] = useState(filteredProducts)
 
-    useLayoutEffect(() => {
-        setFilteredProducts(filteredProducts)
-    },[])
+    // useLayoutEffect(() => {
+    //     setFilteredProducts(data)
+    //     // setShowAll(products)
+    // },[])
 
-    return (      
+    const [isActive, setIsActive] = useState(0)
+    
+    const toggleActive = (index) => {
+        setIsActive(index)
+    }
+    
+    const slider = [
+        {
+            title: "GET 50%",
+            promo: "WEEKEND",
+            image: "/src/img/Food-2.png"
+        },
+        {
+            title: "GET 30%",
+            promo: "TODAY",
+            image: "/src/img/Food-3.png"           
+        },
+        {
+            title: "GET 20%",
+            promo: "MONTH",
+            image: "/src/img/Food-1.png"           
+        },
+    ]
+
+    const control = [
+        {}, {}, {}
+    ]
+
+    return (    
+        <>
+        <div className="supersale">
+            <div className="container"> 
+                <div className="supersale__row">
+                    <div className="supersale__promo">
+                        <img className='supersale__promo_decor' src="/src/img/decor7.svg" alt="decor"/>
+                        <ul className="supersale__slider">
+                            <div className="supersale__list">
+                                {slider.map((slide, index) =>  
+                                    <li key={index} className={isActive === index ? "supersale__slider_item active" : "supersale__slider_item"}>
+                                        <div className="supersale__slider_title">{slide.title}</div>
+                                        <div className="supersale__slider_promo">{slide.promo}</div>
+                                        <img className="supersale__slider_img" src={slide.image}/>
+                                    </li>
+                                    )
+                                }    
+                            </div>           
+                        </ul>
+
+                        <ul className="supersale__line"> {control.map((item, index) => 
+                            <li key={index} className={isActive === index ? "supersale__line_item-active" : "supersale__line_item"} onClick={() => toggleActive(index)} ></li> 
+                        )}
+                        </ul>
+                        <Search products={products} setFilteredProducts={setFilteredProducts} />
+                    </div>
+                    <CategoryFilter products={products} setFilteredProducts={setFilteredProducts} />
+                </div>    
+            </div>
+        </div>  
         <div className="dishes">
             <div className="container">
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our Selected <span>Dishes</span></h2>
-                    <Search products={products} setFilteredProducts={setFilteredProducts} />
-                    <CategoryFilter products={products} setFilteredProducts={setFilteredProducts} />
+                    <div className="dishes__button">
+                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
+                    </div>
+
                     <ul className="dishes__cards">
                         {filteredProducts.map((item) => {
                             return (
@@ -53,12 +114,10 @@ function DishesFilter() {
                             )
                         })}
                     </ul>
-                    <div className="dishes__button">
-                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
-                    </div>
                 </div>
             </div>
         </div>
+        </>
     )
   }
   

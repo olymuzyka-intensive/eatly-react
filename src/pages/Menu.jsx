@@ -5,7 +5,6 @@ import DishesFilter from "../layouts/DishesFilter"
 function Menu() {
     return (
         <>
-            <Supersale/>
             <DishesFilter/>
             <Questions/>
         </>

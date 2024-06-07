@@ -21,10 +21,10 @@ function App() {
 
       if (cartLikeDataLocal && cartLikeDataLocal.length > 0) setCartLike([...cartLikeDataLocal]);
     }
-  }, [cartLike]);
+  }, []);
 
     const addCartFavourite = (id) => {
-        const cartLikeTmp = cartLike;
+        let cartLikeTmp = cartLike;
         
         let itemLike = cartLikeTmp.find((item) => {
             return item.id == id;
@@ -39,6 +39,8 @@ function App() {
         } 
         else {
           itemLike.favourites = false;
+          cartLikeTmp = cartLikeTmp.filter(item => item.favourites !== false)
+          
         } 
         setCartLike([...cartLikeTmp]);
         localStorage.setItem('cartLike', JSON.stringify(cartLikeTmp));
@@ -61,6 +63,15 @@ function App() {
         setCart([...cartTmp]);
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
+    useEffect(() => {
+      const cartLikeTmp = cartLike.filter((item) => {
+        if (item.favourites === true) {
+            return true
+        }  
+        
+    })
+    // setCartLike(cartLikeTmp)
+    }, [cartLike])
 
     useEffect(() => {
         if (cart.length == 0) {
