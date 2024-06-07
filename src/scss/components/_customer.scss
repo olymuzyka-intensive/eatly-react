@@ -8,11 +8,9 @@
         padding-bottom: 80px;
     }
 
-    // &__card {
-    //     // display: flex;
-    //     gap: 30px;
-    //     overflow: hidden;
-    // }    
+    &__card {
+        overflow: hidden;
+    }    
 
     // &__list {
     //     // display: flex;
@@ -177,7 +175,7 @@
     right: 5%;
     bottom: -3%;
     display: flex !important;
-    z-index: 1000;
+    // z-index: 1000;
     margin: 10px;
     @media(max-width: 769px) {
         right: 9%;

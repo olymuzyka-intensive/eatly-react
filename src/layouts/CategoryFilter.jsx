@@ -41,16 +41,16 @@ function CategoryFilter({products, setFilteredProducts }) {
             <ul className="category__list">
 
                 <li className={selectedCategory === 'pizza' ? "category__item-active" : "category__item"}  onClick={() => handleCategorySelect('pizza')}>
-                    <h4 className="category__item_title category__item_title-1" >Pizza</h4>
+                    <h4 className={selectedCategory === 'pizza' ? "category__item_title-1 active" : "category__item_title-1"} >Pizza</h4>
                 </li>
                 <li className={selectedCategory === 'main' ? "category__item-active" : "category__item"}  onClick={() => handleCategorySelect('main')}>
-                    <h4 className="category__item_title category__item_title-1" >Dish</h4>
+                    <h4 className={selectedCategory === 'main' ? "category__item_title-2 active" : "category__item_title-2"}>Dish</h4>
                 </li>
                 <li className={selectedCategory === 'donut' ? "category__item-active" : "category__item"}  onClick={() => handleCategorySelect('donut')}>
-                    <h4 className="category__item_title category__item_title-1" >Donut</h4>
+                    <h4 className={selectedCategory === 'donut' ? "category__item_title-3 active" : "category__item_title-3"} >Donut</h4>
                 </li>
                 <li className={selectedCategory === 'ice' ? "category__item-active" : "category__item"}  onClick={() => handleCategorySelect('ice')}>
-                    <h4 className="category__item_title category__item_title-1" >Ice</h4>
+                    <h4 className={selectedCategory === 'ice' ? "category__item_title-4 active" : "category__item_title-4"} >Ice</h4>
                 </li>
             </ul>
 

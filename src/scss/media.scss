@@ -645,21 +645,37 @@
         }
         
         &__item {
-            width: 47px;
+            width: 23%;
+            // min-height: 75px;
             &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
                 background-size: 24.5px 24.5px;
+                // background-position: center 15px;
+
+            }            
+            &-active {
+                width: 23%;
             }
-            &_title {
-                padding-top: 48.12px;
-                padding-bottom: 7.85px;
-                line-height: 13px;
-            }
+            &-active:nth-child(1), &-active:nth-child(2), &-active:nth-child(3), &-active:nth-child(4) {
+                background-size: 26.5px 26.5px;
+            } 
+            &_title-1, &_title-2, &_title-3, &_title-4 {
+                padding-top: 60px;
+                padding-bottom: 9px;
+                line-height: 11px;
+                font-size: 11px;
+            } 
             
         }
+        
+    
         &__card {
             &_history {
-                font-size: 10.99px;
+                font-size: 12px;
                 line-height: 21px;
+                &-active {
+                    font-size: 13px;
+                    line-height: 21px;
+                }
             }
             &_col {
                 padding: 26px 0 30px;
@@ -1362,6 +1378,25 @@
         &__price {
             margin-bottom: 25px;
         }
+        &__item {
+            width: 23%;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                background-size: 20px 20px;
+            }            
+            &-active {
+                width: 23%;
+            }
+            &-active:nth-child(1), &-active:nth-child(2), &-active:nth-child(3), &-active:nth-child(4) {
+                // background-size: 22px 22px;
+                background-position: center 15px;
+            } 
+            &_title-1, &_title-2, &_title-3, &_title-4 {
+                padding-top: 50px;
+                padding-bottom: 7px;
+                line-height: 11px;
+                font-size: 10px;
+            } 
+        }
     }
 
     .questions {
@@ -1759,15 +1794,20 @@
         padding: 26.82px;
         padding-bottom: 32.72px;
         &__item {
-            width: 55.48px;
-            height: 80.76px;
             &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-                background-size: 28.98px 28.98px;
+                background-size: 28px 28px;
             }
-            &_title {
-                font-size: 11px;
-                padding-top: 55px;
+            &_title-1, &_title-2, &_title-3, &_title-4 {
+                font-size: 13px;
+                padding-top: 60px;
+                padding-bottom: 7px;
+                line-height: 13px;
             }
+            &-active:nth-child(1), &-active:nth-child(2), &-active:nth-child(3), &-active:nth-child(4) {
+                background-size: 30px 30px;
+                background-position: center 15px;
+            } 
+
         }
         &__price {
             margin-bottom: 10px;
@@ -2081,20 +2121,6 @@
         }
     }
 
-    // .dishes { 
-    //     &__cards {
-    //         gap: 20px;
-    //     }  
-    //     &__item {
-    //         &_like {
-    //             svg {
-    //                 width: 14.36px;
-    //                 height: 11.9px;
-    //             }
-    //         }
-    //     }      
-    // }
-
     .shopping {
         &__form input {
             width: 75%;
@@ -2204,24 +2230,6 @@
             flex: 0 0 305px;
             padding: 10px;
         }
-        // &__item:nth-child(1) {
-        //     transform: translate3d(575px, 0px, 0px);  
-        //     transition: 1s ease-in-out;
-        // }
-    
-        // &__item.active:nth-child(1) {
-        //     transform: translate3d(0, 0px, 0px);  
-        //     transition: 1s ease-in-out;
-        // }
-    
-        // &__item.active:nth-child(2) {
-        //     transform: translate3d(-350px, 0px, 0px);        
-        //     transition: 1s ease-in-out;
-        // }
-        // &__item.active:nth-child(3) {
-        //     transform: translate3d(-700px, 0px, 0px);        
-        //     transition: 1s ease-in-out;
-        // }
         &__title {
             font-size: 30px;
             line-height: 36px;
@@ -2229,12 +2237,6 @@
         &__button {
             width: 100px;
         }
-        // &__slider {
-        //     &_control {
-        //         width: 300px;
-        //         left: 0px;
-        //     }
-        // }
     }
 
     .content {
@@ -2248,12 +2250,11 @@
             &_item {
                 width: 322px;
             }
-            &__promo {
-                &_decor {
-                    top: -13px;
-                    right: -18px;
-                    width: 30px;
-                }
+            
+        }
+        &__promo {
+            &_decor {
+                display: none;
             }
         }
     }
@@ -2309,33 +2310,6 @@
         }
     }
 
-    // .customer {
-    //     &__item {
-    //         flex: 0 0 255px;
-    //     }
-    //     &__item.active:nth-child(1) {
-    //         transform: translate3d(0, 0px, 0px);  
-    //         transition: 1s ease-in-out;
-    //     }
-    
-    //     &__item.active:nth-child(2) {
-    //         transform: translate3d(-300px, 0px, 0px);        
-    //         transition: 1s ease-in-out;
-    //     }
-    //     &__item.active:nth-child(3) {
-    //         transform: translate3d(-600px, 0px, 0px);        
-    //         transition: 1s ease-in-out;
-    //     }
-    //     &__button {
-    //         width: 80px;
-    //     }
-    //     &__slider {
-    //         &_control {
-    //             width: 255px;
-    //         }
-    //     }
-    // }
-
     .dishes {
         &__button-menu {
             position: absolute;
@@ -2388,11 +2362,6 @@
     }
    
     .supersale {
-        &__promo {
-            &_decor {
-                left: 89%;
-            }
-        }
         &__slider {
             &_item {
                 width: 272px;
