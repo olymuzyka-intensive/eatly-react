@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import SearchContext from "./Search"
 import CategoryFilter from "./CategoryFilter"
-// import PriceSlider from '../layouts/PricesSlider'
 function Getsupersale( {products, setFilteredProducts} ) {
     
     const [isActive, setIsActive] = useState(0)

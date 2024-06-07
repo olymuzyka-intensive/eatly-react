@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useLayoutEffect } from "react"
 import { MainContext } from "./Main"
 import { useContext } from "react";
 
 function CategoryFilter({products, setFilteredProducts }) {
     const data = useContext(MainContext)
 
-    // const [products, setProducts] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortCategory, setSortCategory] = useState('')
 
     const [priceFilter, setPriceFilter] = useState(50)
 
-    useEffect( () => {
-        let productsList = JSON.parse(localStorage.getItem('data'))
-        // prod
-        // setSelectedCategory(category)
-        const filteredProducts = productsList.filter(product => product.category === null)
-        setFilteredProducts(filteredProducts)
-        
+    useLayoutEffect( () => {
+        let productsList = JSON.parse(localStorage.getItem('data')) || []
+        const filteredProducts = productsList.filter(product => product.category === null ? '' : true)
+        setFilteredProducts(filteredProducts) 
     },[])
 
     const handleCategorySelect = (category) => {        
@@ -34,7 +30,6 @@ function CategoryFilter({products, setFilteredProducts }) {
     const handlePriceSelect = (price) => {
         setPriceFilter(price.target.value)
     }
-
     return (
         <div className="category">
         <div className="category__card">

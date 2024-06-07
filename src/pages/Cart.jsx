@@ -133,10 +133,14 @@ function Cart({item}) {
     if (cartList.length === 0) {
         return (
             <div className="shopping">
-                <div className="shopping__row">
-                    <div className='shopping__empty'>There's nothing here yet</div>
-                    <img className="shopping__cards_decor-1" src="/src/img/decor8.svg" alt="decor"/>
+                <div className="container">
+                    <div className="shopping__row">
+                        <div className='shopping__empty'>There's nothing here yet</div>
+                        <img className="shopping__cards_decor-1" src="/src/img/decor8.svg" alt="decor"/>
+                    </div>
                 </div>
+                <GetSupersale/>
+
             </div>
         )
     }

@@ -1246,7 +1246,7 @@ h2 span {
 }
 
 .getsupersale {
-  margin-top: 102.59px;
+  margin-top: 100px;
   padding: 60px 0 80px;
   position: relative;
 }
@@ -1299,7 +1299,7 @@ h2 span {
 
 .shopping {
   margin-top: 102.59px;
-  padding: 120px 0;
+  padding: 120px 0 0;
 }
 .shopping__row {
   position: relative;
@@ -1520,7 +1520,6 @@ h2 span {
   line-height: 17px;
 }
 .shopping__empty {
-  margin: 0 auto 30px;
   padding: 24.5px 0;
   border-radius: 12px;
   border: 1.4px solid #F4F4F6;
@@ -1956,6 +1955,7 @@ h2 span {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  min-height: 110px;
 }
 .category__card_row {
   display: flex;

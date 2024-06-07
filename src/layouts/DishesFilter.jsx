@@ -1,7 +1,5 @@
 import { useContext, useLayoutEffect, useEffect, useState } from 'react';
 
-// import { useParams } from "react-router-dom"
-
 import { Link } from "react-router-dom"
 import { MainContext } from "./Main"
 import { AppContext } from '../App';
@@ -18,12 +16,6 @@ function DishesFilter() {
     const products = data
     
     const [filteredProducts, setFilteredProducts] = useState([])
-    // const [showAll, setShowAll] = useState(filteredProducts)
-
-    // useLayoutEffect(() => {
-    //     setFilteredProducts(data)
-    //     // setShowAll(products)
-    // },[])
 
     const [isActive, setIsActive] = useState(0)
     
@@ -87,9 +79,6 @@ function DishesFilter() {
             <div className="container">
                 <div className="dishes__row">
                     <h2 className="dishes__title">Our Selected <span>Dishes</span></h2>
-                    <div className="dishes__button">
-                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
-                    </div>
 
                     <ul className="dishes__cards">
                         {filteredProducts.map((item) => {
@@ -114,6 +103,10 @@ function DishesFilter() {
                             )
                         })}
                     </ul>
+                    <div className="dishes__button">
+                        <Link to="/menuAll" className="btn btn--view-all">View All <span> <img src="/src/img/arrow.png" alt="arrow"/> </span></Link>
+                    </div>
+
                 </div>
             </div>
         </div>
