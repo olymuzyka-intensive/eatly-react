@@ -10,10 +10,8 @@ import Blog from "../pages/Blog"
 import AboutUs from "../pages/AboutUs"
 import Contact from "../pages/Contact"
 import Cart from "../pages/Cart"
-import Popup from "../pages/Sign"
+import Sign from "../pages/Sign"
 import Content from "../pages/Content"
-
-import DishesLikeButton from "./DishesLikeButton"
 
 export const MainContext = createContext();
 
@@ -61,7 +59,7 @@ function Main() {
           <Route path="/aboutUs" element={<AboutUs/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="/popup" element={<Popup/>}/>
+          <Route path="/sign" element={<Sign/>}/>
         </Routes>
 
     </>

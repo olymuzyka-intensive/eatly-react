@@ -204,7 +204,7 @@ function Cart({item}) {
                                 <div className="shopping__price_total">$ {price} </div>  
                             </li>
                         </ul>
-                        <Link to="/popup"  className="btn btn--payment">Buy</Link>
+                        <Link to="/sign"  className="btn btn--payment">Buy</Link>
                         <img className="shopping__cards_decor-2" src="/src/img/decor12.svg" alt="decor"/>
                         <img className="shopping__cards_decor-3" src="/src/img/decor12.svg" alt="decor"/>
                     </div>
