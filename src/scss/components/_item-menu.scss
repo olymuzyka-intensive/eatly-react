@@ -203,10 +203,10 @@
         &_circle {
             position: absolute;
             background: url(/src/img/price.svg);
-            width: 24.64px;
+            width: 100%;
             height: 25.45px;
-            bottom: -10px;
-            left: 35px;
+            // bottom: -10px;
+            left: 0;
             cursor: pointer;
         }
     }

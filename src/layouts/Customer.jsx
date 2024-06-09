@@ -48,20 +48,6 @@ function Customer() {
         beforeChange(index, newIndex) {
           setIsActive(newIndex);
         },
-        // customPaging: (slideIndex) => (
-        //   <li key={slideIndex} active={slideIndex === activeSlideIndex}></li>
-        // ),
-      // dotsClass: "customer__slider_control",
-      // baforeChange: (current, next) => {
-      //     setCurrentSlide(next);
-      //   }
-      // appendDots: dots => (
-      //       <ul className="customer__slider_control">
-      //         { dots }</ul>
-      //   ),
-      // customPaging: index => (
-      //         <li className={isActive === index ? "customer__button active" : "customer__button"} onClick={() => toggleActive(index)} ></li>
-      //   )
     };
 
         const comments = [
