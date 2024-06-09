@@ -8,19 +8,16 @@ const CustomSlider = styled(Slider)({
     '& .MuiSlider-thumb': {
       width: 20,
       height: 20,
-    //   marginTop: -8,
-    //   marginLeft: -12,
     },
   });
-function CategoryFilter({products, setFilteredProducts }) {
-    const data = useContext(MainContext)
 
+function CategoryFilter({products, setFilteredProducts }) {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortCategory, setSortCategory] = useState('')
 
     const [priceRange, setPriceRange] = useState(20);
 
-    useLayoutEffect( () => {
+    useEffect( () => {
         let productsList = JSON.parse(localStorage.getItem('data')) || []
         const filteredProducts = productsList.filter(product => product.category === null ? '' : true)
         setFilteredProducts(filteredProducts) 
@@ -39,10 +36,8 @@ function CategoryFilter({products, setFilteredProducts }) {
     const handlePriceChange = (event) => {      
       const value = event.target.value
       setPriceRange(value);
-
     //   const changeProducts = products.filter(product => value === 50 ? true : product.price == value)
-    const changeProducts = products.filter(product => product.price <= priceRange)
-
+        const changeProducts = products.filter(product => product.price <= priceRange + 1)
         setFilteredProducts(changeProducts)
     };
 
@@ -82,7 +77,8 @@ function CategoryFilter({products, setFilteredProducts }) {
                 onChange={handlePriceChange}
                 min={0}
                 max={50}
-            />
+                valueLabelDisplay="auto"            
+                />
             <ul className="category__price">
                 <li className="category__price_item">$ 0</li>
                 <li className="category__price_item">$ 10</li>

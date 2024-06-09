@@ -1984,23 +1984,6 @@ h2 span {
   font-weight: 600;
   line-height: 29px;
 }
-.category__title_line {
-  margin-top: 27px;
-  margin-bottom: 13.21px;
-  background: #6C5FBC;
-  width: 100%;
-  height: 5.3px;
-  border-radius: 8.8px;
-  position: relative;
-}
-.category__title_circle {
-  position: absolute;
-  background: url(/src/img/price.svg);
-  width: 100%;
-  height: 25.45px;
-  left: 0;
-  cursor: pointer;
-}
 .category__list {
   display: flex;
   flex-direction: row;
@@ -2124,4 +2107,20 @@ h2 span {
   line-height: 30px;
   color: #C2C3CB;
   margin-bottom: 39px;
+}
+
+.css-15mdvue-MuiSlider-root {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #6C5FBC !important;
+  width: 100%;
+  height: 5.3px !important;
+  border-radius: 8.8px !important;
+}
+
+.MuiSlider-thumb input {
+  background: url(/src/img/price.svg) !important;
+  width: 25.5px !important;
+  height: 25.5px !important;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
