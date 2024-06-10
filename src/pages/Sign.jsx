@@ -42,13 +42,13 @@ function Sign() {
                             </div>
                             <input type="text" placeholder="Full Name" value={name} required
                                 onChange={(e) => setName(e.target.value)}
-                                style={{ borderColor: isValid || !name ? 'none' : '#6C5FBC' }}/>
+                                style={{ borderColor: isValid || name ? '#6C5FBC' : 'none' }}/>
                             <input type="email" placeholder="Email" value={email} required
                                 onChange={(e) => setEmail(e.target.value)} 
-                                style={{ borderColor: isValid || !email ? 'none' : '#6C5FBC' }}/>
+                                style={{ borderColor: isValid || email ? '#6C5FBC' : 'none' }}/>
                             <input type="tel" placeholder="+375" value={phone} required
                                 onChange={(e) => setPhone(e.target.value)} 
-                                style={{ borderColor: isValid || !phone ? 'none' : '#6C5FBC' }}/>
+                                style={{ borderColor: isValid || phone ? '#6C5FBC' : 'none' }}/>
                             <button className="btn btn--confirm">confirm</button>
                               {(isValid && <div className='form__field'>We will contact you as soon as possible</div>)}
                               
