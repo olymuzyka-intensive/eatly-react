@@ -52,7 +52,8 @@ function Sign() {
                                 onChange={(e) => setPhone(e.target.value)} 
                                 style={{ borderColor: isValid || !phone ? 'none' : '#6C5FBC' }}/>
                             <button className="btn btn--confirm">confirm</button>
-                              {isValid && <div className='form__field'>We will contact you as soon as possible</div>}
+                              {(isValid && <div className='form__field'>We will contact you as soon as possible</div>) || <div className='form__field'>fill in the data correctlyy</div>}
+                              
                         </form>
                     </div>
                     <div className="popup__right">
