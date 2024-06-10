@@ -707,17 +707,17 @@
             background: #EDEDED url(/src/img/Email.svg) no-repeat;
             background-position: 28.5px 50%;
         }
-        input[type="number"] {
+        input[type="tel"] {
             background: #EDEDED url(/src/img/mobile.svg) no-repeat;
             background-size: 19px;
             background-position: 28.5px 50%;
         }
-        input[type="number"]::-webkit-outer-spin-button, 
-        input[type="number"]::-webkit-inner-spin-button {
+        input[type="tel"]::-webkit-outer-spin-button, 
+        input[type="tel"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-        input[type="number"] {
+        input[type="tel"] {
             -moz-appearance: textfield;
             appearance: textfield;
         }
@@ -763,5 +763,12 @@
     .container {
         width: 100%;
         max-width: 1440px;
+    }
+}
+
+.form {
+    &__field {
+        margin-top: 25px;
+        font-size: 16px;
     }
 }
