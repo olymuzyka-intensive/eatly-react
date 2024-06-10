@@ -13,10 +13,8 @@ function Sign() {
           const testEmail = /\S+@\S+\.\S+/;
           const testPhone = /^\+?(375)\s?\-?\(?(29|25|44|33|17)\)?\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]$/g;
   
-          if (name && email && phone) {
-            if ((testEmail.test(email)) && (testPhone.test(phone))) {
+          if (name && (testEmail.test(email) && testPhone.test(phone))) {           
                 setIsValid(true);
-            }
                         
             setName('');
             setEmail('');
@@ -48,11 +46,11 @@ function Sign() {
                             <input type="email" placeholder="Email" value={email} required
                                 onChange={(e) => setEmail(e.target.value)} 
                                 style={{ borderColor: isValid || !email ? 'none' : '#6C5FBC' }}/>
-                            <input type="tel" placeholder="Phone" value={phone} required
+                            <input type="tel" placeholder="+375" value={phone} required
                                 onChange={(e) => setPhone(e.target.value)} 
                                 style={{ borderColor: isValid || !phone ? 'none' : '#6C5FBC' }}/>
                             <button className="btn btn--confirm">confirm</button>
-                              {(isValid && <div className='form__field'>We will contact you as soon as possible</div>) || <div className='form__field'>fill in the data correctlyy</div>}
+                              {(isValid && <div className='form__field'>We will contact you as soon as possible</div>)}
                               
                         </form>
                     </div>
