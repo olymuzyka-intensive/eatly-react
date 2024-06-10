@@ -116,7 +116,7 @@
       "category": "main",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Vegetable salad",
+      "title": "Vegetable Salad",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -149,7 +149,7 @@
       "category": "main",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "French salad",
+      "title": "French Salad",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -171,7 +171,7 @@
       "category": "main",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Italin Hell",
+      "title": "Italian Hell",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -193,7 +193,7 @@
       "category": "main",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",
-      "title": "Cezar Salad",
+      "title": "Caesar Salad",
       "timing": "34 min",
       "star": "4.9",
       "price": "19.99"
@@ -215,7 +215,7 @@
       "category": "main",
       "subcategory": "Trending",
       "sortcategory": "Recomended",
-      "title": "China salad",
+      "title": "China Salad",
       "timing": "34 min",
       "star": "4.9",
       "price": "19.99"
@@ -226,7 +226,7 @@
       "category": "main",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Sea salad",
+      "title": "Sea Salad",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -248,7 +248,7 @@
       "category": "main",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",
-      "title": "Cezar China",
+      "title": "Caesar China",
       "timing": "34 min",
       "star": "4.9",
       "price": "19.99"
@@ -281,7 +281,7 @@
       "category": "main",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Classic steak ",
+      "title": "Classic Steak ",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -303,7 +303,7 @@
       "category": "main",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",
-      "title": "Fresh salad",
+      "title": "Fresh Salad",
       "timing": "34 min",
       "star": "4.9",
       "price": "19.99"
@@ -325,7 +325,7 @@
       "category": "pizza",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Cheese pizza",
+      "title": "Cheese Pizza",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -336,7 +336,7 @@
       "category": "pizza",
       "subcategory": "Trending",
       "sortcategory": "Most Popular",
-      "title": "Veggie pizza",
+      "title": "Veggie Pizza",
       "timing": "34 min",
       "star": "5.0",
       "price": "19.99"
@@ -347,7 +347,7 @@
       "category": "pizza",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",
-      "title": "BBQ pizza",
+      "title": "BBQ Pizza",
       "timing": "29 min",
       "star": "4.9",
       "price": "18.99"
@@ -358,7 +358,7 @@
       "category": "pizza",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Chicago pizza",
+      "title": "Chicago Pizza",
       "timing": "24 min",
       "star": "4.8",
       "price": "12.99"
@@ -369,7 +369,7 @@
       "category": "pizza",
       "subcategory": "Trending",
       "sortcategory": "Recomended",
-      "title": "Pepperoni pizza",
+      "title": "Pepperoni Pizza",
       "timing": "32 min",
       "star": "4.9",
       "price": "17.99"
@@ -435,7 +435,7 @@
       "category": "ice",
       "subcategory": "Healthy",
       "sortcategory": "Recomended",
-      "title": "Eskimo ice",
+      "title": "Eskimo Ice",
       "timing": "14 min",
       "star": "4.8",
       "price": "4.99"
@@ -446,7 +446,7 @@
       "category": "ice",
       "subcategory": "Trending",
       "sortcategory": "Most Popular",
-      "title": "Neapolitan ice",
+      "title": "Neapolitan Ice",
       "timing": "13 min",
       "star": "5.0",
       "price": "3.99"
@@ -457,7 +457,7 @@
       "category": "ice",
       "subcategory": "Supreme",
       "sortcategory": "Recomended",
-      "title": "Vanilla ice",
+      "title": "Vanilla Ice",
       "timing": "14 min",
       "star": "4.9",
       "price": "6.99"
@@ -468,7 +468,7 @@
       "category": "ice",
       "subcategory": "Healthy",
       "sortcategory": "Fast Delivery",
-      "title": "Rocky road ice",
+      "title": "Rocky road Ice",
       "timing": "12 min",
       "star": "4.8",
       "price": "5.99"
@@ -479,7 +479,7 @@
       "category": "ice",
       "subcategory": "Trending",
       "sortcategory": "Recomended",
-      "title": "Butter Pecan ice",
+      "title": "Butter Pecan Ice",
       "timing": "11 min",
       "star": "4.9",
       "price": "3.99"
