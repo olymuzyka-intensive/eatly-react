@@ -10,20 +10,25 @@ function Sign() {
       
         const handleSubmit = (e) => {
           e.preventDefault();
+
           const testEmail = /\S+@\S+\.\S+/;
           const testPhone = /^\+?(375)\s?\-?\(?(29|25|44|33|17)\)?\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]$/g;
-  
-          if (name && (testEmail.test(email) && testPhone.test(phone))) {           
-                setIsValid(true);
-                        
-            setName('');
-            setEmail('');
-            setPhone('');
-          } else {
-            setIsValid(false);
-          }
-        };
-    
+            
+          if (name && name.length > 2 ) {
+            if (email && testEmail.test(email)) {
+                if (phone && testPhone.test(phone)) {
+                   setIsValid(true);
+                   setName('');
+                   setEmail('');
+                   setPhone('');                  
+                    
+                } else {
+                    setIsValid(false);
+                }
+                
+            }
+          }        
+        }    
 
     return (
     <>
@@ -36,21 +41,28 @@ function Sign() {
                                 <img src="/src/img/Logo.svg" alt="Logo"/>
                             </Link>
                         </div>
-                        <form className="popup__left_form" onSubmit={handleSubmit}>
+                        <form className="popup__left_form">
                             <div className="popup__left_title">
                                 Sign Up To eatly
                             </div>
-                            <input type="text" placeholder="Full Name" value={name} required
+                            <input type="text" placeholder="Full Name" value={name} 
                                 onChange={(e) => setName(e.target.value)}
-                                style={{ borderColor: isValid || name ? '#6C5FBC' : 'none' }}/>
-                            <input type="email" placeholder="Email" value={email} required
+                                // className={isValid ? 'valid' : 'novalid'}
+                                style={{ borderColor: isValid || !name ? '' : '#6C5FBC' }}
+                                
+                                />
+                            <input type="email" placeholder="Email" value={email} 
                                 onChange={(e) => setEmail(e.target.value)} 
-                                style={{ borderColor: isValid || email ? '#6C5FBC' : 'none' }}/>
-                            <input type="tel" placeholder="+375" value={phone} required
+                                // className={isValid ? 'valid' : 'novalid'}
+                                style={{ borderColor: isValid || !email ? '' : '#6C5FBC' }}
+                                />
+                            <input type="tel" placeholder="+375" value={phone} 
                                 onChange={(e) => setPhone(e.target.value)} 
-                                style={{ borderColor: isValid || phone ? '#6C5FBC' : 'none' }}/>
-                            <button className="btn btn--confirm">confirm</button>
-                              {(isValid && <div className='form__field'>We will contact you as soon as possible</div>)}
+                                // className={isValid  ? 'valid' : 'novalid'}
+                                style={{ borderColor: isValid || !phone ? '' : '#6C5FBC' }}
+                                />
+                            <button className="btn btn--confirm" onClick={handleSubmit}>confirm</button>
+                              {(isValid && <div className='form__field_ok'>We will contact you as soon as possible</div>)}
                               
                         </form>
                     </div>
