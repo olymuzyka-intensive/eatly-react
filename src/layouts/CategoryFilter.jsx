@@ -23,6 +23,11 @@ function CategoryFilter({products, setFilteredProducts }) {
         setFilteredProducts(filteredProducts) 
     },[])
 
+    useEffect(() => {
+        const changeProducts = products.filter(product => product.price <= priceRange + 1)
+        setFilteredProducts(changeProducts);
+      }, [priceRange]);
+
     const handleCategorySelect = (category) => {        
         setSelectedCategory(category)
         const filteredProducts = products.filter(product => category === null ? true : product.category === category) 
@@ -36,7 +41,6 @@ function CategoryFilter({products, setFilteredProducts }) {
     const handlePriceChange = (event) => {      
       const value = event.target.value
       setPriceRange(value);
-    //   const changeProducts = products.filter(product => value === 50 ? true : product.price == value)
         const changeProducts = products.filter(product => product.price <= priceRange + 1)
         setFilteredProducts(changeProducts)
     };
@@ -75,6 +79,8 @@ function CategoryFilter({products, setFilteredProducts }) {
             <CustomSlider
                 value={priceRange}
                 onChange={handlePriceChange}
+                // onChangeCommitted={handleFilter}
+                step={1}
                 min={0}
                 max={50}
                 valueLabelDisplay="auto"            
