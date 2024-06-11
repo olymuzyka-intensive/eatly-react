@@ -11,9 +11,9 @@ function Sign() {
         const handleSubmit = (e) => {
           e.preventDefault();
 
-          const testEmail = /\S+@\S+\.\S+/;
-          const testPhone = /^\+?(375)\s?\-?\(?(29|25|44|33|17)\)?\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]\s?-?[0-9]$/g;
-            
+          const testEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const testPhone = /^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$/g;
+
           if ((name && name.length > 2 ) && (email && testEmail.test(email)) && (phone && testPhone.test(phone))){
             setIsValid(true);
             setName('');
@@ -41,21 +41,21 @@ function Sign() {
                             <div className="popup__left_title">
                                 Sign Up To eatly
                             </div>
-                            <input type="text" placeholder="Full Name" value={name} 
+                            <input type="text" placeholder="Full Name" value={name} pattern="[A-Za-z]{3,}"
                                 onChange={(e) => setName(e.target.value)}
                                 // className={isValid ? 'valid' : 'novalid'}
-                                style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
+                                // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
                                 
                                 />
-                            <input type="email" placeholder="Email" value={email} 
+                            <input type="email" placeholder="Email" value={email} pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
                                 onChange={(e) => setEmail(e.target.value)} 
                                 // className={isValid ? 'valid' : 'novalid'}
-                                style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
+                                // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
                                 />
-                            <input type="tel" placeholder="+375" value={phone} 
+                            <input type="tel" placeholder="+375" value={phone} pattern="^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$"
                                 onChange={(e) => setPhone(e.target.value)} 
                                 // className={isValid  ? 'valid' : 'novalid'}
-                                style={{ borderColor: isValid ? '#6C5FBC' : '' }}
+                                // style={{ borderColor: isValid ? '#6C5FBC' : '' }}
                                 />
                             <button className="btn btn--confirm" onClick={handleSubmit}>confirm</button>
                               {(isValid && <div className='form__field_ok'>We will contact you as soon as possible</div>)}

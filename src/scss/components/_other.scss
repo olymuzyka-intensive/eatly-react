@@ -782,6 +782,9 @@
 //     color: red;
 // }
 
-input[type="text"]:invalid {
+input:invalid {
     color: red;
+}
+input:valid {
+    color: #083625;
 }
