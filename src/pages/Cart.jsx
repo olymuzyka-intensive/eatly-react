@@ -167,7 +167,7 @@ function Cart({item}) {
                                 <div className="shopping__item_counter">
                                     {/* <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button> */}
                                     <button className="shopping__item_counter-lower" type="button" onClick={() => handleDecrement(item.id)}></button>
-                                    <input className="shopping__item_counter-count" type="number" max="9999" min="0" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
+                                    <input className="shopping__item_counter-count" type="number" max="30" min="0" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
                                     {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
                                     <button  className="shopping__item_counter-remove" onClick={() => { remove(item.id) }}>x</button>

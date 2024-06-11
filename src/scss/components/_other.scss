@@ -773,9 +773,15 @@
     }
 }
 
-// .valid input{
-//     border: 1px solid #6C5FBC;
+// .valid {
+//     // border: 1px solid #6C5FBC;
+//     color: initial;
 // }
-// .novalid input{
-//     border: 1px solid red;
+// .novalid {
+//     outline: 1px solid red;
+//     color: red;
 // }
+
+input:invalid {
+    color: red;
+}

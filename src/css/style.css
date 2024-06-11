@@ -1805,6 +1805,10 @@ h2 span {
   font-size: 16px;
 }
 
+input:invalid {
+  color: red;
+}
+
 .supersale {
   margin-top: 102.59px;
 }
