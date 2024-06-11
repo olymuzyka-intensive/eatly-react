@@ -1455,9 +1455,9 @@ h2 span {
   color: gray;
   font-size: 16px;
   font-weight: 700;
-  background: none;
+  background: url(/src/img/remove_from_cart1.svg) no-repeat;
   position: absolute;
-  top: 1%;
+  top: 5%;
   right: 1%;
   width: 20px;
   height: 20px;

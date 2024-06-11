@@ -170,7 +170,7 @@ function Cart({item}) {
                                     <input className="shopping__item_counter-count" type="number" max="30" min="0" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
                                     {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
-                                    <button  className="shopping__item_counter-remove" onClick={() => { remove(item.id) }}>x</button>
+                                    <button  className="shopping__item_counter-remove" onClick={() => { remove(item.id) }}></button>
 
                                 </div>
                                 <div className="shopping__item_price shopping__item_price-total">$ {(item.price * item.quantity).toFixed(2)}</div>  

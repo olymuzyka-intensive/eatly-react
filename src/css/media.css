@@ -616,7 +616,7 @@
     background-size: 8.5px;
   }
   .shopping__item_info-2 {
-    padding-right: 20px;
+    padding-right: 40px;
   }
   .shopping__item_info-1, .shopping__item_info-2 {
     gap: 6px;
@@ -1616,7 +1616,7 @@
     background-position: 15px center;
   }
   .shopping__item_info-2 {
-    padding-right: 15px;
+    padding-right: 30px;
   }
   .shopping__item_img {
     width: 55.05px;

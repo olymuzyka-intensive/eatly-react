@@ -11,7 +11,7 @@ function Sign() {
         const handleSubmit = (e) => {
           e.preventDefault();
 
-          const testEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const testEmail = /[^@\s]+@[^@\s]+\.[^@\s]+/;
           const testPhone = /^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$/g;
 
           if ((name && name.length > 2 ) && (email && testEmail.test(email)) && (phone && testPhone.test(phone))){
@@ -47,7 +47,7 @@ function Sign() {
                                 // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
                                 
                                 />
-                            <input type="email" placeholder="Email" value={email} pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+                            <input type="email" placeholder="Email" value={email} pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                                 onChange={(e) => setEmail(e.target.value)} 
                                 // className={isValid ? 'valid' : 'novalid'}
                                 // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
