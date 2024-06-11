@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useLayoutEffect } from "react"
-import { MainContext } from "./Main"
-import { useContext } from "react";
+import React, { useEffect, useState } from "react"
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/system';
 
@@ -24,7 +22,7 @@ function CategoryFilter({products, setFilteredProducts }) {
     },[])
 
     useEffect(() => {
-        const changeProducts = products.filter(product => product.price <= priceRange + 1)
+        const changeProducts = products.filter(product => product.price <= priceRange)
         setFilteredProducts(changeProducts);
       }, [priceRange]);
 
