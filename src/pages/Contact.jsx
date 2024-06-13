@@ -18,7 +18,7 @@ function Contact() {
                         <h2 className="support__title support__title_right">Customer <span>Support</span></h2>
                         <input type="text" placeholder="Full name" pattern="[A-Za-z]{3,}"/>
                         <input type="email" placeholder="Enter your email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"/>
-                        <textarea placeholder="Enter The Problem Or Query" minlength="4" required/>
+                        <textarea placeholder="Enter The Problem Or Query" minLength="4" required/>
                         <button className="btn btn--send">send now</button>
                         {/* <img className="support__title_img-3" src="src/img/decor11.svg" alt="decor"/> */}
                         <svg className="support__title_img-3" width="168" height="168" viewBox="0 0 168 168" fill="none" xmlns="http://www.w3.org/2000/svg">
