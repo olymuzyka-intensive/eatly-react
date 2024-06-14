@@ -13,7 +13,7 @@ function CategoryFilter({products, setFilteredProducts }) {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortCategory, setSortCategory] = useState('')
 
-    const [priceRange, setPriceRange] = useState(20);
+    const [priceRange, setPriceRange] = useState(30);
 
     useEffect( () => {
         let productsList = JSON.parse(localStorage.getItem('data')) || []
@@ -96,7 +96,7 @@ function CategoryFilter({products, setFilteredProducts }) {
                 </ul>
                 
                 <div className="category__button">
-                    <button type="button" className="btn btn--apply" onClick={() => {handleCategorySelect('all')}}>Reset</button>
+                    <button type="button" className="btn btn--apply" onClick={() => {handleCategorySelect('all'), handleCategorySort('')}}>Reset</button>
                 </div>
             </div>
             </div>                
