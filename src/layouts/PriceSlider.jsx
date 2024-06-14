@@ -6,16 +6,9 @@ const CustomSlider = styled(Slider)({
     '& .MuiSlider-thumb': {
       width: 20,
       height: 20,
-    //   marginTop: -8,
-    //   marginLeft: -12,
     },
   });
 function PriceSlider() {
-    // const [priceFilter, setPriceFilter] = useState(0)
-
-    // const handlePriceSelect = (price) => {
-    //     setPriceFilter(price.target.value)
-    // }
     const [priceRange, setPriceRange] = useState(50);
 
     const handlePriceChange = (event, newPrice) => {

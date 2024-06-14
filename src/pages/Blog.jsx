@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom"
 
-// import Header from "../laouts/Header"
-// import Footer from "../laouts/Footer"
 import GetSupersale from "../layouts/GetSupersale "
 import Questions from "../layouts/Questions"
 
 function Blog() {
     return (
         <>
-        {/* <Header/> */}
         <GetSupersale/>
         <div className="blog">
             <div className="container">
@@ -174,7 +171,6 @@ function Blog() {
             </div>            
         </div>
         <Questions/>
-        {/* <Footer/> */}
         </>
     )
 }

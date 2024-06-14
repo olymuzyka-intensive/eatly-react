@@ -1,5 +1,3 @@
-// import Header from "../laouts/Header"
-// import Footer from "../laouts/Footer"
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import GetSupersale from "../layouts/GetSupersale "
@@ -19,9 +17,6 @@ function Cart({item}) {
 
     const [cartItems, setCartItems] = useState([])
 
-    // const [quantity, setQuantity] = useState('')
-    
-    // const delivery = 2.99
     const delivery = parseFloat(2.99)
 
     useEffect (() => {
@@ -66,8 +61,6 @@ function Cart({item}) {
         localStorage.setItem('cart', JSON.stringify(cartTmp));
     }
 
-    // работает только в инпуте
-    
     const changeQuantity = (id, value) => {        
         const cartItem = cart.find((item) => item.id == id)
 
@@ -101,7 +94,6 @@ function Cart({item}) {
         });
 
         if (cartListTmp && cartListTmp.length >= 0) setCartList([...cartListTmp])
-        // localStorage.setItem('cart', cartListTmp)
     }, [cart])
 
     useEffect(() => {
@@ -147,7 +139,6 @@ function Cart({item}) {
 
     return (
         <>
-        {/* <Header/>         */}
         <div className="shopping">
             <div className="container">
                 <div className="shopping__row">
@@ -165,17 +156,14 @@ function Cart({item}) {
                             </div>
                             <div className="shopping__item_info-2">
                                 <div className="shopping__item_counter">
-                                    {/* <button className="shopping__item_counter-lower" type="button" onClick={handleDecrement}></button> */}
                                     <button className="shopping__item_counter-lower" type="button" onClick={() => handleDecrement(item.id)}></button>
                                     <input className="shopping__item_counter-count" type="number" max="30" min="0" onChange={(event) => { changeQuantity(item.id, event.target.value, event.target) }} value={item.quantity}></input>
-                                    {/* <button className="shopping__item_counter-raise" type="button" onClick={handleIncrement}></button> */}
                                     <button className="shopping__item_counter-raise" type="button" onClick={() => handleIncrement(item.id)}></button>
                                     <button  className="shopping__item_counter-remove" onClick={() => { remove(item.id) }}></button>
 
                                 </div>
                                 <div className="shopping__item_price shopping__item_price-total">$ {(item.price * item.quantity).toFixed(2)}</div>  
 
-                                {/* <div className="shopping__item_price shopping__item_price-total">$ {(Math.floor(item.price) + Math.round(item.pricesub)/100)* item.quantity}</div>   */}
                             </div>
                         </li>
                         )
@@ -212,7 +200,6 @@ function Cart({item}) {
             </div>
         </div>
         <GetSupersale/>
-        {/* <Footer/> */}
         </>
     )
 }

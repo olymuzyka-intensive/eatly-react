@@ -43,19 +43,13 @@ function Sign() {
                             </div>
                             <input type="text" placeholder="Full Name" value={name} pattern="[A-Za-z]{3,}"
                                 onChange={(e) => setName(e.target.value)}
-                                // className={isValid ? 'valid' : 'novalid'}
-                                // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
                                 
                                 />
                             <input type="email" placeholder="Email" value={email} pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                                 onChange={(e) => setEmail(e.target.value)} 
-                                // className={isValid ? 'valid' : 'novalid'}
-                                // style={{ borderColor: isValid  ? '#6C5FBC' : '' }}
                                 />
                             <input type="tel" placeholder="+375" value={phone} pattern="^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$"
                                 onChange={(e) => setPhone(e.target.value)} 
-                                // className={isValid  ? 'valid' : 'novalid'}
-                                // style={{ borderColor: isValid ? '#6C5FBC' : '' }}
                                 />
                             <button className="btn btn--confirm" onClick={handleSubmit}>confirm</button>
                               {(isValid && <div className='form__field_ok'>We will contact you as soon as possible</div>)}

@@ -23,12 +23,6 @@ function DishesLikeButton(props) {
         localStorage.setItem(`cartLike-${id}`, JSON.stringify(newFavouritesState))
         addCartFavourite(id)
     }
-    // useEffect (() => {
-    //     const dataTmp = JSON.parse(localStorage.getItem('cartLike')) || []
-    //     if (dataTmp && dataTmp.favourites === 'true') {
-    //         setIsFavorite(true)
-    //     }
-    // }, [cartLike])
 
     return (
         <div className={isFavorite ? 'dishes__item_like-active' : 'dishes__item_like'} onClick= {handleToggleFavourite}>

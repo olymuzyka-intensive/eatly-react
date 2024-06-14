@@ -5,8 +5,6 @@ import { AppContext } from '../App';
 import { Link } from "react-router-dom"
 
 function LikeWidget() {
-    const {cartLike} = useContext(AppContext)
-    // const [likeCount, setLikeCount] = useState(0)
     const dataTmp = JSON.parse(localStorage.getItem('cartLike')) || []
     
     const dataFavourites = dataTmp.filter(function(item) {

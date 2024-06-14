@@ -68,22 +68,6 @@ function Questions() {
                   
                 </ul>
 
-                {/* <ul className="questions__list"> 
-                  {dataQuestions.map((item) =>  
-                    <li key={item.id} onClick={() => {handleItemClick(item)}} 
-                      className={item === isActive ? "questions__item active" : "questions__item"}>
-                        <div className="questions__item_questions">
-                            <div className="questions__item_title">{item.title}</div>
-                            <div className={item === isActive ? "questions__item_question-active" : "questions__item_question"}>{item.question}</div>
-                          </div>
-                        <div className={item === isActive ? "questions__item_button active" : "questions__item_button"} onClick={() => {console.log('disable')}}>
-                        </div>                        
-                    </li>  
-                  )}
-                  
-                </ul> */}
-
-
             </div>
 
           </div>    

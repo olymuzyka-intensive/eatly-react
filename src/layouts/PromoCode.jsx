@@ -19,8 +19,6 @@ function PromoCode({applyCoupon}) {
         if (inputValue === "sale50") {
             setIsCorrect(true)
         }
-        
-        // setPromoCode('')
     }
 
     return (

@@ -26,19 +26,13 @@ function CategoryFilter({products, setFilteredProducts }) {
 
     const handleCategorySelect = (category) => {        
         setSelectedCategory(category)
-        // const filteredProducts = products.filter(product => category === null ? true : product.category === category) 
-        // setFilteredProducts(filteredProducts)
     }
     const handleCategorySort = (sort) => {        
         setSortCategory(sort)
-        // const sortProducts = products.filter(product => sortCategory === null ? true : product.sortcategory === sort)
-        // setFilteredProducts(sortProducts)
     }
     const handlePriceChange = (event) => {      
       const value = event.target.value
       setPriceRange(value);
-        // const changeProducts = products.filter(product => product.price <= priceRange + 1)
-        // setFilteredProducts(changeProducts)
     };
 
     return (

@@ -1,5 +1,3 @@
-// import Header from "../laouts/Header"
-// import Footer from "../laouts/Footer"
 import Promo from "../layouts/Promo"
 import Premium from "../layouts/Premium"
 import Quality from "../layouts/Quality"
@@ -9,7 +7,6 @@ import DishesTop from "../layouts/DishesTop"
 function Home() {
     return (
         <>
-        {/* <Header/> */}
         <div className="home">
             <Promo/>
             <Premium/> 
@@ -17,7 +14,6 @@ function Home() {
             <DishesTop/>
             <Customer/>
         </div>
-        {/* <Footer/> */}
         </>
     )
 }
