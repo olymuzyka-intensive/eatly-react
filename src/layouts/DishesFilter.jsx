@@ -17,6 +17,12 @@ function DishesFilter() {
     
     const [filteredProducts, setFilteredProducts] = useState([])
 
+    useEffect( () => {
+        let filteredProducts = JSON.parse(localStorage.getItem('data'));
+        setFilteredProducts(filteredProducts);
+    },[]);
+
+
     const [isActive, setIsActive] = useState(0)
     
     const toggleActive = (index) => {

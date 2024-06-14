@@ -15,12 +15,6 @@ function CategoryFilter({products, setFilteredProducts }) {
 
     const [priceRange, setPriceRange] = useState(30);
 
-    useEffect( () => {
-        let productsList = JSON.parse(localStorage.getItem('data')) || []
-        const filteredProducts = productsList.filter(product => product.category === null ? '' : true)
-        setFilteredProducts(filteredProducts) 
-    },[])
-
     useEffect(() => {
         const filteredProducts = products.filter(product => {
             return (selectedCategory === 'all' || product.category === selectedCategory) &&
