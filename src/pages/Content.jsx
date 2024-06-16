@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import contents from "../layouts/Contents"
 
 function Content() {
     return (
@@ -62,78 +63,34 @@ function Content() {
                             Top Articles
                         </p>
                         <ul className="blog__cards blog__cards_promo">
-                            <li className="blog__item blog__item-promo">
+                        {contents.map((content, index) => {
+                        if (index <= 2) return (
+                            <li key={index} className="blog__item blog__item-promo">
                                 <Link to="/Blog">  
                                     <div className="blog__item_img blog__item_img-promo">
-                                        <img src="/src/img/blog_img1.jpg" alt="img"></img>
+                                    <img src={content.bg} alt="bg"/>
                                     </div>
                                     <div className="blog__item_title">
-                                        How To Order Food ?
+                                    {content.title}
                                     </div>
                                     <div className="blog__item_card">
-                                        <div className="blog__item_logo"></div>
+                                    <img src={content.image} className="blog__item_logo" alt="img"/>
                                         <div className="blog__item__text">
                                             <div className="blog__item_text-1">
                                                 Written By
                                             </div>
                                             <div className="blog__item_text-2">
-                                                Perperzon
+                                            {content.name}
                                             </div>
                                         </div>
                                         <div className="blog__item_date">
-                                            15 DEC, 2022
+                                        {content.data}
                                         </div>
                                     </div>
                                 </Link>                         
-                            </li>        
-                            <li className="blog__item blog__item-promo">
-                                <Link to="/Blog">  
-                                    <div className="blog__item_img blog__item_img-promo">
-                                        <img src="/src/img/blog_img6.jpg" alt="img"></img>
-                                    </div>
-                                    <div className="blog__item_title">
-                                        Top 5 Business Ideas
-                                    </div>
-                                    <div className="blog__item_card">
-                                        <div className="blog__item_logo"></div>
-                                        <div className="blog__item__text">
-                                            <div className="blog__item_text-1">
-                                                Written By
-                                            </div>
-                                            <div className="blog__item_text-2">
-                                                Perperzon
-                                            </div>
-                                        </div>
-                                        <div className="blog__item_date">
-                                            15 DEC, 2022
-                                        </div>
-                                    </div>
-                                </Link>                         
-                            </li>
-                            <li className="blog__item blog__item-promo">
-                                <Link to="/Blog">  
-                                    <div className="blog__item_img blog__item_img-promo">
-                                        <img src="/src/img/blog_img5.jpg" alt="img"></img>
-                                    </div>
-                                    <div className="blog__item_title">
-                                        How To Control Money ?
-                                    </div>
-                                    <div className="blog__item_card">
-                                        <div className="blog__item_logo"></div>
-                                        <div className="blog__item__text">
-                                            <div className="blog__item_text-1">
-                                                Written By
-                                            </div>
-                                            <div className="blog__item_text-2">
-                                                Perperzon
-                                            </div>
-                                        </div>
-                                        <div className="blog__item_date">
-                                            15 DEC, 2022
-                                        </div>
-                                    </div>
-                                </Link>                         
-                            </li>
+                            </li>   
+     ) })                      
+                        }                                 
                         </ul>
                     </div>                    
                 </div>        

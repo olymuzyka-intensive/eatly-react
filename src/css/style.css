@@ -1148,7 +1148,6 @@ h2 span {
   gap: 11.5px;
 }
 .blog__item_logo {
-  background: url(/src/img/blog_item_img.png) no-repeat center center;
   width: 45px;
   height: 45px;
   border-radius: 25px;
@@ -1200,7 +1199,6 @@ h2 span {
   padding-bottom: 62px;
 }
 .content_logo {
-  background: url(/src/img/blog_item_img.png) no-repeat;
   width: 55px;
   height: 55px;
 }
