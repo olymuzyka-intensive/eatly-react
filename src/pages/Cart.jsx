@@ -6,7 +6,7 @@ import PromoCode from "../layouts/PromoCode"
 import { AppContext } from "../App";
 import { MainContext } from "../layouts/Main";
 
-function Cart({item}) {
+function Cart() {
     const {cart, setCart} = useContext(AppContext)
 
     const data = useContext(MainContext);
