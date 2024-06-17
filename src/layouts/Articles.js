@@ -5,7 +5,7 @@ const articles = [
       "name": "Olga M.",
       "bg": "/src/img/blog_img1.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/368.jpg",
-      "text": "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time",
+      "text": "",
       "id": "1"
     },
   {
@@ -14,7 +14,7 @@ const articles = [
       "name": "Alex Br.",
       "bg": "/src/img/blog_img2.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1.jpg",
-      "text": "perferendis libero cum",
+      "text": "",
       "id": "2"
     },
     {
@@ -23,7 +23,7 @@ const articles = [
       "name": "Victoria S.",
       "bg": "/src/img/blog_img3.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/459.jpg",
-      "text": "porro minima impedit",
+      "text": "",
       "id": "3"
     },
     {
@@ -32,7 +32,7 @@ const articles = [
       "name": "Alexander R.",
       "bg": "/src/img/blog_img4.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/379.jpg",
-      "text": "Online invoice payment helps companies save time, are faster and save maximum effort for the clients and save maximum effort. Online invoice payment helps companies save time",
+      "text": "",
       "id": "4"
     },
   {
@@ -41,7 +41,7 @@ const articles = [
       "name": "Sarina H.",
       "bg": "/src/img/blog_img5.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/549.jpg",
-      "text": "perferendis libero cum",
+      "text": "",
       "id": "5"
     },
     {
@@ -50,7 +50,7 @@ const articles = [
       "name": "Kurt R.",
       "bg": "/src/img/blog_img6.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/7.jpg",
-      "text": "porro minima impedit",
+      "text": "",
       "id": "6"
     }
 ]
