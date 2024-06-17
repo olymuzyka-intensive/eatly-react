@@ -3,15 +3,11 @@ import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
 import articles from "../layouts/Articles"
 import Content from '../layouts/Content'
-import Blog from './Blog'
 
 function BlogPage() {
     const { id } = useParams();
     const selectedPost = articles.find((article) => article.id === (id))
 
-    if (!selectedPost) {
-        return <div>Статья не найдена</div>;
-      }
     return (
     <>
       <div className="content">
@@ -35,26 +31,22 @@ function BlogPage() {
                 <div className="content__promo">
                     <div className="content__article">
                         <div className="content__article_title">
-                            Browse restaurants and menus
+                            {selectedPost.caption1}
                         </div>
                         <div className="content__article_text">
-                            Once you're logged in, you can browse through the list of available restaurants on the Eatly website. You can filter by cuisine, price, and distance to find the perfect restaurant for your needs. Click on a restaurant to view its menu. Once you're logged in, you can browse through the list of available restaurants on the Eatly website. You can filter by cuisine, price, and distance.
-                            <ul className="content__article_list">
-                                <li>It was popularized in the 1960s with the release</li>
-                                <li>Lorem Ipsum passages, and more recently </li>
-                            </ul>
+                            {selectedPost.text1}
                         </div>
                         <div className="content__article_title">
-                            Select your items
+                            {selectedPost.caption2}
                         </div>
                         <div className="content__article_text">
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classNameical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classNameical literature, discovered the undoubtable source. 
+                            {selectedPost.text2}                        
                         </div>
                         <div className="content__article_title">
-                            Place your order
+                            {selectedPost.caption3}
                         </div>
                         <div className="content__article_text">
-                            Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
+                            {selectedPost.text3}                        
                         </div>
                        {selectedPost.id < 6 ? <Link to={`/blog/${+selectedPost.id + 1}`}>
                         <div className="content__button">
