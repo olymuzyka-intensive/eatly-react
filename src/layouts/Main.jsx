@@ -11,7 +11,8 @@ import AboutUs from "../pages/AboutUs"
 import Contact from "../pages/Contact"
 import Cart from "../pages/Cart"
 import Sign from "../pages/Sign"
-import Content from "../pages/Content"
+import Content from "./Content"
+import BlogPage from "../pages/BlogPage"
 
 export const MainContext = createContext();
 
@@ -21,10 +22,6 @@ function Main() {
     const getData = async () => {
       
         const dataServer = await fetch('http://localhost:3000/dishes')
-
-        // const dataServer = await fetch('https://api.npoint.io/788ae13712e2c2cb7c97')
-        // const dataServer = await fetch('./db.json')
-
         .then(response => response.json());
 
         localStorage.setItem('data', JSON.stringify(dataServer));
@@ -55,7 +52,7 @@ function Main() {
           <Route path="/menuAll" element={<MenuAll/>}/>
           <Route path="/menuFavourites" element={<MenuFavourites/>}/>
           <Route path="/blog" element={<Blog/>}/>
-          <Route path="/content" element={<Content/>}/>
+          <Route path="/blog/:id/" element={<BlogPage/>}/>
           <Route path="/aboutUs" element={<AboutUs/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/cart" element={<Cart/>}/>

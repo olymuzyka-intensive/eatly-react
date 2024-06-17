@@ -1,7 +1,7 @@
-const contents = [
+const articles = [
   {
       "data": "15 MAY, 2024",
-      "title": "How To Order Food ?",
+      "title": "How To Order Food?",
       "name": "Olga M.",
       "bg": "/src/img/blog_img1.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/368.jpg",
@@ -10,7 +10,7 @@ const contents = [
     },
   {
       "data": "21 NOV, 2023",
-      "title": "How To Track The Order ?",
+      "title": "How To Track The Order?",
       "name": "Alex Br.",
       "bg": "/src/img/blog_img2.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1.jpg",
@@ -19,7 +19,7 @@ const contents = [
     },
     {
       "data": "1 SEPT, 2021",
-      "title": "How To Manage Cards ?",
+      "title": "How To Manage Cards?",
       "name": "Victoria S.",
       "bg": "/src/img/blog_img3.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/459.jpg",
@@ -37,7 +37,7 @@ const contents = [
     },
   {
       "data": "20 OCT, 2022",
-      "title": "How To Control Money ?",
+      "title": "How To Control Money?",
       "name": "Sarina H.",
       "bg": "/src/img/blog_img5.jpg",
       "image": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/549.jpg",
@@ -55,4 +55,4 @@ const contents = [
     }
 ]
 
-export default contents
+export default articles
