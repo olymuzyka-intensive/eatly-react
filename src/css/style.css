@@ -1543,7 +1543,7 @@ h2 span {
   width: 530px;
   height: 100%;
   position: absolute;
-  background: #6C5FBC url(/srs/img/decor10.svg) no-repeat;
+  background: #6C5FBC url(/src/img/decor10.svg) no-repeat;
   background-position: 16.5% 5.75%;
   left: -100px;
   display: flex;

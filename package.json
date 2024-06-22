@@ -2,12 +2,14 @@
   "name": "eatly-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://olymuzyka-intensive.github.io/EatlyApp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
