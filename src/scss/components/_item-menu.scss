@@ -191,24 +191,6 @@
         font-size: 21.5px;
         font-weight: 600;
         line-height: 29px; 
-        // &_line {
-        //     margin-top: 27px;
-        //     margin-bottom: 13.21px;
-        //     background:$purple ;
-        //     width: 100%;
-        //     height: 5.3px;
-        //     border-radius: 8.8px;   
-        //     position: relative;         
-        // }
-        // &_circle {
-        //     position: absolute;
-        //     background: url(/src/img/price.svg);
-        //     width: 100%;
-        //     height: 25.45px;
-        //     // bottom: -10px;
-        //     left: 0;
-        //     cursor: pointer;
-        // }
     }
 
     &__list {
@@ -225,24 +207,24 @@
         cursor: pointer;
         border: 4px solid transparent;
         &:nth-child(1) {
-        background: rgba(255, 222, 138, 0.35) url(/src/img/Pizza.png) no-repeat;
+        background: rgba(255, 222, 138, 0.35) url(/src/img/pizza.png) no-repeat;
         background-position: center 20px ;
         }
 
         &:nth-child(2) {
-        background: rgba(251, 71, 29, 0.35) url(/src/img/Main1.png) no-repeat;
+        background: rgba(251, 71, 29, 0.35) url(/src/img/main.png) no-repeat;
         background-position: center 15px ;
         background-size: 35px 35px;
 
         }
 
         &:nth-child(3) {
-        background: rgba(237, 182, 107, 0.35) url(/src/img/Doughnut.png) no-repeat;
+        background: rgba(237, 182, 107, 0.35) url(/src/img/doughnut.png) no-repeat;
         background-position: center 20px ;
         }
         
         &:nth-child(4) {
-        background: rgba(90, 133, 255, 0.35) url(/src/img/Icecream.png) no-repeat;
+        background: rgba(90, 133, 255, 0.35) url(/src/img/icecream.png) no-repeat;
         background-position: center 20px;
         }
     }
@@ -253,25 +235,25 @@
         cursor: pointer;
     }
     &__item-active:nth-child(1) {
-        background: rgba(255, 222, 138, 0.35) url(/src/img/Pizza.png) no-repeat;
+        background: rgba(255, 222, 138, 0.35) url(/src/img/pizza.png) no-repeat;
         border: 4px solid rgba(255, 222, 138, 0.50);
         background-position: center 20px;
         background-size: 40px 40px;
     }
     &__item-active:nth-child(2) {
-        background: rgba(251, 71, 29, 0.35) url(/src/img/Main1.png) no-repeat;
+        background: rgba(251, 71, 29, 0.35) url(/src/img/main.png) no-repeat;
         background-position: center 15px ;
         border: 4px solid rgba(251, 71, 29, 0.50);
         background-size: 40px 40px;
     }
     &__item-active:nth-child(3) {
-        background: rgba(237, 182, 107, 0.35) url(/src/img/Doughnut.png) no-repeat;
+        background: rgba(237, 182, 107, 0.35) url(/src/img/doughnut.png) no-repeat;
         background-position: center 20px ;
         border: 4px solid rgba(237, 182, 107, 0.50);
         background-size: 40px 40px;
     }
     &__item-active:nth-child(4) {
-        background: rgba(90, 133, 255, 0.35) url(/src/img/Icecream.png) no-repeat;
+        background: rgba(90, 133, 255, 0.35) url(/src/img/icecream.png) no-repeat;
         background-position: center 20px;
         border: 4px solid rgba(90, 133, 255, 0.50);
         background-size: auto 45px;
