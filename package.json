@@ -1,7 +1,8 @@
 {
   "name": "eatly-react",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "homepage": "https://github.com/olymuzyka-intensive/eatly-react",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,8 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "json-server --watch db.json --port 3000",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
